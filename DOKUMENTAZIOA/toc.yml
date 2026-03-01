@@ -1,0 +1,6 @@
+- name: Hasiera
+  href: index.md
+- name: Dokumentazioa
+  href: docs/
+- name: API Dokumentazioa
+  href: api/

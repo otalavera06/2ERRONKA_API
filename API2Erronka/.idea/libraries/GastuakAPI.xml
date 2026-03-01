@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="GastuakAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/GastuakWeb.zip!/" />
+      <root url="jar://$PROJECT_DIR$/JavaApi.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

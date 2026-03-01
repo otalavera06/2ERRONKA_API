@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Controlerrak
+  commentId: N:ErronkaApi.Controlerrak
+  id: ErronkaApi.Controlerrak
+  children:
+  - ErronkaApi.Controlerrak.LoginKontrollera
+  langs:
+  - csharp
+  - vb
+  name: ErronkaApi.Controlerrak
+  nameWithType: ErronkaApi.Controlerrak
+  fullName: ErronkaApi.Controlerrak
+  type: Namespace
+  assemblies:
+  - ErronkaApi
+references:
+- uid: ErronkaApi.Controlerrak.LoginKontrollera
+  commentId: T:ErronkaApi.Controlerrak.LoginKontrollera
+  href: ErronkaApi.Controlerrak.LoginKontrollera.html
+  name: LoginKontrollera
+  nameWithType: LoginKontrollera
+  fullName: ErronkaApi.Controlerrak.LoginKontrollera

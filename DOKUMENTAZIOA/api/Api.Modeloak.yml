@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Api.Modeloak
+  commentId: N:Api.Modeloak
+  id: Api.Modeloak
+  children:
+  - Api.Modeloak.Eskaera
+  - Api.Modeloak.EskaeraMahaiak
+  langs:
+  - csharp
+  - vb
+  name: Api.Modeloak
+  nameWithType: Api.Modeloak
+  fullName: Api.Modeloak
+  type: Namespace
+  assemblies:
+  - ErronkaApi
+references:
+- uid: Api.Modeloak.Eskaera
+  commentId: T:Api.Modeloak.Eskaera
+  parent: Api.Modeloak
+  href: Api.Modeloak.Eskaera.html
+  name: Eskaera
+  nameWithType: Eskaera
+  fullName: Api.Modeloak.Eskaera
+- uid: Api.Modeloak.EskaeraMahaiak
+  commentId: T:Api.Modeloak.EskaeraMahaiak
+  href: Api.Modeloak.EskaeraMahaiak.html
+  name: EskaeraMahaiak
+  nameWithType: EskaeraMahaiak
+  fullName: Api.Modeloak.EskaeraMahaiak
+- uid: Api.Modeloak
+  commentId: N:Api.Modeloak
+  href: Api.html
+  name: Api.Modeloak
+  nameWithType: Api.Modeloak
+  fullName: Api.Modeloak
+  spec.csharp:
+  - uid: Api
+    name: Api
+    href: Api.html
+  - name: .
+  - uid: Api.Modeloak
+    name: Modeloak
+    href: Api.Modeloak.html
+  spec.vb:
+  - uid: Api
+    name: Api
+    href: Api.html
+  - name: .
+  - uid: Api.Modeloak
+    name: Modeloak
+    href: Api.Modeloak.html

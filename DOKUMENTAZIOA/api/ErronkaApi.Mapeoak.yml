@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Mapeoak
+  commentId: N:ErronkaApi.Mapeoak
+  id: ErronkaApi.Mapeoak
+  children:
+  - ErronkaApi.Mapeoak.EskaeraHistorikoaMap
+  - ErronkaApi.Mapeoak.EskaeraMahaiakMap
+  - ErronkaApi.Mapeoak.KategoriaMap
+  - ErronkaApi.Mapeoak.ProduktuaMap
+  langs:
+  - csharp
+  - vb
+  name: ErronkaApi.Mapeoak
+  nameWithType: ErronkaApi.Mapeoak
+  fullName: ErronkaApi.Mapeoak
+  type: Namespace
+  assemblies:
+  - ErronkaApi
+references:
+- uid: ErronkaApi.Mapeoak.EskaeraHistorikoaMap
+  commentId: T:ErronkaApi.Mapeoak.EskaeraHistorikoaMap
+  href: ErronkaApi.Mapeoak.EskaeraHistorikoaMap.html
+  name: EskaeraHistorikoaMap
+  nameWithType: EskaeraHistorikoaMap
+  fullName: ErronkaApi.Mapeoak.EskaeraHistorikoaMap
+- uid: ErronkaApi.Mapeoak.EskaeraMahaiakMap
+  commentId: T:ErronkaApi.Mapeoak.EskaeraMahaiakMap
+  href: ErronkaApi.Mapeoak.EskaeraMahaiakMap.html
+  name: EskaeraMahaiakMap
+  nameWithType: EskaeraMahaiakMap
+  fullName: ErronkaApi.Mapeoak.EskaeraMahaiakMap
+- uid: ErronkaApi.Mapeoak.KategoriaMap
+  commentId: T:ErronkaApi.Mapeoak.KategoriaMap
+  href: ErronkaApi.Mapeoak.KategoriaMap.html
+  name: KategoriaMap
+  nameWithType: KategoriaMap
+  fullName: ErronkaApi.Mapeoak.KategoriaMap
+- uid: ErronkaApi.Mapeoak.ProduktuaMap
+  commentId: T:ErronkaApi.Mapeoak.ProduktuaMap
+  href: ErronkaApi.Mapeoak.ProduktuaMap.html
+  name: ProduktuaMap
+  nameWithType: ProduktuaMap
+  fullName: ErronkaApi.Mapeoak.ProduktuaMap

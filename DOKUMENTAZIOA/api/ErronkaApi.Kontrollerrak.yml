@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Kontrollerrak
+  commentId: N:ErronkaApi.Kontrollerrak
+  id: ErronkaApi.Kontrollerrak
+  children:
+  - ErronkaApi.Kontrollerrak.EskaeraKontrollerra
+  - ErronkaApi.Kontrollerrak.KategoriaKontrollerra
+  - ErronkaApi.Kontrollerrak.LogKontrollerra
+  - ErronkaApi.Kontrollerrak.LoginKontrollera
+  - ErronkaApi.Kontrollerrak.MahaiakController
+  - ErronkaApi.Kontrollerrak.ProduktuakKontrollera
+  langs:
+  - csharp
+  - vb
+  name: ErronkaApi.Kontrollerrak
+  nameWithType: ErronkaApi.Kontrollerrak
+  fullName: ErronkaApi.Kontrollerrak
+  type: Namespace
+  assemblies:
+  - ErronkaApi
+references:
+- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
+  commentId: T:ErronkaApi.Kontrollerrak.EskaeraKontrollerra
+  href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html
+  name: EskaeraKontrollerra
+  nameWithType: EskaeraKontrollerra
+  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
+- uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
+  commentId: T:ErronkaApi.Kontrollerrak.KategoriaKontrollerra
+  href: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html
+  name: KategoriaKontrollerra
+  nameWithType: KategoriaKontrollerra
+  fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
+- uid: ErronkaApi.Kontrollerrak.LoginKontrollera
+  commentId: T:ErronkaApi.Kontrollerrak.LoginKontrollera
+  href: ErronkaApi.Kontrollerrak.LoginKontrollera.html
+  name: LoginKontrollera
+  nameWithType: LoginKontrollera
+  fullName: ErronkaApi.Kontrollerrak.LoginKontrollera
+- uid: ErronkaApi.Kontrollerrak.LogKontrollerra
+  commentId: T:ErronkaApi.Kontrollerrak.LogKontrollerra
+  href: ErronkaApi.Kontrollerrak.LogKontrollerra.html
+  name: LogKontrollerra
+  nameWithType: LogKontrollerra
+  fullName: ErronkaApi.Kontrollerrak.LogKontrollerra
+- uid: ErronkaApi.Kontrollerrak.MahaiakController
+  commentId: T:ErronkaApi.Kontrollerrak.MahaiakController
+  href: ErronkaApi.Kontrollerrak.MahaiakController.html
+  name: MahaiakController
+  nameWithType: MahaiakController
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController
+- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
+  commentId: T:ErronkaApi.Kontrollerrak.ProduktuakKontrollera
+  href: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html
+  name: ProduktuakKontrollera
+  nameWithType: ProduktuakKontrollera
+  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera

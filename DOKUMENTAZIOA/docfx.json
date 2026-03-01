@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../API2Erronka/ErronkaApi",
+          "files": [
+            "ErronkaApi.csproj"
+          ]
+        }
+      ],
+      "filter": "filter.yml",
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "downloadPdf": "Deskargatu PDF-a",
+      "_appName": "Erronka API",
+      "_appTitle": "Erronka API Dokumentazioa",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}

@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Api.DTOak
+  commentId: N:Api.DTOak
+  id: Api.DTOak
+  children:
+  - Api.DTOak.EskaeraProduktuaSortuDTO
+  - Api.DTOak.EskaeraSortuDTO
+  langs:
+  - csharp
+  - vb
+  name: Api.DTOak
+  nameWithType: Api.DTOak
+  fullName: Api.DTOak
+  type: Namespace
+  assemblies:
+  - ErronkaApi
+references:
+- uid: Api.DTOak.EskaeraProduktuaSortuDTO
+  commentId: T:Api.DTOak.EskaeraProduktuaSortuDTO
+  href: Api.DTOak.EskaeraProduktuaSortuDTO.html
+  name: EskaeraProduktuaSortuDTO
+  nameWithType: EskaeraProduktuaSortuDTO
+  fullName: Api.DTOak.EskaeraProduktuaSortuDTO
+- uid: Api.DTOak.EskaeraSortuDTO
+  commentId: T:Api.DTOak.EskaeraSortuDTO
+  parent: Api.DTOak
+  href: Api.DTOak.EskaeraSortuDTO.html
+  name: EskaeraSortuDTO
+  nameWithType: EskaeraSortuDTO
+  fullName: Api.DTOak.EskaeraSortuDTO
+- uid: Api.DTOak
+  commentId: N:Api.DTOak
+  href: Api.html
+  name: Api.DTOak
+  nameWithType: Api.DTOak
+  fullName: Api.DTOak
+  spec.csharp:
+  - uid: Api
+    name: Api
+    href: Api.html
+  - name: .
+  - uid: Api.DTOak
+    name: DTOak
+    href: Api.DTOak.html
+  spec.vb:
+  - uid: Api
+    name: Api
+    href: Api.html
+  - name: .
+  - uid: Api.DTOak
+    name: DTOak
+    href: Api.DTOak.html

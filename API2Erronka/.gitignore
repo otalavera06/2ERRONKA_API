@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+
+# NuGet
+packages/
+
+# Build folders (TODOS los proyectos)
+ErronkaApi/bin/
+ErronkaApi/obj/
+
+# Archivos generados
+*.dll
+*.pdb
+*.cache
+*.sourcelink.json
+
+# Razor / ASP.NET
+rjsmcshtml.dswa.cache.json
+rjsmrazor.dswa.cache.json

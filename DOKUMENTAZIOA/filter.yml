@@ -1,0 +1,22 @@
+apiRules:
+- exclude:
+    uidRegex: ^Api\.Modeloak
+    type: Namespace
+- exclude:
+    uidRegex: ^ErronkaApi\.Modeloak
+    type: Namespace
+- exclude:
+    uidRegex: ^ErronkaApi\.Mapeoak
+    type: Namespace
+- exclude:
+    uidRegex: ^ErronkaApi\.NHibernate
+    type: Namespace
+- exclude:
+    uidRegex: ^ErronkaApi\.Repositorioak
+    type: Namespace
+- include:
+    uidRegex: ^ErronkaApi\.Kontrollerrak
+    type: Namespace
+- include:
+    uidRegex: ^ErronkaApi\.DTOak
+    type: Namespace

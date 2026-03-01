@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  id: ErronkaApi.Modeloak
+  children:
+  - ErronkaApi.Modeloak.Erabiltzailea
+  - ErronkaApi.Modeloak.EskaeraHistorikoa
+  - ErronkaApi.Modeloak.EskaeraProduktuak
+  - ErronkaApi.Modeloak.Kategoria
+  - ErronkaApi.Modeloak.Mahaia
+  - ErronkaApi.Modeloak.Produktua
+  - ErronkaApi.Modeloak.Rola
+  langs:
+  - csharp
+  - vb
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
+  type: Namespace
+  assemblies:
+  - ErronkaApi
+references:
+- uid: ErronkaApi.Modeloak.Erabiltzailea
+  commentId: T:ErronkaApi.Modeloak.Erabiltzailea
+  parent: ErronkaApi.Modeloak
+  href: ErronkaApi.Modeloak.Erabiltzailea.html
+  name: Erabiltzailea
+  nameWithType: Erabiltzailea
+  fullName: ErronkaApi.Modeloak.Erabiltzailea
+- uid: ErronkaApi.Modeloak.EskaeraHistorikoa
+  commentId: T:ErronkaApi.Modeloak.EskaeraHistorikoa
+  href: ErronkaApi.Modeloak.EskaeraHistorikoa.html
+  name: EskaeraHistorikoa
+  nameWithType: EskaeraHistorikoa
+  fullName: ErronkaApi.Modeloak.EskaeraHistorikoa
+- uid: ErronkaApi.Modeloak.EskaeraProduktuak
+  commentId: T:ErronkaApi.Modeloak.EskaeraProduktuak
+  href: ErronkaApi.Modeloak.EskaeraProduktuak.html
+  name: EskaeraProduktuak
+  nameWithType: EskaeraProduktuak
+  fullName: ErronkaApi.Modeloak.EskaeraProduktuak
+- uid: ErronkaApi.Modeloak.Kategoria
+  commentId: T:ErronkaApi.Modeloak.Kategoria
+  parent: ErronkaApi.Modeloak
+  href: ErronkaApi.Modeloak.Kategoria.html
+  name: Kategoria
+  nameWithType: Kategoria
+  fullName: ErronkaApi.Modeloak.Kategoria
+- uid: ErronkaApi.Modeloak.Mahaia
+  commentId: T:ErronkaApi.Modeloak.Mahaia
+  parent: ErronkaApi.Modeloak
+  href: ErronkaApi.Modeloak.Mahaia.html
+  name: Mahaia
+  nameWithType: Mahaia
+  fullName: ErronkaApi.Modeloak.Mahaia
+- uid: ErronkaApi.Modeloak.Produktua
+  commentId: T:ErronkaApi.Modeloak.Produktua
+  parent: ErronkaApi.Modeloak
+  href: ErronkaApi.Modeloak.Produktua.html
+  name: Produktua
+  nameWithType: Produktua
+  fullName: ErronkaApi.Modeloak.Produktua
+- uid: ErronkaApi.Modeloak.Rola
+  commentId: T:ErronkaApi.Modeloak.Rola
+  parent: ErronkaApi.Modeloak
+  href: ErronkaApi.Modeloak.Rola.html
+  name: Rola
+  nameWithType: Rola
+  fullName: ErronkaApi.Modeloak.Rola
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  href: ErronkaApi.html
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+    href: ErronkaApi.Modeloak.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+    href: ErronkaApi.Modeloak.html
