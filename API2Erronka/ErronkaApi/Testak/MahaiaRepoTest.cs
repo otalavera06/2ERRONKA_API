@@ -1,35 +1,52 @@
-using Xunit;
+﻿using Xunit;
 using Moq;
-using ErronkaApi.Repositorioak;
-using ErronkaApi.Modeloak;
-using NHibernate;
+using Microsoft.AspNetCore.Mvc;
+using ErronkaApi.Interfaces;      // Para IMahaiaRepository
+using ErronkaApi.DTOak;           // Para MahaiaDTO
+using ErronkaApi.Kontrollerrak;  // Para MahaiaKontrollera
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace ErronkaApi.Testak
+public class MahaiaKontrolleraTests
 {
-    public class MahaiaRepoTest
+    [Fact]
+    public async Task get_mahaia_libre_ok()
     {
-        [Fact]
-        public async void get_lortuMahaiaLibre_mahaia_libre_mahaiak_itzuli_200()
-        {
-            // var sessionMock = new Mock<ISession>();
-            // var sessionMockFactory = new Mock<ISessionFactory>();
+        // Arrange
+        var mockRepo = new Mock<IMahaiaRepository>();
 
-            // var mahaiak = new List<Mahaia>
-            // {
-            //     new Mahaia { id = 1, zenbakia = 5, egoera = "libre" }
-            // }.AsQueryable();
+        mockRepo.Setup(x => x.LortuMahaiLibreAsync())
+            .ReturnsAsync(new List<MahaiaDTO>
+            {
+                new MahaiaDTO { Id = 1, Zenbakia = 3 }
+            });
 
-            // sessionMock
-            //     .Setup(s => s.Query<Mahaia>())
-            //     .Returns(mahaiak);
+        var controller = new MahaiaKontrollera(mockRepo.Object);
 
-            // MahaiaRepository repo = new MahaiaRepository(sessionMockFactory.Object);
+        // Act
+        var result = await controller.GetMahaiLibre();
 
-            // var result = await repo.LortuMahaiLibreAsync();
+        // Assert
+        var okResult = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(200, okResult.StatusCode);
+    }
 
-            // Assert.Equal(200, result.Code);
-            // Assert.NotNull(result.Datuak);
-            // Assert.Single(result.Datuak);
-        }
+    [Fact]
+    public async Task get_mahaia_libre_errorea()
+    {
+        // Arrange
+        var mockRepo = new Mock<IMahaiaRepository>();
+
+        mockRepo.Setup(x => x.LortuMahaiLibreAsync())
+            .ReturnsAsync((List<MahaiaDTO>)null);
+
+        var controller = new MahaiaKontrollera(mockRepo.Object);
+
+        // Act
+        var result = await controller.GetMahaiLibre();
+
+        // Assert
+        var errorResult = Assert.IsType<ObjectResult>(result);
+        Assert.NotEqual(200, errorResult.StatusCode);
     }
 }
