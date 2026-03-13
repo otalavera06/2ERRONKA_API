@@ -25,6 +25,20 @@ namespace ErronkaApi.Repositorioak
             _sessionFactory = sessionFactory;
         }
 
+        public Eskaera? Get(int id)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            var query = session.Query<Eskaera>()
+                .Where(x => x.id == id);
+
+            var eskaera = query.SingleOrDefault();
+            return eskaera;
+
+        }
+
+
         public ErantzunaDTO<string> SortuEskaera(EskaeraSortuDTO dto)
         {
             using var session = _sessionFactory.OpenSession();
@@ -125,6 +139,26 @@ namespace ErronkaApi.Repositorioak
             }
         }
 
+        public void Save(Eskaera eskaera)
+        {
+            using (var session = _sessionFactory.OpenSession())
+            using (var tx = session.BeginTransaction())
+            {
+                session.Save(eskaera);
+                tx.Commit();
+            }
+        }
+
+        public void Delete(Eskaera eskaera)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            session.Delete(eskaera);
+
+            tx.Commit();
+        }
+
         public ErantzunaDTO<EskaeraDTO> LortuEskaerak()
         {
             using var session = _sessionFactory.OpenSession();
@@ -161,6 +195,17 @@ namespace ErronkaApi.Repositorioak
                     Datuak = new List<EskaeraDTO>()
                 };
             }
+        }
+
+        public List<Eskaera> LortuEskaerak2()
+        {
+            using var session = _sessionFactory.OpenSession();
+
+            return session.Query<Eskaera>()
+                .Where(e => e.egoera == "irekita")
+                .OrderByDescending(e => e.sortzeData)
+                .ToList();
+
         }
 
         /// <summary>
@@ -217,6 +262,14 @@ namespace ErronkaApi.Repositorioak
             }
         }
 
+        public List<EskaeraProduktuak> LortuEskaeraProduktuak2(int eskaeraId)
+        {
+            using var session = _sessionFactory.OpenSession();
+            return session.Query<EskaeraProduktuak>()
+                .Where(ep => ep.Eskaera.id == eskaeraId)
+                .ToList();
+        }
+
         public ErantzunaDTO<int> LortuMahaiKapazitatea(int mahaiaId)
         {
             using var session = _sessionFactory.OpenSession();
@@ -253,6 +306,75 @@ namespace ErronkaApi.Repositorioak
         }
 
         public ErantzunaDTO<string> EzabatuEskaera(int eskaeraId)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+            try
+            {
+                var eskaera = session.Get<Eskaera>(eskaeraId);
+                if (eskaera == null)
+                {
+                    return new ErantzunaDTO<string>
+                    {
+                        Code = 404,
+                        Message = "Eskaera ez da aurkitu",
+                        Datuak = new List<string>()
+                    };
+                }
+
+                // Lortu eskaeraren produktuak zuzenean databasetik eager loading bidez
+                var eskaeraProduktuak = session.Query<EskaeraProduktuak>()
+                    .Where(ep => ep.Eskaera.id == eskaeraId)
+                    .ToList();
+
+                if (eskaera.EskaeraMahaiak.Any())
+                {
+                    foreach (var em in eskaera.EskaeraMahaiak)
+                    {
+                        em.Mahaia.egoera = "libre";
+                        session.Update(em.Mahaia);
+                        session.Delete(em);
+                    }
+                }
+
+                if (eskaeraProduktuak.Any())
+                {
+                    foreach (var ep in eskaeraProduktuak)
+                    {
+                        var produktua = session.Get<Produktua>(ep.Produktua.id, LockMode.Upgrade);
+                        if (produktua != null)
+                        {
+                            produktua.stock_aktuala += ep.Kantitatea;
+                            session.Update(produktua);
+                        }
+                        session.Delete(ep);
+                    }
+                }
+
+                session.Delete(eskaera);
+
+                tx.Commit();
+
+                return new ErantzunaDTO<string>
+                {
+                    Code = 200,
+                    Message = "Eskaera ezabatu da arrakastaz",
+                    Datuak = new List<string>()
+                };
+            }
+            catch (Exception ex)
+            {
+                tx.Rollback();
+                return new ErantzunaDTO<string>
+                {
+                    Code = 500,
+                    Message = "Errore bat egon da: " + ex.Message,
+                    Datuak = new List<string>()
+                };
+            }
+        }
+
+        public ErantzunaDTO<string> EzabatuEskaera2(int eskaeraId)
         {
             using var session = _sessionFactory.OpenSession();
             using var tx = session.BeginTransaction();

@@ -1,5 +1,7 @@
-﻿using ErronkaApi.DTOak;
+using Api.Modeloak;
+using ErronkaApi.DTOak;
 using ErronkaApi.Modeloak;
+using FluentNHibernate.Testing.Values;
 using NHibernate;
 using NHibernate.Linq;
 using System;
@@ -18,49 +20,61 @@ namespace ErronkaApi.Repositorioak
             _sessionFactory = sessionFactory;
         }
 
-        public async Task<ErantzunaDTO<MahaiaDTO>> LortuMahaiLibreAsync()
+        public void Delete(Mahaia mahaia)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            session.Delete(mahaia);
+
+            tx.Commit();
+        }
+
+        public Mahaia? Get(int id)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            var query = session.Query<Mahaia>()
+                .Where(x => x.id == id);
+
+            var mahaia = query.SingleOrDefault();
+            return mahaia;
+
+        }
+
+        public void Update(Mahaia mahaia)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            session.Update(mahaia);
+
+            tx.Commit();
+        }
+
+
+
+        public List<MahaiaDTO> LortuMahaiLibreAsync()
         {
             try
             {
-                return await Task.Run(() =>
-                {
-                    using var session = _sessionFactory.OpenSession();
+                using var session = _sessionFactory.OpenSession();
 
-                    var mahaiakLibreak = session.Query<Mahaia>()
-                        .Where(m => m.egoera == "libre")
-                        .Select(m => new MahaiaDTO
-                        {
-                            Id = m.id,
-                            Zenbakia = m.zenbakia
-                        })
-                        .ToList();
-
-                    if (!mahaiakLibreak.Any())
+                var mahaiakLibreak = session.Query<Mahaia>()
+                    .Where(m => m.egoera == "libre")
+                    .Select(m => new MahaiaDTO
                     {
-                        return new ErantzunaDTO<MahaiaDTO>
-                        {
-                            Code = 404,
-                            Message = "Ez dago mahai librerik",
-                            Datuak = null
-                        };
-                    }
+                        Id = m.id,
+                        Zenbakia = m.zenbakia
+                    })
+                    .ToList();
 
-                    return new ErantzunaDTO<MahaiaDTO>
-                    {
-                        Code = 200,
-                        Message = "Mahai libreak lortu dira",
-                        Datuak = mahaiakLibreak
-                    };
-                });
+                return mahaiakLibreak;
             }
             catch (Exception ex)
             {
-                return new ErantzunaDTO<MahaiaDTO>
-                {
-                    Code = 500,
-                    Message = "Errore bat egon da: " + ex.Message,
-                    Datuak = null
-                };
+                return null;
             }
         }
     }

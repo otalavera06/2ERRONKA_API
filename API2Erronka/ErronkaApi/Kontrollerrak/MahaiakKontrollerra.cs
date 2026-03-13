@@ -25,15 +25,37 @@ namespace ErronkaApi.Kontrollerrak
         /// Mahai libre bat lortzen du.
         /// </summary>
         /// <returns>Mahai libre baten informazioa.</returns>
-        [HttpGet("libre")]
+        [HttpGet("libre2")]
         public async Task<ActionResult<ErantzunaDTO<MahaiaDTO>>> LortuMahaiLibre()
         {
-            var erantzuna = await _mahaiaService.LortuMahaiLibreAsync();
+            var mahaiLibreak = _mahaiaService.LortuMahaiLibreAsync();
 
-            if (erantzuna.Code != 200)
-                return StatusCode(erantzuna.Code, erantzuna);
+            if(mahaiLibreak == null)
+            {
+                return StatusCode(500, new ErantzunaDTO<MahaiaDTO>
+                {
+                    Code = 500,
+                    Message = "Errorea gertatu da",
+                    Datuak = null
+                });
+            }
 
-            return Ok(erantzuna);
+            if (!mahaiLibreak.Any())
+            {
+                return Ok(new ErantzunaDTO<MahaiaDTO>
+                {
+                    Code = 201,
+                    Message = "Ez dago mahai librerik",
+                    Datuak = null
+                }); 
+            }
+
+            return Ok(new ErantzunaDTO<MahaiaDTO>
+            {
+                Code = 200,
+                Message = "Mahai libreak lortu dira",
+                Datuak = mahaiLibreak
+            });
         }
 
     }

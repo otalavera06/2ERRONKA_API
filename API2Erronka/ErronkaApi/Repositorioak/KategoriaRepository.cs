@@ -1,4 +1,4 @@
-﻿using ErronkaApi.Modeloak;
+using ErronkaApi.Modeloak;
 using MySqlX.XDevAPI;
 using NHibernate;
 using System.Collections.Generic;

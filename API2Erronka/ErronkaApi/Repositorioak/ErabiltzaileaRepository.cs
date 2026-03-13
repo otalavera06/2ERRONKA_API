@@ -1,4 +1,4 @@
-﻿using NHibernate;
+using NHibernate;
 using ErronkaApi.Modeloak;
 
 namespace ErronkaApi.Repositorioak

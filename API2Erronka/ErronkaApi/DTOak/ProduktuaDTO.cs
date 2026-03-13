@@ -1,4 +1,6 @@
-﻿namespace ErronkaApi.DTOak
+﻿using ErronkaApi.Modeloak;
+
+namespace ErronkaApi.DTOak
 {
     /// <summary>
     /// Produktu baten informazioa duen DTOa.
@@ -30,5 +32,14 @@
         /// </summary>
         public int stock_aktuala { get; set; }
 
+
+        public ProduktuaDTO(Produktua produktua)
+        {
+            id = produktua.id;
+            izena = produktua.izena;
+            prezioa = produktua.prezioa;
+            kategoria_id = produktua.kategoria.id;
+            stock_aktuala = produktua.stock_aktuala;
+        }
     }
 }

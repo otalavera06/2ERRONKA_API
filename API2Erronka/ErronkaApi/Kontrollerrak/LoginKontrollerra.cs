@@ -44,7 +44,7 @@ namespace ErronkaApi.Kontrollerrak
                 }
                 catch
                 {
-                    // Ignorar errores de logging para no bloquear la autenticación
+                    // Login erroreak baztertu autentifikazioa ez oztopatzeko.
                 }
 
                 return Unauthorized(new ErantzunaDTO<object>
@@ -76,7 +76,7 @@ namespace ErronkaApi.Kontrollerrak
             }
             catch
             {
-                // Ignorar errores de logging
+                // Login erroreak baztertu
             }
 
             return Ok(new ErantzunaDTO<Erabiltzailea>
