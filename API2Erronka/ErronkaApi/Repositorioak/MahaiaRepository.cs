@@ -1,4 +1,3 @@
-using Api.Modeloak;
 using ErronkaApi.DTOak;
 using ErronkaApi.Modeloak;
 using FluentNHibernate.Testing.Values;
@@ -9,9 +8,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using ErronkaApi.Interfaces;
+
 namespace ErronkaApi.Repositorioak
 {
-    public class MahaiaRepository
+    public class MahaiaRepository : IMahaiaRepository
     {
         private readonly ISessionFactory _sessionFactory;
 
@@ -55,22 +56,21 @@ namespace ErronkaApi.Repositorioak
 
 
 
-        public List<MahaiaDTO> LortuMahaiLibreAsync()
+        public List<MahaiaDTO> LortuMahaiLibre()
         {
             try
             {
                 using var session = _sessionFactory.OpenSession();
 
-                var mahaiakLibreak = session.Query<Mahaia>()
+                return session.Query<Mahaia>()
                     .Where(m => m.egoera == "libre")
                     .Select(m => new MahaiaDTO
                     {
                         Id = m.id,
-                        Zenbakia = m.zenbakia
+                        Zenbakia = m.zenbakia,
+                        kapazitatea = m.kapazitatea
                     })
                     .ToList();
-
-                return mahaiakLibreak;
             }
             catch (Exception ex)
             {

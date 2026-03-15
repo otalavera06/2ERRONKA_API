@@ -1,4 +1,4 @@
-﻿using ErronkaApi.Modeloak;
+using ErronkaApi.Modeloak;
 using FluentNHibernate.Mapping;
 
 public class MahaiaMap : ClassMap<Mahaia>

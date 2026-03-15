@@ -1,6 +1,5 @@
-﻿using Api.Modeloak;
-using FluentNHibernate.Mapping;
 using ErronkaApi.Modeloak;
+using FluentNHibernate.Mapping;
 
 public class EskaeraProduktuakMap : ClassMap<EskaeraProduktuak>
 {

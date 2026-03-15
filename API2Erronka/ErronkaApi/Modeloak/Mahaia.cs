@@ -1,8 +1,6 @@
-﻿    using Api.Modeloak;
-
     namespace ErronkaApi.Modeloak
-    {
-        public class Mahaia
+{
+    public class Mahaia
         {
             public virtual int id { get; set; }
             public virtual int zenbakia { get; set; }

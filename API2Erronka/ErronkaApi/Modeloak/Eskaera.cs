@@ -1,6 +1,4 @@
-using ErronkaApi.Modeloak;
-
-namespace Api.Modeloak
+namespace ErronkaApi.Modeloak
 {
     public class Eskaera
     {

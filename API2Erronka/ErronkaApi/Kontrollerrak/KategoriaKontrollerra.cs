@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using ErronkaApi.Repositorioak;
 using ErronkaApi.DTOak;
 using System.Linq;
+using ErronkaApi.Interfaces;
 namespace ErronkaApi.Kontrollerrak
 {
     /// <summary>
@@ -12,8 +13,8 @@ namespace ErronkaApi.Kontrollerrak
     [Route("api/Kategoria")]
     public class KategoriaKontrollerra : ControllerBase
     {
-        private readonly KategoriaRepository _repo;
-        public KategoriaKontrollerra(KategoriaRepository repo)
+        private readonly IKategoriaRepository _repo;
+        public KategoriaKontrollerra(IKategoriaRepository repo)
         {
             _repo = repo;
         }
@@ -25,13 +26,7 @@ namespace ErronkaApi.Kontrollerrak
         [HttpGet]
         public IActionResult GetAll()
         {
-            var kategoriak = _repo.GetAll()
-                                    .Select(k => new KategoriaDTO
-                                    {
-                                        id = k.id,
-                                        izena = k.izena
-                                    })
-                                    .ToList();
+            var kategoriak = _repo.GetAllDTO();
             return Ok(kategoriak);
         }
     }

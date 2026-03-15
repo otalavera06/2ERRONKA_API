@@ -1,5 +1,3 @@
-using System;
-
 namespace ErronkaApi.Modeloak
 {
     public class EskaeraHistorikoa

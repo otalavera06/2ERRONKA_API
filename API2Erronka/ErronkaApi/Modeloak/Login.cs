@@ -1,21 +1,20 @@
 using ErronkaApi.DTOak;
-using ErronkaApi.Modeloak;
 using ErronkaApi.Repositorioak;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ErronkaApi.Kontrollerrak
+namespace ErronkaApi.Modeloak
 {
     /// <summary>
     /// Erabiltzaileen autentifikazioa kudeatzeko kontroladorea.
     /// </summary>
     [ApiController]
     [Route("api/Logina")]
-    public class LoginKontrollera : ControllerBase
+    public class Login : ControllerBase
     {
         private readonly ErabiltzaileaRepository _repo;
         private readonly string logKarpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "TPV_Logs");
 
-        public LoginKontrollera(ErabiltzaileaRepository repo)
+        public Login(ErabiltzaileaRepository repo)
         {
             _repo = repo;
         }
@@ -27,7 +26,7 @@ namespace ErronkaApi.Kontrollerrak
         /// <returns>Autentifikazioaren emaitza eta erabiltzailearen datuak.</returns>
         [HttpPost]
 
-        public IActionResult Login([FromBody] LoginDTO loginDto)
+        public IActionResult Logina([FromBody] LoginDTO loginDto)
         {
             var erabiltzailea = _repo.Login(loginDto.erabiltzailea, loginDto.pasahitza);
             if (erabiltzailea == null)

@@ -4,9 +4,11 @@ using ErronkaApi.NHibernate;
 using Microsoft.OpenApi.Validations;
 using NHibernate;
 
+using ErronkaApi.Interfaces;
+
 namespace ErronkaApi.Repositorioak
 {
-    public class ProduktuaRepository
+    public class ProduktuaRepository : IProduktuaRepository
     {
 
         private readonly ISessionFactory _sessionFactory;

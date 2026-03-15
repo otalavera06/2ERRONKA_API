@@ -1,4 +1,4 @@
-﻿using Api.Modeloak;
+﻿using ErronkaApi.Modeloak;
 using FluentNHibernate.Mapping;
 
 public class EskaeraMap : ClassMap<Eskaera>

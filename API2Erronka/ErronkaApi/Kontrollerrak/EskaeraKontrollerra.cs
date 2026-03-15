@@ -1,14 +1,12 @@
-using Api.Modeloak;
 using ErronkaApi.DTOak;
+using ErronkaApi.Interfaces;
 using ErronkaApi.Modeloak;
 using ErronkaApi.NHibernate;
 using ErronkaApi.Repositorioak;
 using Microsoft.AspNetCore.Mvc;
-using MySqlX.XDevAPI;
-using MySqlX.XDevAPI.Common;
-using NHibernate;
+using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace ErronkaApi.Kontrollerrak
 {
@@ -20,19 +18,24 @@ namespace ErronkaApi.Kontrollerrak
     [Route("api/eskaerak")]
     public class EskaeraKontrollerra : ControllerBase
     {
-        private readonly EskaeraRepository _repo;
-        private readonly MahaiaRepository _repoMahaia;
-        private readonly ProduktuaRepository _repoProduktua;
-        private readonly EskaeraProduktuakRepository _repoEskaeraProduktuak;
-        private readonly EskaeraMahaiakRepository _repoEskaeraMahaiak;
+        private readonly IEskaeraRepository _repo;
+        private readonly IMahaiaRepository _repoMahaia;
+        private readonly IProduktuaRepository _repoProduktua;
+        private readonly IEskaeraProduktuakRepository _repoEskaeraProduktuak;
+        private readonly IEskaeraMahaiakRepository _repoEskaeraMahaiak;
 
-        public EskaeraKontrollerra()
+        public EskaeraKontrollerra(
+            IEskaeraRepository repo,
+            IMahaiaRepository repoMahaia,
+            IProduktuaRepository repoProduktua,
+            IEskaeraProduktuakRepository repoEskaeraProduktuak,
+            IEskaeraMahaiakRepository repoEskaeraMahaiak)
         {
-            _repo = new EskaeraRepository(NHibernateHelper.SessionFactory);
-            _repoMahaia = new MahaiaRepository(NHibernateHelper.SessionFactory);
-            _repoProduktua = new ProduktuaRepository(NHibernateHelper.SessionFactory);
-            _repoEskaeraProduktuak = new EskaeraProduktuakRepository(NHibernateHelper.SessionFactory);
-            _repoEskaeraMahaiak = new EskaeraMahaiakRepository(NHibernateHelper.SessionFactory);
+            _repo = repo;
+            _repoMahaia = repoMahaia;
+            _repoProduktua = repoProduktua;
+            _repoEskaeraProduktuak = repoEskaeraProduktuak;
+            _repoEskaeraMahaiak = repoEskaeraMahaiak;
         }
 
         /// <summary>
@@ -40,27 +43,10 @@ namespace ErronkaApi.Kontrollerrak
         /// </summary>
         /// <param name="dto">Eskaera berriaren datuak.</param>
         /// <returns>Sortutako eskaeraren informazioa.</returns>
-        //[HttpPost]
-        //public IActionResult SortuEskaera([FromBody] EskaeraSortuDTO dto)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(ModelState);
-
-        //    var erantzuna = _repo.SortuEskaera(dto);
-
-        //    if (erantzuna.Code == 200)
-        //    {
-        //        return Ok(erantzuna);
-
-        //    }
-        //    else {
-        //        return BadRequest(erantzuna);
-        //    }
-        //}
-
         [HttpPost]
         public IActionResult SortuEskaera([FromBody] EskaeraSortuDTO dto)
         {
+            if (dto == null) return BadRequest(new ErantzunaDTO<string> { Code = 400, Message = "Datuak behar dira" });
 
             Mahaia mahaia = _repoMahaia.Get(dto.MahaiaId);
 
@@ -82,6 +68,7 @@ namespace ErronkaApi.Kontrollerrak
             foreach (var p in dto.Produktuak)
             {
                 Produktua produktua = _repoProduktua.Get(p.ProduktuaId);
+                if (produktua == null) continue;
                 if (produktua.stock_aktuala < p.Kantitatea)
                 {
                     produktuakStockGabe.Add(produktua.izena);
@@ -119,6 +106,7 @@ namespace ErronkaApi.Kontrollerrak
             foreach (var p in dto.Produktuak)
             {
                 var produktua = _repoProduktua.Get(p.ProduktuaId);
+                if (produktua == null) continue;
                 produktua.stock_aktuala -= p.Kantitatea;
                 _repoProduktua.Update(produktua);
 
@@ -135,8 +123,6 @@ namespace ErronkaApi.Kontrollerrak
 
             _repo.Save(eskaera);
 
-            IList<object> eskaerak = new List<object> { eskaera };
-
             return Ok(new ErantzunaDTO<Eskaera>
             {
                 Code = 200,
@@ -149,14 +135,6 @@ namespace ErronkaApi.Kontrollerrak
         /// Eskaera guztiak lortzen ditu.
         /// </summary>
         /// <returns>Eskaeren zerrenda.</returns>
-        //[HttpGet]
-        //public IActionResult LortuEskaerak()
-        //{
-        //    var erantzuna = _repo.LortuEskaerak();
-
-        //    return StatusCode(erantzuna.Code, erantzuna);
-        //}
-
         [HttpGet]
         public IActionResult LortuEskaerak()
         {
@@ -192,23 +170,15 @@ namespace ErronkaApi.Kontrollerrak
             }
         }
 
-    /// <summary>
-    /// Eskaera baten produktuak lortzen ditu.
-    /// </summary>
-    /// <param name="eskaeraId">Eskaeraren IDa.</param>
-    /// <returns>Eskaeraren produktuen zerrenda.</returns>
-    //[HttpGet("{eskaeraId}/produktuak")]
-    //public IActionResult LortuEskaeraProduktuak(int eskaeraId)
-    //{
-    //    var erantzuna = _repo.LortuEskaeraProduktuak(eskaeraId);
-
-    //    return StatusCode(erantzuna.Code, erantzuna);
-    //}
-
-    [HttpGet("{eskaeraId}/produktuak")]
-    public IActionResult LortuEskaeraProduktuak(int eskaeraId)
-    {
-        try
+        /// <summary>
+        /// Eskaera baten produktuak lortzen ditu.
+        /// </summary>
+        /// <param name="eskaeraId">Eskaeraren IDa.</param>
+        /// <returns>Eskaeraren produktuen zerrenda.</returns>
+        [HttpGet("{eskaeraId}/produktuak")]
+        public IActionResult LortuEskaeraProduktuak(int eskaeraId)
+        {
+            try
             {
                 var produktuLista = _repo.LortuEskaeraProduktuak2(eskaeraId);
 
@@ -216,14 +186,14 @@ namespace ErronkaApi.Kontrollerrak
 
                 foreach (var ep in produktuLista)
                 {
-                    for (int i = 0; i < ep.Kantitatea; i++)  // Kantitate bakoitzeko ilara
+                    for (int i = 0; i < ep.Kantitatea; i++)
                     {
                         result.Add(new EskaeraLortuDTO
                         {
                             ProduktuaId = ep.Produktua.id,
                             ProduktuaIzena = ep.Produktua.izena,
                             PrezioUnitarioa = ep.Produktua.prezioa,
-                            Kantitatea = 1  // TPV logikari egokitua
+                            Kantitatea = 1
                         });
                     }
                 }
@@ -246,116 +216,82 @@ namespace ErronkaApi.Kontrollerrak
             }
         }
 
-    /// <summary>
-    /// Eskaera bat ezabatzen du.
-    /// </summary>
-    /// <param name="eskaeraId">Ezabatu nahi den eskaeraren IDa.</param>
-    /// <returns>Erantzunaren emaitza.</returns>
-    //[HttpDelete("{eskaeraId}")]
-    //public IActionResult EzabatuEskaera(int eskaeraId)
-    //{
-    //    var erantzuna = _repo.EzabatuEskaera(eskaeraId);
-
-    //    if (erantzuna.Code == 200)
-    //    {
-    //        return Ok(erantzuna);
-    //    }
-    //    else
-    //    {
-    //        return BadRequest(erantzuna);
-    //    }
-    //}
-
-
-    [HttpDelete("{eskaeraId}")]
-    public IActionResult EzabatuEskaera(int eskaeraId)
-    {
-        try
+        /// <summary>
+        /// Eskaera bat ezabatzen du.
+        /// </summary>
+        /// <param name="eskaeraId">Ezabatu nahi den eskaeraren IDa.</param>
+        /// <returns>Erantzunaren emaitza.</returns>
+        [HttpDelete("{eskaeraId}")]
+        public IActionResult EzabatuEskaera(int eskaeraId)
         {
-            Eskaera eskaera = _repo.Get(eskaeraId);
-
-            if (eskaera == null)
+            try
             {
-                return BadRequest(new ErantzunaDTO<string>
+                Eskaera eskaera = _repo.Get(eskaeraId);
+
+                if (eskaera == null)
                 {
-                    Code = 400,
-                    Message = "Eskaera ez da aurkitu",
+                    return BadRequest(new ErantzunaDTO<string>
+                    {
+                        Code = 400,
+                        Message = "Eskaera ez da aurkitu",
+                        Datuak = new List<string>()
+                    });
+                }
+
+                var eskaeraProduktuak = _repoEskaeraProduktuak.GetByEskaeraId(eskaeraId);
+
+                if (eskaera.EskaeraMahaiak.Any())
+                {
+                    foreach (var em in eskaera.EskaeraMahaiak)
+                    {
+                        em.Mahaia.egoera = "libre";
+                        _repoMahaia.Update(em.Mahaia);
+                        _repoEskaeraMahaiak.Delete(em);
+                    }
+                }
+
+                if (eskaeraProduktuak.Any())
+                {
+                    foreach (var ep in eskaeraProduktuak)
+                    {
+                        var produktua = _repoProduktua.Get(ep.Produktua.id);
+                        if (produktua != null)
+                        {
+                            produktua.stock_aktuala += ep.Kantitatea;
+                            _repoProduktua.Update(produktua);
+                        }
+                        _repoEskaeraProduktuak.Delete(ep);
+                    }
+                }
+
+                _repo.Delete(eskaera);
+
+                return Ok(new ErantzunaDTO<Eskaera>
+                {
+                    Code = 200,
+                    Message = "Eskaera ongi ezabatu da",
+                    Datuak = new List<Eskaera> { eskaera },
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ErantzunaDTO<string>
+                {
+                    Code = 500,
+                    Message = "Errore bat egon da: " + ex.Message,
                     Datuak = new List<string>()
                 });
             }
-
-            // Lortu eskaeraren produktuak zuzenean databasetik eager loading bidez
-            var eskaeraProduktuak = _repoEskaeraProduktuak.GetByEskaeraId(eskaeraId);
-
-            if (eskaera.EskaeraMahaiak.Any())
-            {
-                foreach (var em in eskaera.EskaeraMahaiak)
-                {
-                    em.Mahaia.egoera = "libre";
-                    _repoMahaia.Update(em.Mahaia);
-                    _repoEskaeraMahaiak.Delete(em);
-                }
-            }
-
-            if (eskaeraProduktuak.Any())
-            {
-                foreach (var ep in eskaeraProduktuak)
-                {
-                    var produktua = _repoProduktua.Get(ep.Produktua.id);
-                    if (produktua != null)
-                    {
-                        produktua.stock_aktuala += ep.Kantitatea;
-                        _repoProduktua.Update(produktua);
-                    }
-                    _repoEskaeraProduktuak.Delete(ep);
-                }
-            }
-
-            _repo.Delete(eskaera);
-
-                //tx.Commit();
-
-            IList<object> eskaerak = new List<object> { eskaera };
-
-            return Ok(new ErantzunaDTO<Eskaera>
-            {
-                Code = 200,
-                Message = "Eskaera ongi ezabatu da",
-                Datuak = new List<Eskaera> { eskaera },
-            });
         }
-        catch (Exception ex)
+
+        /// <summary>
+        /// Mahai baten kapazitatea lortzen du.
+        /// </summary>
+        /// <param name="mahaiaId">Mahaiaren IDa.</param>
+        /// <returns>Mahaiaren kapazitatea.</returns>
+        [HttpGet("mahaiak/{mahaiaId}/kapazitatea")]
+        public IActionResult LortuMahaiKapasitatea(int mahaiaId)
         {
-            return StatusCode(500, new ErantzunaDTO<EskaeraLortuDTO>
-            {
-                Code = 500,
-                Message = "Errore bat egon da: " + ex.Message,
-                Datuak = new List<EskaeraLortuDTO>()
-            });
-        }
-    }
-
-    /// <summary>
-    /// Mahai baten kapazitatea lortzen du.
-    /// </summary>
-    /// <param name="mahaiaId">Mahaiaren IDa.</param>
-    /// <returns>Mahaiaren kapazitatea.</returns>
-    //[HttpGet("mahaiak/{mahaiaId}/kapazitatea")]
-    //public IActionResult LortuMahaiKapasitatea(int mahaiaId)
-    //{
-    //    var erantzuna = _repo.LortuMahaiKapazitatea(mahaiaId);
-
-    //    if (erantzuna.Code == 200)
-    //        return Ok(erantzuna);
-    //    else if (erantzuna.Code == 404)
-    //        return NotFound(erantzuna);
-    //    else
-    //        return StatusCode(500, erantzuna);
-    //}
-
-    [HttpGet("mahaiak/{mahaiaId}/kapazitatea")]
-    public IActionResult LortuMahaiKapasitatea(int mahaiaId)
-    {
             try
             {
                 var mahaia = _repoMahaia.Get(mahaiaId);
@@ -373,162 +309,256 @@ namespace ErronkaApi.Kontrollerrak
                 {
                     Code = 200,
                     Message = "Mahaia lortu da arrakastaz",
-                    Datuak = new List<int> { mahaia.kapazitatea } //TO-DO
+                    Datuak = new List<int> { mahaia.kapazitatea }
                 });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new ErantzunaDTO<EskaeraLortuDTO>
+                return StatusCode(500, new ErantzunaDTO<string>
                 {
                     Code = 500,
                     Message = "Errore bat egon da: " + ex.Message,
-                    Datuak = new List<EskaeraLortuDTO>()
+                    Datuak = new List<string>()
                 });
             }
         }
 
-    /// <summary>
-    /// Eskaera bat eguneratzen du (komensalak eta produktuak).
-    /// </summary>
-    /// <param name="eskaeraId">Eskaeraren IDa.</param>
-    /// <param name="dto">Eguneratu nahi diren datuak.</param>
-    /// <returns>Eguneratzearen emaitza.</returns>
-    [HttpPut("{eskaeraId}")]
-    public IActionResult EguneratuEskaera(
-    int eskaeraId,
-    [FromBody] EskaeraEguneratuDTO dto)
-    {
-        if (dto == null || dto.Produktuak == null || !dto.Produktuak.Any())
+        /// <summary>
+        /// Eskaera bat eguneratzen du (komensalak eta produktuak).
+        /// </summary>
+        /// <param name="eskaeraId">Eskaeraren IDa.</param>
+        /// <param name="dto">Eguneratu nahi diren datuak.</param>
+        /// <returns>Eguneratzearen emaitza.</returns>
+        [HttpPut("{eskaeraId}")]
+        public IActionResult EguneratuEskaera(int eskaeraId, [FromBody] EskaeraEguneratuDTO dto)
         {
-            return BadRequest(new ErantzunaDTO<string>
+            if (dto == null || dto.Produktuak == null || !dto.Produktuak.Any())
             {
-                Code = 400,
-                Message = "Ez duzu produkturik bidali",
-                Datuak = new List<string>()
-            });
+                return BadRequest(new ErantzunaDTO<string>
+                {
+                    Code = 400,
+                    Message = "Ez duzu produkturik bidali",
+                    Datuak = new List<string>()
+                });
+            }
+
+            try
+            {
+                var eskaera = _repo.Get(eskaeraId);
+                if (eskaera == null)
+                {
+                    return NotFound(new ErantzunaDTO<string>
+                    {
+                        Code = 404,
+                        Message = "Eskaera ez da aurkitu",
+                        Datuak = new List<string>()
+                    });
+                }
+
+                var eskaerakoProduktuak = _repo.LortuEskaeraProduktuak2(eskaeraId);
+
+                if (dto.Komensalak > 0)
+                {
+                    eskaera.komensalak = dto.Komensalak;
+                }
+
+                foreach (var pDto in dto.Produktuak)
+                {
+                    var produktua = _repoProduktua.Get(pDto.ProduktuaId);
+                    if (produktua == null)
+                        return BadRequest(new ErantzunaDTO<string> { Code = 400, Message = $"Produktua ez da existitzen: {pDto.ProduktuaId}" });
+
+                    var ep = eskaerakoProduktuak.FirstOrDefault(x => x.Produktua.id == pDto.ProduktuaId);
+
+                    if (ep == null)
+                    {
+                        if (produktua.stock_aktuala < pDto.Kantitatea)
+                            return BadRequest(new ErantzunaDTO<string> { Code = 400, Message = $"Stock nahikorik ez: {produktua.izena}" });
+
+                        produktua.stock_aktuala -= pDto.Kantitatea;
+
+                        var berria = new EskaeraProduktuak
+                        {
+                            Eskaera = eskaera,
+                            Produktua = produktua,
+                            Kantitatea = pDto.Kantitatea,
+                            PrezioUnitarioa = produktua.prezioa,
+                            Guztira = produktua.prezioa * pDto.Kantitatea
+                        };
+
+                        eskaera.EskaeraProduktuak.Add(berria);
+                        _repoProduktua.Update(produktua);
+                    }
+                    else
+                    {
+                        int diferentzia = pDto.Kantitatea - ep.Kantitatea;
+
+                        if (diferentzia != 0)
+                        {
+                            if (diferentzia > 0 && produktua.stock_aktuala < diferentzia)
+                                return BadRequest(new ErantzunaDTO<string> { Code = 400, Message = $"Stock nahikorik ez: {produktua.izena}" });
+
+                            produktua.stock_aktuala -= diferentzia;
+
+                            ep.Kantitatea = pDto.Kantitatea;
+                            ep.Guztira = ep.PrezioUnitarioa * ep.Kantitatea;
+
+                            _repoProduktua.Update(produktua);
+                            _repoEskaeraProduktuak.Update(ep);
+                        }
+                    }
+                }
+
+                foreach (var ep in eskaerakoProduktuak)
+                {
+                    bool badagoDTOan = dto.Produktuak.Any(p => p.ProduktuaId == ep.Produktua.id);
+
+                    if (!badagoDTOan)
+                    {
+                        var produktua = _repoProduktua.Get(ep.Produktua.id);
+                        if (produktua != null)
+                        {
+                            produktua.stock_aktuala += ep.Kantitatea;
+                            _repoProduktua.Update(produktua);
+                        }
+
+                        eskaera.EskaeraProduktuak.Remove(ep);
+                        _repoEskaeraProduktuak.Delete(ep);
+                    }
+                }
+
+                _repo.Update(eskaera);
+
+                return Ok(new ErantzunaDTO<string>
+                {
+                    Code = 200,
+                    Message = "Eskaera eguneratu da arrakastaz",
+                    Datuak = new List<string>()
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ErantzunaDTO<string>
+                {
+                    Code = 500,
+                    Message = "Errore bat egon da: " + ex.Message,
+                    Datuak = new List<string>()
+                });
+            }
         }
 
-        var erantzuna = _repo.EguneratuEskaera(eskaeraId, dto.Komensalak, dto.Produktuak);
-
-        if (erantzuna.Code == 200)
-            return Ok(erantzuna);
-        else if (erantzuna.Code == 404)
-            return NotFound(erantzuna);
-        else if (erantzuna.Code == 400)
-            return BadRequest(erantzuna);
-        else
-            return StatusCode(500, erantzuna);
-    }
-
-    [HttpPut("{eskaeraId}")]
-    public IActionResult EguneratuEskaera2(
-        int eskaeraId,
-        [FromBody] EskaeraEguneratuDTO dto)
-    {
-        if (dto == null || dto.Produktuak == null || !dto.Produktuak.Any())
+        /// <summary>
+        /// Eskaera baten sukaldeko egoera eguneratzen du.
+        /// </summary>
+        /// <param name="eskaeraId">Eskaeraren IDa.</param>
+        /// <param name="dto">Sukaldeko egoera berria.</param>
+        /// <returns>Eguneratzearen emaitza.</returns>
+        [HttpPut("{eskaeraId}/sukaldea-egoera")]
+        public IActionResult EguneratuSukaldeaEgoera(int eskaeraId, [FromBody] EskaeraSukaldeaEgoeraDTO dto)
         {
-            return BadRequest(new ErantzunaDTO<string>
+            if (dto == null || string.IsNullOrWhiteSpace(dto.SukaldeaEgoera))
             {
-                Code = 400,
-                Message = "Ez duzu produkturik bidali",
-                Datuak = new List<string>()
-            });
+                return BadRequest(new ErantzunaDTO<string> { Code = 400, Message = "Datuak behar dira" });
+            }
+
+            string[] onartuak = { "zain", "hasi", "prest" };
+            if (!onartuak.Contains(dto.SukaldeaEgoera.ToLower()))
+            {
+                return BadRequest(new ErantzunaDTO<string> { Code = 400, Message = "Sukaldea egoera ez da baliozkoa (zain, hasi, prest)" });
+            }
+
+            try
+            {
+                var eskaera = _repo.Get(eskaeraId);
+                if (eskaera == null)
+                {
+                    return NotFound(new ErantzunaDTO<string> { Code = 404, Message = "Eskaera ez da aurkitu" });
+                }
+
+                eskaera.sukaldeaEgoera = dto.SukaldeaEgoera.ToLower();
+                _repo.Update(eskaera);
+
+                return Ok(new ErantzunaDTO<string>
+                {
+                    Code = 200,
+                    Message = "Sukaldea egoera eguneratu da",
+                    Datuak = new List<string>()
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ErantzunaDTO<string> { Code = 500, Message = "Errore bat egon da: " + ex.Message });
+            }
         }
 
-        var erantzuna = _repo.EguneratuEskaera(eskaeraId, dto.Komensalak, dto.Produktuak);
-
-        if (erantzuna.Code == 200)
-            return Ok(erantzuna);
-        else if (erantzuna.Code == 404)
-            return NotFound(erantzuna);
-        else if (erantzuna.Code == 400)
-            return BadRequest(erantzuna);
-        else
-            return StatusCode(500, erantzuna);
-    }
-
-    /// <summary>
-    /// Eskaera baten sukaldeko egoera eguneratzen du.
-    /// </summary>
-    /// <param name="eskaeraId">Eskaeraren IDa.</param>
-    /// <param name="dto">Sukaldeko egoera berria.</param>
-    /// <returns>Eguneratzearen emaitza.</returns>
-    [HttpPut("{eskaeraId}/sukaldea-egoera")]
-    public IActionResult EguneratuSukaldeaEgoera(int eskaeraId, [FromBody] EskaeraSukaldeaEgoeraDTO dto)
-    {
-        if (dto == null)
+        /// <summary>
+        /// Eskaera bat ordaintzera bidaltzen du.
+        /// </summary>
+        /// <param name="eskaeraId">Eskaeraren IDa.</param>
+        /// <returns>Emaitza.</returns>
+        [HttpPost("{eskaeraId}/ordaindu")]
+        public IActionResult OrdainduEskaera(int eskaeraId)
         {
-            return BadRequest(new ErantzunaDTO<string>
+            try
             {
-                Code = 400,
-                Message = "Datuak behar dira",
-                Datuak = new List<string>()
-            });
+                var eskaera = _repo.Get(eskaeraId);
+                if (eskaera == null)
+                {
+                    return NotFound(new ErantzunaDTO<string> { Code = 404, Message = "Eskaera ez da aurkitu" });
+                }
+
+                eskaera.egoera = "ordainketa_pendiente";
+                _repo.Update(eskaera);
+
+                return Ok(new ErantzunaDTO<string>
+                {
+                    Code = 200,
+                    Message = "Eskaera ordainketara bidali da",
+                    Datuak = new List<string>()
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ErantzunaDTO<string> { Code = 500, Message = "Errore bat egon da: " + ex.Message });
+            }
         }
 
-        var erantzuna = _repo.EguneratuSukaldeaEgoera(eskaeraId, dto.SukaldeaEgoera);
+        /// <summary>
+        /// Ordaintzeko dauden eskaerak lortzen ditu.
+        /// </summary>
+        /// <returns>Ordaintzeko dauden eskaeren zerrenda.</returns>
+        [HttpGet("ordainketa-pendiente")]
+        public IActionResult LortuEskaerakOrdaintzeko()
+        {
+            try
+            {
+                var eskaerak = _repo.LortuEskaerakOrdaintzeko();
 
-        if (erantzuna.Code == 200)
-            return Ok(erantzuna);
-        else if (erantzuna.Code == 404)
-            return NotFound(erantzuna);
-        else if (erantzuna.Code == 400)
-            return BadRequest(erantzuna);
-        else
-            return StatusCode(500, erantzuna);
+                var dtoak = eskaerak.Select(e => new EskaeraDTO
+                {
+                    Id = e.id,
+                    Izena = $"Eskaera #{e.id} ({e.sortzeData:dd/MM/yyyy HH:mm})",
+                    MahaiaId = e.mahaia_id,
+                    Data = e.sortzeData.ToString("yyyy-MM-dd HH:mm"),
+                    SukaldeaEgoera = e.sukaldeaEgoera
+                }).ToList();
+
+                return Ok(new ErantzunaDTO<EskaeraDTO>
+                {
+                    Code = 200,
+                    Message = "Eskaerak lortu dira",
+                    Datuak = dtoak
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ErantzunaDTO<EskaeraDTO>
+                {
+                    Code = 500,
+                    Message = "Errore bat egon da: " + ex.Message,
+                    Datuak = new List<EskaeraDTO>()
+                });
+            }
+        }
     }
-
-    /// <summary>
-    /// Eskaera bat ordaintzera bidaltzen du.
-    /// </summary>
-    /// <param name="eskaeraId">Eskaeraren IDa.</param>
-    /// <returns>Emaitza.</returns>
-    [HttpPost("{eskaeraId}/ordainduEskaera")]
-    public IActionResult OrdainduEskaera(int eskaeraId)
-    {
-        var erantzuna = _repo.OrdaintzeraBidali(eskaeraId);
-
-        if (erantzuna.Code == 200)
-            return Ok(erantzuna);
-        else if (erantzuna.Code == 404)
-            return NotFound(erantzuna);
-        else if (erantzuna.Code == 400)
-            return BadRequest(erantzuna);
-        else
-            return StatusCode(500, erantzuna);
-    }
-
-    /// <summary>
-    /// Eskaera baten faktura sortzen du.
-    /// </summary>
-    /// <param name="eskaeraId">Eskaeraren IDa.</param>
-    /// <returns>Emaitza.</returns>
-    [HttpPost("{eskaeraId}/sortuFaktura")]
-    public IActionResult SortuFaktura(int eskaeraId)
-    {
-        var erantzuna = _repo.SortuFaktura(eskaeraId);
-
-        if (erantzuna.Code == 200)
-            return Ok(erantzuna);
-        else if (erantzuna.Code == 404)
-            return NotFound(erantzuna);
-        else
-            return StatusCode(500, erantzuna);
-    }
-
-    /// <summary>
-    /// Ordaintzeko dauden eskaerak lortzen ditu.
-    /// </summary>
-    /// <returns>Ordaintzeko dauden eskaeren zerrenda.</returns>
-    [HttpGet("ordainketa-pendiente")]
-    public IActionResult LortuEskaerakOrdaintzeko()
-    {
-        var erantzuna = _repo.LortuEskaerakOrdaintzeko();
-
-        if (erantzuna.Code == 200)
-            return Ok(erantzuna);
-        else
-            return StatusCode(erantzuna.Code, erantzuna);
-    }
-}
 }

@@ -1,32 +1,47 @@
 using ErronkaApi.Modeloak;
-using Mysqlx.Crud;
 using NHibernate;
+using System.Collections.Generic;
+using System.Linq;
+using ErronkaApi.Interfaces;
 
-public class EskaeraProduktuakRepository
+namespace ErronkaApi.Repositorioak
 {
-    private readonly ISessionFactory _sessionFactory;
-
-    public EskaeraProduktuakRepository(ISessionFactory sessionFactory)
+    public class EskaeraProduktuakRepository : IEskaeraProduktuakRepository
     {
-        _sessionFactory = sessionFactory;
-    }
+        private readonly ISessionFactory _sessionFactory;
 
-    public List<EskaeraProduktuak> GetByEskaeraId(int eskaeraId)
-    {
-        using var session = _sessionFactory.OpenSession();
+        public EskaeraProduktuakRepository(ISessionFactory sessionFactory)
+        {
+            _sessionFactory = sessionFactory;
+        }
 
-        return session.Query<EskaeraProduktuak>()
-            .Where(ep => ep.Eskaera.id == eskaeraId)
-            .ToList();
-    }
+        public List<EskaeraProduktuak> GetByEskaeraId(int eskaeraId)
+        {
+            using var session = _sessionFactory.OpenSession();
 
-    public void Delete (EskaeraProduktuak ep)
-    {
-        using var session = _sessionFactory.OpenSession();
-        using var tx = session.BeginTransaction();
+            return session.Query<EskaeraProduktuak>()
+                .Where(ep => ep.Eskaera.id == eskaeraId)
+                .ToList();
+        }
 
-        session.Delete(ep);
+        public void Update(EskaeraProduktuak ep)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
 
-        tx.Commit();
+            session.Update(ep);
+
+            tx.Commit();
+        }
+
+        public void Delete(EskaeraProduktuak ep)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            session.Delete(ep);
+
+            tx.Commit();
+        }
     }
 }

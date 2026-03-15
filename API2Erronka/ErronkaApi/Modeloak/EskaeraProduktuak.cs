@@ -1,5 +1,3 @@
-﻿using Api.Modeloak;
-
 namespace ErronkaApi.Modeloak
 {
     public class EskaeraProduktuak

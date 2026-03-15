@@ -47,5 +47,41 @@ namespace ErronkaApi.Testak
             Assert.DoesNotContain(p1k2dto, returnedProduktuakList);
 
         }
+
+        [Fact]
+        public void GetByKategoria_kategoriak_ez_du_produkturik_zerrenda_hutsa()
+        {
+            var mockRepo = new Mock<IProduktuaRepository>();
+
+            mockRepo.Setup(r => r.GetAllByKategoriaId(99))
+                    .Returns(new List<ProduktuaDTO>());
+
+            var controller = new ProduktuakKontrollera(mockRepo.Object);
+
+            var result = controller.GetByKategoria(99);
+
+            var ok = Assert.IsType<OkObjectResult>(result);
+            var zerrenda = Assert.IsType<List<ProduktuaDTO>>(ok.Value);
+
+            Assert.Empty(zerrenda);
+        }
+
+        [Fact]
+        public void GetByKategoria_repoak_null_ituzten_du()
+        {
+            var mockRepo = new Mock<IProduktuaRepository>();
+
+            mockRepo.Setup(r => r.GetAllByKategoriaId(1))
+                    .Returns((List<ProduktuaDTO>)null);
+
+            var controller = new ProduktuakKontrollera(mockRepo.Object);
+
+            var result = controller.GetByKategoria(1);
+
+            var ok = Assert.IsType<OkObjectResult>(result);
+
+            Assert.Null(ok.Value);
+        }
+
     }
 }

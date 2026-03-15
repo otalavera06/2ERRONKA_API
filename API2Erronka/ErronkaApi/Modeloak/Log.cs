@@ -1,7 +1,7 @@
 using ErronkaApi.DTOak;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ErronkaApi.Kontrollerrak
+namespace ErronkaApi.Modeloak
 {
     /// <summary>
     /// Logak kudeatzeko kontroladorea.
@@ -9,11 +9,11 @@ namespace ErronkaApi.Kontrollerrak
     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
-    public class LogKontrollerra : ControllerBase
+    public class Log : ControllerBase
     {
         private readonly string logKarpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop),"TPV_Logs");
 
-        public LogKontrollerra()
+        public Log()
         {
             if (!Directory.Exists(logKarpeta))
                 Directory.CreateDirectory(logKarpeta);

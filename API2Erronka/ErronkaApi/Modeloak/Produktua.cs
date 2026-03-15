@@ -1,4 +1,4 @@
-﻿namespace ErronkaApi.Modeloak
+namespace ErronkaApi.Modeloak
 {
     public class Produktua
     {
@@ -7,6 +7,8 @@
         public virtual Kategoria kategoria { get; set; }
         public virtual decimal prezioa { get; set; }
         public virtual int stock_aktuala { get; set; }
+
+        public Produktua() { }
 
         public Produktua(int id, string izena, Kategoria kategoria, decimal prezioa, int stock_aktuala)
         {

@@ -1,5 +1,6 @@
-﻿using FluentNHibernate.Mapping;
+using FluentNHibernate.Mapping;
 using ErronkaApi.Modeloak;
+using System;
 
 namespace ErronkaApi.Mapeoak
 {

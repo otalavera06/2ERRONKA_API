@@ -3,6 +3,7 @@ using ErronkaApi.Repositorioak;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ErronkaApi.Interfaces;
 
 namespace ErronkaApi.Kontrollerrak
 {
@@ -11,28 +12,28 @@ namespace ErronkaApi.Kontrollerrak
     /// Mahai libreak lortzeko funtzioak eskaintzen ditu.
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/mahaiak")]
     public class MahaiakController : ControllerBase
     {
-        private readonly MahaiaRepository _mahaiaService;
+        private readonly IMahaiaRepository _mahaiaService;
 
-        public MahaiakController(MahaiaRepository mahaiaService)
+        public MahaiakController(IMahaiaRepository mahaiaService)
         {
             _mahaiaService = mahaiaService;
         }
 
         /// <summary>
-        /// Mahai libre bat lortzen du.
+        /// Mahai libreak lortzen ditu.
         /// </summary>
-        /// <returns>Mahai libre baten informazioa.</returns>
-        [HttpGet("libre2")]
-        public async Task<ActionResult<ErantzunaDTO<MahaiaDTO>>> LortuMahaiLibre()
+        /// <returns>Mahai libreen zerrenda ErantzunaDTO formatuan.</returns>
+        [HttpGet("libreak")]
+        public ActionResult<ErantzunaDTO<List<MahaiaDTO>>> LortuMahaiLibre()
         {
-            var mahaiLibreak = _mahaiaService.LortuMahaiLibreAsync();
+            var mahaiLibreak = _mahaiaService.LortuMahaiLibre();
 
             if(mahaiLibreak == null)
             {
-                return StatusCode(500, new ErantzunaDTO<MahaiaDTO>
+                return StatusCode(500, new ErantzunaDTO<List<MahaiaDTO>>
                 {
                     Code = 500,
                     Message = "Errorea gertatu da",
@@ -42,7 +43,7 @@ namespace ErronkaApi.Kontrollerrak
 
             if (!mahaiLibreak.Any())
             {
-                return Ok(new ErantzunaDTO<MahaiaDTO>
+                return Ok(new ErantzunaDTO<List<MahaiaDTO>>
                 {
                     Code = 201,
                     Message = "Ez dago mahai librerik",

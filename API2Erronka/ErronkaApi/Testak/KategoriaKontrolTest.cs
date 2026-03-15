@@ -1,11 +1,10 @@
 ﻿using ErronkaApi.Kontrollerrak;
 using ErronkaApi.Modeloak;
-using ErronkaApi.Repositorioak;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
-using System.Collections.Generic;
-using System.Linq;
+using ErronkaApi.Interfaces;
+using ErronkaApi.DTOak;
 
 namespace ErronkaApi.Testak
 {
@@ -13,65 +12,66 @@ namespace ErronkaApi.Testak
     {
 
         [Fact]
-        public void get_kategoriak_badira_datu_basean()
+        public void GetAll_kategoriak_badira_eta_itzultzen_ditu()
         {
-            var data = new List<Kategoria>()
-            {
-                new Kategoria(1, "Edariak"),
-                new Kategoria(2, "Janaria")
-            }.AsQueryable();
+            var mockRepo = new Mock<IKategoriaRepository>();
 
-            var mockSession = new Mock<global::NHibernate.ISession>();
+            var k1 = new Kategoria(1, "Edariak");
+            var k2 = new Kategoria(2, "Janaria");
+            var k3 = new Kategoria(3, "Arropa");
 
-            mockSession
-                .Setup(s => s.Query<Kategoria>())
-                .Returns(data);
+            var dto1 = new KategoriaDTO { id = k1.id, izena = k1.izena };
+            var dto2 = new KategoriaDTO { id = k2.id, izena = k2.izena };
+            var dto3 = new KategoriaDTO { id = k3.id, izena = k3.izena };
 
-            var mockFactory = new Mock<global::NHibernate.ISessionFactory>();
+            var kategoriak = new List<KategoriaDTO> { dto1, dto2};
 
-            mockFactory
-                .Setup(f => f.OpenSession())
-                .Returns(mockSession.Object);
+            mockRepo.Setup(r => r.GetAllDTO()).Returns(kategoriak);
 
-            var repo = new KategoriaRepository(mockFactory.Object);
-
-            var controller = new KategoriaKontrollerra(repo);
+            var controller = new KategoriaKontrollerra(mockRepo.Object);
 
             var result = controller.GetAll();
 
             var ok = Assert.IsType<OkObjectResult>(result);
+            var itzulitakoZerrenda = Assert.IsType<List<KategoriaDTO>>(ok.Value);
 
-            Assert.NotNull(ok.Value);
+            Assert.Contains(dto1, itzulitakoZerrenda);
+            Assert.Contains(dto2, itzulitakoZerrenda);
+
+            Assert.DoesNotContain(dto3, itzulitakoZerrenda);
         }
 
 
 
         [Fact]
-        public void get_kategoriak_oker_datu_basean()
+        public void GetAll_kategoriarik_ez_lista_hutsa_itzultzen_du()
         {
-            var data = new List<Kategoria>().AsQueryable();
+            var mockRepo = new Mock<IKategoriaRepository>();
 
-            var mockSession = new Mock<global::NHibernate.ISession>();
+            mockRepo.Setup(r => r.GetAllDTO()).Returns(new List<KategoriaDTO>());
 
-            mockSession
-                .Setup(s => s.Query<Kategoria>())
-                .Returns(data);
-
-            var mockFactory = new Mock<global::NHibernate.ISessionFactory>();
-
-            mockFactory
-                .Setup(f => f.OpenSession())
-                .Returns(mockSession.Object);
-
-            var repo = new KategoriaRepository(mockFactory.Object);
-
-            var controller = new KategoriaKontrollerra(repo);
+            var controller = new KategoriaKontrollerra(mockRepo.Object);
 
             var result = controller.GetAll();
 
+            
             var ok = Assert.IsType<OkObjectResult>(result);
+            var itzulitakoZerrenda = Assert.IsType<List<KategoriaDTO>>(ok.Value);
 
-            Assert.NotNull(ok.Value);
+            Assert.Empty(itzulitakoZerrenda);
+        }
+
+        [Fact]
+        public void GetAll_repoak_salbuespena_botatzen_du()
+        {
+            var mockRepo = new Mock<IKategoriaRepository>();
+
+            mockRepo.Setup(r => r.GetAllDTO())
+                    .Throws(new System.Exception("DB error"));
+
+            var controller = new KategoriaKontrollerra(mockRepo.Object);
+
+            Assert.Throws<System.Exception>(() => controller.GetAll());
         }
     }
 }
