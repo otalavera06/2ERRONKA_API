@@ -41,6 +41,16 @@ CREATE TABLE `erabiltzaileak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `erabiltzaileak`
+--
+
+LOCK TABLES `erabiltzaileak` WRITE;
+/*!40000 ALTER TABLE `erabiltzaileak` DISABLE KEYS */;
+INSERT INTO `erabiltzaileak` VALUES (1,'Barratik','tricode@gmail.com','1234',1,0,1,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `erabiltzaileak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `erreserbak`
 --
 
@@ -62,6 +72,16 @@ CREATE TABLE `erreserbak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `erreserbak`
+--
+
+LOCK TABLES `erreserbak` WRITE;
+/*!40000 ALTER TABLE `erreserbak` DISABLE KEYS */;
+INSERT INTO `erreserbak` VALUES (7,'2026-03-25 23:00:00',1,1,5);
+/*!40000 ALTER TABLE `erreserbak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `eskaera_mahaiak`
 --
 
@@ -79,6 +99,16 @@ CREATE TABLE `eskaera_mahaiak` (
   CONSTRAINT `fk_em_mahaia` FOREIGN KEY (`mahaia_id`) REFERENCES `mahaiak` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `eskaera_mahaiak`
+--
+
+LOCK TABLES `eskaera_mahaiak` WRITE;
+/*!40000 ALTER TABLE `eskaera_mahaiak` DISABLE KEYS */;
+INSERT INTO `eskaera_mahaiak` VALUES (1,3,6),(2,4,6);
+/*!40000 ALTER TABLE `eskaera_mahaiak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `eskaera_produktuak`
@@ -101,6 +131,16 @@ CREATE TABLE `eskaera_produktuak` (
   CONSTRAINT `fk_ep_produktua` FOREIGN KEY (`produktua_id`) REFERENCES `produktuak` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `eskaera_produktuak`
+--
+
+LOCK TABLES `eskaera_produktuak` WRITE;
+/*!40000 ALTER TABLE `eskaera_produktuak` DISABLE KEYS */;
+INSERT INTO `eskaera_produktuak` (`id`, `eskaera_id`, `produktua_id`, `kantitatea`, `prezio_unitarioa`) VALUES (1,3,6,1,6.00),(2,3,50,1,2.00),(3,4,6,1,6.00),(4,4,50,1,2.00);
+/*!40000 ALTER TABLE `eskaera_produktuak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `eskaerak`
@@ -136,6 +176,16 @@ CREATE TABLE `eskaerak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `eskaerak`
+--
+
+LOCK TABLES `eskaerak` WRITE;
+/*!40000 ALTER TABLE `eskaerak` DISABLE KEYS */;
+INSERT INTO `eskaerak` VALUES (1,NULL,NULL,NULL,'1','zain','2026-03-25 14:52:26',NULL,'Ardoa',6,'2026-03-25 13:52:26',1,6),(2,NULL,NULL,NULL,'1','zain','2026-03-25 14:52:26',NULL,'Kas Laranja',2,'2026-03-25 13:52:26',1,50),(3,6,1,0,'itxita','zain','2026-03-25 18:46:35','2026-03-25 18:46:39',NULL,NULL,NULL,NULL,NULL),(4,6,1,0,'itxita','zain','2026-03-25 19:10:06','2026-03-25 19:10:13',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `eskaerak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `fakturak`
 --
 
@@ -159,6 +209,16 @@ CREATE TABLE `fakturak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `fakturak`
+--
+
+LOCK TABLES `fakturak` WRITE;
+/*!40000 ALTER TABLE `fakturak` DISABLE KEYS */;
+INSERT INTO `fakturak` VALUES (1,NULL,NULL,'2026-03-25 14:52:30',NULL,8,1);
+/*!40000 ALTER TABLE `fakturak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `kategoriak`
 --
 
@@ -172,6 +232,15 @@ CREATE TABLE `kategoriak` (
   UNIQUE KEY `uk_kategoriak_izena` (`izena`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `kategoriak`
+--
+
+LOCK TABLES `kategoriak` WRITE;
+/*!40000 ALTER TABLE `kategoriak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `kategoriak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `langileak`
@@ -197,6 +266,16 @@ CREATE TABLE `langileak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `langileak`
+--
+
+LOCK TABLES `langileak` WRITE;
+/*!40000 ALTER TABLE `langileak` DISABLE KEYS */;
+INSERT INTO `langileak` VALUES (1,'Oier','Talavera','Muñoa','1234','oier@gmail.com','343221241',1,NULL);
+/*!40000 ALTER TABLE `langileak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `mahaiak`
 --
 
@@ -211,6 +290,16 @@ CREATE TABLE `mahaiak` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mahaiak`
+--
+
+LOCK TABLES `mahaiak` WRITE;
+/*!40000 ALTER TABLE `mahaiak` DISABLE KEYS */;
+INSERT INTO `mahaiak` VALUES (1,'Mahaia1',5,'0'),(2,'Mahaia 2',5,'0'),(3,'Mahaia 3',5,'0'),(4,'Mahaia 4',5,'0'),(5,'Mahaia 5',5,'0'),(6,'Barra',0,'0');
+/*!40000 ALTER TABLE `mahaiak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `osagaiak`
@@ -230,6 +319,15 @@ CREATE TABLE `osagaiak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `osagaiak`
+--
+
+LOCK TABLES `osagaiak` WRITE;
+/*!40000 ALTER TABLE `osagaiak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `osagaiak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `platera_motak`
 --
 
@@ -242,6 +340,15 @@ CREATE TABLE `platera_motak` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `platera_motak`
+--
+
+LOCK TABLES `platera_motak` WRITE;
+/*!40000 ALTER TABLE `platera_motak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `platera_motak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `platerak`
@@ -263,6 +370,15 @@ CREATE TABLE `platerak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `platerak`
+--
+
+LOCK TABLES `platerak` WRITE;
+/*!40000 ALTER TABLE `platerak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `platerak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `platerak_has_eskaerak`
 --
 
@@ -279,6 +395,15 @@ CREATE TABLE `platerak_has_eskaerak` (
   CONSTRAINT `fk_phe_platerak` FOREIGN KEY (`platerak_id`) REFERENCES `platerak` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `platerak_has_eskaerak`
+--
+
+LOCK TABLES `platerak_has_eskaerak` WRITE;
+/*!40000 ALTER TABLE `platerak_has_eskaerak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `platerak_has_eskaerak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `platerak_has_kontsumizioa`
@@ -298,6 +423,15 @@ CREATE TABLE `platerak_has_kontsumizioa` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `platerak_has_kontsumizioa`
+--
+
+LOCK TABLES `platerak_has_kontsumizioa` WRITE;
+/*!40000 ALTER TABLE `platerak_has_kontsumizioa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `platerak_has_kontsumizioa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `produktu_osagaiak`
 --
 
@@ -315,6 +449,15 @@ CREATE TABLE `produktu_osagaiak` (
   CONSTRAINT `fk_produktu_osagaiak_produktua` FOREIGN KEY (`produktua_id`) REFERENCES `produktuak` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `produktu_osagaiak`
+--
+
+LOCK TABLES `produktu_osagaiak` WRITE;
+/*!40000 ALTER TABLE `produktu_osagaiak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `produktu_osagaiak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `produktuak`
@@ -341,6 +484,16 @@ CREATE TABLE `produktuak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `produktuak`
+--
+
+LOCK TABLES `produktuak` WRITE;
+/*!40000 ALTER TABLE `produktuak` DISABLE KEYS */;
+INSERT INTO `produktuak` VALUES (6,'Ardoa',6.00,NULL,NULL,'ardoa.png',NULL,6),(7,'Kafea',2.00,NULL,NULL,'kafea.png',NULL,6),(8,'Estrella',2.00,NULL,NULL,'estrella.png',NULL,6),(49,'Sagardo',3.50,NULL,NULL,'Sagardo.png',NULL,6),(50,'Kas Laranja',2.00,NULL,NULL,'Kas_Laranja.png',NULL,6),(51,'Aquarius',2.20,NULL,NULL,'Aquarius.png',NULL,6),(52,'Coca-Cola',2.10,NULL,NULL,'Coca-Cola.png',NULL,6),(53,'Nestea',2.30,NULL,NULL,'Nestea.png',NULL,6),(54,'Fanta Limon',2.00,NULL,NULL,'Fanta_Limon.png',NULL,6),(55,'Agua Bezoya',1.20,NULL,NULL,'Agua_Bezoya.png',NULL,6),(56,'Red Bull',2.50,NULL,NULL,'Red_Bull.png',NULL,6),(57,'Zumo Laranja',2.80,NULL,NULL,'Zumo_Laranja.png',NULL,6),(58,'Kas Limón',2.00,NULL,NULL,'Kas_Limon.png',NULL,6),(59,'Sugus',1.50,NULL,NULL,'Sugus.png',NULL,7),(60,'Haribo Gominolas',2.00,NULL,NULL,'Haribo_Gominolas.png',NULL,7),(61,'KitKat',1.20,NULL,NULL,'KitKat.png',NULL,7),(62,'Kinder Bueno',1.50,NULL,NULL,'Kinder_Bueno.png',NULL,7),(63,'Txupa Txups',0.80,NULL,NULL,'Txupa_Txups.png',NULL,7),(64,'Oreo',1.70,NULL,NULL,'Oreo.png',NULL,7),(65,'Donuts',1.50,NULL,NULL,'Donuts.png',NULL,7),(66,'Milka Txokolatea',2.20,NULL,NULL,'Milka_Txokolatea.png',NULL,7),(67,'M&M',1.90,NULL,NULL,'M&M.png',NULL,7),(68,'Twix',1.40,NULL,NULL,'Twix.png',NULL,7);
+/*!40000 ALTER TABLE `produktuak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `produktuak_has_platerak`
 --
 
@@ -356,6 +509,15 @@ CREATE TABLE `produktuak_has_platerak` (
   CONSTRAINT `fk_php_produktuak` FOREIGN KEY (`produktuak_id`) REFERENCES `produktuak` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `produktuak_has_platerak`
+--
+
+LOCK TABLES `produktuak_has_platerak` WRITE;
+/*!40000 ALTER TABLE `produktuak_has_platerak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `produktuak_has_platerak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `produktuen_eskaerak`
@@ -377,6 +539,15 @@ CREATE TABLE `produktuen_eskaerak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `produktuen_eskaerak`
+--
+
+LOCK TABLES `produktuen_eskaerak` WRITE;
+/*!40000 ALTER TABLE `produktuen_eskaerak` DISABLE KEYS */;
+/*!40000 ALTER TABLE `produktuen_eskaerak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `produktuen_motak`
 --
 
@@ -391,6 +562,16 @@ CREATE TABLE `produktuen_motak` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `produktuen_motak`
+--
+
+LOCK TABLES `produktuen_motak` WRITE;
+/*!40000 ALTER TABLE `produktuen_motak` DISABLE KEYS */;
+INSERT INTO `produktuen_motak` VALUES (6,'edariak'),(7,'txutxeriak');
+/*!40000 ALTER TABLE `produktuen_motak` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `rolak`
 --
 
@@ -403,6 +584,16 @@ CREATE TABLE `rolak` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rolak`
+--
+
+LOCK TABLES `rolak` WRITE;
+/*!40000 ALTER TABLE `rolak` DISABLE KEYS */;
+INSERT INTO `rolak` VALUES (1,'Barra');
+/*!40000 ALTER TABLE `rolak` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `zerbitzua`
@@ -425,6 +616,16 @@ CREATE TABLE `zerbitzua` (
   CONSTRAINT `fk_zerbitzua_mahaiak` FOREIGN KEY (`mahaiak_id`) REFERENCES `mahaiak` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `zerbitzua`
+--
+
+LOCK TABLES `zerbitzua` WRITE;
+/*!40000 ALTER TABLE `zerbitzua` DISABLE KEYS */;
+INSERT INTO `zerbitzua` VALUES (1,8,'2026-03-25 13:52:26',1,NULL,6);
+/*!40000 ALTER TABLE `zerbitzua` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -435,4 +636,4 @@ CREATE TABLE `zerbitzua` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-26 13:59:07
+-- Dump completed on 2026-03-26 14:11:48
