@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace ErronkaApi.Repositorioak
 {
-    public class KategoriaRepository
+    public class KategoriaRepository : IKategoriaRepository
     {
         private readonly ISessionFactory _sessionFactory;
         public KategoriaRepository(ISessionFactory sessionFactory)

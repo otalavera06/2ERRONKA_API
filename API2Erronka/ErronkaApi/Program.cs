@@ -1,56 +1,53 @@
 using ErronkaApi;
+using ErronkaApi.Interfaces;
 using ErronkaApi.Repositorioak;
 using ErronkaApi.NHibernate;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(5093);        // HTTP
-    options.ListenLocalhost(7236, listenOptions =>
-    {
-        listenOptions.UseHttps();     // HTTPS
-    });
-});
-
-// Add services to the container.
-
-// CORS konfigurazioa gehitu => Web-etik errorea ez emateko
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
         policy
-            .AllowAnyOrigin()     //.WithOrigins("http://localhost:8000") Jakiteko zein IPtatik etorri daitekeen
+            .AllowAnyOrigin()   
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton(NHibernateHelper.SessionFactory);
+builder.Services.AddSingleton<NHibernate.ISessionFactory>(_ => NHibernateHelper.SessionFactory);
 builder.Services.AddTransient<ErabiltzaileaRepository>();
-builder.Services.AddTransient<KategoriaRepository>();
-builder.Services.AddTransient<ProduktuaRepository>();
-builder.Services.AddTransient<EskaeraRepository>();
-builder.Services.AddTransient<MahaiaRepository>();
+builder.Services.AddTransient<IKategoriaRepository, KategoriaRepository>();
+builder.Services.AddTransient<IProduktuaRepository, ProduktuaRepository>();
+builder.Services.AddTransient<IEskaeraRepository, EskaeraRepository>();
+builder.Services.AddTransient<IMahaiaRepository, MahaiaRepository>();
+builder.Services.AddTransient<IEskaeraMahaiakRepository, EskaeraMahaiakRepository>();
+builder.Services.AddTransient<IEskaeraProduktuakRepository, EskaeraProduktuakRepository>();
 
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "irudiak"))),
+    RequestPath = "/irudiak"
+});
 
 app.UseCors(); 
 

@@ -4,9 +4,13 @@ namespace ErronkaApi.Modeloak
     {
         public virtual int id { get; set; }
         public virtual string izena { get; set; }
-        public virtual Kategoria kategoria { get; set; }
+        public virtual Kategoria? kategoria { get; set; }
         public virtual decimal prezioa { get; set; }
-        public virtual int stock_aktuala { get; set; }
+        public virtual int? stock_aktuala { get; set; }
+        public virtual int? stock_min { get; set; }
+        public virtual int? stock_max { get; set; }
+        public virtual string? irudia { get; set; }
+        public virtual int? produktuen_motak_id { get; set; }
 
         public Produktua() { }
 

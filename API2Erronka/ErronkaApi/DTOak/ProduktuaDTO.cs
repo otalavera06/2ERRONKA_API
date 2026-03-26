@@ -1,4 +1,4 @@
-﻿using ErronkaApi.Modeloak;
+using ErronkaApi.Modeloak;
 
 namespace ErronkaApi.DTOak
 {
@@ -38,8 +38,8 @@ namespace ErronkaApi.DTOak
             id = produktua.id;
             izena = produktua.izena;
             prezioa = produktua.prezioa;
-            kategoria_id = produktua.kategoria.id;
-            stock_aktuala = produktua.stock_aktuala;
+            kategoria_id = produktua.kategoria?.id ?? 0;
+            stock_aktuala = produktua.stock_aktuala ?? 0;
         }
     }
 }

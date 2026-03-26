@@ -6,11 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 using ErronkaApi.Interfaces;
-using Microsoft.AspNetCore.Mvc;
 
 namespace ErronkaApi.Repositorioak
 {
-    public class EskaeraRepository : ControllerBase
+    public class EskaeraRepository : IEskaeraRepository
     {
         private readonly ISessionFactory _sessionFactory;
 
@@ -60,6 +59,22 @@ namespace ErronkaApi.Repositorioak
         }
 
         public List<EskaeraProduktuak> LortuEskaeraProduktuak(int eskaeraId)
+        {
+            using var session = _sessionFactory.OpenSession();
+            return session.Query<EskaeraProduktuak>()
+                .Where(ep => ep.Eskaera.id == eskaeraId)
+                .ToList();
+        }
+
+        public List<Eskaera> LortuEskaerak2()
+        {
+            using var session = _sessionFactory.OpenSession();
+            return session.Query<Eskaera>()
+                .OrderByDescending(e => e.sortzeData)
+                .ToList();
+        }
+
+        public List<EskaeraProduktuak> LortuEskaeraProduktuak2(int eskaeraId)
         {
             using var session = _sessionFactory.OpenSession();
             return session.Query<EskaeraProduktuak>()

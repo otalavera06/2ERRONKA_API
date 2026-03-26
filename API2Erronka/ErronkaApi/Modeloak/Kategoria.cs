@@ -1,9 +1,13 @@
-﻿namespace ErronkaApi.Modeloak
+namespace ErronkaApi.Modeloak
 {
     public class Kategoria
     {
         public virtual int id { get; set; }
         public virtual string izena { get; set; }
+
+        public Kategoria()
+        {
+        }
 
         public Kategoria(int id, string izena)
         {

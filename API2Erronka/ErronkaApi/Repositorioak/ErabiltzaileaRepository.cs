@@ -1,5 +1,6 @@
 using NHibernate;
 using ErronkaApi.Modeloak;
+using System.Linq;
 
 namespace ErronkaApi.Repositorioak
 {

@@ -1,7 +1,10 @@
-﻿using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using ErronkaApi.Mapeoak;
 using NH = NHibernate;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.IO;
 
 namespace ErronkaApi.NHibernate
 {
@@ -18,17 +21,39 @@ namespace ErronkaApi.NHibernate
                 return _sessionFactory;
             }
         }
+
+        private static string? TryGetConnectionString()
+        {
+            var cwdConfig = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true)
+                .AddJsonFile("appsettings.Development.json", optional: true)
+                .AddEnvironmentVariables()
+                .Build();
+
+            var cs = cwdConfig.GetConnectionString("DefaultConnection");
+            if (!string.IsNullOrWhiteSpace(cs)) return cs;
+
+            var baseDirConfig = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: true)
+                .AddJsonFile("appsettings.Development.json", optional: true)
+                .AddEnvironmentVariables()
+                .Build();
+
+            cs = baseDirConfig.GetConnectionString("DefaultConnection");
+            if (!string.IsNullOrWhiteSpace(cs)) return cs;
+
+            return null;
+        }
+
         private static void InitializeSessionFactory()
         {
+            var connectionString = TryGetConnectionString() ?? "Server=localhost;Port=3306;Database=erronka2_2026;Uid=root;Pwd=1mg2024;";
             _sessionFactory = Fluently.Configure()
                 .Database(
                     MySQLConfiguration.Standard
-                        .ConnectionString(cs => cs
-                            .Server("localhost") // 192.168.1.10  localhost
-                            .Database("frogaenpresakudeaketa") // tpv
-                            .Username("root") // admin root
-                            .Password("1mg2024") // Taldea4 1MG2024
-                        )
+                        .ConnectionString(connectionString)
                 )
                 .Mappings(m =>
                 {
@@ -41,6 +66,7 @@ namespace ErronkaApi.NHibernate
                     m.FluentMappings.AddFromAssemblyOf<EskaeraProduktuakMap>();
                     m.FluentMappings.AddFromAssemblyOf<KategoriaMap>();
                     m.FluentMappings.AddFromAssemblyOf<EskaeraHistorikoaMap>();
+                    m.FluentMappings.AddFromAssemblyOf<ErreserbaMap>();
                 })
                 .ExposeConfiguration(cfg =>
                 {

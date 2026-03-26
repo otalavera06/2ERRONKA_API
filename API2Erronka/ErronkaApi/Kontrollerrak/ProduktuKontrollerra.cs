@@ -10,7 +10,7 @@ namespace ErronkaApi.Kontrollerrak
     /// Produktuak kategoriaren arabera lortzeko aukera ematen du.
     /// </summary>
     [ApiController]
-    [Route("api/Produktuak")]
+    [Route("api/produktuak")]
     public class ProduktuakKontrollera : ControllerBase
     {
         private readonly IProduktuaRepository _repo;
@@ -18,6 +18,23 @@ namespace ErronkaApi.Kontrollerrak
         public ProduktuakKontrollera(IProduktuaRepository repo)
         {
             _repo = repo;
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var produktuak = _repo.GetAll()
+                .Select(p => new
+                {
+                    id = p.id,
+                    izena = p.izena,
+                    prezioa = (float)p.prezioa,
+                    irudia = p.irudia,
+                    produktuenMotakId = p.produktuen_motak_id ?? 0
+                })
+                .ToList();
+
+            return Ok(produktuak);
         }
 
         /// <summary>
