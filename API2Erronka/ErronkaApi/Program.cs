@@ -24,13 +24,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<NHibernate.ISessionFactory>(_ => NHibernateHelper.SessionFactory);
-builder.Services.AddTransient<ErabiltzaileaRepository>();
+builder.Services.AddTransient<IErabiltzaileaRepository, ErabiltzaileaRepository>();
 builder.Services.AddTransient<IKategoriaRepository, KategoriaRepository>();
 builder.Services.AddTransient<IProduktuaRepository, ProduktuaRepository>();
 builder.Services.AddTransient<IEskaeraRepository, EskaeraRepository>();
 builder.Services.AddTransient<IMahaiaRepository, MahaiaRepository>();
 builder.Services.AddTransient<IEskaeraMahaiakRepository, EskaeraMahaiakRepository>();
 builder.Services.AddTransient<IEskaeraProduktuakRepository, EskaeraProduktuakRepository>();
+builder.Services.AddTransient<IZerbitzuaRepository, ZerbitzuaRepository>();
 
 
 var app = builder.Build();

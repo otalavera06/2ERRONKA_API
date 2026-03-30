@@ -1,10 +1,11 @@
 using NHibernate;
 using ErronkaApi.Modeloak;
 using System.Linq;
+using ErronkaApi.Interfaces;
 
 namespace ErronkaApi.Repositorioak
 {
-    public class ErabiltzaileaRepository
+    public class ErabiltzaileaRepository : IErabiltzaileaRepository
     {
         private readonly ISessionFactory _sessionFactory;
 
@@ -13,7 +14,7 @@ namespace ErronkaApi.Repositorioak
             _sessionFactory = sessionFactory;
         }
 
-        public Erabiltzailea Login(string erabiltzailea, string pasahitza)
+        public Erabiltzailea? Login(string erabiltzailea, string pasahitza)
         {
             using var session = _sessionFactory.OpenSession();
 

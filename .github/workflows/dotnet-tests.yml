@@ -9,21 +9,23 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore API2Erronka/ErronkaApi/ErronkaApi.csproj
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build API2Erronka/ErronkaApi/ErronkaApi.csproj --configuration Release --no-restore
 
     - name: Run tests
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test API2Erronka/ErronkaApi/ErronkaApi.csproj --configuration Release --no-build --verbosity normal

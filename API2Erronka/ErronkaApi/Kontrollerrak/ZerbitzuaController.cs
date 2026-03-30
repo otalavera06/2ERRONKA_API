@@ -1,5 +1,5 @@
-using ErronkaApi.Modeloak;
-using ErronkaApi.NHibernate;
+ using ErronkaApi.Modeloak;
+ using ErronkaApi.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,10 +7,19 @@ using System.Linq;
 
 namespace ErronkaApi.Kontrollerrak
 {
+     /// <summary>
+     /// Zerbitzuen kudeaketa: eskaerak sortu, mahaika kontsultatu eta ordaindu.
+     /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class ZerbitzuaController : ControllerBase
     {
+         private readonly IZerbitzuaRepository _repo;
+ 
+         public ZerbitzuaController(IZerbitzuaRepository repo)
+         {
+             _repo = repo;
+         }
         public class EskaeraSortuDto
         {
             public int ProduktuaId { get; set; }
@@ -29,116 +38,49 @@ namespace ErronkaApi.Kontrollerrak
             public IList<EskaeraSortuDto> Eskaerak { get; set; } = new List<EskaeraSortuDto>();
         }
 
+        /// <summary>
+        /// Zerbitzu berria sortzen du mahai baten gainean.
+        /// </summary>
+        /// <param name="dto">Zerbitzua sortzeko datuak.</param>
+        /// <returns>201 Created edo 400.</returns>
         [HttpPost]
         public IActionResult Create([FromBody] ZerbitzuaSortuDto dto)
         {
             if (!dto.MahaiakId.HasValue) return BadRequest("MahaiakId is required");
-
-            using var session = NHibernateHelper.OpenSession();
-            using var tx = session.BeginTransaction();
-
-            var eskaera = new Eskaera
+            try
             {
-                erabiltzaileId = 1,
-                mahaia_id = dto.MahaiakId.Value,
-                komensalak = 0,
-                egoera = "irekita",
-                sukaldeaEgoera = "zain",
-                sortzeData = dto.Data == default ? DateTime.Now : dto.Data,
-                itxieraData = null
-            };
-
-            session.Save(eskaera);
-
-            var mahaia = session.Query<Mahaia>().FirstOrDefault(m => m.id == dto.MahaiakId.Value);
-            if (mahaia != null)
-            {
-                var link = new EskaeraMahaiak
-                {
-                    Eskaera = eskaera,
-                    Mahaia = mahaia
-                };
-                session.Save(link);
+                var id = _repo.Create(dto);
+                return CreatedAtAction(nameof(GetByMahai), new { mahaiaId = dto.MahaiakId.Value }, new { Id = id });
             }
-
-            foreach (var e in dto.Eskaerak)
+            catch (InvalidOperationException ex)
             {
-                var produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == e.ProduktuaId);
-                if (produktua == null) return BadRequest($"Produktua ez da existitzen: {e.ProduktuaId}");
-
-                var ep = new EskaeraProduktuak
-                {
-                    Eskaera = eskaera,
-                    Produktua = produktua,
-                    Kantitatea = 1,
-                    PrezioUnitarioa = e.Prezioa,
-                    Guztira = e.Prezioa
-                };
-                session.Save(ep);
+                return BadRequest(ex.Message);
             }
-
-            tx.Commit();
-
-            return CreatedAtAction(nameof(GetByMahai), new { mahaiaId = dto.MahaiakId.Value }, new { Id = eskaera.id });
         }
 
+        /// <summary>
+        /// Mahaiko azken zerbitzuak lortzen ditu.
+        /// </summary>
+        /// <param name="mahaiaId">Mahaiaren IDa.</param>
+        /// <returns>200 OK eta zerbitzuen zerrenda.</returns>
         [HttpGet("mahaia/{mahaiaId:int}")]
         public IActionResult GetByMahai(int mahaiaId)
         {
-            using var session = NHibernateHelper.OpenSession();
-
-            var eskaerak = session.Query<Eskaera>()
-                .Where(e => e.mahaia_id == mahaiaId)
-                .OrderByDescending(e => e.sortzeData)
-                .Take(50)
-                .ToList();
-
-            var result = eskaerak.Select(e =>
-            {
-                var produktuak = session.Query<EskaeraProduktuak>()
-                    .Where(ep => ep.Eskaera.id == e.id)
-                    .ToList();
-
-                var egoeraInt = string.Equals(e.egoera, "itxita", StringComparison.OrdinalIgnoreCase) ? 1 : 0;
-                var prezioTotala = produktuak.Sum(ep => ep.PrezioUnitarioa * ep.Kantitatea);
-
-                return new
-                {
-                    Id = e.id,
-                    PrezioTotala = prezioTotala,
-                    Data = e.sortzeData,
-                    ErreserbaId = (int?)null,
-                    MahaiakId = (int?)e.mahaia_id,
-                    Eskaerak = produktuak.Select(ep => new
-                    {
-                        Id = ep.Id,
-                        ProduktuaId = ep.Produktua.id,
-                        Izena = ep.Produktua.izena,
-                        Data = e.sortzeData,
-                        Prezioa = ep.PrezioUnitarioa,
-                        Egoera = egoeraInt
-                    }).ToList()
-                };
-            }).ToList();
-
-            return Ok(result);
+             var result = _repo.GetByMahai(mahaiaId);
+             return Ok(result);
         }
 
+        /// <summary>
+        /// Eskaera ordainduta markatzen du.
+        /// </summary>
+        /// <param name="id">Eskaeraren IDa.</param>
+        /// <returns>200 OK edo 404.</returns>
         [HttpPost("{id:int}/ordaindu")]
         public IActionResult Ordaindu(int id)
         {
-            using var session = NHibernateHelper.OpenSession();
-            using var tx = session.BeginTransaction();
-
-            var eskaera = session.Query<Eskaera>().FirstOrDefault(e => e.id == id);
-            if (eskaera == null) return NotFound();
-
-            eskaera.egoera = "itxita";
-            eskaera.itxieraData = DateTime.Now;
-            session.Update(eskaera);
-
-            tx.Commit();
-            return Ok();
+             var ok = _repo.Ordaindu(id);
+             if (!ok) return NotFound();
+             return Ok();
         }
     }
 }
