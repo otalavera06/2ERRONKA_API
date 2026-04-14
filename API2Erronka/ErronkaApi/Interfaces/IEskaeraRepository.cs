@@ -9,6 +9,7 @@ namespace ErronkaApi.Interfaces
         Eskaera? Get(int id);
         void Save(Eskaera eskaera);
         void Update(Eskaera eskaera);
+        void EguneratuSukaldeaEgoera(int eskaeraId, string egoera);
         void Delete(Eskaera eskaera);
         List<Eskaera> LortuEskaerak2();
         List<EskaeraProduktuak> LortuEskaeraProduktuak2(int eskaeraId);

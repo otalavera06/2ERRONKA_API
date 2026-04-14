@@ -1,4 +1,4 @@
-﻿using ErronkaApi.Modeloak;
+using ErronkaApi.Modeloak;
 using FluentNHibernate.Mapping;
 
 public class EskaeraMap : ClassMap<Eskaera>
@@ -6,6 +6,7 @@ public class EskaeraMap : ClassMap<Eskaera>
     public EskaeraMap()
     {
         Table("eskaerak");
+        DynamicUpdate();
 
         Id(x => x.id).Column("id").GeneratedBy.Identity();
         Map(x => x.mahaia_id).Column("mahaia_id");

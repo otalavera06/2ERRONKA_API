@@ -475,8 +475,7 @@ namespace ErronkaApi.Kontrollerrak
                     return NotFound(new ErantzunaDTO<string> { Code = 404, Message = "Eskaera ez da aurkitu" });
                 }
 
-                eskaera.sukaldeaEgoera = dto.SukaldeaEgoera.ToLower();
-                _repo.Update(eskaera);
+                _repo.EguneratuSukaldeaEgoera(eskaeraId, dto.SukaldeaEgoera.ToLower());
 
                 return Ok(new ErantzunaDTO<string>
                 {
@@ -539,8 +538,9 @@ namespace ErronkaApi.Kontrollerrak
                     Id = e.id,
                     Izena = $"Eskaera #{e.id} ({e.sortzeData:dd/MM/yyyy HH:mm})",
                     MahaiaId = e.mahaia_id,
+                    Komensalak = e.komensalak,
                     Data = e.sortzeData.ToString("yyyy-MM-dd HH:mm"),
-                    SukaldeaEgoera = e.sukaldeaEgoera
+                    SukaldeaEgoera = string.IsNullOrWhiteSpace(e.sukaldeaEgoera) ? "zain" : e.sukaldeaEgoera
                 }).ToList();
 
                 return Ok(new ErantzunaDTO<EskaeraDTO>

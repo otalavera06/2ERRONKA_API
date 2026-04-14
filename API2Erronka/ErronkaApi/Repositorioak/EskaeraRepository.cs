@@ -37,7 +37,20 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             using var tx = session.BeginTransaction();
-            session.Update(eskaera);
+            session.Merge(eskaera);
+            tx.Commit();
+        }
+
+        public void EguneratuSukaldeaEgoera(int eskaeraId, string egoera)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+            
+            var query = session.CreateQuery("update Eskaera set sukaldeaEgoera = :egoera where id = :id");
+            query.SetParameter("egoera", egoera);
+            query.SetParameter("id", eskaeraId);
+            query.ExecuteUpdate();
+            
             tx.Commit();
         }
 
