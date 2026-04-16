@@ -5,6 +5,7 @@ on:
     branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
+  workflow_dispatch:
 
 jobs:
   build-and-test:
@@ -22,10 +23,18 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore API2Erronka/ErronkaApi/ErronkaApi.csproj
+      run: dotnet restore API2Erronka/ErronkaApi.slnx
 
     - name: Build
-      run: dotnet build API2Erronka/ErronkaApi/ErronkaApi.csproj --configuration Release --no-restore
+      run: dotnet build API2Erronka/ErronkaApi.slnx --configuration Release --no-restore
 
     - name: Run tests
-      run: dotnet test API2Erronka/ErronkaApi/ErronkaApi.csproj --configuration Release --no-build --verbosity normal
+      run: dotnet test API2Erronka/ErronkaApi.slnx --configuration Release --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx" --results-directory TestResults
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: TestResults/*.trx
+        if-no-files-found: ignore

@@ -164,7 +164,7 @@ namespace ErronkaApi.Testak
             
             var eskaerak = new List<Eskaera>
             {
-                new Eskaera { id = 1, sortzeData = DateTime.Now, egoera = "irekita" }
+                new Eskaera { id = 1, mahaia_id = 3, komensalak = 2, sortzeData = new DateTime(2026, 4, 16, 13, 30, 0), egoera = "irekita", sukaldeaEgoera = "" }
             };
             _mockRepo.Setup(r => r.LortuEskaerak2()).Returns(eskaerak);
 
@@ -175,7 +175,12 @@ namespace ErronkaApi.Testak
             var okResult = Assert.IsType<OkObjectResult>(result);
             var response = Assert.IsType<ErantzunaDTO<EskaeraDTO>>(okResult.Value);
             Assert.Equal(200, response.Code);
-            Assert.Single(response.Datuak);
+            var dto = Assert.Single(response.Datuak);
+            Assert.Equal(1, dto.Id);
+            Assert.Equal(3, dto.MahaiaId);
+            Assert.Equal(2, dto.Komensalak);
+            Assert.Equal("zain", dto.SukaldeaEgoera);
+            Assert.Contains("Eskaera #1", dto.Izena);
         }
 
         [Fact]
@@ -392,8 +397,7 @@ namespace ErronkaApi.Testak
             var okResult = Assert.IsType<OkObjectResult>(result);
             var response = Assert.IsType<ErantzunaDTO<string>>(okResult.Value);
             Assert.Equal(200, response.Code);
-            Assert.Equal("hasi", eskaera.sukaldeaEgoera);
-            _mockRepo.Verify(r => r.Update(eskaera), Times.Once);
+            _mockRepo.Verify(r => r.EguneratuSukaldeaEgoera(eskaeraId, "hasi"), Times.Once);
         }
 
         [Fact]

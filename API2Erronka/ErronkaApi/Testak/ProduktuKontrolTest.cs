@@ -14,6 +14,38 @@ namespace ErronkaApi.Testak
     public class ProduktuKontrolTest
     {
         [Fact]
+        public void GetAll_ondo_mapeatutako_objektuak_itzultzen_ditu()
+        {
+            var mockRepo = new Mock<IProduktuaRepository>();
+
+            mockRepo.Setup(r => r.GetAll()).Returns(new List<Produktua>
+            {
+                new Produktua
+                {
+                    id = 1,
+                    izena = "Kafea",
+                    prezioa = 1.5m,
+                    stock_aktuala = 8,
+                    produktuen_motak_id = 3,
+                    irudia = "/irudiak/kafea.png"
+                }
+            });
+
+            var controller = new ProduktuakKontrollera(mockRepo.Object);
+
+            var result = controller.GetAll();
+
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var values = Assert.IsAssignableFrom<IEnumerable<object>>(okResult.Value);
+            var item = Assert.Single(values);
+
+            Assert.Equal(1, (int)item.GetType().GetProperty("id")!.GetValue(item)!);
+            Assert.Equal("Kafea", (string)item.GetType().GetProperty("izena")!.GetValue(item)!);
+            Assert.Equal(8, (int)item.GetType().GetProperty("stock")!.GetValue(item)!);
+            Assert.Equal(3, (int)item.GetType().GetProperty("produktuenMotakId")!.GetValue(item)!);
+        }
+
+        [Fact]
         public void GetByKategoria_existitzen_den_kategoria_sartuta_kategoria_horretako_produktuak_itzultzen_ditu()
         {
             var mockRepo = new Mock<IProduktuaRepository>();
