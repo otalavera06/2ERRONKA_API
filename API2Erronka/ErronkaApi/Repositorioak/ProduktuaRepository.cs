@@ -57,7 +57,7 @@ namespace ErronkaApi.Repositorioak
         public List<ProduktuaDTO> GetAllByKategoriaId(int katId)
         {
             return this.GetAll()
-                        .Where(p => (p.produktuen_motak_id ?? 0) == katId)
+                        .  Where(p => (p.produktuen_motak_id ?? 0) == katId)
                         .Select(p => new ProduktuaDTO(p))
                         .ToList();
         }

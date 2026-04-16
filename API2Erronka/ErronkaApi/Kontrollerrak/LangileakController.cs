@@ -29,29 +29,12 @@ namespace ErronkaApi.Kontrollerrak
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest req)
         {
-            var erabiltzaileaFallback = _repo.Login(req.erabiltzailea, req.pasahitza);
-            if (erabiltzaileaFallback != null)
-            {
-                var baimenaFallback = erabiltzaileaFallback.rola?.id == 1;
-                return Ok(new
-                {
-                    Id = erabiltzaileaFallback.id,
-                    Izena = (string?)null,
-                    Abizena = (string?)null,
-                    Erabiltzailea = erabiltzaileaFallback.erabiltzailea,
-                    Email = erabiltzaileaFallback.emaila,
-                    Telefonoa = (string?)null,
-                    Baimena = baimenaFallback,
-                    MahaiakId = (int?)null
-                });
-            }
-
             try
             {
                 using (var session = NHibernateHelper.OpenSession())
                 {
                     var row = (object[])session.CreateSQLQuery(
-                            @"SELECT id, izena, abizena, erabiltzailea, email, telefonoa, baimena, mahaiak_id
+                            @"SELECT id, izena, abizena, erabiltzailea, email, telefonoa, baimena, mahaiak_id, chat_baimena
                               FROM langileak
                               WHERE erabiltzailea = :u AND pasahitza = :p
                               LIMIT 1")
@@ -63,6 +46,15 @@ namespace ErronkaApi.Kontrollerrak
                     {
                         var baimena = row[6] != null && row[6] != DBNull.Value && Convert.ToInt32(row[6]) != 0;
                         var mahaiakId = row[7] == null || row[7] == DBNull.Value ? (int?)null : Convert.ToInt32(row[7]);
+                        var chatBaimena = row[8] != null && row[8] != DBNull.Value && Convert.ToInt32(row[8]) != 0;
+
+                        if (!chatBaimena)
+                        {
+                            return StatusCode(403, new
+                            {
+                                Message = "Langile honek ez dauka txata erabiltzeko baimenik."
+                            });
+                        }
 
                         return Ok(new
                         {
@@ -73,13 +65,40 @@ namespace ErronkaApi.Kontrollerrak
                             Email = row[4] == DBNull.Value ? null : row[4]?.ToString(),
                             Telefonoa = row[5] == DBNull.Value ? null : row[5]?.ToString(),
                             Baimena = baimena,
-                            MahaiakId = mahaiakId
+                            MahaiakId = mahaiakId,
+                            chatBaimena = chatBaimena
                         });
                     }
                 }
             }
             catch
             {
+            }
+
+            var erabiltzaileaFallback = _repo.Login(req.erabiltzailea, req.pasahitza);
+            if (erabiltzaileaFallback != null)
+            {
+                if (!erabiltzaileaFallback.txat)
+                {
+                    return StatusCode(403, new
+                    {
+                        Message = "Langile honek ez dauka txata erabiltzeko baimenik."
+                    });
+                }
+
+                var baimenaFallback = erabiltzaileaFallback.rola?.id == 1;
+                return Ok(new
+                {
+                    Id = erabiltzaileaFallback.id,
+                    Izena = (string?)null,
+                    Abizena = (string?)null,
+                    Erabiltzailea = erabiltzaileaFallback.erabiltzailea,
+                    Email = erabiltzaileaFallback.emaila,
+                    Telefonoa = (string?)null,
+                    Baimena = baimenaFallback,
+                    MahaiakId = (int?)null,
+                    chatBaimena = erabiltzaileaFallback.txat
+                });
             }
 
             return Unauthorized();

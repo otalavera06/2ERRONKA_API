@@ -20,7 +20,8 @@ namespace ErronkaApi.Testak
                 emaila = "user@example.com",
                 pasahitza = "pass",
                 rola = new Rola { id = 1, izena = "admin" },
-                ezabatua = false
+                ezabatua = false,
+                txat = true
             };
             mockRepo.Setup(r => r.Login("user", "pass")).Returns(erabiltzailea);
             var controller = new LangileakController(mockRepo.Object);
@@ -37,6 +38,30 @@ namespace ErronkaApi.Testak
             var controller = new LangileakController(mockRepo.Object);
             var result = controller.Login(new LangileakController.LoginRequest("user", "bad"));
             Assert.IsType<UnauthorizedResult>(result);
+        }
+
+        [Fact]
+        public void Login_txat_baimenik_gabe_403_itzultzen_du()
+        {
+            var mockRepo = new Mock<IErabiltzaileaRepository>();
+            var erabiltzailea = new Erabiltzailea
+            {
+                id = 11,
+                erabiltzailea = "user",
+                emaila = "user@example.com",
+                pasahitza = "pass",
+                rola = new Rola { id = 1, izena = "admin" },
+                ezabatua = false,
+                txat = false
+            };
+
+            mockRepo.Setup(r => r.Login("user", "pass")).Returns(erabiltzailea);
+            var controller = new LangileakController(mockRepo.Object);
+
+            var result = controller.Login(new LangileakController.LoginRequest("user", "pass"));
+
+            var forbidden = Assert.IsType<ObjectResult>(result);
+            Assert.Equal(403, forbidden.StatusCode);
         }
     }
 }

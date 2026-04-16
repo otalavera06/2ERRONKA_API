@@ -1,5 +1,5 @@
+using ErronkaApi.Interfaces;
 using ErronkaApi.Modeloak;
-using ErronkaApi.NHibernate;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Globalization;
@@ -11,15 +11,11 @@ namespace ErronkaApi.Kontrollerrak
     [Route("api/[controller]")]
     public class ErreserbakController : ControllerBase
     {
-        private static int? NormalizeErabiltzaileaId(global::NHibernate.ISession session, int? erabiltzaileakId)
+        private readonly IErreserbaRepository _repo;
+
+        public ErreserbakController(IErreserbaRepository repo)
         {
-            if (!erabiltzaileakId.HasValue) return null;
-
-            var exists = session.CreateSQLQuery("SELECT COUNT(*) FROM erabiltzaileak WHERE id = :id")
-                .SetParameter("id", erabiltzaileakId.Value)
-                .UniqueResult();
-
-            return Convert.ToInt32(exists) > 0 ? erabiltzaileakId : null;
+            _repo = repo;
         }
 
         public class ErreserbakSortuDto
@@ -44,9 +40,7 @@ namespace ErronkaApi.Kontrollerrak
             if (!DateTime.TryParseExact(data, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var eguna))
                 return BadRequest("data format: yyyy-MM-dd");
 
-            using var session = NHibernateHelper.OpenSession();
-            var list = session.Query<Erreserba>()
-                .Where(r => r.Data.Date == eguna.Date && r.Mota == mota)
+            var list = _repo.GetByDate(eguna, mota)
                 .Select(r => new
                 {
                     Id = r.Id,
@@ -63,21 +57,7 @@ namespace ErronkaApi.Kontrollerrak
         [HttpPost]
         public IActionResult Create([FromBody] ErreserbakSortuDto dto)
         {
-            using var session = NHibernateHelper.OpenSession();
-            using var tx = session.BeginTransaction();
-            var erabiltzaileakId = NormalizeErabiltzaileaId(session, dto.ErabiltzaileakId);
-
-            var entity = new Erreserba
-            {
-                Data = dto.Data,
-                Mota = dto.Mota,
-                ErabiltzaileakId = erabiltzaileakId,
-                MahaiakId = dto.MahaiakId
-            };
-
-            session.Save(entity);
-            tx.Commit();
-
+            var entity = _repo.Create(dto);
             return Ok(new
             {
                 Id = entity.Id,
@@ -94,20 +74,7 @@ namespace ErronkaApi.Kontrollerrak
             if (!DateTime.TryParseExact(data, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var eguna))
                 return BadRequest("data format: yyyy-MM-dd");
 
-            using var session = NHibernateHelper.OpenSession();
-            using var tx = session.BeginTransaction();
-
-            var entity = session.Query<Erreserba>()
-                .FirstOrDefault(r => r.MahaiakId == mahaiaId && r.Data.Date == eguna.Date && r.Mota == mota);
-            if (entity == null) return NotFound();
-
-            if (dto.Data.HasValue) entity.Data = dto.Data.Value;
-            if (dto.Mota.HasValue) entity.Mota = dto.Mota.Value;
-            if (dto.ErabiltzaileakId.HasValue) entity.ErabiltzaileakId = NormalizeErabiltzaileaId(session, dto.ErabiltzaileakId);
-            if (dto.MahaiakId.HasValue) entity.MahaiakId = dto.MahaiakId.Value;
-
-            session.Update(entity);
-            tx.Commit();
+            if (!_repo.UpdateByMahai(mahaiaId, eguna, mota, dto)) return NotFound();
 
             return NoContent();
         }
@@ -118,15 +85,7 @@ namespace ErronkaApi.Kontrollerrak
             if (!DateTime.TryParseExact(data, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var eguna))
                 return BadRequest("data format: yyyy-MM-dd");
 
-            using var session = NHibernateHelper.OpenSession();
-            using var tx = session.BeginTransaction();
-
-            var entity = session.Query<Erreserba>()
-                .FirstOrDefault(r => r.MahaiakId == mahaiaId && r.Data.Date == eguna.Date && r.Mota == mota);
-            if (entity == null) return NotFound();
-
-            session.Delete(entity);
-            tx.Commit();
+            if (!_repo.DeleteByMahai(mahaiaId, eguna, mota)) return NotFound();
 
             return NoContent();
         }
