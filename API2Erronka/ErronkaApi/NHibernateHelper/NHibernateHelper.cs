@@ -49,7 +49,7 @@ namespace ErronkaApi.NHibernate
 
         private static void InitializeSessionFactory()
         {
-            var connectionString = TryGetConnectionString() ?? "Server=localhost;Port=3306;Database=erronka2_2026;Uid=root;Pwd=1mg2024;";
+            var connectionString = TryGetConnectionString() ?? "Server=localhost;Port=3306;Database=erronka2026;Uid=root;Pwd=1mg2024;";
             _sessionFactory = Fluently.Configure()
                 .Database(
                     MySQLConfiguration.Standard

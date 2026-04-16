@@ -30,6 +30,7 @@ namespace ErronkaApi.Kontrollerrak
                     izena = p.izena,
                     prezioa = (float)p.prezioa,
                     irudia = p.irudia,
+                    stock = p.stock_aktuala ?? 0,
                     produktuenMotakId = p.produktuen_motak_id ?? 0
                 })
                 .ToList();

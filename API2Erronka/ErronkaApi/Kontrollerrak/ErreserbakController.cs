@@ -11,6 +11,17 @@ namespace ErronkaApi.Kontrollerrak
     [Route("api/[controller]")]
     public class ErreserbakController : ControllerBase
     {
+        private static int? NormalizeErabiltzaileaId(global::NHibernate.ISession session, int? erabiltzaileakId)
+        {
+            if (!erabiltzaileakId.HasValue) return null;
+
+            var exists = session.CreateSQLQuery("SELECT COUNT(*) FROM erabiltzaileak WHERE id = :id")
+                .SetParameter("id", erabiltzaileakId.Value)
+                .UniqueResult();
+
+            return Convert.ToInt32(exists) > 0 ? erabiltzaileakId : null;
+        }
+
         public class ErreserbakSortuDto
         {
             public DateTime Data { get; set; }
@@ -54,12 +65,13 @@ namespace ErronkaApi.Kontrollerrak
         {
             using var session = NHibernateHelper.OpenSession();
             using var tx = session.BeginTransaction();
+            var erabiltzaileakId = NormalizeErabiltzaileaId(session, dto.ErabiltzaileakId);
 
             var entity = new Erreserba
             {
                 Data = dto.Data,
                 Mota = dto.Mota,
-                ErabiltzaileakId = dto.ErabiltzaileakId,
+                ErabiltzaileakId = erabiltzaileakId,
                 MahaiakId = dto.MahaiakId
             };
 
@@ -91,7 +103,7 @@ namespace ErronkaApi.Kontrollerrak
 
             if (dto.Data.HasValue) entity.Data = dto.Data.Value;
             if (dto.Mota.HasValue) entity.Mota = dto.Mota.Value;
-            if (dto.ErabiltzaileakId.HasValue) entity.ErabiltzaileakId = dto.ErabiltzaileakId;
+            if (dto.ErabiltzaileakId.HasValue) entity.ErabiltzaileakId = NormalizeErabiltzaileaId(session, dto.ErabiltzaileakId);
             if (dto.MahaiakId.HasValue) entity.MahaiakId = dto.MahaiakId.Value;
 
             session.Update(entity);

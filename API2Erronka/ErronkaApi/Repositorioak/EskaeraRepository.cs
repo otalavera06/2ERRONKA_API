@@ -9,6 +9,10 @@ using ErronkaApi.Interfaces;
 
 namespace ErronkaApi.Repositorioak
 {
+    /// <summary>
+    /// Eskaeren biltegia.
+    /// Eskema berrian, `Eskaera` zaharra `zerbitzua` + `eskaerak` egituran oinarritzen da.
+    /// </summary>
     public class EskaeraRepository : IEskaeraRepository
     {
         private readonly ISessionFactory _sessionFactory;
@@ -29,7 +33,16 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             using var tx = session.BeginTransaction();
-            session.Save(eskaera);
+            session.CreateSQLQuery(
+                    @"INSERT INTO zerbitzua (prezioTotala, data, ordainduta, erreserba_id, mahaiak_id)
+                      VALUES (:prezioTotala, :data, :ordainduta, :erreserbaId, :mahaiakId)")
+                .SetParameter("prezioTotala", 0m)
+                .SetParameter("data", eskaera.sortzeData == default ? DateTime.Now : eskaera.sortzeData)
+                .SetParameter("ordainduta", 0)
+                .SetParameter("erreserbaId", (int?)null, global::NHibernate.NHibernateUtil.Int32)
+                .SetParameter("mahaiakId", eskaera.mahaia_id)
+                .ExecuteUpdate();
+            eskaera.id = Convert.ToInt32(session.CreateSQLQuery("SELECT LAST_INSERT_ID()").UniqueResult());
             tx.Commit();
         }
 
@@ -37,7 +50,21 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             using var tx = session.BeginTransaction();
-            session.Merge(eskaera);
+
+            if (string.Equals(eskaera.egoera, "itxita", StringComparison.OrdinalIgnoreCase))
+            {
+                session.CreateSQLQuery("UPDATE zerbitzua SET ordainduta = 1 WHERE id = :id")
+                    .SetParameter("id", eskaera.id)
+                    .ExecuteUpdate();
+            }
+            else if (string.Equals(eskaera.egoera, "irekita", StringComparison.OrdinalIgnoreCase) ||
+                     string.Equals(eskaera.egoera, "ordainketa_pendiente", StringComparison.OrdinalIgnoreCase))
+            {
+                session.CreateSQLQuery("UPDATE zerbitzua SET ordainduta = 0 WHERE id = :id")
+                    .SetParameter("id", eskaera.id)
+                    .ExecuteUpdate();
+            }
+
             tx.Commit();
         }
 
@@ -45,11 +72,19 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             using var tx = session.BeginTransaction();
-            
-            var query = session.CreateQuery("update Eskaera set sukaldeaEgoera = :egoera where id = :id");
-            query.SetParameter("egoera", egoera);
-            query.SetParameter("id", eskaeraId);
-            query.ExecuteUpdate();
+
+            var egoeraInt = egoera.ToLower() switch
+            {
+                "zain" => 0,
+                "hasi" => 1,
+                "prest" => 2,
+                _ => 0
+            };
+
+            session.CreateSQLQuery("UPDATE eskaerak SET egoera = :egoera WHERE zerbitzua_id = :id")
+                .SetParameter("egoera", egoeraInt)
+                .SetParameter("id", eskaeraId)
+                .ExecuteUpdate();
             
             tx.Commit();
         }
@@ -58,7 +93,12 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             using var tx = session.BeginTransaction();
-            session.Delete(eskaera);
+            session.CreateSQLQuery("DELETE FROM eskaerak WHERE zerbitzua_id = :id")
+                .SetParameter("id", eskaera.id)
+                .ExecuteUpdate();
+            session.CreateSQLQuery("DELETE FROM zerbitzua WHERE id = :id")
+                .SetParameter("id", eskaera.id)
+                .ExecuteUpdate();
             tx.Commit();
         }
 
@@ -66,7 +106,7 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             return session.Query<Eskaera>()
-                .Where(e => e.egoera == "irekita")
+                .Where(e => e.egoera != "itxita")
                 .OrderByDescending(e => e.sortzeData)
                 .ToList();
         }
@@ -99,7 +139,7 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             return session.Query<Eskaera>()
-                .Where(e => e.egoera == "ordainketa_pendiente")
+                .Where(e => e.egoera != "itxita")
                 .OrderByDescending(e => e.sortzeData)
                 .ToList();
         }

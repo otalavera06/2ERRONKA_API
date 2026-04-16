@@ -5,12 +5,12 @@ public class EskaeraProduktuakMap : ClassMap<EskaeraProduktuak>
 {
     public EskaeraProduktuakMap()
     {
-        Table("eskaera_produktuak");
+        Table("eskaerak");
 
         Id(x => x.Id).GeneratedBy.Identity();
 
         References(x => x.Eskaera)
-            .Column("eskaera_id")
+            .Column("zerbitzua_id")
             .Not.Nullable();
 
         References(x => x.Produktua)
@@ -18,9 +18,14 @@ public class EskaeraProduktuakMap : ClassMap<EskaeraProduktuak>
             .Not.Nullable();
 
         Map(x => x.Kantitatea)
-            .Column("kantitatea");
+            .Formula("1")
+            .ReadOnly();
 
         Map(x => x.PrezioUnitarioa)
-            .Column("prezio_unitarioa");
+            .Column("prezioa");
+
+        Map(x => x.Guztira)
+            .Formula("prezioa")
+            .ReadOnly();
     }
 }

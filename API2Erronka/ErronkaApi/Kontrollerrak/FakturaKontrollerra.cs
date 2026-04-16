@@ -43,45 +43,53 @@ namespace ErronkaApi.Kontrollerrak
         public IActionResult GetAll()
         {
             using var session = NHibernateHelper.OpenSession();
+            var rows = session.CreateSQLQuery(
+                    @"SELECT f.id, f.zerbitzua_id, f.prezio_totala
+                      FROM fakturak f
+                      ORDER BY f.id DESC
+                      LIMIT 200")
+                .List<object[]>();
 
-            var eskaerak = session.Query<Eskaera>()
-                .Where(e => e.egoera == "itxita")
-                .OrderByDescending(e => e.itxieraData ?? e.sortzeData)
-                .Take(200)
-                .ToList();
-
-            var list = eskaerak.Select(e =>
+            var list = rows.Select(r => new
             {
-                var produktuak = session.Query<EskaeraProduktuak>()
-                    .Where(ep => ep.Eskaera.id == e.id)
-                    .ToList();
-
-                var total = produktuak.Sum(p => p.PrezioUnitarioa * p.Kantitatea);
-                return new
-                {
-                    Id = e.id,
-                    ZerbitzuaId = e.id,
-                    PrezioTotala = total,
-                    Sortuta = true
-                };
+                Id = Convert.ToInt32(r[0]),
+                ZerbitzuaId = r[1] == DBNull.Value || r[1] == null ? 0 : Convert.ToInt32(r[1]),
+                PrezioTotala = r[2] == DBNull.Value || r[2] == null ? 0 : Convert.ToDecimal(r[2]),
+                Sortuta = true,
+                Path = $"/api/fakturak/{Convert.ToInt32(r[0])}/pdf"
             }).ToList();
 
             return Ok(list);
         }
 
-        [HttpGet("{eskaeraId:int}/pdf")]
-        public IActionResult Pdf(int eskaeraId)
+        [HttpGet("{fakturaId:int}/pdf")]
+        public IActionResult Pdf(int fakturaId)
         {
             using var session = NHibernateHelper.OpenSession();
+            var faktura = session.CreateSQLQuery(
+                    @"SELECT f.id, f.zerbitzua_id, f.prezio_totala
+                      FROM fakturak f
+                      WHERE f.id = :id")
+                .SetParameter("id", fakturaId)
+                .UniqueResult<object[]>();
+            if (faktura == null) return NotFound();
 
-            var eskaera = session.Query<Eskaera>()
-                .FirstOrDefault(e => e.id == eskaeraId);
-            if (eskaera == null) return NotFound();
+            var zerbitzuaId = faktura[1] == DBNull.Value || faktura[1] == null ? 0 : Convert.ToInt32(faktura[1]);
+            var zerbitzua = session.CreateSQLQuery(
+                    @"SELECT z.id, z.mahaiak_id, z.data, z.prezioTotala
+                      FROM zerbitzua z
+                      WHERE z.id = :id")
+                .SetParameter("id", zerbitzuaId)
+                .UniqueResult<object[]>();
+            if (zerbitzua == null) return NotFound();
 
-            var produktuak = session.Query<EskaeraProduktuak>()
-                .Fetch(x => x.Produktua)
-                .Where(ep => ep.Eskaera.id == eskaeraId)
-                .ToList();
+            var produktuak = session.CreateSQLQuery(
+                    @"SELECT e.izena, e.prezioa, 1 AS kantitatea
+                      FROM eskaerak e
+                      WHERE e.zerbitzua_id = :id
+                      ORDER BY e.id")
+                .SetParameter("id", zerbitzuaId)
+                .List<object[]>();
 
             using var ms = new MemoryStream();
             float mmToPoints = 2.83465f;
@@ -97,16 +105,18 @@ namespace ErronkaApi.Kontrollerrak
 
             doc.Add(new iTextSharp.text.Paragraph("Beasain Jatetxea", titleFont) { Alignment = iTextSharp.text.Element.ALIGN_CENTER, SpacingAfter = 3f });
             doc.Add(new iTextSharp.text.Paragraph("NIF: X12345678", normalFont) { Alignment = iTextSharp.text.Element.ALIGN_CENTER });
-            doc.Add(new iTextSharp.text.Paragraph($"Faktura #: {eskaeraId}", normalFont) { Alignment = iTextSharp.text.Element.ALIGN_CENTER, SpacingAfter = 5f });
-            doc.Add(new iTextSharp.text.Paragraph($"Mahaia: {eskaera.mahaia_id}   Data: {eskaera.sortzeData:dd/MM/yyyy HH:mm}", normalFont) { SpacingAfter = 5f });
+            doc.Add(new iTextSharp.text.Paragraph($"Faktura #: {fakturaId}", normalFont) { Alignment = iTextSharp.text.Element.ALIGN_CENTER, SpacingAfter = 5f });
+            var mahaiaId = zerbitzua[1] == DBNull.Value || zerbitzua[1] == null ? 0 : Convert.ToInt32(zerbitzua[1]);
+            var data = zerbitzua[2] == DBNull.Value || zerbitzua[2] == null ? DateTime.MinValue : Convert.ToDateTime(zerbitzua[2]);
+            doc.Add(new iTextSharp.text.Paragraph($"Mahaia: {mahaiaId}   Data: {data:dd/MM/yyyy HH:mm}", normalFont) { SpacingAfter = 5f });
 
             decimal total = 0;
 
             foreach (var p in produktuak)
             {
-                string produktuIzena = p.Produktua?.izena ?? "Ezezaguna";
-                decimal prezioa = p.PrezioUnitarioa;
-                int kantitatea = p.Kantitatea;
+                string produktuIzena = p[0]?.ToString() ?? "Ezezaguna";
+                decimal prezioa = p[1] == DBNull.Value || p[1] == null ? 0 : Convert.ToDecimal(p[1]);
+                int kantitatea = p[2] == DBNull.Value || p[2] == null ? 1 : Convert.ToInt32(p[2]);
                 decimal lineaTotala = prezioa * kantitatea;
                 total += lineaTotala;
 
@@ -129,7 +139,7 @@ namespace ErronkaApi.Kontrollerrak
             writer.Close();
 
             var bytes = ms.ToArray();
-            Response.Headers["Content-Disposition"] = $"inline; filename='Faktura_{eskaeraId}.pdf'";
+            Response.Headers["Content-Disposition"] = $"inline; filename=\"Faktura_{fakturaId}.pdf\"";
             return new FileStreamResult(new MemoryStream(bytes), "application/pdf");
         }
 
@@ -143,8 +153,17 @@ namespace ErronkaApi.Kontrollerrak
         {
             try
             {
-                var eskaera = _repoEskaera.Get(eskaeraId);
-                if (eskaera == null)
+                using var session = NHibernateHelper.OpenSession();
+                using var tx = session.BeginTransaction();
+
+                var zerbitzua = session.CreateSQLQuery(
+                        @"SELECT id, mahaiak_id, prezioTotala
+                          FROM zerbitzua
+                          WHERE id = :id")
+                    .SetParameter("id", eskaeraId)
+                    .UniqueResult<object[]>();
+
+                if (zerbitzua == null)
                 {
                     return NotFound(new ErantzunaDTO<string>
                     {
@@ -154,26 +173,42 @@ namespace ErronkaApi.Kontrollerrak
                     });
                 }
 
-                var produktuak = _repoEskaera.LortuEskaeraProduktuak2(eskaeraId);
+                session.CreateSQLQuery("UPDATE zerbitzua SET ordainduta = 1 WHERE id = :id")
+                    .SetParameter("id", eskaeraId)
+                    .ExecuteUpdate();
 
-                
-                eskaera.egoera = "itxita";
-                eskaera.itxieraData = DateTime.Now;
-                _repoEskaera.Update(eskaera);
+                var fakturaExists = session.CreateSQLQuery("SELECT id FROM fakturak WHERE zerbitzua_id = :id LIMIT 1")
+                    .SetParameter("id", eskaeraId)
+                    .UniqueResult();
 
-                
-                foreach (var em in eskaera.EskaeraMahaiak)
+                if (fakturaExists == null)
                 {
-                    var mahaia = em.Mahaia;
-                    mahaia.egoera = "libre";
-                    _repoMahaia.Update(mahaia);
+                    session.CreateSQLQuery(
+                            @"INSERT INTO fakturak (prezio_totala, zerbitzua_id)
+                              VALUES (:prezioTotala, :zerbitzuaId)")
+                        .SetParameter("prezioTotala", zerbitzua[2] == DBNull.Value || zerbitzua[2] == null ? 0 : Convert.ToDecimal(zerbitzua[2]))
+                        .SetParameter("zerbitzuaId", eskaeraId)
+                        .ExecuteUpdate();
                 }
+
+                if (zerbitzua[1] != DBNull.Value && zerbitzua[1] != null)
+                {
+                    session.CreateSQLQuery("UPDATE mahaiak SET egoera = 'libre' WHERE id = :id")
+                        .SetParameter("id", Convert.ToInt32(zerbitzua[1]))
+                        .ExecuteUpdate();
+                }
+
+                tx.Commit();
+
+                var fakturaId = fakturaExists == null
+                    ? Convert.ToInt32(session.CreateSQLQuery("SELECT LAST_INSERT_ID()").UniqueResult())
+                    : Convert.ToInt32(fakturaExists);
 
                 return Ok(new ErantzunaDTO<string>
                 {
                     Code = 200,
                     Message = "Faktura ongi sortuta",
-                    Datuak = new List<string> { $"/api/fakturak/{eskaeraId}/pdf" }
+                    Datuak = new List<string> { $"/api/fakturak/{fakturaId}/pdf" }
                 });
             }
             catch (Exception ex)

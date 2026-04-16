@@ -8,6 +8,10 @@ using ErronkaApi.Interfaces;
 
 namespace ErronkaApi.Repositorioak
 {
+    /// <summary>
+    /// Produktuen datu-sarbidea kudeatzen duen biltegia.
+    /// Eskema berriko produktuak eta stock datuak bateratzen ditu.
+    /// </summary>
     public class ProduktuaRepository : IProduktuaRepository
     {
 
@@ -21,12 +25,7 @@ namespace ErronkaApi.Repositorioak
         public Produktua? Get(int id)
         {
             using var session = _sessionFactory.OpenSession();
-            using var tx = session.BeginTransaction();
-
-            var query = session.Query<Produktua>()
-                .Where(x => x.id == id);
-
-            var produktua = query.SingleOrDefault();
+            var produktua = session.Query<Produktua>().SingleOrDefault(x => x.id == id);
             return produktua;
         }
         public void Update(Produktua produktua)
@@ -58,7 +57,7 @@ namespace ErronkaApi.Repositorioak
         public List<ProduktuaDTO> GetAllByKategoriaId(int katId)
         {
             return this.GetAll()
-                        .Where(p => p.kategoria.id == katId)
+                        .Where(p => (p.produktuen_motak_id ?? 0) == katId)
                         .Select(p => new ProduktuaDTO(p))
                         .ToList();
         }
@@ -67,7 +66,7 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = NHibernateHelper.OpenSession();
             return session.Query<Produktua>()
-                          .Where(p => p.kategoria.id == kategoriaId)
+                          .Where(p => p.produktuen_motak_id == kategoriaId)
                           .ToList();
         }
     }

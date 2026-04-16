@@ -9,8 +9,8 @@ namespace ErronkaApi.Mapeoak
     {
         public KategoriaMap()
         {
-            Table("kategoriak");
-            Id(x => x.id).Column("ID").GeneratedBy.Identity();
+            Table("produktuen_motak");
+            Id(x => x.id).Column("id").GeneratedBy.Identity();
             Map(x => x.izena).Column("izena").Length(100);
         }
     }
