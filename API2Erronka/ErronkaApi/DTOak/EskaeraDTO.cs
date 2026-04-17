@@ -34,5 +34,7 @@ namespace ErronkaApi.DTOak
         /// Sukaldeko egoera (adibidez: "Prestatzen", "Eginda").
         /// </summary>
         public string SukaldeaEgoera { get; set; }
+
+        public List<EskaeraLortuDTO> Produktuak { get; set; } = new List<EskaeraLortuDTO>();
     }
 }

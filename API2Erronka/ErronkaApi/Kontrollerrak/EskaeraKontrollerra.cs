@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NHibernate.Linq;
 
 namespace ErronkaApi.Kontrollerrak
 {
@@ -164,7 +165,7 @@ namespace ErronkaApi.Kontrollerrak
                 return StatusCode(500, new ErantzunaDTO<EskaeraDTO>
                 {
                     Code = 500,
-                    Message = "Errore bat egon da: " + ex.Message,
+                    Message = "Errore bat egon da: " + ex.Message + " " + ex.StackTrace,
                     Datuak = new List<EskaeraDTO>()
                 });
             }
@@ -447,6 +448,48 @@ namespace ErronkaApi.Kontrollerrak
             }
         }
 
+        [HttpGet("sukaldea")]
+        public IActionResult LortuSukaldekoEskaerak()
+        {
+            try
+            {
+                var produktuak = _repo.LortuSukaldekoEskaerak();
+
+                var grouped = produktuak.GroupBy(ep => ep.Eskaera.id).Select(g => new EskaeraDTO
+                {
+                    Id = g.Key,
+                    Izena = $"Eskaera #{g.Key} ({g.First().Eskaera.sortzeData:HH:mm})",
+                    MahaiaId = g.First().Eskaera.mahaia_id,
+                    Komensalak = g.First().Eskaera.komensalak,
+                    Data = g.First().Eskaera.sortzeData.ToString("yyyy-MM-dd HH:mm"),
+                    SukaldeaEgoera = "zain",
+                    Produktuak = g.Select(ep => new EskaeraLortuDTO
+                    {
+                        ProduktuaId = ep.Produktua.id,
+                        ProduktuaIzena = ep.Produktua.izena,
+                        PrezioUnitarioa = ep.PrezioUnitarioa,
+                        Kantitatea = ep.Kantitatea
+                    }).ToList()
+                }).ToList();
+
+                return Ok(new ErantzunaDTO<EskaeraDTO>
+                {
+                    Code = 200,
+                    Message = "Sukaldeko eskaerak lortu dira",
+                    Datuak = grouped
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ErantzunaDTO<EskaeraDTO>
+                {
+                    Code = 500,
+                    Message = "Errore bat egon da: " + ex.Message,
+                    Datuak = new List<EskaeraDTO>()
+                });
+            }
+        }
+
         /// <summary>
         /// Eskaera baten sukaldeko egoera eguneratzen du.
         /// </summary>
@@ -475,7 +518,7 @@ namespace ErronkaApi.Kontrollerrak
                     return NotFound(new ErantzunaDTO<string> { Code = 404, Message = "Eskaera ez da aurkitu" });
                 }
 
-                _repo.EguneratuSukaldeaEgoera(eskaeraId, dto.SukaldeaEgoera.ToLower());
+                _repo.EguneratuSukaldeaEgoera(eskaeraId, dto.SukaldeaEgoera);
 
                 return Ok(new ErantzunaDTO<string>
                 {

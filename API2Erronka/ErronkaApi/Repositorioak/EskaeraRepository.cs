@@ -1,6 +1,7 @@
 using ErronkaApi.DTOak;
 using ErronkaApi.Modeloak;
 using NHibernate;
+using NHibernate.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -115,6 +116,7 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             return session.Query<EskaeraProduktuak>()
+                .Fetch(ep => ep.Produktua)
                 .Where(ep => ep.Eskaera.id == eskaeraId)
                 .ToList();
         }
@@ -131,6 +133,7 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             return session.Query<EskaeraProduktuak>()
+                .Fetch(ep => ep.Produktua)
                 .Where(ep => ep.Eskaera.id == eskaeraId)
                 .ToList();
         }
@@ -142,6 +145,15 @@ namespace ErronkaApi.Repositorioak
                 .Where(e => e.egoera != "itxita")
                 .OrderByDescending(e => e.sortzeData)
                 .ToList();
+        }
+
+        public List<EskaeraProduktuak> LortuSukaldekoEskaerak()
+        {
+            using var session = _sessionFactory.OpenSession();
+            var query = session.Query<EskaeraProduktuak>().Where(ep => ep.Egoera == 0);
+            query.Fetch(ep => ep.Produktua).ToFuture();
+            query.Fetch(ep => ep.Eskaera).ToFuture();
+            return query.ToFuture().ToList();
         }
     }
 }

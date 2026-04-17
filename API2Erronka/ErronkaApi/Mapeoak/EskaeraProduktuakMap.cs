@@ -27,5 +27,11 @@ public class EskaeraProduktuakMap : ClassMap<EskaeraProduktuak>
         Map(x => x.Guztira)
             .Formula("prezioa")
             .ReadOnly();
+
+        Map(x => x.Egoera)
+            .Column("egoera");
+
+        Map(x => x.Data)
+            .Column("data");
     }
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace ErronkaApi.Modeloak
 {
     public class EskaeraProduktuak
@@ -12,5 +14,8 @@ namespace ErronkaApi.Modeloak
         public virtual decimal Guztira { get; set; }
 
         public virtual Eskaera Eskaera { get; set; }
+        
+        public virtual int Egoera { get; set; }
+        public virtual DateTime Data { get; set; }
     }
 }
