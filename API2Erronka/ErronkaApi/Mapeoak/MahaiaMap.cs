@@ -8,10 +8,10 @@ public class MahaiaMap : ClassMap<Mahaia>
         Table("mahaiak");
 
         Id(x => x.id).Column("id").GeneratedBy.Identity();
-        Map(x => x.zenbakia).Formula("id").ReadOnly();
-        Map(x => x.kapazitatea).Formula("4").ReadOnly();
-        Map(x => x.egoera).Column("egoera");
         Map(x => x.izena).Column("izena");
+        Map(x => x.erabiltzailea).Column("erabiltzailea");
+        Map(x => x.pasahitza).Column("pasahitza");
+        Map(x => x.chat_baimena).Column("chat_baimena");
 
     }
 }

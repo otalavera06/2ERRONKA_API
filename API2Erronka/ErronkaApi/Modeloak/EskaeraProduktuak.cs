@@ -17,5 +17,6 @@ namespace ErronkaApi.Modeloak
         
         public virtual int Egoera { get; set; }
         public virtual DateTime Data { get; set; }
+        public virtual string Izena { get; set; }
     }
 }

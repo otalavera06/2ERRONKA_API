@@ -34,5 +34,11 @@ namespace ErronkaApi.Repositorioak
             return session.Query<Erabiltzailea>()
                 .FirstOrDefault(e => e.erabiltzailea == erabiltzailea && e.pasahitza == pasahitza && !e.ezabatua);
         }
+
+        public Erabiltzailea? LortuErabiltzailea(int id)
+        {
+            using var session = _sessionFactory.OpenSession();
+            return session.Get<Erabiltzailea>(id);
+        }
     }
 }

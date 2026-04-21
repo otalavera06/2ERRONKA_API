@@ -48,14 +48,6 @@ namespace ErronkaApi.Kontrollerrak
                         var mahaiakId = row[7] == null || row[7] == DBNull.Value ? (int?)null : Convert.ToInt32(row[7]);
                         var chatBaimena = row[8] != null && row[8] != DBNull.Value && Convert.ToInt32(row[8]) != 0;
 
-                        if (!chatBaimena)
-                        {
-                            return StatusCode(403, new
-                            {
-                                Message = "Langile honek ez dauka txata erabiltzeko baimenik."
-                            });
-                        }
-
                         return Ok(new
                         {
                             Id = Convert.ToInt32(row[0]),
@@ -78,14 +70,6 @@ namespace ErronkaApi.Kontrollerrak
             var erabiltzaileaFallback = _repo.Login(req.erabiltzailea, req.pasahitza);
             if (erabiltzaileaFallback != null)
             {
-                if (!erabiltzaileaFallback.txat)
-                {
-                    return StatusCode(403, new
-                    {
-                        Message = "Langile honek ez dauka txata erabiltzeko baimenik."
-                    });
-                }
-
                 var baimenaFallback = erabiltzaileaFallback.rola?.id == 1;
                 return Ok(new
                 {
@@ -102,6 +86,38 @@ namespace ErronkaApi.Kontrollerrak
             }
 
             return Unauthorized();
+        }
+
+        [HttpGet("{id}/txat-baimena")]
+        public IActionResult CheckTxatBaimena(int id)
+        {
+            try
+            {
+                using (var session = NHibernateHelper.OpenSession())
+                {
+                    var chatBaimenaRaw = session.CreateSQLQuery(
+                            @"SELECT chat_baimena FROM langileak WHERE id = :id LIMIT 1")
+                        .SetParameter("id", id)
+                        .UniqueResult();
+
+                    if (chatBaimenaRaw != null)
+                    {
+                        var chatBaimena = chatBaimenaRaw != DBNull.Value && Convert.ToInt32(chatBaimenaRaw) != 0;
+                        return Ok(new { chatBaimena = chatBaimena });
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+            var erabiltzaileaFallback = _repo.LortuErabiltzailea(id);
+            if (erabiltzaileaFallback != null)
+            {
+                return Ok(new { chatBaimena = erabiltzaileaFallback.txat });
+            }
+
+            return NotFound();
         }
     }
 }

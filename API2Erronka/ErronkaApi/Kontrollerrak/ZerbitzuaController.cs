@@ -27,6 +27,7 @@ namespace ErronkaApi.Kontrollerrak
             public decimal Prezioa { get; set; }
             public DateTime Data { get; set; }
             public int Egoera { get; set; }
+            public bool IsPlatera { get; set; }
         }
 
         public class ZerbitzuaSortuDto
@@ -50,6 +51,11 @@ namespace ErronkaApi.Kontrollerrak
             try
             {
                 var id = _repo.Create(dto);
+
+                var log = new Log();
+                int cantidadPlatos = dto.Eskaerak?.Count ?? 0;
+                log.RegistrarLog($"Mahaiaren Id-a (6 = Barra): {dto.MahaiakId.Value}. Guztira produktuak: {cantidadPlatos}");
+
                 return CreatedAtAction(nameof(GetByMahai), new { mahaiaId = dto.MahaiakId.Value }, new { Id = id });
             }
             catch (InvalidOperationException ex)

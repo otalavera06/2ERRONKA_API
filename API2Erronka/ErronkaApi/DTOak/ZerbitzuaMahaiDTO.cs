@@ -67,5 +67,10 @@ namespace ErronkaApi.DTOak
         /// Zerbitzuan dauden eskaeren zerrenda.
         /// </summary>
         public List<ZerbitzuaEskaeraDTO> Eskaerak { get; set; } = new List<ZerbitzuaEskaeraDTO>();
+
+        /// <summary>
+        /// Zerbitzua ordainduta dagoen ala ez.
+        /// </summary>
+        public bool Ordainduta { get; set; }
     }
 }

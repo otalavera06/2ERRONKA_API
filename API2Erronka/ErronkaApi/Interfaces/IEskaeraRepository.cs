@@ -15,5 +15,6 @@ namespace ErronkaApi.Interfaces
         List<EskaeraProduktuak> LortuEskaeraProduktuak2(int eskaeraId);
         List<Eskaera> LortuEskaerakOrdaintzeko();
         List<EskaeraProduktuak> LortuSukaldekoEskaerak();
+        Eskaera SortuEskaera(EskaeraSortuDTO dto);
     }
 }

@@ -22,6 +22,8 @@ namespace ErronkaApi.Kontrollerrak
             _mahaiaService = mahaiaService;
         }
 
+        public record MahaiakLoginRequest(string erabiltzailea, string pasahitza);
+
         /// <summary>
         /// Mahai libreak lortzen ditu.
         /// </summary>
@@ -59,5 +61,38 @@ namespace ErronkaApi.Kontrollerrak
             });
         }
 
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] MahaiakLoginRequest req)
+        {
+            if (req == null || string.IsNullOrWhiteSpace(req.erabiltzailea) || string.IsNullOrWhiteSpace(req.pasahitza))
+                return BadRequest("Erabiltzailea eta pasahitza beharrezkoak dira.");
+
+            var mahaia = _mahaiaService.Login(req.erabiltzailea, req.pasahitza);
+            if (mahaia != null)
+            {
+                return Ok(new
+                {
+                    Id = mahaia.id,
+                    Izena = mahaia.izena,
+                    Erabiltzailea = mahaia.erabiltzailea,
+                    ChatBaimena = mahaia.chat_baimena == "1" || mahaia.chat_baimena?.ToLower() == "true"
+                });
+            }
+
+            return Unauthorized();
+        }
+
+        [HttpGet("{id}/txat-baimena")]
+        public IActionResult CheckTxatBaimena(int id)
+        {
+            var mahaia = _mahaiaService.Get(id);
+            if (mahaia != null)
+            {
+                bool chatBaimena = mahaia.chat_baimena == "1" || mahaia.chat_baimena?.ToLower() == "true";
+                return Ok(new { chatBaimena = chatBaimena });
+            }
+
+            return NotFound();
+        }
     }
 }

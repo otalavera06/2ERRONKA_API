@@ -33,5 +33,8 @@ public class EskaeraProduktuakMap : ClassMap<EskaeraProduktuak>
 
         Map(x => x.Data)
             .Column("data");
+
+        Map(x => x.Izena)
+            .Column("izena");
     }
 }

@@ -23,6 +23,11 @@ namespace ErronkaApi.Repositorioak
             _sessionFactory = sessionFactory;
         }
 
+        /// <summary>
+        /// Eskaera bat IDaren arabera lortzen du.
+        /// </summary>
+        /// <param name="id">Eskaeraren IDa.</param>
+        /// <returns>Eskaera objektua edo null.</returns>
         public Eskaera? Get(int id)
         {
             using var session = _sessionFactory.OpenSession();
@@ -30,6 +35,10 @@ namespace ErronkaApi.Repositorioak
             return eskaera;
         }
 
+        /// <summary>
+        /// Eskaera bat gordetzen du datu-basean.
+        /// </summary>
+        /// <param name="eskaera">Gordetzeko eskaera.</param>
         public void Save(Eskaera eskaera)
         {
             using var session = _sessionFactory.OpenSession();
@@ -47,6 +56,10 @@ namespace ErronkaApi.Repositorioak
             tx.Commit();
         }
 
+        /// <summary>
+        /// Eskaera bat eguneratzen du datu-basean.
+        /// </summary>
+        /// <param name="eskaera">Eguneratzeko eskaera.</param>
         public void Update(Eskaera eskaera)
         {
             using var session = _sessionFactory.OpenSession();
@@ -69,6 +82,11 @@ namespace ErronkaApi.Repositorioak
             tx.Commit();
         }
 
+        /// <summary>
+        /// Eskaera baten sukaldeko egoera eguneratzen du.
+        /// </summary>
+        /// <param name="eskaeraId">Eskaeraren IDa.</param>
+        /// <param name="egoera">Egoera berria.</param>
         public void EguneratuSukaldeaEgoera(int eskaeraId, string egoera)
         {
             using var session = _sessionFactory.OpenSession();
@@ -77,12 +95,12 @@ namespace ErronkaApi.Repositorioak
             var egoeraInt = egoera.ToLower() switch
             {
                 "zain" => 0,
-                "hasi" => 1,
-                "prest" => 2,
+                "prest" => 1,
+                "ordainduta" => 2,
                 _ => 0
             };
 
-            session.CreateSQLQuery("UPDATE eskaerak SET egoera = :egoera WHERE zerbitzua_id = :id")
+            session.CreateSQLQuery("UPDATE eskaerak SET egoera = :egoera WHERE zerbitzua_id = :id AND egoera = 0")
                 .SetParameter("egoera", egoeraInt)
                 .SetParameter("id", eskaeraId)
                 .ExecuteUpdate();
@@ -90,8 +108,18 @@ namespace ErronkaApi.Repositorioak
             tx.Commit();
         }
 
+        /// <summary>
+        /// Eskaera bat ezabatzen du datu-basean.
+        /// </summary>
+        /// <param name="eskaera">Ezabatzeko eskaera.</param>
         public void Delete(Eskaera eskaera)
         {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+            session.CreateSQLQuery("DELETE FROM eskaerak WHERE zerbitzua_id = :id")
+                .SetParameter("id", eskaera.id)
+                .ExecuteUpdate();
+            session.CreateSQLQuery("DELETE FROM zerbitzua WHERE id = :id")
             using var session = _sessionFactory.OpenSession();
             using var tx = session.BeginTransaction();
             session.CreateSQLQuery("DELETE FROM eskaerak WHERE zerbitzua_id = :id")
@@ -103,6 +131,10 @@ namespace ErronkaApi.Repositorioak
             tx.Commit();
         }
 
+        /// <summary>
+        /// Eskaera guztiak lortzen ditu, itxita ez daudenak.
+        /// </summary>
+        /// <returns>Eskaeren zerrenda.</returns>
         public List<Eskaera> LortuEskaerak()
         {
             using var session = _sessionFactory.OpenSession();
@@ -112,6 +144,11 @@ namespace ErronkaApi.Repositorioak
                 .ToList();
         }
 
+        /// <summary>
+        /// Eskaera baten produktuak lortzen ditu.
+        /// </summary>
+        /// <param name="eskaeraId">Eskaeraren IDa.</param>
+        /// <returns>Eskaera-produktuen zerrenda.</returns>
         public List<EskaeraProduktuak> LortuEskaeraProduktuak(int eskaeraId)
         {
             using var session = _sessionFactory.OpenSession();
@@ -121,6 +158,10 @@ namespace ErronkaApi.Repositorioak
                 .ToList();
         }
 
+        /// <summary>
+        /// Eskaera guztiak lortzen ditu ordenatuta.
+        /// </summary>
+        /// <returns>Eskaeren zerrenda.</returns>
         public List<Eskaera> LortuEskaerak2()
         {
             using var session = _sessionFactory.OpenSession();
@@ -129,6 +170,11 @@ namespace ErronkaApi.Repositorioak
                 .ToList();
         }
 
+        /// <summary>
+        /// Eskaera baten produktuak lortzen ditu (beste metodoa).
+        /// </summary>
+        /// <param name="eskaeraId">Eskaeraren IDa.</param>
+        /// <returns>Eskaera-produktuen zerrenda.</returns>
         public List<EskaeraProduktuak> LortuEskaeraProduktuak2(int eskaeraId)
         {
             using var session = _sessionFactory.OpenSession();
@@ -138,6 +184,10 @@ namespace ErronkaApi.Repositorioak
                 .ToList();
         }
 
+        /// <summary>
+        /// Ordaintzeko dauden eskaerak lortzen ditu.
+        /// </summary>
+        /// <returns>Eskaeren zerrenda.</returns>
         public List<Eskaera> LortuEskaerakOrdaintzeko()
         {
             using var session = _sessionFactory.OpenSession();
@@ -147,13 +197,73 @@ namespace ErronkaApi.Repositorioak
                 .ToList();
         }
 
+        /// <summary>
+        /// Sukaldeko eskaerak lortzen ditu.
+        /// </summary>
+        /// <returns>Eskaera-produktuen zerrenda sukaldearentzat.</returns>
         public List<EskaeraProduktuak> LortuSukaldekoEskaerak()
         {
             using var session = _sessionFactory.OpenSession();
-            var query = session.Query<EskaeraProduktuak>().Where(ep => ep.Egoera == 0);
+            var query = session.Query<EskaeraProduktuak>()
+                .Where(ep => ep.Egoera == 0 && ep.Eskaera.mahaia_id >= 1 && ep.Eskaera.mahaia_id <= 5);
             query.Fetch(ep => ep.Produktua).ToFuture();
             query.Fetch(ep => ep.Eskaera).ToFuture();
             return query.ToFuture().ToList();
+        }
+
+        /// <summary>
+        /// Eskaera berri bat sortzen du DTOtik.
+        /// </summary>
+        /// <param name="dto">Eskaera sortzeko datuak.</param>
+        /// <returns>Sortutako eskaera.</returns>
+        public Eskaera SortuEskaera(EskaeraSortuDTO dto)
+        {
+            using var session = _sessionFactory.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            var eskaera = new Eskaera
+            {
+                mahaia_id = dto.MahaiaId,
+                komensalak = dto.Komensalak,
+                sortzeData = DateTime.Now,
+                egoera = "irekita",
+                EskaeraProduktuak = new List<EskaeraProduktuak>(),
+                EskaeraMahaiak = new List<EskaeraMahaiak>()
+            };
+
+            session.Save(eskaera);
+
+            foreach (var p in dto.Produktuak)
+            {
+                var produktua = session.Get<Produktua>(p.ProduktuaId);
+                if (produktua != null && produktua.stock_aktuala >= p.Kantitatea)
+                {
+                    var ep = new EskaeraProduktuak
+                    {
+                        Eskaera = eskaera,
+                        Produktua = produktua,
+                        Kantitatea = p.Kantitatea,
+                        PrezioUnitarioa = produktua.prezioa,
+                        Guztira = produktua.prezioa * p.Kantitatea,
+                        Egoera = 0
+                    };
+                    eskaera.EskaeraProduktuak.Add(ep);
+                    session.Save(ep);
+
+                    produktua.stock_aktuala -= p.Kantitatea;
+                    session.Update(produktua);
+                }
+            }
+
+            var mahaia = session.Get<Mahaia>(dto.MahaiaId);
+            if (mahaia != null)
+            {
+                mahaia.egoera = "okupatuta";
+                session.Update(mahaia);
+            }
+
+            tx.Commit();
+            return eskaera;
         }
     }
 }

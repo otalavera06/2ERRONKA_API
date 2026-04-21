@@ -44,8 +44,15 @@ namespace ErronkaApi.Kontrollerrak
         {
             using var session = NHibernateHelper.OpenSession();
             var rows = session.CreateSQLQuery(
-                    @"SELECT f.id, f.zerbitzua_id, f.prezio_totala
+                    @"SELECT f.id, f.zerbitzua_id, f.prezio_totala, z.data, m.izena,
+                             (SELECT GROUP_CONCAT(CONCAT(ag.izena, ' x', ag.kant) SEPARATOR ', ')
+                              FROM (SELECT e3.zerbitzua_id, e3.izena, COUNT(*) as kant
+                                    FROM eskaerak e3
+                                    GROUP BY e3.zerbitzua_id, e3.izena) ag
+                              WHERE ag.zerbitzua_id = f.zerbitzua_id) AS eskaera_xehetasunak
                       FROM fakturak f
+                      LEFT JOIN zerbitzua z ON f.zerbitzua_id = z.id
+                      LEFT JOIN mahaiak m ON z.mahaiak_id = m.id
                       ORDER BY f.id DESC
                       LIMIT 200")
                 .List<object[]>();
@@ -55,6 +62,9 @@ namespace ErronkaApi.Kontrollerrak
                 Id = Convert.ToInt32(r[0]),
                 ZerbitzuaId = r[1] == DBNull.Value || r[1] == null ? 0 : Convert.ToInt32(r[1]),
                 PrezioTotala = r[2] == DBNull.Value || r[2] == null ? 0 : Convert.ToDecimal(r[2]),
+                Data = r[3] == DBNull.Value || r[3] == null ? "" : Convert.ToDateTime(r[3]).ToString("yyyy-MM-dd HH:mm"),
+                MahaiaIzena = r[4] == DBNull.Value || r[4] == null ? "Ezezaguna" : r[4].ToString(),
+                EskaeraXehetasunak = r[5] == DBNull.Value || r[5] == null ? "" : r[5].ToString(),
                 Sortuta = true,
                 Path = $"/api/fakturak/{Convert.ToInt32(r[0])}/pdf"
             }).ToList();
@@ -84,10 +94,11 @@ namespace ErronkaApi.Kontrollerrak
             if (zerbitzua == null) return NotFound();
 
             var produktuak = session.CreateSQLQuery(
-                    @"SELECT e.izena, e.prezioa, 1 AS kantitatea
+                    @"SELECT e.izena, e.prezioa, COUNT(*) AS kantitatea
                       FROM eskaerak e
                       WHERE e.zerbitzua_id = :id
-                      ORDER BY e.id")
+                      GROUP BY e.izena, e.prezioa
+                      ORDER BY e.izena")
                 .SetParameter("id", zerbitzuaId)
                 .List<object[]>();
 
@@ -177,6 +188,11 @@ namespace ErronkaApi.Kontrollerrak
                     .SetParameter("id", eskaeraId)
                     .ExecuteUpdate();
 
+                
+                session.CreateSQLQuery("UPDATE eskaerak SET egoera = 2 WHERE zerbitzua_id = :id")
+                    .SetParameter("id", eskaeraId)
+                    .ExecuteUpdate();
+
                 var fakturaExists = session.CreateSQLQuery("SELECT id FROM fakturak WHERE zerbitzua_id = :id LIMIT 1")
                     .SetParameter("id", eskaeraId)
                     .UniqueResult();
@@ -188,13 +204,6 @@ namespace ErronkaApi.Kontrollerrak
                               VALUES (:prezioTotala, :zerbitzuaId)")
                         .SetParameter("prezioTotala", zerbitzua[2] == DBNull.Value || zerbitzua[2] == null ? 0 : Convert.ToDecimal(zerbitzua[2]))
                         .SetParameter("zerbitzuaId", eskaeraId)
-                        .ExecuteUpdate();
-                }
-
-                if (zerbitzua[1] != DBNull.Value && zerbitzua[1] != null)
-                {
-                    session.CreateSQLQuery("UPDATE mahaiak SET egoera = 'libre' WHERE id = :id")
-                        .SetParameter("id", Convert.ToInt32(zerbitzua[1]))
                         .ExecuteUpdate();
                 }
 

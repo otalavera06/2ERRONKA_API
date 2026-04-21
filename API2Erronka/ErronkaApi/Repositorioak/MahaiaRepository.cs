@@ -87,19 +87,26 @@ namespace ErronkaApi.Repositorioak
                 using var session = _sessionFactory.OpenSession();
 
                 return session.Query<Mahaia>()
-                    .Where(m => m.egoera == "libre")
                     .Select(m => new MahaiaDTO
                     {
                         Id = m.id,
-                        Zenbakia = m.zenbakia,
-                        kapazitatea = m.kapazitatea
+                        Izena = m.izena,
+                        Erabiltzailea = m.erabiltzailea,
+                        ChatBaimena = m.chat_baimena
                     })
                     .ToList();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
+        }
+
+        public Mahaia? Login(string erabiltzailea, string pasahitza)
+        {
+            using var session = _sessionFactory.OpenSession();
+            return session.Query<Mahaia>()
+                .SingleOrDefault(m => m.erabiltzailea == erabiltzailea && m.pasahitza == pasahitza);
         }
     }
 }

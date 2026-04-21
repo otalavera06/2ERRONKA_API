@@ -28,44 +28,86 @@ namespace ErronkaApi.Repositorioak
             using var tx = session.BeginTransaction();
             var zerbitzuData = dto.Data == default ? DateTime.Now : dto.Data;
 
-            session.CreateSQLQuery(
-                    @"INSERT INTO zerbitzua (prezioTotala, data, ordainduta, erreserba_id, mahaiak_id)
-                      VALUES (:prezioTotala, :data, :ordainduta, :erreserbaId, :mahaiakId)")
-                .SetParameter("prezioTotala", dto.PrezioTotala)
-                .SetParameter("data", zerbitzuData)
-                .SetParameter("ordainduta", 0)
-                .SetParameter("erreserbaId", dto.ErreserbaId.HasValue ? dto.ErreserbaId.Value : (int?)null, global::NHibernate.NHibernateUtil.Int32)
+            var existingIdObj = session.CreateSQLQuery(
+                    "SELECT id FROM zerbitzua WHERE mahaiak_id = :mahaiakId AND ordainduta = 0 ORDER BY data DESC LIMIT 1")
                 .SetParameter("mahaiakId", dto.MahaiakId!.Value)
-                .ExecuteUpdate();
+                .UniqueResult();
 
-            var zerbitzuaId = Convert.ToInt32(session.CreateSQLQuery("SELECT LAST_INSERT_ID()").UniqueResult());
+            int zerbitzuaId;
+
+            if (existingIdObj != null)
+            {
+                zerbitzuaId = Convert.ToInt32(existingIdObj);
+                session.CreateSQLQuery(
+                        "UPDATE zerbitzua SET prezioTotala = prezioTotala + :prezioTotala WHERE id = :id")
+                    .SetParameter("prezioTotala", dto.PrezioTotala)
+                    .SetParameter("id", zerbitzuaId)
+                    .ExecuteUpdate();
+            }
+            else
+            {
+                session.CreateSQLQuery(
+                        @"INSERT INTO zerbitzua (prezioTotala, data, ordainduta, erreserba_id, mahaiak_id)
+                          VALUES (:prezioTotala, :data, :ordainduta, :erreserbaId, :mahaiakId)")
+                    .SetParameter("prezioTotala", dto.PrezioTotala)
+                    .SetParameter("data", zerbitzuData)
+                    .SetParameter("ordainduta", 0)
+                    .SetParameter("erreserbaId", dto.ErreserbaId.HasValue ? dto.ErreserbaId.Value : (int?)null, global::NHibernate.NHibernateUtil.Int32)
+                    .SetParameter("mahaiakId", dto.MahaiakId!.Value)
+                    .ExecuteUpdate();
+
+                zerbitzuaId = Convert.ToInt32(session.CreateSQLQuery("SELECT LAST_INSERT_ID()").UniqueResult());
+            }
 
             foreach (var e in dto.Eskaerak)
             {
-                var stockUpdate = session.CreateSQLQuery(
-                        @"UPDATE produktuak
-                          SET stock = stock - 1
-                          WHERE id = :produktuId AND COALESCE(stock, 0) >= 1")
-                    .SetParameter("produktuId", e.ProduktuaId)
-                    .ExecuteUpdate();
-
-                if (stockUpdate == 0)
+                int dbProduktuaId = e.IsPlatera ? 1 : e.ProduktuaId;
+                var produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == dbProduktuaId);
+                
+                if (produktua == null && e.IsPlatera)
                 {
-                    var produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == e.ProduktuaId);
-                    if (produktua == null) throw new InvalidOperationException($"Produktua ez da existitzen: {e.ProduktuaId}");
-                    throw new InvalidOperationException($"Stock nahikorik ez: {produktua.izena}");
+                    
+                    session.CreateSQLQuery("INSERT IGNORE INTO produktuak (id, izena, prezioa, stock, irudia, produktuen_motak_id) VALUES (1, 'Platera', 0, 999, 'platera.png', 8)").ExecuteUpdate();
+                    produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == 1);
                 }
 
-                session.CreateSQLQuery(
-                        @"INSERT INTO eskaerak (izena, prezioa, data, egoera, zerbitzua_id, produktua_id)
-                          VALUES (:izena, :prezioa, :data, :egoera, :zerbitzuaId, :produktuaId)")
-                    .SetParameter("izena", e.Izena)
-                    .SetParameter("prezioa", e.Prezioa)
-                    .SetParameter("data", e.Data == default ? zerbitzuData : e.Data)
-                    .SetParameter("egoera", e.Egoera)
-                    .SetParameter("zerbitzuaId", zerbitzuaId)
-                    .SetParameter("produktuaId", e.ProduktuaId)
-                    .ExecuteUpdate();
+                if (produktua == null) throw new InvalidOperationException($"Produktua ez da existitzen: {dbProduktuaId}");
+
+                var finalIzena = string.IsNullOrWhiteSpace(e.Izena) ? produktua.izena : e.Izena;
+                var finalPrezioa = e.Prezioa == 0m ? (decimal)produktua.prezioa : e.Prezioa;
+
+                if (!e.IsPlatera)
+                {
+                    var stockUpdate = session.CreateSQLQuery(
+                            @"UPDATE produktuak
+                              SET stock = stock - 1
+                              WHERE id = :id AND stock >= 1")
+                        .SetParameter("id", dbProduktuaId)
+                        .ExecuteUpdate();
+
+                    if (stockUpdate == 0)
+                    {
+                        throw new InvalidOperationException($"Stock nahikorik ez: {produktua.izena}");
+                    }
+                }
+
+                try
+                {
+                    session.CreateSQLQuery(
+                            @"INSERT INTO eskaerak (izena, prezioa, data, egoera, zerbitzua_id, produktua_id)
+                              VALUES (:izena, :prezioa, :data, :egoera, :zerbitzuaId, :produktuaId)")
+                        .SetParameter("izena", finalIzena)
+                        .SetParameter("prezioa", finalPrezioa)
+                        .SetParameter("data", e.Data == default ? zerbitzuData : e.Data)
+                        .SetParameter("egoera", e.Egoera)
+                        .SetParameter("zerbitzuaId", zerbitzuaId)
+                        .SetParameter("produktuaId", dbProduktuaId)
+                        .ExecuteUpdate();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Error inserting eskaerak (izena={finalIzena}, prezioa={finalPrezioa}, zerbitzuaId={zerbitzuaId}, produktuaId={dbProduktuaId}): {ex.InnerException?.Message ?? ex.Message}", ex);
+                }
             }
 
             tx.Commit();
@@ -88,7 +130,7 @@ namespace ErronkaApi.Repositorioak
             {
                 var zerbitzuaId = Convert.ToInt32(z[0]);
                 var produktuak = session.CreateSQLQuery(
-                        @"SELECT e.id, e.produktua_id, COALESCE(p.izena, e.izena), p.irudia, e.data, e.prezioa, e.egoera
+                        @"SELECT e.id, e.produktua_id, COALESCE(e.izena, p.izena), p.irudia, e.data, e.prezioa, e.egoera
                           FROM eskaerak e
                           LEFT JOIN produktuak p ON p.id = e.produktua_id
                           WHERE e.zerbitzua_id = :zerbitzuaId
@@ -105,6 +147,7 @@ namespace ErronkaApi.Repositorioak
                     Data = z[2] == DBNull.Value || z[2] == null ? DateTime.MinValue : Convert.ToDateTime(z[2]),
                     ErreserbaId = z[3] == DBNull.Value || z[3] == null ? null : Convert.ToInt32(z[3]),
                     MahaiakId = z[4] == DBNull.Value || z[4] == null ? null : Convert.ToInt32(z[4]),
+                    Ordainduta = ordainduta,
                     Eskaerak = produktuak.Select(ep => new ZerbitzuaEskaeraDTO
                     {
                         Id = Convert.ToInt32(ep[0]),

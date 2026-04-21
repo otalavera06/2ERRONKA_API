@@ -484,10 +484,36 @@ namespace ErronkaApi.Testak
         }
 
         [Fact]
-        public void LortuEskaerakOrdaintzeko_errore_bada_500_itzultzen_du()
+        public void LortuSukaldekoEskaerak_eskaerak_daudenean_itzultzen_ditu()
         {
-            _mockRepo.Setup(r => r.LortuEskaerakOrdaintzeko()).Throws(new Exception("Error"));
-            var result = _controller.LortuEskaerakOrdaintzeko();
+            
+            var produktuak = new List<EskaeraProduktuak>
+            {
+                new EskaeraProduktuak
+                {
+                    Eskaera = new Eskaera { id = 1, sortzeData = DateTime.Now, mahaia_id = 1, komensalak = 2 },
+                    Produktua = new Produktua { id = 1, izena = "P1" },
+                    Kantitatea = 1,
+                    PrezioUnitarioa = 10
+                }
+            };
+            _mockRepo.Setup(r => r.LortuSukaldekoEskaerak()).Returns(produktuak);
+
+            
+            var result = _controller.LortuSukaldekoEskaerak();
+
+            
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var response = Assert.IsType<ErantzunaDTO<EskaeraDTO>>(okResult.Value);
+            Assert.Equal(200, response.Code);
+            Assert.Single(response.Datuak);
+        }
+
+        [Fact]
+        public void LortuSukaldekoEskaerak_errore_bada_500_itzultzen_du()
+        {
+            _mockRepo.Setup(r => r.LortuSukaldekoEskaerak()).Throws(new Exception("Error"));
+            var result = _controller.LortuSukaldekoEskaerak();
             var errorResult = Assert.IsType<ObjectResult>(result);
             Assert.Equal(500, errorResult.StatusCode);
         }
