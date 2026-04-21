@@ -119,15 +119,7 @@ namespace ErronkaApi.Repositorioak
             session.CreateSQLQuery("DELETE FROM eskaerak WHERE zerbitzua_id = :id")
                 .SetParameter("id", eskaera.id)
                 .ExecuteUpdate();
-            session.CreateSQLQuery("DELETE FROM zerbitzua WHERE id = :id")
-            using var session = _sessionFactory.OpenSession();
-            using var tx = session.BeginTransaction();
-            session.CreateSQLQuery("DELETE FROM eskaerak WHERE zerbitzua_id = :id")
-                .SetParameter("id", eskaera.id)
-                .ExecuteUpdate();
-            session.CreateSQLQuery("DELETE FROM zerbitzua WHERE id = :id")
-                .SetParameter("id", eskaera.id)
-                .ExecuteUpdate();
+            session.CreateSQLQuery("DELETE FROM zerbitzua WHERE id = :id");
             tx.Commit();
         }
 
@@ -255,12 +247,12 @@ namespace ErronkaApi.Repositorioak
                 }
             }
 
-            var mahaia = session.Get<Mahaia>(dto.MahaiaId);
-            if (mahaia != null)
-            {
-                mahaia.egoera = "okupatuta";
-                session.Update(mahaia);
-            }
+            //var mahaia = session.Get<Mahaia>(dto.MahaiaId);
+            //if (mahaia != null)
+            //{
+            //    mahaia = "okupatuta";
+            //    session.Update(mahaia);
+            //}
 
             tx.Commit();
             return eskaera;
