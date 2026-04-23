@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ErronkaApi.Test_Logika")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2e8717c536aaffaf79852d832044da873dfc815")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17230eefa4a63d5d7fc69ceaac6f57fc86d76a28")]
 [assembly: System.Reflection.AssemblyProductAttribute("ErronkaApi.Test_Logika")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ErronkaApi.Test_Logika")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
