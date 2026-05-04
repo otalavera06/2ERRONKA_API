@@ -5,8 +5,8 @@
 packages/
 
 # Build folders (TODOS los proyectos)
-ErronkaApi/bin/
-ErronkaApi/obj/
+**/bin/
+**/obj/
 
 # Archivos generados
 *.dll

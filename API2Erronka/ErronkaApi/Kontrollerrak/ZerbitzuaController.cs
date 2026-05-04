@@ -27,6 +27,7 @@ namespace ErronkaApi.Kontrollerrak
             public decimal Prezioa { get; set; }
             public DateTime Data { get; set; }
             public int Egoera { get; set; }
+            public bool IsPlatera { get; set; }
         }
 
         public class ZerbitzuaSortuDto

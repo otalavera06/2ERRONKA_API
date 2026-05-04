@@ -69,4 +69,15 @@ public class MahaiaKontrolleraTests
         Assert.Equal(500, dto.Code);
         Assert.Null(dto.Datuak);
     }
+
+    [Fact]
+    public void Login_datu_hutsak_401_itzultzen_du()
+    {
+        var mockRepo = new Mock<IMahaiaRepository>();
+        var controller = new MahaiakController(mockRepo.Object);
+
+        var result = controller.Login(new MahaiakController.LoginRequest("", ""));
+
+        Assert.IsType<UnauthorizedResult>(result);
+    }
 }

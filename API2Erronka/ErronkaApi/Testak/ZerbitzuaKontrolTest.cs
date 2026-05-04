@@ -71,6 +71,40 @@ namespace ErronkaApi.Testak
         }
 
         [Fact]
+        public void Create_platera_lerroa_repoari_pasatzen_dio()
+        {
+            var mockRepo = new Mock<IZerbitzuaRepository>();
+            mockRepo.Setup(r => r.Create(It.Is<ZerbitzuaController.ZerbitzuaSortuDto>(dto =>
+                    dto.Eskaerak.Count == 1 && dto.Eskaerak[0].IsPlatera && dto.Eskaerak[0].ProduktuaId == 6)))
+                .Returns(124);
+
+            var controller = new ZerbitzuaController(mockRepo.Object);
+            var dto = new ZerbitzuaController.ZerbitzuaSortuDto
+            {
+                PrezioTotala = 6.5m,
+                Data = DateTime.Now,
+                MahaiakId = 5,
+                Eskaerak = new List<ZerbitzuaController.EskaeraSortuDto>
+                {
+                    new ZerbitzuaController.EskaeraSortuDto
+                    {
+                        ProduktuaId = 6,
+                        Izena = "Entsalada Mistoa",
+                        Prezioa = 6.5m,
+                        Data = DateTime.Now,
+                        Egoera = 0,
+                        IsPlatera = true
+                    }
+                }
+            };
+
+            var result = controller.Create(dto);
+
+            Assert.IsType<CreatedAtActionResult>(result);
+            mockRepo.Verify(r => r.Create(It.IsAny<ZerbitzuaController.ZerbitzuaSortuDto>()), Times.Once);
+        }
+
+        [Fact]
         public void LortuMahaiarenZerbitzuak_ok_lista()
         {
             var mockRepo = new Mock<IZerbitzuaRepository>();
@@ -112,6 +146,52 @@ namespace ErronkaApi.Testak
             var controller = new ZerbitzuaController(mockRepo.Object);
             var result = controller.Ordaindu(99);
             Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
+        public void Update_eskaerarik_gabe_400()
+        {
+            var mockRepo = new Mock<IZerbitzuaRepository>();
+            var controller = new ZerbitzuaController(mockRepo.Object);
+            var dto = new ZerbitzuaController.ZerbitzuaSortuDto
+            {
+                PrezioTotala = 0,
+                MahaiakId = 2,
+                Eskaerak = new List<ZerbitzuaController.EskaeraSortuDto>()
+            };
+
+            var result = controller.Update(1, dto);
+
+            Assert.IsType<BadRequestObjectResult>(result);
+            mockRepo.Verify(r => r.Update(It.IsAny<int>(), It.IsAny<ZerbitzuaController.ZerbitzuaSortuDto>()), Times.Never);
+        }
+
+        [Fact]
+        public void Update_repoak_stock_errorea_ematen_badu_400()
+        {
+            var mockRepo = new Mock<IZerbitzuaRepository>();
+            mockRepo.Setup(r => r.Update(1, It.IsAny<ZerbitzuaController.ZerbitzuaSortuDto>()))
+                .Throws(new InvalidOperationException("Stock nahikorik ez: Letxuga"));
+            var controller = new ZerbitzuaController(mockRepo.Object);
+            var dto = new ZerbitzuaController.ZerbitzuaSortuDto
+            {
+                PrezioTotala = 6.5m,
+                MahaiakId = 2,
+                Eskaerak = new List<ZerbitzuaController.EskaeraSortuDto>
+                {
+                    new ZerbitzuaController.EskaeraSortuDto
+                    {
+                        ProduktuaId = 6,
+                        Izena = "Entsalada Mistoa",
+                        Prezioa = 6.5m,
+                        IsPlatera = true
+                    }
+                }
+            };
+
+            var result = controller.Update(1, dto);
+            var bad = Assert.IsType<BadRequestObjectResult>(result);
+            Assert.Equal("Stock nahikorik ez: Letxuga", bad.Value);
         }
     }
 }

@@ -36,6 +36,10 @@ namespace ErronkaApi.DTOak
         /// Eskaeraren egoera zenbakiz adierazita.
         /// </summary>
         public int Egoera { get; set; }
+        /// <summary>
+        /// Lerroa plater bat den adierazten du; bestela produktu arrunta da.
+        /// </summary>
+        public bool IsPlatera { get; set; }
     }
 
     /// <summary>
