@@ -464,6 +464,12 @@
             Langileen kudeaketa eta saioa hasteko endpoint-a.
             </summary>
         </member>
+        <member name="M:ErronkaApi.Kontrollerrak.LangileakController.GetAll">
+            <summary>
+            Langile guztiak lortzen ditu Odoo-rekin sinkronizatzeko.
+            </summary>
+            <returns>Langileen zerrenda.</returns>
+        </member>
         <member name="M:ErronkaApi.Kontrollerrak.LangileakController.Login(ErronkaApi.Kontrollerrak.LangileakController.LoginRequest)">
             <summary>
             Saioa hasten du erabiltzaile eta pasahitzarekin.
@@ -514,6 +520,14 @@
             </summary>
             <param name="mahaiaId">Mahaiaren IDa.</param>
             <returns>200 OK eta zerbitzuen zerrenda.</returns>
+        </member>
+        <member name="M:ErronkaApi.Kontrollerrak.ZerbitzuaController.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)">
+            <summary>
+            Lehendik dagoen zerbitzu baten produktuak ordezkatzen ditu.
+            </summary>
+            <param name="id">Zerbitzuaren IDa.</param>
+            <param name="dto">Zerbitzuaren produktu berriak.</param>
+            <returns>200 OK, 400 edo 404.</returns>
         </member>
         <member name="M:ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu(System.Int32)">
             <summary>

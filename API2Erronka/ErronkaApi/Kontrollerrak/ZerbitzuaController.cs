@@ -71,6 +71,30 @@ namespace ErronkaApi.Kontrollerrak
         }
 
         /// <summary>
+        /// Lehendik dagoen zerbitzu baten produktuak ordezkatzen ditu.
+        /// </summary>
+        /// <param name="id">Zerbitzuaren IDa.</param>
+        /// <param name="dto">Zerbitzuaren produktu berriak.</param>
+        /// <returns>200 OK, 400 edo 404.</returns>
+        [HttpPut("{id:int}")]
+        public IActionResult Update(int id, [FromBody] ZerbitzuaSortuDto dto)
+        {
+            if (dto == null) return BadRequest("Datuak behar dira");
+            if (dto.Eskaerak == null || !dto.Eskaerak.Any()) return BadRequest("Gutxienez produktu bat behar da");
+
+            try
+            {
+                var ok = _repo.Update(id, dto);
+                if (!ok) return NotFound();
+                return Ok();
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        /// <summary>
         /// Eskaera ordainduta markatzen du.
         /// </summary>
         /// <param name="id">Eskaeraren IDa.</param>
