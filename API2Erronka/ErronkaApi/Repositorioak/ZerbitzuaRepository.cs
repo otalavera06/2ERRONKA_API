@@ -164,6 +164,98 @@ namespace ErronkaApi.Repositorioak
             return result;
         }
 
+        public bool Update(int id, ZerbitzuaController.ZerbitzuaSortuDto dto)
+        {
+            using var session = NHibernateHelper.OpenSession();
+            using var tx = session.BeginTransaction();
+
+            var zerbitzua = session.CreateSQLQuery("SELECT id, ordainduta FROM zerbitzua WHERE id = :id")
+                .SetParameter("id", id)
+                .UniqueResult<object[]>();
+
+            if (zerbitzua == null) return false;
+
+            var ordainduta = zerbitzua[1] != null && zerbitzua[1] != DBNull.Value && Convert.ToInt32(zerbitzua[1]) != 0;
+            if (ordainduta)
+            {
+                throw new InvalidOperationException("Zerbitzua jada ordainduta dago; ezin da editatu.");
+            }
+
+            var oraingoProduktuak = session.CreateSQLQuery(
+                    @"SELECT produktua_id, COUNT(*)
+                      FROM eskaerak
+                      WHERE zerbitzua_id = :id
+                      GROUP BY produktua_id")
+                .SetParameter("id", id)
+                .List<object[]>();
+
+            foreach (var row in oraingoProduktuak)
+            {
+                session.CreateSQLQuery(
+                        @"UPDATE produktuak
+                          SET stock = stock + :kantitatea
+                          WHERE id = :produktuId")
+                    .SetParameter("kantitatea", Convert.ToInt32(row[1]))
+                    .SetParameter("produktuId", Convert.ToInt32(row[0]))
+                    .ExecuteUpdate();
+            }
+
+            var taldekatuta = dto.Eskaerak
+                .GroupBy(e => e.ProduktuaId)
+                .Select(g => new
+                {
+                    ProduktuaId = g.Key,
+                    Kantitatea = g.Count(),
+                    Produktua = g.First()
+                })
+                .ToList();
+
+            foreach (var item in taldekatuta)
+            {
+                var stockUpdate = session.CreateSQLQuery(
+                        @"UPDATE produktuak
+                          SET stock = stock - :kantitatea
+                          WHERE id = :produktuId AND COALESCE(stock, 0) >= :kantitatea")
+                    .SetParameter("kantitatea", item.Kantitatea)
+                    .SetParameter("produktuId", item.ProduktuaId)
+                    .ExecuteUpdate();
+
+                if (stockUpdate == 0)
+                {
+                    var produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == item.ProduktuaId);
+                    if (produktua == null) throw new InvalidOperationException($"Produktua ez da existitzen: {item.ProduktuaId}");
+                    throw new InvalidOperationException($"Stock nahikorik ez: {produktua.izena}");
+                }
+            }
+
+            session.CreateSQLQuery("DELETE FROM eskaerak WHERE zerbitzua_id = :id")
+                .SetParameter("id", id)
+                .ExecuteUpdate();
+
+            var data = DateTime.Now;
+            foreach (var e in dto.Eskaerak)
+            {
+                session.CreateSQLQuery(
+                        @"INSERT INTO eskaerak (izena, prezioa, data, egoera, zerbitzua_id, produktua_id)
+                          VALUES (:izena, :prezioa, :data, :egoera, :zerbitzuaId, :produktuaId)")
+                    .SetParameter("izena", e.Izena)
+                    .SetParameter("prezioa", e.Prezioa)
+                    .SetParameter("data", e.Data == default ? data : e.Data)
+                    .SetParameter("egoera", e.Egoera)
+                    .SetParameter("zerbitzuaId", id)
+                    .SetParameter("produktuaId", e.ProduktuaId)
+                    .ExecuteUpdate();
+            }
+
+            session.CreateSQLQuery("UPDATE zerbitzua SET prezioTotala = :prezioTotala WHERE id = :id")
+                .SetParameter("prezioTotala", dto.PrezioTotala)
+                .SetParameter("id", id)
+                .ExecuteUpdate();
+
+            tx.Commit();
+            return true;
+        }
+
         public bool Ordaindu(int id)
         {
             using var session = NHibernateHelper.OpenSession();

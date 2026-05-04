@@ -1,7 +1,9 @@
+using ErronkaApi.DTOak;
 using ErronkaApi.NHibernate;
 using ErronkaApi.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace ErronkaApi.Kontrollerrak
 {
@@ -9,7 +11,7 @@ namespace ErronkaApi.Kontrollerrak
     /// Langileen kudeaketa eta saioa hasteko endpoint-a.
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/langileak")]
     public class LangileakController : ControllerBase
     {
         private readonly IErabiltzaileaRepository _repo;
@@ -20,6 +22,34 @@ namespace ErronkaApi.Kontrollerrak
         }
 
         public record LoginRequest(string erabiltzailea, string pasahitza);
+        /// <summary>
+        /// Langile guztiak lortzen ditu Odoo-rekin sinkronizatzeko.
+        /// </summary>
+        /// <returns>Langileen zerrenda.</returns>
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            try
+            {
+                var langileak = _repo.GetAll();
+
+                return Ok(new ErantzunaDTO<LangileaDTO>
+                {
+                    Code = 200,
+                    Message = "Langileak lortu dira",
+                    Datuak = langileak
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ErantzunaDTO<LangileaDTO>
+                {
+                    Code = 500,
+                    Message = "Errore bat egon da: " + ex.Message,
+                    Datuak = new List<LangileaDTO>()
+                });
+            }
+        }
 
         /// <summary>
         /// Saioa hasten du erabiltzaile eta pasahitzarekin.
