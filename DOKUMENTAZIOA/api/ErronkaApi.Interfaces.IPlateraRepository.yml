@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Interfaces.IPlateraRepository
+  commentId: T:ErronkaApi.Interfaces.IPlateraRepository
+  id: IPlateraRepository
+  parent: ErronkaApi.Interfaces
+  children:
+  - ErronkaApi.Interfaces.IPlateraRepository.GetAll(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IPlateraRepository
+  nameWithType: IPlateraRepository
+  fullName: ErronkaApi.Interfaces.IPlateraRepository
+  type: Interface
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IPlateraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: IPlateraRepository
+    path: ../API2Erronka/ErronkaApi/Interfaces/IPlateraRepository.cs
+    startLine: 4
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: public interface IPlateraRepository
+    content.vb: Public Interface IPlateraRepository
+- uid: ErronkaApi.Interfaces.IPlateraRepository.GetAll(System.String)
+  commentId: M:ErronkaApi.Interfaces.IPlateraRepository.GetAll(System.String)
+  id: GetAll(System.String)
+  parent: ErronkaApi.Interfaces.IPlateraRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAll(string)
+  nameWithType: IPlateraRepository.GetAll(string)
+  fullName: ErronkaApi.Interfaces.IPlateraRepository.GetAll(string)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IPlateraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAll
+    path: ../API2Erronka/ErronkaApi/Interfaces/IPlateraRepository.cs
+    startLine: 6
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: List<PlateraDTO> GetAll(string baseUrl)
+    parameters:
+    - id: baseUrl
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.PlateraDTO}
+    content.vb: Function GetAll(baseUrl As String) As List(Of PlateraDTO)
+  overload: ErronkaApi.Interfaces.IPlateraRepository.GetAll*
+  nameWithType.vb: IPlateraRepository.GetAll(String)
+  fullName.vb: ErronkaApi.Interfaces.IPlateraRepository.GetAll(String)
+  name.vb: GetAll(String)
+references:
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+- uid: ErronkaApi.Interfaces.IPlateraRepository.GetAll*
+  commentId: Overload:ErronkaApi.Interfaces.IPlateraRepository.GetAll
+  href: ErronkaApi.Interfaces.IPlateraRepository.html#ErronkaApi_Interfaces_IPlateraRepository_GetAll_System_String_
+  name: GetAll
+  nameWithType: IPlateraRepository.GetAll
+  fullName: ErronkaApi.Interfaces.IPlateraRepository.GetAll
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.PlateraDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.PlateraDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PlateraDTO>
+  nameWithType: List<PlateraDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.PlateraDTO>
+  nameWithType.vb: List(Of PlateraDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.PlateraDTO)
+  name.vb: List(Of PlateraDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.DTOak.PlateraDTO
+    name: PlateraDTO
+    href: ErronkaApi.DTOak.PlateraDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.DTOak.PlateraDTO
+    name: PlateraDTO
+    href: ErronkaApi.DTOak.PlateraDTO.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

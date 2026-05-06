@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EskaeraKontrollerra | Erronka API Dokumentazioa ">
       
-      <meta name="description" content="Eskaerak kudeatzeko kontroladorea. Eskaerak sortu, kontsultatu, eguneratu eta ezabatzeko aukera ematen du.">
+      
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/UnaiMarti88/API2Erronka/new/main/apiSpec/new?filename=ErronkaApi_Kontrollerrak_EskaeraKontrollerra.md&amp;value=---%0Auid%3A%20ErronkaApi.Kontrollerrak.EskaeraKontrollerra%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/otalavera06/2ERRONKA_API/new/main/apiSpec/new?filename=ErronkaApi_Kontrollerrak_EskaeraKontrollerra.md&amp;value=---%0Auid%3A%20ErronkaApi.Kontrollerrak.EskaeraKontrollerra%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra" class="text-break">
-Class EskaeraKontrollerra  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class EskaeraKontrollerra  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,9 +97,7 @@ Class EskaeraKontrollerra  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>ErronkaApi.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Eskaerak kudeatzeko kontroladorea.
-Eskaerak sortu, kontsultatu, eguneratu eta ezabatzeko aukera ematen du.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -678,18 +676,31 @@ public class EskaeraKontrollerra : ControllerBase</code></pre>
 
   <a id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor*"></a>
 
-  <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor">
-  EskaeraKontrollerra()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor_ErronkaApi_Interfaces_IEskaeraRepository_ErronkaApi_Interfaces_IMahaiaRepository_ErronkaApi_Interfaces_IProduktuaRepository_ErronkaApi_Interfaces_IEskaeraProduktuakRepository_ErronkaApi_Interfaces_IEskaeraMahaiakRepository_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository,ErronkaApi.Interfaces.IEskaeraMahaiakRepository)">
+  EskaeraKontrollerra(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EskaeraKontrollerra()</code></pre>
+    <pre><code class="lang-csharp hljs">public EskaeraKontrollerra(IEskaeraRepository repo, IMahaiaRepository repoMahaia, IProduktuaRepository repoProduktua, IEskaeraProduktuakRepository repoEskaeraProduktuak, IEskaeraMahaiakRepository repoEskaeraMahaiak)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repo</code> <a class="xref" href="ErronkaApi.Interfaces.IEskaeraRepository.html">IEskaeraRepository</a></dt>
+    <dd></dd>
+    <dt><code>repoMahaia</code> <a class="xref" href="ErronkaApi.Interfaces.IMahaiaRepository.html">IMahaiaRepository</a></dt>
+    <dd></dd>
+    <dt><code>repoProduktua</code> <a class="xref" href="ErronkaApi.Interfaces.IProduktuaRepository.html">IProduktuaRepository</a></dt>
+    <dd></dd>
+    <dt><code>repoEskaeraProduktuak</code> <a class="xref" href="ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html">IEskaeraProduktuakRepository</a></dt>
+    <dd></dd>
+    <dt><code>repoEskaeraMahaiak</code> <a class="xref" href="ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html">IEskaeraMahaiakRepository</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -710,11 +721,10 @@ public class EskaeraKontrollerra : ControllerBase</code></pre>
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_EguneratuEskaera_System_Int32_ErronkaApi_DTOak_EskaeraEguneratuDTO_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuEskaera(System.Int32,ErronkaApi.DTOak.EskaeraEguneratuDTO)">
   EguneratuEskaera(int, EskaeraEguneratuDTO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Eskaera bat eguneratzen du (komensalak eta produktuak).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -725,18 +735,15 @@ public IActionResult EguneratuEskaera(int eskaeraId, EskaeraEguneratuDTO dto)</c
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Eskaeraren IDa.</p>
-</dd>
+    <dd></dd>
     <dt><code>dto</code> <a class="xref" href="ErronkaApi.DTOak.EskaeraEguneratuDTO.html">EskaeraEguneratuDTO</a></dt>
-    <dd><p>Eguneratu nahi diren datuak.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Eguneratzearen emaitza.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -753,11 +760,10 @@ public IActionResult EguneratuEskaera(int eskaeraId, EskaeraEguneratuDTO dto)</c
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_EguneratuSukaldeaEgoera_System_Int32_ErronkaApi_DTOak_EskaeraSukaldeaEgoeraDTO_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuSukaldeaEgoera(System.Int32,ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO)">
   EguneratuSukaldeaEgoera(int, EskaeraSukaldeaEgoeraDTO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L440"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Eskaera baten sukaldeko egoera eguneratzen du.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -768,18 +774,15 @@ public IActionResult EguneratuSukaldeaEgoera(int eskaeraId, EskaeraSukaldeaEgoer
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Eskaeraren IDa.</p>
-</dd>
+    <dd></dd>
     <dt><code>dto</code> <a class="xref" href="ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO.html">EskaeraSukaldeaEgoeraDTO</a></dt>
-    <dd><p>Sukaldeko egoera berria.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Eguneratzearen emaitza.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -796,11 +799,10 @@ public IActionResult EguneratuSukaldeaEgoera(int eskaeraId, EskaeraSukaldeaEgoer
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_EzabatuEskaera_System_Int32_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EzabatuEskaera(System.Int32)">
   EzabatuEskaera(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Eskaera bat ezabatzen du.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -811,15 +813,13 @@ public IActionResult EzabatuEskaera(int eskaeraId)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Ezabatu nahi den eskaeraren IDa.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Erantzunaren emaitza.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -836,11 +836,10 @@ public IActionResult EzabatuEskaera(int eskaeraId)</code></pre>
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuEskaeraProduktuak_System_Int32_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaeraProduktuak(System.Int32)">
   LortuEskaeraProduktuak(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Eskaera baten produktuak lortzen ditu.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -851,15 +850,13 @@ public IActionResult LortuEskaeraProduktuak(int eskaeraId)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Eskaeraren IDa.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Eskaeraren produktuen zerrenda.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -876,11 +873,10 @@ public IActionResult LortuEskaeraProduktuak(int eskaeraId)</code></pre>
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuEskaerak" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerak">
   LortuEskaerak()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Eskaera guztiak lortzen ditu.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -892,8 +888,7 @@ public IActionResult LortuEskaerak()</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Eskaeren zerrenda.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -910,11 +905,10 @@ public IActionResult LortuEskaerak()</code></pre>
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuEskaerakOrdaintzeko" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerakOrdaintzeko">
   LortuEskaerakOrdaintzeko()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L504"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Ordaintzeko dauden eskaerak lortzen ditu.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -926,8 +920,7 @@ public IActionResult LortuEskaerakOrdaintzeko()</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Ordaintzeko dauden eskaeren zerrenda.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -944,11 +937,10 @@ public IActionResult LortuEskaerakOrdaintzeko()</code></pre>
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuMahaiKapasitatea_System_Int32_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuMahaiKapasitatea(System.Int32)">
   LortuMahaiKapasitatea(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Mahai baten kapazitatea lortzen du.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -959,15 +951,45 @@ public IActionResult LortuMahaiKapasitatea(int mahaiaId)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>mahaiaId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Mahaiaren IDa.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Mahaiaren kapazitatea.</p>
-</dd>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuSukaldekoEskaerak_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak*"></a>
+
+  <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuSukaldekoEskaerak" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak">
+  LortuSukaldekoEskaerak()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;sukaldea&quot;)]
+public IActionResult LortuSukaldekoEskaerak()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -984,30 +1006,27 @@ public IActionResult LortuMahaiKapasitatea(int mahaiaId)</code></pre>
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_OrdainduEskaera_System_Int32_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.OrdainduEskaera(System.Int32)">
   OrdainduEskaera(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L477"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Eskaera bat ordaintzera bidaltzen du.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpPost(&quot;{eskaeraId}/ordainduEskaera&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;{eskaeraId}/ordaindu&quot;)]
 public IActionResult OrdainduEskaera(int eskaeraId)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Eskaeraren IDa.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Emaitza.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1024,11 +1043,10 @@ public IActionResult OrdainduEskaera(int eskaeraId)</code></pre>
 
   <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)">
   SortuEskaera(EskaeraSortuDTO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Eskaera berri bat sortzen du.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -1039,55 +1057,13 @@ public IActionResult SortuEskaera(EskaeraSortuDTO dto)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>dto</code> <a class="xref" href="ErronkaApi.DTOak.EskaeraSortuDTO.html">EskaeraSortuDTO</a></dt>
-    <dd><p>Eskaera berriaren datuak.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Sortutako eskaeraren informazioa.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_SortuFaktura_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura*"></a>
-
-  <h3 id="ErronkaApi_Kontrollerrak_EskaeraKontrollerra_SortuFaktura_System_Int32_" data-uid="ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(System.Int32)">
-  SortuFaktura(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L200"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Eskaera baten faktura sortzen du.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpPost(&quot;{eskaeraId}/sortuFaktura&quot;)]
-public IActionResult SortuFaktura(int eskaeraId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Eskaeraren IDa.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
-    <dd><p>Emaitza.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -1104,7 +1080,7 @@ public IActionResult SortuFaktura(int eskaeraId)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs/#L14" class="edit-link">Edit this page</a>
         </div>
 
 

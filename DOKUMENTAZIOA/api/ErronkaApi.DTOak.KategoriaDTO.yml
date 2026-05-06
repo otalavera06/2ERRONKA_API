@@ -16,9 +16,9 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/DTOak/KategoriaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/KategoriaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: KategoriaDTO
     path: ../API2Erronka/ErronkaApi/DTOak/KategoriaDTO.cs
     startLine: 5
@@ -53,9 +53,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/KategoriaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/KategoriaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: id
     path: ../API2Erronka/ErronkaApi/DTOak/KategoriaDTO.cs
     startLine: 10
@@ -84,9 +84,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/KategoriaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/KategoriaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: izena
     path: ../API2Erronka/ErronkaApi/DTOak/KategoriaDTO.cs
     startLine: 15

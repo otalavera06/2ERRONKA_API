@@ -14,10 +14,5 @@
         /// Pasahitza.
         /// </summary>
         public string pasahitza { get; set; }
-
-        /// <summary>
-        /// Txata gaituta dagoen ala ez adierazten du.
-        /// </summary>
-        public Boolean txat { get; set; }
     }
 }

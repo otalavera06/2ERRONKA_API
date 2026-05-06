@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/UnaiMarti88/API2Erronka/new/main/apiSpec/new?filename=ErronkaApi_Kontrollerrak_ProduktuakKontrollera.md&amp;value=---%0Auid%3A%20ErronkaApi.Kontrollerrak.ProduktuakKontrollera%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/otalavera06/2ERRONKA_API/new/main/apiSpec/new?filename=ErronkaApi_Kontrollerrak_ProduktuakKontrollera.md&amp;value=---%0Auid%3A%20ErronkaApi.Kontrollerrak.ProduktuakKontrollera%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera" class="text-break">
-Class ProduktuakKontrollera  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class ProduktuakKontrollera  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,7 @@ Produktuak kategoriaren arabera lortzeko aukera ematen du.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[ApiController]
-[Route(&quot;api/Produktuak&quot;)]
+[Route(&quot;api/produktuak&quot;)]
 public class ProduktuakKontrollera : ControllerBase</code></pre>
   </div>
 
@@ -678,21 +678,21 @@ public class ProduktuakKontrollera : ControllerBase</code></pre>
 
   <a id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor*"></a>
 
-  <h3 id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_ErronkaApi_Repositorioak_ProduktuaRepository_" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Repositorioak.ProduktuaRepository)">
-  ProduktuakKontrollera(ProduktuaRepository)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_ErronkaApi_Interfaces_IProduktuaRepository_" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Interfaces.IProduktuaRepository)">
+  ProduktuakKontrollera(IProduktuaRepository)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProduktuakKontrollera(ProduktuaRepository repo)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProduktuakKontrollera(IProduktuaRepository repo)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>repo</code> <a class="xref" href="ErronkaApi.Repositorioak.ProduktuaRepository.html">ProduktuaRepository</a></dt>
+    <dt><code>repo</code> <a class="xref" href="ErronkaApi.Interfaces.IProduktuaRepository.html">IProduktuaRepository</a></dt>
     <dd></dd>
   </dl>
 
@@ -711,11 +711,43 @@ public class ProduktuakKontrollera : ControllerBase</code></pre>
 </h2>
 
 
+  <a id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetAll_" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll*"></a>
+
+  <h3 id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetAll" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll">
+  GetAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+public IActionResult GetAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetByKategoria_" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria*"></a>
 
   <h3 id="ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetByKategoria_System_Int32_" data-uid="ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria(System.Int32)">
   GetByKategoria(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Kategoria jakin bateko produktuak lortzen ditu.</p>
@@ -755,7 +787,7 @@ public IActionResult GetByKategoria(int kategoriaId)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

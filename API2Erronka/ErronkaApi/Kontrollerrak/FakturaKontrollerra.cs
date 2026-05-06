@@ -184,6 +184,25 @@ namespace ErronkaApi.Kontrollerrak
                     });
                 }
 
+                var pendingPlaterak = Convert.ToInt32(session.CreateSQLQuery(
+                        @"SELECT COUNT(*)
+                          FROM eskaerak
+                          WHERE zerbitzua_id = :id
+                            AND produktua_id = 1
+                            AND COALESCE(egoera, 0) = 0")
+                    .SetParameter("id", eskaeraId)
+                    .UniqueResult());
+
+                if (pendingPlaterak > 0)
+                {
+                    return BadRequest(new ErantzunaDTO<string>
+                    {
+                        Code = 400,
+                        Message = "Ezin da ordaindu: plater guztiak Prestatuta egon behar dira.",
+                        Datuak = new List<string>()
+                    });
+                }
+
                 session.CreateSQLQuery("UPDATE zerbitzua SET ordainduta = 1 WHERE id = :id")
                     .SetParameter("id", eskaeraId)
                     .ExecuteUpdate();

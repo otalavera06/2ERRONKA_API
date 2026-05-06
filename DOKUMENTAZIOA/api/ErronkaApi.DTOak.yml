@@ -14,10 +14,15 @@ items:
   - ErronkaApi.DTOak.EskaeraSortuDTO
   - ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO
   - ErronkaApi.DTOak.KategoriaDTO
+  - ErronkaApi.DTOak.LangileaDTO
   - ErronkaApi.DTOak.LogDTO
   - ErronkaApi.DTOak.LoginDTO
   - ErronkaApi.DTOak.MahaiaDTO
+  - ErronkaApi.DTOak.PlateraDTO
+  - ErronkaApi.DTOak.PlateraOsagaiaDTO
   - ErronkaApi.DTOak.ProduktuaDTO
+  - ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+  - ErronkaApi.DTOak.ZerbitzuaMahaiDTO
   langs:
   - csharp
   - vb
@@ -110,16 +115,20 @@ references:
   name: KategoriaDTO
   nameWithType: KategoriaDTO
   fullName: ErronkaApi.DTOak.KategoriaDTO
+- uid: ErronkaApi.DTOak.LangileaDTO
+  commentId: T:ErronkaApi.DTOak.LangileaDTO
+  href: ErronkaApi.DTOak.LangileaDTO.html
+  name: LangileaDTO
+  nameWithType: LangileaDTO
+  fullName: ErronkaApi.DTOak.LangileaDTO
 - uid: ErronkaApi.DTOak.LogDTO
   commentId: T:ErronkaApi.DTOak.LogDTO
-  parent: ErronkaApi.DTOak
   href: ErronkaApi.DTOak.LogDTO.html
   name: LogDTO
   nameWithType: LogDTO
   fullName: ErronkaApi.DTOak.LogDTO
 - uid: ErronkaApi.DTOak.LoginDTO
   commentId: T:ErronkaApi.DTOak.LoginDTO
-  parent: ErronkaApi.DTOak
   href: ErronkaApi.DTOak.LoginDTO.html
   name: LoginDTO
   nameWithType: LoginDTO
@@ -130,12 +139,36 @@ references:
   name: MahaiaDTO
   nameWithType: MahaiaDTO
   fullName: ErronkaApi.DTOak.MahaiaDTO
+- uid: ErronkaApi.DTOak.PlateraDTO
+  commentId: T:ErronkaApi.DTOak.PlateraDTO
+  href: ErronkaApi.DTOak.PlateraDTO.html
+  name: PlateraDTO
+  nameWithType: PlateraDTO
+  fullName: ErronkaApi.DTOak.PlateraDTO
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO
+  commentId: T:ErronkaApi.DTOak.PlateraOsagaiaDTO
+  href: ErronkaApi.DTOak.PlateraOsagaiaDTO.html
+  name: PlateraOsagaiaDTO
+  nameWithType: PlateraOsagaiaDTO
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO
 - uid: ErronkaApi.DTOak.ProduktuaDTO
   commentId: T:ErronkaApi.DTOak.ProduktuaDTO
   href: ErronkaApi.DTOak.ProduktuaDTO.html
   name: ProduktuaDTO
   nameWithType: ProduktuaDTO
   fullName: ErronkaApi.DTOak.ProduktuaDTO
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+  commentId: T:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+  href: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html
+  name: ZerbitzuaEskaeraDTO
+  nameWithType: ZerbitzuaEskaeraDTO
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+  commentId: T:ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+  href: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html
+  name: ZerbitzuaMahaiDTO
+  nameWithType: ZerbitzuaMahaiDTO
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO
 - uid: ErronkaApi.DTOak
   commentId: N:ErronkaApi.DTOak
   href: ErronkaApi.html

@@ -52,11 +52,23 @@ namespace ErronkaApi.Testak
                     new EskaeraProduktuaSortuDTO { ProduktuaId = 1, Kantitatea = 2 }
                 }
             };
-            var mahaia = new Mahaia { id = 1, egoera = "libre", EskaeraMahaiak = new List<EskaeraMahaiak>() };
+            var mahaia = new Mahaia { id = 1, EskaeraMahaiak = new List<EskaeraMahaiak>() };
             var produktua = new Produktua { id = 1, izena = "Test", stock_aktuala = 10, prezioa = 5 };
+            var eskaera = new Eskaera
+            {
+                id = 7,
+                mahaia_id = dto.MahaiaId,
+                erabiltzaileId = dto.ErabiltzaileId,
+                komensalak = dto.Komensalak,
+                EskaeraProduktuak = new List<EskaeraProduktuak>
+                {
+                    new EskaeraProduktuak { Produktua = produktua, Kantitatea = 2 }
+                }
+            };
 
             _mockRepoMahaia.Setup(r => r.Get(1)).Returns(mahaia);
             _mockRepoProduktua.Setup(r => r.Get(1)).Returns(produktua);
+            _mockRepo.Setup(r => r.SortuEskaera(dto)).Returns(eskaera);
 
             
             var result = _controller.SortuEskaera(dto);
@@ -65,9 +77,8 @@ namespace ErronkaApi.Testak
             var okResult = Assert.IsType<OkObjectResult>(result);
             var response = Assert.IsType<ErantzunaDTO<Eskaera>>(okResult.Value);
             Assert.Equal(200, response.Code);
-            _mockRepo.Verify(r => r.Save(It.IsAny<Eskaera>()), Times.Once);
-            _mockRepoMahaia.Verify(r => r.Update(It.Is<Mahaia>(m => m.egoera == "okupatuta")), Times.Once);
-            _mockRepoProduktua.Verify(r => r.Update(It.Is<Produktua>(p => p.stock_aktuala == 8)), Times.Once);
+            Assert.Same(eskaera, response.Datuak.First());
+            _mockRepo.Verify(r => r.SortuEskaera(dto), Times.Once);
         }
 
         [Fact]
@@ -87,7 +98,14 @@ namespace ErronkaApi.Testak
         public void SortuEskaera_mahaia_ez_bada_existitzen_400_itzultzen_du()
         {
             
-            var dto = new EskaeraSortuDTO { MahaiaId = 99 };
+            var dto = new EskaeraSortuDTO
+            {
+                MahaiaId = 99,
+                Produktuak = new List<EskaeraProduktuaSortuDTO>
+                {
+                    new EskaeraProduktuaSortuDTO { ProduktuaId = 1, Kantitatea = 1 }
+                }
+            };
             _mockRepoMahaia.Setup(r => r.Get(99)).Returns((Mahaia)null);
 
             
@@ -112,7 +130,7 @@ namespace ErronkaApi.Testak
                     new EskaeraProduktuaSortuDTO { ProduktuaId = 1, Kantitatea = 50 }
                 }
             };
-            var mahaia = new Mahaia { id = 1, egoera = "libre" };
+            var mahaia = new Mahaia { id = 1 };
             var produktua = new Produktua { id = 1, izena = "Ardoa", stock_aktuala = 10 };
 
             _mockRepoMahaia.Setup(r => r.Get(1)).Returns(mahaia);
@@ -125,7 +143,7 @@ namespace ErronkaApi.Testak
             var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
             var response = Assert.IsType<ErantzunaDTO<string>>(badRequestResult.Value);
             Assert.Equal(400, response.Code);
-            Assert.Contains("Ardoa", response.Datuak);
+            Assert.Contains("Stock nahikorik ez: Ardoa", response.Datuak);
         }
 
         [Fact]
@@ -138,10 +156,10 @@ namespace ErronkaApi.Testak
                 Produktuak = new List<EskaeraProduktuaSortuDTO>
                 {
                     new EskaeraProduktuaSortuDTO { ProduktuaId = 1, Kantitatea = 1 },
-                    new EskaeraProduktuaSortuDTO { ProduktuaId = 99, Kantitatea = 1 } // No existe
+                    new EskaeraProduktuaSortuDTO { ProduktuaId = 99, Kantitatea = 1 }
                 }
             };
-            var mahaia = new Mahaia { id = 1, egoera = "libre", EskaeraMahaiak = new List<EskaeraMahaiak>() };
+            var mahaia = new Mahaia { id = 1, EskaeraMahaiak = new List<EskaeraMahaiak>() };
             var produktua = new Produktua { id = 1, izena = "Existitzen da", stock_aktuala = 10, prezioa = 5 };
 
             _mockRepoMahaia.Setup(r => r.Get(1)).Returns(mahaia);
@@ -152,10 +170,10 @@ namespace ErronkaApi.Testak
             var result = _controller.SortuEskaera(dto);
 
             
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var response = Assert.IsType<ErantzunaDTO<Eskaera>>(okResult.Value);
-            var eskaera = response.Datuak.First();
-            Assert.Single(eskaera.EskaeraProduktuak);
+            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
+            var response = Assert.IsType<ErantzunaDTO<string>>(badRequestResult.Value);
+            Assert.Equal(400, response.Code);
+            Assert.Contains("Produktua ez da existitzen: 99", response.Datuak);
         }
         
         [Fact]
@@ -270,7 +288,7 @@ namespace ErronkaApi.Testak
         {
             
             var mahaiaId = 1;
-            var mahaia = new Mahaia { id = mahaiaId, kapazitatea = 4 };
+            var mahaia = new Mahaia { id = mahaiaId };
             _mockRepoMahaia.Setup(r => r.Get(mahaiaId)).Returns(mahaia);
 
             

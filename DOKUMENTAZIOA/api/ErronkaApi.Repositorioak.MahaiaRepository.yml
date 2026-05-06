@@ -6,7 +6,11 @@ items:
   parent: ErronkaApi.Repositorioak
   children:
   - ErronkaApi.Repositorioak.MahaiaRepository.#ctor(NHibernate.ISessionFactory)
-  - ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
+  - ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  - ErronkaApi.Repositorioak.MahaiaRepository.Get(System.Int32)
+  - ErronkaApi.Repositorioak.MahaiaRepository.Login(System.String,System.String)
+  - ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  - ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
   langs:
   - csharp
   - vb
@@ -16,20 +20,24 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Repositorioak/MahaiaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: MahaiaRepository
     path: ../API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
-    startLine: 11
+    startLine: 17
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Mahaien egoera eta kontsultak kudeatzen dituen datu-biltegia.
+  example: []
   syntax:
-    content: public class MahaiaRepository
-    content.vb: Public Class MahaiaRepository
+    content: 'public class MahaiaRepository : IMahaiaRepository'
+    content.vb: Public Class MahaiaRepository Implements IMahaiaRepository
   inheritance:
   - System.Object
+  implements:
+  - ErronkaApi.Interfaces.IMahaiaRepository
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -51,53 +59,208 @@ items:
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Repositorioak/MahaiaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
-    startLine: 15
+    startLine: 25
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: '`MahaiaRepository` instantzia berri bat sortzen du.'
+  example: []
   syntax:
     content: public MahaiaRepository(ISessionFactory sessionFactory)
     parameters:
     - id: sessionFactory
       type: NHibernate.ISessionFactory
+      description: NHibernate saio-fabrika.
     content.vb: Public Sub New(sessionFactory As ISessionFactory)
   overload: ErronkaApi.Repositorioak.MahaiaRepository.#ctor*
   nameWithType.vb: MahaiaRepository.New(ISessionFactory)
   fullName.vb: ErronkaApi.Repositorioak.MahaiaRepository.New(NHibernate.ISessionFactory)
   name.vb: New(ISessionFactory)
-- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
-  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
-  id: LortuMahaiLibreAsync
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  id: Delete(ErronkaApi.Modeloak.Mahaia)
   parent: ErronkaApi.Repositorioak.MahaiaRepository
   langs:
   - csharp
   - vb
-  name: LortuMahaiLibreAsync()
-  nameWithType: MahaiaRepository.LortuMahaiLibreAsync()
-  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync()
+  name: Delete(Mahaia)
+  nameWithType: MahaiaRepository.Delete(Mahaia)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/MahaiaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: LortuMahaiLibreAsync
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Delete
     path: ../API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
-    startLine: 20
+    startLine: 34
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Mahaia bat datu-basean ezabatzen du.
+  example: []
   syntax:
-    content: public Task<ErantzunaDTO<MahaiaDTO>> LortuMahaiLibreAsync()
+    content: public void Delete(Mahaia mahaia)
+    parameters:
+    - id: mahaia
+      type: ErronkaApi.Modeloak.Mahaia
+      description: Ezabatu beharreko mahaia.
+    content.vb: Public Sub Delete(mahaia As Mahaia)
+  overload: ErronkaApi.Repositorioak.MahaiaRepository.Delete*
+  implements:
+  - ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Get(System.Int32)
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Get(System.Int32)
+  id: Get(System.Int32)
+  parent: ErronkaApi.Repositorioak.MahaiaRepository
+  langs:
+  - csharp
+  - vb
+  name: Get(int)
+  nameWithType: MahaiaRepository.Get(int)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Get(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Get
+    path: ../API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+    startLine: 49
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Bere identifikatzailearen arabera mahaia bat lortzen du.
+  example: []
+  syntax:
+    content: public Mahaia? Get(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Bilatu beharreko mahaiaren identifikatzailea.
     return:
-      type: System.Threading.Tasks.Task{ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.MahaiaDTO}}
-    content.vb: Public Function LortuMahaiLibreAsync() As Task(Of ErantzunaDTO(Of MahaiaDTO))
-  overload: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync*
+      type: ErronkaApi.Modeloak.Mahaia
+      description: Aurkitutako mahaia edo `null`.
+    content.vb: Public Function [Get](id As Integer) As Mahaia
+  overload: ErronkaApi.Repositorioak.MahaiaRepository.Get*
+  implements:
+  - ErronkaApi.Interfaces.IMahaiaRepository.Get(System.Int32)
+  nameWithType.vb: MahaiaRepository.Get(Integer)
+  fullName.vb: ErronkaApi.Repositorioak.MahaiaRepository.Get(Integer)
+  name.vb: Get(Integer)
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  id: Update(ErronkaApi.Modeloak.Mahaia)
+  parent: ErronkaApi.Repositorioak.MahaiaRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(Mahaia)
+  nameWithType: MahaiaRepository.Update(Mahaia)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Update
+    path: ../API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+    startLine: 66
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Mahaia baten egoera edo atributuak eguneratzen ditu.
+  example: []
+  syntax:
+    content: public void Update(Mahaia mahaia)
+    parameters:
+    - id: mahaia
+      type: ErronkaApi.Modeloak.Mahaia
+      description: Eguneratu beharreko mahaia.
+    content.vb: Public Sub Update(mahaia As Mahaia)
+  overload: ErronkaApi.Repositorioak.MahaiaRepository.Update*
+  implements:
+  - ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  id: LortuMahaiLibre
+  parent: ErronkaApi.Repositorioak.MahaiaRepository
+  langs:
+  - csharp
+  - vb
+  name: LortuMahaiLibre()
+  nameWithType: MahaiaRepository.LortuMahaiLibre()
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: LortuMahaiLibre
+    path: ../API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+    startLine: 82
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Une honetan libre dauden mahaiak DTO formatuan lortzen ditu.
+  example: []
+  syntax:
+    content: public List<MahaiaDTO> LortuMahaiLibre()
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.MahaiaDTO}
+      description: Mahai libreen zerrenda edo `null` errorea gertatzen bada.
+    content.vb: Public Function LortuMahaiLibre() As List(Of MahaiaDTO)
+  overload: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre*
+  implements:
+  - ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Login(System.String,System.String)
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Login(System.String,System.String)
+  id: Login(System.String,System.String)
+  parent: ErronkaApi.Repositorioak.MahaiaRepository
+  langs:
+  - csharp
+  - vb
+  name: Login(string, string)
+  nameWithType: MahaiaRepository.Login(string, string)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Login(string, string)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Login
+    path: ../API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs
+    startLine: 104
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public Mahaia? Login(string erabiltzailea, string pasahitza)
+    parameters:
+    - id: erabiltzailea
+      type: System.String
+    - id: pasahitza
+      type: System.String
+    return:
+      type: ErronkaApi.Modeloak.Mahaia
+    content.vb: Public Function Login(erabiltzailea As String, pasahitza As String) As Mahaia
+  overload: ErronkaApi.Repositorioak.MahaiaRepository.Login*
+  implements:
+  - ErronkaApi.Interfaces.IMahaiaRepository.Login(System.String,System.String)
+  nameWithType.vb: MahaiaRepository.Login(String, String)
+  fullName.vb: ErronkaApi.Repositorioak.MahaiaRepository.Login(String, String)
+  name.vb: Login(String, String)
 references:
 - uid: ErronkaApi.Repositorioak
   commentId: N:ErronkaApi.Repositorioak
@@ -132,6 +295,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: ErronkaApi.Interfaces.IMahaiaRepository
+  commentId: T:ErronkaApi.Interfaces.IMahaiaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html
+  name: IMahaiaRepository
+  nameWithType: IMahaiaRepository
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -358,6 +528,28 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
 - uid: ErronkaApi.Repositorioak.MahaiaRepository.#ctor*
   commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.#ctor
   href: ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository__ctor_NHibernate_ISessionFactory_
@@ -380,119 +572,318 @@ references:
   name: NHibernate
   nameWithType: NHibernate
   fullName: NHibernate
-- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync*
-  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
-  href: ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibreAsync
-  name: LortuMahaiLibreAsync
-  nameWithType: MahaiaRepository.LortuMahaiLibreAsync
-  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
-- uid: System.Threading.Tasks.Task{ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.MahaiaDTO}}
-  commentId: T:System.Threading.Tasks.Task{ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.MahaiaDTO}}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<ErantzunaDTO<MahaiaDTO>>
-  nameWithType: Task<ErantzunaDTO<MahaiaDTO>>
-  fullName: System.Threading.Tasks.Task<ErronkaApi.DTOak.ErantzunaDTO<ErronkaApi.DTOak.MahaiaDTO>>
-  nameWithType.vb: Task(Of ErantzunaDTO(Of MahaiaDTO))
-  fullName.vb: System.Threading.Tasks.Task(Of ErronkaApi.DTOak.ErantzunaDTO(Of ErronkaApi.DTOak.MahaiaDTO))
-  name.vb: Task(Of ErantzunaDTO(Of MahaiaDTO))
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Delete*
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Delete
+  href: ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Delete_ErronkaApi_Modeloak_Mahaia_
+  name: Delete
+  nameWithType: MahaiaRepository.Delete
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Delete
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  parent: ErronkaApi.Interfaces.IMahaiaRepository
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Delete_ErronkaApi_Modeloak_Mahaia_
+  name: Delete(Mahaia)
+  nameWithType: IMahaiaRepository.Delete(Mahaia)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: <
-  - uid: ErronkaApi.DTOak.MahaiaDTO
-    name: MahaiaDTO
-    href: ErronkaApi.DTOak.MahaiaDTO.html
-  - name: '>'
-  - name: '>'
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+    name: Delete
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Delete_ErronkaApi_Modeloak_Mahaia_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Mahaia
+    name: Mahaia
+  - name: )
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+    name: Delete
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Delete_ErronkaApi_Modeloak_Mahaia_
   - name: (
-  - name: Of
-  - name: " "
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ErronkaApi.DTOak.MahaiaDTO
-    name: MahaiaDTO
-    href: ErronkaApi.DTOak.MahaiaDTO.html
+  - uid: ErronkaApi.Modeloak.Mahaia
+    name: Mahaia
   - name: )
-  - name: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
+- uid: ErronkaApi.Modeloak.Mahaia
+  commentId: T:ErronkaApi.Modeloak.Mahaia
+  parent: ErronkaApi.Modeloak
+  name: Mahaia
+  nameWithType: Mahaia
+  fullName: ErronkaApi.Modeloak.Mahaia
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  href: ErronkaApi.html
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Get*
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Get
+  href: ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Get_System_Int32_
+  name: Get
+  nameWithType: MahaiaRepository.Get
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Get
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Get(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Get(System.Int32)
+  parent: ErronkaApi.Interfaces.IMahaiaRepository
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Get_System_Int32_
+  name: Get(int)
+  nameWithType: IMahaiaRepository.Get(int)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Get(int)
+  nameWithType.vb: IMahaiaRepository.Get(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IMahaiaRepository.Get(Integer)
+  name.vb: Get(Integer)
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Get(System.Int32)
+    name: Get
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Get_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Get(System.Int32)
+    name: Get
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Get_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Update*
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Update
+  href: ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Update_ErronkaApi_Modeloak_Mahaia_
+  name: Update
+  nameWithType: MahaiaRepository.Update
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Update
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  parent: ErronkaApi.Interfaces.IMahaiaRepository
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Update_ErronkaApi_Modeloak_Mahaia_
+  name: Update(Mahaia)
+  nameWithType: IMahaiaRepository.Update(Mahaia)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+    name: Update
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Update_ErronkaApi_Modeloak_Mahaia_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Mahaia
+    name: Mahaia
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+    name: Update
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Update_ErronkaApi_Modeloak_Mahaia_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Mahaia
+    name: Mahaia
+  - name: )
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre*
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  href: ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibre
+  name: LortuMahaiLibre
+  nameWithType: MahaiaRepository.LortuMahaiLibre
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+  parent: ErronkaApi.Interfaces.IMahaiaRepository
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_LortuMahaiLibre
+  name: LortuMahaiLibre()
+  nameWithType: IMahaiaRepository.LortuMahaiLibre()
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre()
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+    name: LortuMahaiLibre
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_LortuMahaiLibre
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+    name: LortuMahaiLibre
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_LortuMahaiLibre
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.MahaiaDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.MahaiaDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<MahaiaDTO>
+  nameWithType: List<MahaiaDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.MahaiaDTO>
+  nameWithType.vb: List(Of MahaiaDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.MahaiaDTO)
+  name.vb: List(Of MahaiaDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - name: TResult
+  - uid: ErronkaApi.DTOak.MahaiaDTO
+    name: MahaiaDTO
+    href: ErronkaApi.DTOak.MahaiaDTO.html
   - name: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: (
   - name: Of
   - name: " "
-  - name: TResult
+  - uid: ErronkaApi.DTOak.MahaiaDTO
+    name: MahaiaDTO
+    href: ErronkaApi.DTOak.MahaiaDTO.html
   - name: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
   spec.csharp:
   - uid: System
     name: System
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system
   - name: .
-  - uid: System.Threading
-    name: Threading
+  - uid: System.Collections
+    name: Collections
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
+    href: https://learn.microsoft.com/dotnet/api/system.collections
   - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
+  - uid: System.Collections.Generic
+    name: Generic
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
   spec.vb:
   - uid: System
     name: System
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system
   - name: .
-  - uid: System.Threading
-    name: Threading
+  - uid: System.Collections
+    name: Collections
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
+    href: https://learn.microsoft.com/dotnet/api/system.collections
   - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
+  - uid: System.Collections.Generic
+    name: Generic
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Login*
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Login
+  href: ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Login_System_String_System_String_
+  name: Login
+  nameWithType: MahaiaRepository.Login
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Login
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Login(System.String,System.String)
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Login(System.String,System.String)
+  parent: ErronkaApi.Interfaces.IMahaiaRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Login_System_String_System_String_
+  name: Login(string, string)
+  nameWithType: IMahaiaRepository.Login(string, string)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Login(string, string)
+  nameWithType.vb: IMahaiaRepository.Login(String, String)
+  fullName.vb: ErronkaApi.Interfaces.IMahaiaRepository.Login(String, String)
+  name.vb: Login(String, String)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Login(System.String,System.String)
+    name: Login
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Login_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository.Login(System.String,System.String)
+    name: Login
+    href: ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Login_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

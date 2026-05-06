@@ -36,6 +36,10 @@ namespace ErronkaApi.DTOak
         /// Eskaeraren egoera zenbakiz adierazita.
         /// </summary>
         public int Egoera { get; set; }
+        /// <summary>
+        /// Plateren katalogotik datorren eskaera den ala ez.
+        /// </summary>
+        public bool IsPlatera { get; set; }
     }
 
     /// <summary>

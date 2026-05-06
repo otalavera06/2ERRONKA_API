@@ -1,0 +1,802 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  commentId: T:ErronkaApi.Repositorioak.ZerbitzuaRepository
+  id: ZerbitzuaRepository
+  parent: ErronkaApi.Repositorioak
+  children:
+  - ErronkaApi.Repositorioak.ZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  - ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(System.Int32)
+  - ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(System.Int32)
+  - ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  langs:
+  - csharp
+  - vb
+  name: ZerbitzuaRepository
+  nameWithType: ZerbitzuaRepository
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  type: Class
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: ZerbitzuaRepository
+    path: ../API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+    startLine: 15
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: >-
+    Zerbitzuen datu-sarbidea kudeatzen du, eskema berriko `zerbitzua` eta `eskaerak`
+
+    tauletara egokituta, lehengo API kontratua mantenduz.
+  example: []
+  syntax:
+    content: 'public class ZerbitzuaRepository : IZerbitzuaRepository'
+    content.vb: Public Class ZerbitzuaRepository Implements IZerbitzuaRepository
+  inheritance:
+  - System.Object
+  implements:
+  - ErronkaApi.Interfaces.IZerbitzuaRepository
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  id: Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  parent: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  langs:
+  - csharp
+  - vb
+  name: Create(ZerbitzuaSortuDto)
+  nameWithType: ZerbitzuaRepository.Create(ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Create
+    path: ../API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+    startLine: 45
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public int Create(ZerbitzuaController.ZerbitzuaSortuDto dto)
+    parameters:
+    - id: dto
+      type: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    return:
+      type: System.Int32
+    content.vb: Public Function Create(dto As ZerbitzuaController.ZerbitzuaSortuDto) As Integer
+  overload: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create*
+  implements:
+  - ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(System.Int32)
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(System.Int32)
+  id: GetByMahai(System.Int32)
+  parent: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetByMahai(int)
+  nameWithType: ZerbitzuaRepository.GetByMahai(int)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetByMahai
+    path: ../API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+    startLine: 132
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public List<ZerbitzuaMahaiDTO> GetByMahai(int mahaiaId)
+    parameters:
+    - id: mahaiaId
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.ZerbitzuaMahaiDTO}
+    content.vb: Public Function GetByMahai(mahaiaId As Integer) As List(Of ZerbitzuaMahaiDTO)
+  overload: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai*
+  implements:
+  - ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(System.Int32)
+  nameWithType.vb: ZerbitzuaRepository.GetByMahai(Integer)
+  fullName.vb: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(Integer)
+  name.vb: GetByMahai(Integer)
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  id: Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  parent: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(int, ZerbitzuaSortuDto)
+  nameWithType: ZerbitzuaRepository.Update(int, ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(int, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Update
+    path: ../API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+    startLine: 183
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public bool Update(int id, ZerbitzuaController.ZerbitzuaSortuDto dto)
+    parameters:
+    - id: id
+      type: System.Int32
+    - id: dto
+      type: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    return:
+      type: System.Boolean
+    content.vb: Public Function Update(id As Integer, dto As ZerbitzuaController.ZerbitzuaSortuDto) As Boolean
+  overload: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update*
+  implements:
+  - ErronkaApi.Interfaces.IZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType.vb: ZerbitzuaRepository.Update(Integer, ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName.vb: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(Integer, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name.vb: Update(Integer, ZerbitzuaSortuDto)
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(System.Int32)
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(System.Int32)
+  id: Ordaindu(System.Int32)
+  parent: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  langs:
+  - csharp
+  - vb
+  name: Ordaindu(int)
+  nameWithType: ZerbitzuaRepository.Ordaindu(int)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Ordaindu
+    path: ../API2Erronka/ErronkaApi/Repositorioak/ZerbitzuaRepository.cs
+    startLine: 279
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public bool Ordaindu(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function Ordaindu(id As Integer) As Boolean
+  overload: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu*
+  implements:
+  - ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(System.Int32)
+  nameWithType.vb: ZerbitzuaRepository.Ordaindu(Integer)
+  fullName.vb: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(Integer)
+  name.vb: Ordaindu(Integer)
+references:
+- uid: ErronkaApi.Repositorioak
+  commentId: N:ErronkaApi.Repositorioak
+  href: ErronkaApi.html
+  name: ErronkaApi.Repositorioak
+  nameWithType: ErronkaApi.Repositorioak
+  fullName: ErronkaApi.Repositorioak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Repositorioak
+    name: Repositorioak
+    href: ErronkaApi.Repositorioak.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Repositorioak
+    name: Repositorioak
+    href: ErronkaApi.Repositorioak.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository
+  commentId: T:ErronkaApi.Interfaces.IZerbitzuaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IZerbitzuaRepository.html
+  name: IZerbitzuaRepository
+  nameWithType: IZerbitzuaRepository
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create*
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.Create
+  href: ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Create_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  name: Create
+  nameWithType: ZerbitzuaRepository.Create
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  parent: ErronkaApi.Interfaces.IZerbitzuaRepository
+  href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Create_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  name: Create(ZerbitzuaSortuDto)
+  nameWithType: IZerbitzuaRepository.Create(ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+    name: Create
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Create_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  - name: (
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+    name: Create
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Create_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  - name: (
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+  - name: )
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  commentId: T:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  parent: ErronkaApi.Kontrollerrak
+  href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  name: ZerbitzuaController.ZerbitzuaSortuDto
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  spec.csharp:
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+    name: ZerbitzuaController
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+  spec.vb:
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+    name: ZerbitzuaController
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ErronkaApi.Kontrollerrak
+  commentId: N:ErronkaApi.Kontrollerrak
+  href: ErronkaApi.html
+  name: ErronkaApi.Kontrollerrak
+  nameWithType: ErronkaApi.Kontrollerrak
+  fullName: ErronkaApi.Kontrollerrak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak
+    name: Kontrollerrak
+    href: ErronkaApi.Kontrollerrak.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak
+    name: Kontrollerrak
+    href: ErronkaApi.Kontrollerrak.html
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai*
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai
+  href: ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_GetByMahai_System_Int32_
+  name: GetByMahai
+  nameWithType: ZerbitzuaRepository.GetByMahai
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(System.Int32)
+  parent: ErronkaApi.Interfaces.IZerbitzuaRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_GetByMahai_System_Int32_
+  name: GetByMahai(int)
+  nameWithType: IZerbitzuaRepository.GetByMahai(int)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(int)
+  nameWithType.vb: IZerbitzuaRepository.GetByMahai(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(Integer)
+  name.vb: GetByMahai(Integer)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(System.Int32)
+    name: GetByMahai
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_GetByMahai_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(System.Int32)
+    name: GetByMahai
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_GetByMahai_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.ZerbitzuaMahaiDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.ZerbitzuaMahaiDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ZerbitzuaMahaiDTO>
+  nameWithType: List<ZerbitzuaMahaiDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.ZerbitzuaMahaiDTO>
+  nameWithType.vb: List(Of ZerbitzuaMahaiDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.ZerbitzuaMahaiDTO)
+  name.vb: List(Of ZerbitzuaMahaiDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+    name: ZerbitzuaMahaiDTO
+    href: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+    name: ZerbitzuaMahaiDTO
+    href: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update*
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.Update
+  href: ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Update_System_Int32_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  name: Update
+  nameWithType: ZerbitzuaRepository.Update
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  parent: ErronkaApi.Interfaces.IZerbitzuaRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Update_System_Int32_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  name: Update(int, ZerbitzuaSortuDto)
+  nameWithType: IZerbitzuaRepository.Update(int, ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(int, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType.vb: IZerbitzuaRepository.Update(Integer, ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName.vb: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(Integer, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name.vb: Update(Integer, ZerbitzuaSortuDto)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+    name: Update
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Update_System_Int32_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+    name: Update
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Update_System_Int32_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu*
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu
+  href: ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Ordaindu_System_Int32_
+  name: Ordaindu
+  nameWithType: ZerbitzuaRepository.Ordaindu
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(System.Int32)
+  parent: ErronkaApi.Interfaces.IZerbitzuaRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Ordaindu_System_Int32_
+  name: Ordaindu(int)
+  nameWithType: IZerbitzuaRepository.Ordaindu(int)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(int)
+  nameWithType.vb: IZerbitzuaRepository.Ordaindu(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(Integer)
+  name.vb: Ordaindu(Integer)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(System.Int32)
+    name: Ordaindu
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Ordaindu_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(System.Int32)
+    name: Ordaindu
+    href: ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Ordaindu_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )

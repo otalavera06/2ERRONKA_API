@@ -1,3 +1,4 @@
+### YamlMime:ManagedReference
 apiRules:
 - exclude:
     uidRegex: ^Api\.Modeloak
@@ -11,12 +12,12 @@ apiRules:
 - exclude:
     uidRegex: ^ErronkaApi\.NHibernate
     type: Namespace
-- exclude:
-    uidRegex: ^ErronkaApi\.Repositorioak
-    type: Namespace
 - include:
     uidRegex: ^ErronkaApi\.Kontrollerrak
     type: Namespace
 - include:
     uidRegex: ^ErronkaApi\.DTOak
+    type: Namespace
+- include:
+    uidRegex: ^ErronkaApi\.Repositorioak
     type: Namespace

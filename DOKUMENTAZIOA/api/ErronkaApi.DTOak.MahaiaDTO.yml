@@ -5,9 +5,10 @@ items:
   id: MahaiaDTO
   parent: ErronkaApi.DTOak
   children:
+  - ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  - ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
   - ErronkaApi.DTOak.MahaiaDTO.Id
-  - ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  - ErronkaApi.DTOak.MahaiaDTO.kapazitatea
+  - ErronkaApi.DTOak.MahaiaDTO.Izena
   langs:
   - csharp
   - vb
@@ -17,9 +18,9 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/DTOak/MahaiaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: MahaiaDTO
     path: ../API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
     startLine: 5
@@ -54,17 +55,15 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/MahaiaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Id
     path: ../API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
-    startLine: 10
+    startLine: 7
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
-  summary: Mahaiaren identifikatzailea.
-  example: []
   syntax:
     content: public int Id { get; set; }
     parameters: []
@@ -72,68 +71,93 @@ items:
       type: System.Int32
     content.vb: Public Property Id As Integer
   overload: ErronkaApi.DTOak.MahaiaDTO.Id*
-- uid: ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  commentId: P:ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  id: Zenbakia
+- uid: ErronkaApi.DTOak.MahaiaDTO.Izena
+  commentId: P:ErronkaApi.DTOak.MahaiaDTO.Izena
+  id: Izena
   parent: ErronkaApi.DTOak.MahaiaDTO
   langs:
   - csharp
   - vb
-  name: Zenbakia
-  nameWithType: MahaiaDTO.Zenbakia
-  fullName: ErronkaApi.DTOak.MahaiaDTO.Zenbakia
+  name: Izena
+  nameWithType: MahaiaDTO.Izena
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Izena
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/MahaiaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: Zenbakia
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Izena
     path: ../API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
-    startLine: 15
+    startLine: 8
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
-  summary: Mahaiaren zenbakia.
-  example: []
   syntax:
-    content: public int Zenbakia { get; set; }
+    content: public string? Izena { get; set; }
     parameters: []
     return:
-      type: System.Int32
-    content.vb: Public Property Zenbakia As Integer
-  overload: ErronkaApi.DTOak.MahaiaDTO.Zenbakia*
-- uid: ErronkaApi.DTOak.MahaiaDTO.kapazitatea
-  commentId: P:ErronkaApi.DTOak.MahaiaDTO.kapazitatea
-  id: kapazitatea
+      type: System.String
+    content.vb: Public Property Izena As String
+  overload: ErronkaApi.DTOak.MahaiaDTO.Izena*
+- uid: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  commentId: P:ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  id: Erabiltzailea
   parent: ErronkaApi.DTOak.MahaiaDTO
   langs:
   - csharp
   - vb
-  name: kapazitatea
-  nameWithType: MahaiaDTO.kapazitatea
-  fullName: ErronkaApi.DTOak.MahaiaDTO.kapazitatea
+  name: Erabiltzailea
+  nameWithType: MahaiaDTO.Erabiltzailea
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/MahaiaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: kapazitatea
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Erabiltzailea
     path: ../API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
-    startLine: 20
+    startLine: 9
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
-  summary: Mahaiaren kapazitatea (pertsona kopurua).
-  example: []
   syntax:
-    content: public int kapazitatea { get; set; }
+    content: public string? Erabiltzailea { get; set; }
     parameters: []
     return:
-      type: System.Int32
-    content.vb: Public Property kapazitatea As Integer
-  overload: ErronkaApi.DTOak.MahaiaDTO.kapazitatea*
+      type: System.String
+    content.vb: Public Property Erabiltzailea As String
+  overload: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea*
+- uid: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  commentId: P:ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  id: ChatBaimena
+  parent: ErronkaApi.DTOak.MahaiaDTO
+  langs:
+  - csharp
+  - vb
+  name: ChatBaimena
+  nameWithType: MahaiaDTO.ChatBaimena
+  fullName: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  type: Property
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: ChatBaimena
+    path: ../API2Erronka/ErronkaApi/DTOak/MahaiaDTO.cs
+    startLine: 10
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.DTOak
+  syntax:
+    content: public string? ChatBaimena { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChatBaimena As String
+  overload: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena*
 references:
 - uid: ErronkaApi.DTOak
   commentId: N:ErronkaApi.DTOak
@@ -411,15 +435,32 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: ErronkaApi.DTOak.MahaiaDTO.Zenbakia*
-  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  href: ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Zenbakia
-  name: Zenbakia
-  nameWithType: MahaiaDTO.Zenbakia
-  fullName: ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-- uid: ErronkaApi.DTOak.MahaiaDTO.kapazitatea*
-  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.kapazitatea
-  href: ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_kapazitatea
-  name: kapazitatea
-  nameWithType: MahaiaDTO.kapazitatea
-  fullName: ErronkaApi.DTOak.MahaiaDTO.kapazitatea
+- uid: ErronkaApi.DTOak.MahaiaDTO.Izena*
+  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.Izena
+  href: ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Izena
+  name: Izena
+  nameWithType: MahaiaDTO.Izena
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Izena
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea*
+  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  href: ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Erabiltzailea
+  name: Erabiltzailea
+  nameWithType: MahaiaDTO.Erabiltzailea
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+- uid: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena*
+  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  href: ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_ChatBaimena
+  name: ChatBaimena
+  nameWithType: MahaiaDTO.ChatBaimena
+  fullName: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena

@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Interfaces.IKategoriaRepository
+  commentId: T:ErronkaApi.Interfaces.IKategoriaRepository
+  id: IKategoriaRepository
+  parent: ErronkaApi.Interfaces
+  children:
+  - ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  - ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  langs:
+  - csharp
+  - vb
+  name: IKategoriaRepository
+  nameWithType: IKategoriaRepository
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository
+  type: Interface
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IKategoriaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: IKategoriaRepository
+    path: ../API2Erronka/ErronkaApi/Interfaces/IKategoriaRepository.cs
+    startLine: 6
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: public interface IKategoriaRepository
+    content.vb: Public Interface IKategoriaRepository
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  commentId: M:ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  id: GetAll
+  parent: ErronkaApi.Interfaces.IKategoriaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: IKategoriaRepository.GetAll()
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAll()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IKategoriaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAll
+    path: ../API2Erronka/ErronkaApi/Interfaces/IKategoriaRepository.cs
+    startLine: 8
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: List<Kategoria> GetAll()
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.Kategoria}
+    content.vb: Function GetAll() As List(Of Kategoria)
+  overload: ErronkaApi.Interfaces.IKategoriaRepository.GetAll*
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  commentId: M:ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  id: GetAllDTO
+  parent: ErronkaApi.Interfaces.IKategoriaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllDTO()
+  nameWithType: IKategoriaRepository.GetAllDTO()
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IKategoriaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAllDTO
+    path: ../API2Erronka/ErronkaApi/Interfaces/IKategoriaRepository.cs
+    startLine: 9
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: List<KategoriaDTO> GetAllDTO()
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.KategoriaDTO}
+    content.vb: Function GetAllDTO() As List(Of KategoriaDTO)
+  overload: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO*
+references:
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAll*
+  commentId: Overload:ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAll
+  name: GetAll
+  nameWithType: IKategoriaRepository.GetAll
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+- uid: System.Collections.Generic.List{ErronkaApi.Modeloak.Kategoria}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.Modeloak.Kategoria}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Kategoria>
+  nameWithType: List<Kategoria>
+  fullName: System.Collections.Generic.List<ErronkaApi.Modeloak.Kategoria>
+  nameWithType.vb: List(Of Kategoria)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.Modeloak.Kategoria)
+  name.vb: List(Of Kategoria)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.Modeloak.Kategoria
+    name: Kategoria
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.Modeloak.Kategoria
+    name: Kategoria
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO*
+  commentId: Overload:ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAllDTO
+  name: GetAllDTO
+  nameWithType: IKategoriaRepository.GetAllDTO
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.KategoriaDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.KategoriaDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<KategoriaDTO>
+  nameWithType: List<KategoriaDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.KategoriaDTO>
+  nameWithType.vb: List(Of KategoriaDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.KategoriaDTO)
+  name.vb: List(Of KategoriaDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.DTOak.KategoriaDTO
+    name: KategoriaDTO
+    href: ErronkaApi.DTOak.KategoriaDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.DTOak.KategoriaDTO
+    name: KategoriaDTO
+    href: ErronkaApi.DTOak.KategoriaDTO.html
+  - name: )

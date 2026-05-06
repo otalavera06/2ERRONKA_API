@@ -5,6 +5,7 @@ items:
   id: ProduktuaDTO
   parent: ErronkaApi.DTOak
   children:
+  - ErronkaApi.DTOak.ProduktuaDTO.#ctor(ErronkaApi.Modeloak.Produktua)
   - ErronkaApi.DTOak.ProduktuaDTO.id
   - ErronkaApi.DTOak.ProduktuaDTO.izena
   - ErronkaApi.DTOak.ProduktuaDTO.kategoria_id
@@ -19,12 +20,12 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/DTOak/ProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: ProduktuaDTO
     path: ../API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
@@ -56,12 +57,12 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: id
     path: ../API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
@@ -87,12 +88,12 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: izena
     path: ../API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
@@ -118,12 +119,12 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: prezioa
     path: ../API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
@@ -149,12 +150,12 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: kategoria_id
     path: ../API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
@@ -180,12 +181,12 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: stock_aktuala
     path: ../API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
-    startLine: 30
+    startLine: 32
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.DTOak
@@ -198,6 +199,38 @@ items:
       type: System.Int32
     content.vb: Public Property stock_aktuala As Integer
   overload: ErronkaApi.DTOak.ProduktuaDTO.stock_aktuala*
+- uid: ErronkaApi.DTOak.ProduktuaDTO.#ctor(ErronkaApi.Modeloak.Produktua)
+  commentId: M:ErronkaApi.DTOak.ProduktuaDTO.#ctor(ErronkaApi.Modeloak.Produktua)
+  id: '#ctor(ErronkaApi.Modeloak.Produktua)'
+  parent: ErronkaApi.DTOak.ProduktuaDTO
+  langs:
+  - csharp
+  - vb
+  name: ProduktuaDTO(Produktua)
+  nameWithType: ProduktuaDTO.ProduktuaDTO(Produktua)
+  fullName: ErronkaApi.DTOak.ProduktuaDTO.ProduktuaDTO(ErronkaApi.Modeloak.Produktua)
+  type: Constructor
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: .ctor
+    path: ../API2Erronka/ErronkaApi/DTOak/ProduktuaDTO.cs
+    startLine: 35
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.DTOak
+  syntax:
+    content: public ProduktuaDTO(Produktua produktua)
+    parameters:
+    - id: produktua
+      type: ErronkaApi.Modeloak.Produktua
+    content.vb: Public Sub New(produktua As Produktua)
+  overload: ErronkaApi.DTOak.ProduktuaDTO.#ctor*
+  nameWithType.vb: ProduktuaDTO.New(Produktua)
+  fullName.vb: ErronkaApi.DTOak.ProduktuaDTO.New(ErronkaApi.Modeloak.Produktua)
+  name.vb: New(Produktua)
 references:
 - uid: ErronkaApi.DTOak
   commentId: N:ErronkaApi.DTOak
@@ -521,3 +554,38 @@ references:
   name: stock_aktuala
   nameWithType: ProduktuaDTO.stock_aktuala
   fullName: ErronkaApi.DTOak.ProduktuaDTO.stock_aktuala
+- uid: ErronkaApi.DTOak.ProduktuaDTO.#ctor*
+  commentId: Overload:ErronkaApi.DTOak.ProduktuaDTO.#ctor
+  href: ErronkaApi.DTOak.ProduktuaDTO.html#ErronkaApi_DTOak_ProduktuaDTO__ctor_ErronkaApi_Modeloak_Produktua_
+  name: ProduktuaDTO
+  nameWithType: ProduktuaDTO.ProduktuaDTO
+  fullName: ErronkaApi.DTOak.ProduktuaDTO.ProduktuaDTO
+  nameWithType.vb: ProduktuaDTO.New
+  fullName.vb: ErronkaApi.DTOak.ProduktuaDTO.New
+  name.vb: New
+- uid: ErronkaApi.Modeloak.Produktua
+  commentId: T:ErronkaApi.Modeloak.Produktua
+  parent: ErronkaApi.Modeloak
+  name: Produktua
+  nameWithType: Produktua
+  fullName: ErronkaApi.Modeloak.Produktua
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  href: ErronkaApi.html
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak

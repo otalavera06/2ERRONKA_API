@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/skfkjskfn/Lanak/2. Urtea/2.Ebaluazioa/Interfaze garapena/4Entrega_API_DOKUMENTAZIOA/DOKUMENTAZIOA",
+  "source_base_path": "C:/skfkjskfn/Lanak/2. Urtea/2.Ebaluazioa/2ERRONKA/2ERRONKA_API/DOKUMENTAZIOA",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -264,6 +264,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.DTOak.LangileaDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.DTOak.LangileaDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.DTOak.LangileaDTO",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.DTOak.LangileaDTO.yml\" sourcestartlinenumber=\"1\">Langile baten datuak eta aplikazioko baimenak garraiatzeko DTOa.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ErronkaApi.DTOak.LogDTO.yml",
       "output": {
         ".html": {
@@ -306,6 +320,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.DTOak.PlateraDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.DTOak.PlateraDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.DTOak.PlateraDTO",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.DTOak.PlateraDTO.yml\" sourcestartlinenumber=\"1\">Plater baten informazio osoa eta bere osagaiak garraiatzeko DTOa.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.DTOak.PlateraOsagaiaDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.DTOak.PlateraOsagaiaDTO",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.DTOak.PlateraOsagaiaDTO.yml\" sourcestartlinenumber=\"1\">Plater bati lotutako osagai baten datuak.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ErronkaApi.DTOak.ProduktuaDTO.yml",
       "output": {
         ".html": {
@@ -317,6 +359,34 @@
       "IsMRef": true,
       "Title": "ErronkaApi.DTOak.ProduktuaDTO",
       "Summary": "<p sourcefile=\"api/ErronkaApi.DTOak.ProduktuaDTO.yml\" sourcestartlinenumber=\"1\">Produktu baten informazioa duen DTOa.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.DTOak.ZerbitzuaEskaeraDTO",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.yml\" sourcestartlinenumber=\"1\">Zerbitzu baten barruan dagoen eskaera bakoitzaren informazioa.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.DTOak.ZerbitzuaMahaiDTO",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.yml\" sourcestartlinenumber=\"1\">Mahai bateko zerbitzuaren laburpena eta bere eskaeren zerrenda.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -334,6 +404,202 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IErabiltzaileaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IErabiltzaileaRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IErreserbaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IErreserbaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IErreserbaRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IEskaeraMahaiakRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IEskaeraMahaiakRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IEskaeraProduktuakRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IEskaeraRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IEskaeraRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IEskaeraRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IKategoriaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IKategoriaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IKategoriaRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IMahaiaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IMahaiaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IMahaiaRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IPlateraRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IPlateraRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IPlateraRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IProduktuaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IProduktuaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IProduktuaRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.IZerbitzuaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.IZerbitzuaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces.IZerbitzuaRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.ErreserbakController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.ErreserbakController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.ErreserbakController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.yml",
       "output": {
         ".html": {
@@ -344,7 +610,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ErronkaApi.Kontrollerrak.EskaeraKontrollerra",
-      "Summary": "<p sourcefile=\"api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.yml\" sourcestartlinenumber=\"1\">Eskaerak kudeatzeko kontroladorea.\nEskaerak sortu, kontsultatu, eguneratu eta ezabatzeko aukera ematen du.</p>\n"
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.FakturaKontrollerra",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.yml\" sourcestartlinenumber=\"1\">Fakturak kudeatzeko kontroladorea.\nEskaera baten faktura sortzeko eta ordainketa pendienteak kudeatzeko balio du.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -359,6 +639,34 @@
       "IsMRef": true,
       "Title": "ErronkaApi.Kontrollerrak.KategoriaKontrollerra",
       "Summary": "<p sourcefile=\"api/ErronkaApi.Kontrollerrak.KategoriaKontrollerra.yml\" sourcestartlinenumber=\"1\">Kategoriak kudeatzeko kontroladorea.\nProduktuen kategoriak zerrendatzeko balio du.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.LangileakController.LoginRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.LangileakController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.LangileakController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.LangileakController",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Kontrollerrak.LangileakController.yml\" sourcestartlinenumber=\"1\">Langileen kudeaketa eta saioa hasteko endpoint-a.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -390,6 +698,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ErronkaApi.Kontrollerrak.MahaiakController.yml",
       "output": {
         ".html": {
@@ -404,6 +726,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.PlaterakController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.PlaterakController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.PlaterakController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.yml",
       "output": {
         ".html": {
@@ -415,6 +751,48 @@
       "IsMRef": true,
       "Title": "ErronkaApi.Kontrollerrak.ProduktuakKontrollera",
       "Summary": "<p sourcefile=\"api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.yml\" sourcestartlinenumber=\"1\">Produktuak kudeatzeko kontroladorea.\nProduktuak kategoriaren arabera lortzeko aukera ematen du.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Kontrollerrak.ZerbitzuaController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Kontrollerrak.ZerbitzuaController",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Kontrollerrak.ZerbitzuaController.yml\" sourcestartlinenumber=\"1\">Zerbitzuen kudeaketa: eskaerak sortu, mahaika kontsultatu eta ordaindu.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -652,6 +1030,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ErronkaApi.Repositorioak.ErabiltzaileaRepository",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Repositorioak.ErabiltzaileaRepository.yml\" sourcestartlinenumber=\"1\">Langile eta erabiltzaileen autentifikazio-datuetarako sarbidea ematen duen biltegia.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Repositorioak.ErreserbaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Repositorioak.ErreserbaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Repositorioak.ErreserbaRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Repositorioak.EskaeraMahaiakRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Repositorioak.EskaeraMahaiakRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Repositorioak.EskaeraProduktuakRepository",
       "Summary": null
     },
     {
@@ -666,7 +1086,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ErronkaApi.Repositorioak.EskaeraRepository",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Repositorioak.EskaeraRepository.yml\" sourcestartlinenumber=\"1\">Eskaeren biltegia.\nEskema berrian, <code sourcefile=\"api/ErronkaApi.Repositorioak.EskaeraRepository.yml\" sourcestartlinenumber=\"2\">Eskaera</code> zaharra <code sourcefile=\"api/ErronkaApi.Repositorioak.EskaeraRepository.yml\" sourcestartlinenumber=\"2\">zerbitzua</code> + <code sourcefile=\"api/ErronkaApi.Repositorioak.EskaeraRepository.yml\" sourcestartlinenumber=\"2\">eskaerak</code> egituran oinarritzen da.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -680,7 +1100,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ErronkaApi.Repositorioak.KategoriaRepository",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Repositorioak.KategoriaRepository.yml\" sourcestartlinenumber=\"1\">Kategorien datu-sarbidea kudeatzen duen biltegia.\nEntitate osoak nahiz APIrako DTO arinak itzultzen ditu.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -694,6 +1114,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ErronkaApi.Repositorioak.MahaiaRepository",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Repositorioak.MahaiaRepository.yml\" sourcestartlinenumber=\"1\">Mahaien egoera eta kontsultak kudeatzen dituen datu-biltegia.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Repositorioak.PlateraRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Repositorioak.PlateraRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Repositorioak.PlateraRepository",
       "Summary": null
     },
     {
@@ -708,7 +1142,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ErronkaApi.Repositorioak.ProduktuaRepository",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Repositorioak.ProduktuaRepository.yml\" sourcestartlinenumber=\"1\">Produktuen datu-sarbidea kudeatzen duen biltegia.\nEskema berriko produktuak eta stock datuak bateratzen ditu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ErronkaApi.Repositorioak.ZerbitzuaRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ErronkaApi.Repositorioak.ZerbitzuaRepository",
+      "Summary": "<p sourcefile=\"api/ErronkaApi.Repositorioak.ZerbitzuaRepository.yml\" sourcestartlinenumber=\"1\">Zerbitzuen datu-sarbidea kudeatzen du, eskema berriko <code sourcefile=\"api/ErronkaApi.Repositorioak.ZerbitzuaRepository.yml\" sourcestartlinenumber=\"1\">zerbitzua</code> eta <code sourcefile=\"api/ErronkaApi.Repositorioak.ZerbitzuaRepository.yml\" sourcestartlinenumber=\"1\">eskaerak</code>\ntauletara egokituta, lehengo API kontratua mantenduz.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -739,6 +1187,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/dtoak.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/dtoak.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/getting-started.md",
       "output": {
         ".html": {
@@ -753,6 +1211,26 @@
       "output": {
         ".html": {
           "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/kontrollerrak.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/kontrollerrak.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/repositorioak.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/repositorioak.html"
         }
       },
       "version": ""

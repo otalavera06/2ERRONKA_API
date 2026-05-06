@@ -6,7 +6,9 @@ items:
   parent: ErronkaApi.Repositorioak
   children:
   - ErronkaApi.Repositorioak.ErabiltzaileaRepository.#ctor(NHibernate.ISessionFactory)
+  - ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
   - ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login(System.String,System.String)
+  - ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
   langs:
   - csharp
   - vb
@@ -16,20 +18,24 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: ErabiltzaileaRepository
     path: ../API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
-    startLine: 5
+    startLine: 13
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Langile eta erabiltzaileen autentifikazio-datuetarako sarbidea ematen duen biltegia.
+  example: []
   syntax:
-    content: public class ErabiltzaileaRepository
-    content.vb: Public Class ErabiltzaileaRepository
+    content: 'public class ErabiltzaileaRepository : IErabiltzaileaRepository'
+    content.vb: Public Class ErabiltzaileaRepository Implements IErabiltzaileaRepository
   inheritance:
   - System.Object
+  implements:
+  - ErronkaApi.Interfaces.IErabiltzaileaRepository
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -51,25 +57,59 @@ items:
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
-    startLine: 9
+    startLine: 21
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: '`ErabiltzaileaRepository` instantzia berri bat sortzen du.'
+  example: []
   syntax:
     content: public ErabiltzaileaRepository(ISessionFactory sessionFactory)
     parameters:
     - id: sessionFactory
       type: NHibernate.ISessionFactory
+      description: NHibernate saio-fabrika.
     content.vb: Public Sub New(sessionFactory As ISessionFactory)
   overload: ErronkaApi.Repositorioak.ErabiltzaileaRepository.#ctor*
   nameWithType.vb: ErabiltzaileaRepository.New(ISessionFactory)
   fullName.vb: ErronkaApi.Repositorioak.ErabiltzaileaRepository.New(NHibernate.ISessionFactory)
   name.vb: New(ISessionFactory)
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+  commentId: M:ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+  id: GetAll
+  parent: ErronkaApi.Repositorioak.ErabiltzaileaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: ErabiltzaileaRepository.GetAll()
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAll
+    path: ../API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
+    startLine: 26
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public List<LangileaDTO> GetAll()
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.LangileaDTO}
+    content.vb: Public Function GetAll() As List(Of LangileaDTO)
+  overload: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll*
+  implements:
+  - ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
 - uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login(System.String,System.String)
   commentId: M:ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login(System.String,System.String)
   id: Login(System.String,System.String)
@@ -83,29 +123,73 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Login
     path: ../API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
-    startLine: 14
+    startLine: 56
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Erabiltzaile aktibo bat bilatzen du emandako kredentzialekin.
+  example: []
   syntax:
-    content: public Erabiltzailea Login(string erabiltzailea, string pasahitza)
+    content: public Erabiltzailea? Login(string erabiltzailea, string pasahitza)
     parameters:
     - id: erabiltzailea
       type: System.String
+      description: Saioa hasteko erabiltzaile-izena.
     - id: pasahitza
       type: System.String
+      description: Saioa hasteko pasahitza.
     return:
       type: ErronkaApi.Modeloak.Erabiltzailea
+      description: Aurkitutako erabiltzailea edo `null`.
     content.vb: Public Function Login(erabiltzailea As String, pasahitza As String) As Erabiltzailea
   overload: ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login*
+  implements:
+  - ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(System.String,System.String)
   nameWithType.vb: ErabiltzaileaRepository.Login(String, String)
   fullName.vb: ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login(String, String)
   name.vb: Login(String, String)
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  commentId: M:ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  id: LortuErabiltzailea(System.Int32)
+  parent: ErronkaApi.Repositorioak.ErabiltzaileaRepository
+  langs:
+  - csharp
+  - vb
+  name: LortuErabiltzailea(int)
+  nameWithType: ErabiltzaileaRepository.LortuErabiltzailea(int)
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: LortuErabiltzailea
+    path: ../API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs
+    startLine: 64
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public Erabiltzailea? LortuErabiltzailea(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: ErronkaApi.Modeloak.Erabiltzailea
+    content.vb: Public Function LortuErabiltzailea(id As Integer) As Erabiltzailea
+  overload: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea*
+  implements:
+  - ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  nameWithType.vb: ErabiltzaileaRepository.LortuErabiltzailea(Integer)
+  fullName.vb: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(Integer)
+  name.vb: LortuErabiltzailea(Integer)
 references:
 - uid: ErronkaApi.Repositorioak
   commentId: N:ErronkaApi.Repositorioak
@@ -140,6 +224,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository
+  commentId: T:ErronkaApi.Interfaces.IErabiltzaileaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html
+  name: IErabiltzaileaRepository
+  nameWithType: IErabiltzaileaRepository
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -366,6 +457,28 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
 - uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.#ctor*
   commentId: Overload:ErronkaApi.Repositorioak.ErabiltzaileaRepository.#ctor
   href: ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository__ctor_NHibernate_ISessionFactory_
@@ -388,12 +501,178 @@ references:
   name: NHibernate
   nameWithType: NHibernate
   fullName: NHibernate
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll*
+  commentId: Overload:ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+  href: ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_GetAll
+  name: GetAll
+  nameWithType: ErabiltzaileaRepository.GetAll
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+  commentId: M:ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+  parent: ErronkaApi.Interfaces.IErabiltzaileaRepository
+  href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_GetAll
+  name: GetAll()
+  nameWithType: IErabiltzaileaRepository.GetAll()
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll()
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+    name: GetAll
+    href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_GetAll
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+    name: GetAll
+    href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_GetAll
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.LangileaDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.LangileaDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<LangileaDTO>
+  nameWithType: List<LangileaDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.LangileaDTO>
+  nameWithType.vb: List(Of LangileaDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.LangileaDTO)
+  name.vb: List(Of LangileaDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.DTOak.LangileaDTO
+    name: LangileaDTO
+    href: ErronkaApi.DTOak.LangileaDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.DTOak.LangileaDTO
+    name: LangileaDTO
+    href: ErronkaApi.DTOak.LangileaDTO.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login*
   commentId: Overload:ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login
   href: ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_Login_System_String_System_String_
   name: Login
   nameWithType: ErabiltzaileaRepository.Login
   fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(System.String,System.String)
+  commentId: M:ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(System.String,System.String)
+  parent: ErronkaApi.Interfaces.IErabiltzaileaRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_Login_System_String_System_String_
+  name: Login(string, string)
+  nameWithType: IErabiltzaileaRepository.Login(string, string)
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(string, string)
+  nameWithType.vb: IErabiltzaileaRepository.Login(String, String)
+  fullName.vb: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(String, String)
+  name.vb: Login(String, String)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(System.String,System.String)
+    name: Login
+    href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_Login_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(System.String,System.String)
+    name: Login
+    href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_Login_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -408,7 +687,6 @@ references:
 - uid: ErronkaApi.Modeloak.Erabiltzailea
   commentId: T:ErronkaApi.Modeloak.Erabiltzailea
   parent: ErronkaApi.Modeloak
-  href: ErronkaApi.Modeloak.Erabiltzailea.html
   name: Erabiltzailea
   nameWithType: Erabiltzailea
   fullName: ErronkaApi.Modeloak.Erabiltzailea
@@ -425,7 +703,6 @@ references:
   - name: .
   - uid: ErronkaApi.Modeloak
     name: Modeloak
-    href: ErronkaApi.Modeloak.html
   spec.vb:
   - uid: ErronkaApi
     name: ErronkaApi
@@ -433,4 +710,51 @@ references:
   - name: .
   - uid: ErronkaApi.Modeloak
     name: Modeloak
-    href: ErronkaApi.Modeloak.html
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea*
+  commentId: Overload:ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea
+  href: ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_LortuErabiltzailea_System_Int32_
+  name: LortuErabiltzailea
+  nameWithType: ErabiltzaileaRepository.LortuErabiltzailea
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  parent: ErronkaApi.Interfaces.IErabiltzaileaRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_LortuErabiltzailea_System_Int32_
+  name: LortuErabiltzailea(int)
+  nameWithType: IErabiltzaileaRepository.LortuErabiltzailea(int)
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(int)
+  nameWithType.vb: IErabiltzaileaRepository.LortuErabiltzailea(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(Integer)
+  name.vb: LortuErabiltzailea(Integer)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+    name: LortuErabiltzailea
+    href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_LortuErabiltzailea_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+    name: LortuErabiltzailea
+    href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_LortuErabiltzailea_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

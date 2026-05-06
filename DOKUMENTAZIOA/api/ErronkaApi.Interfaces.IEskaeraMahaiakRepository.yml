@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  id: IEskaeraMahaiakRepository
+  parent: ErronkaApi.Interfaces
+  children:
+  - ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  langs:
+  - csharp
+  - vb
+  name: IEskaeraMahaiakRepository
+  nameWithType: IEskaeraMahaiakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  type: Interface
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IEskaeraMahaiakRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: IEskaeraMahaiakRepository
+    path: ../API2Erronka/ErronkaApi/Interfaces/IEskaeraMahaiakRepository.cs
+    startLine: 4
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: public interface IEskaeraMahaiakRepository
+    content.vb: Public Interface IEskaeraMahaiakRepository
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  id: Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  parent: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(EskaeraMahaiak)
+  nameWithType: IEskaeraMahaiakRepository.Delete(EskaeraMahaiak)
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IEskaeraMahaiakRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Delete
+    path: ../API2Erronka/ErronkaApi/Interfaces/IEskaeraMahaiakRepository.cs
+    startLine: 6
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: void Delete(EskaeraMahaiak em)
+    parameters:
+    - id: em
+      type: ErronkaApi.Modeloak.EskaeraMahaiak
+    content.vb: Sub Delete(em As EskaeraMahaiak)
+  overload: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete*
+references:
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete*
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete
+  href: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html#ErronkaApi_Interfaces_IEskaeraMahaiakRepository_Delete_ErronkaApi_Modeloak_EskaeraMahaiak_
+  name: Delete
+  nameWithType: IEskaeraMahaiakRepository.Delete
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete
+- uid: ErronkaApi.Modeloak.EskaeraMahaiak
+  commentId: T:ErronkaApi.Modeloak.EskaeraMahaiak
+  parent: ErronkaApi.Modeloak
+  name: EskaeraMahaiak
+  nameWithType: EskaeraMahaiak
+  fullName: ErronkaApi.Modeloak.EskaeraMahaiak
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  href: ErronkaApi.html
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak

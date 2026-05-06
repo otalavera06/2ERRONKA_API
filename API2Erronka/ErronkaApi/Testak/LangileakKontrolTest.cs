@@ -89,7 +89,7 @@ namespace ErronkaApi.Testak
         }
 
         [Fact]
-        public void Login_txat_baimenik_gabe_403_itzultzen_du()
+        public void Login_txat_baimenik_gabe_chatBaimena_false_itzultzen_du()
         {
             var mockRepo = new Mock<IErabiltzaileaRepository>();
             var erabiltzailea = new Erabiltzailea
@@ -108,8 +108,9 @@ namespace ErronkaApi.Testak
 
             var result = controller.Login(new LangileakController.LoginRequest("user", "pass"));
 
-            var forbidden = Assert.IsType<ObjectResult>(result);
-            Assert.Equal(403, forbidden.StatusCode);
+            var ok = Assert.IsType<OkObjectResult>(result);
+            var prop = ok.Value!.GetType().GetProperty("chatBaimena")!;
+            Assert.Equal(false, prop.GetValue(ok.Value));
         }
     }
 }

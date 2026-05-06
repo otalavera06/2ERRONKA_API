@@ -10,6 +10,7 @@ Ongi etorri Erronka APIaren dokumentazio gunera. Hemen aurkituko duzu proiektuar
 
 - **[Kontrollerrak](xref:ErronkaApi.Kontrollerrak)**: APIaren endpoints guztiak eta hauen funtzionaltasuna.
 - **[DTOak](xref:ErronkaApi.DTOak)**: Eskaeretan eta erantzunetan erabiltzen diren datu-egiturak.
+- **[Repositorioak](xref:ErronkaApi.Repositorioak)**: Datu-basearekin lan egiten duten biltegi-klaseak.
 - **[Hasiera](docs/introduction.md)**: Proiektuaren sarrera eta helburuak.
 
 Proiektu hau Jatetxe kudeaketa sistemarako garatutako APIa da, .NET 8 erabiliz.

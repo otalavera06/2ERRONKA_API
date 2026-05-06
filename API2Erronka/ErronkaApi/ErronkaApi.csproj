@@ -20,6 +20,10 @@
   <ItemGroup>
     <Compile Remove="Testak\**\*.cs" />
     <Compile Remove="Test_Logika\**\*.cs" />
+    <Content Remove="Testak\**\*" />
+    <Content Remove="Test_Logika\**\*" />
+    <None Remove="Testak\**\*" />
+    <None Remove="Test_Logika\**\*" />
   </ItemGroup>
 
 </Project>

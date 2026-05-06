@@ -1,0 +1,472 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  commentId: T:ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  id: EskaeraMahaiakRepository
+  parent: ErronkaApi.Repositorioak
+  children:
+  - ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor(NHibernate.ISessionFactory)
+  - ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  langs:
+  - csharp
+  - vb
+  name: EskaeraMahaiakRepository
+  nameWithType: EskaeraMahaiakRepository
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  type: Class
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraMahaiakRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: EskaeraMahaiakRepository
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraMahaiakRepository.cs
+    startLine: 6
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  syntax:
+    content: 'public class EskaeraMahaiakRepository : IEskaeraMahaiakRepository'
+    content.vb: Public Class EskaeraMahaiakRepository Implements IEskaeraMahaiakRepository
+  inheritance:
+  - System.Object
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor(NHibernate.ISessionFactory)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor(NHibernate.ISessionFactory)
+  id: '#ctor(NHibernate.ISessionFactory)'
+  parent: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  langs:
+  - csharp
+  - vb
+  name: EskaeraMahaiakRepository(ISessionFactory)
+  nameWithType: EskaeraMahaiakRepository.EskaeraMahaiakRepository(ISessionFactory)
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.EskaeraMahaiakRepository(NHibernate.ISessionFactory)
+  type: Constructor
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraMahaiakRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: .ctor
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraMahaiakRepository.cs
+    startLine: 10
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  syntax:
+    content: public EskaeraMahaiakRepository(ISessionFactory sessionFactory)
+    parameters:
+    - id: sessionFactory
+      type: NHibernate.ISessionFactory
+    content.vb: Public Sub New(sessionFactory As ISessionFactory)
+  overload: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor*
+  nameWithType.vb: EskaeraMahaiakRepository.New(ISessionFactory)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.New(NHibernate.ISessionFactory)
+  name.vb: New(ISessionFactory)
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  id: Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  parent: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(EskaeraMahaiak)
+  nameWithType: EskaeraMahaiakRepository.Delete(EskaeraMahaiak)
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraMahaiakRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Delete
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraMahaiakRepository.cs
+    startLine: 15
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  example: []
+  syntax:
+    content: public void Delete(EskaeraMahaiak em)
+    parameters:
+    - id: em
+      type: ErronkaApi.Modeloak.EskaeraMahaiak
+    content.vb: Public Sub Delete(em As EskaeraMahaiak)
+  overload: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+references:
+- uid: ErronkaApi.Repositorioak
+  commentId: N:ErronkaApi.Repositorioak
+  href: ErronkaApi.html
+  name: ErronkaApi.Repositorioak
+  nameWithType: ErronkaApi.Repositorioak
+  fullName: ErronkaApi.Repositorioak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Repositorioak
+    name: Repositorioak
+    href: ErronkaApi.Repositorioak.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Repositorioak
+    name: Repositorioak
+    href: ErronkaApi.Repositorioak.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html
+  name: IEskaeraMahaiakRepository
+  nameWithType: IEskaeraMahaiakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor
+  href: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html#ErronkaApi_Repositorioak_EskaeraMahaiakRepository__ctor_NHibernate_ISessionFactory_
+  name: EskaeraMahaiakRepository
+  nameWithType: EskaeraMahaiakRepository.EskaeraMahaiakRepository
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.EskaeraMahaiakRepository
+  nameWithType.vb: EskaeraMahaiakRepository.New
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.New
+  name.vb: New
+- uid: NHibernate.ISessionFactory
+  commentId: T:NHibernate.ISessionFactory
+  parent: NHibernate
+  isExternal: true
+  name: ISessionFactory
+  nameWithType: ISessionFactory
+  fullName: NHibernate.ISessionFactory
+- uid: NHibernate
+  commentId: N:NHibernate
+  isExternal: true
+  name: NHibernate
+  nameWithType: NHibernate
+  fullName: NHibernate
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete
+  href: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html#ErronkaApi_Repositorioak_EskaeraMahaiakRepository_Delete_ErronkaApi_Modeloak_EskaeraMahaiak_
+  name: Delete
+  nameWithType: EskaeraMahaiakRepository.Delete
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  parent: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  href: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html#ErronkaApi_Interfaces_IEskaeraMahaiakRepository_Delete_ErronkaApi_Modeloak_EskaeraMahaiak_
+  name: Delete(EskaeraMahaiak)
+  nameWithType: IEskaeraMahaiakRepository.Delete(EskaeraMahaiak)
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+    name: Delete
+    href: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html#ErronkaApi_Interfaces_IEskaeraMahaiakRepository_Delete_ErronkaApi_Modeloak_EskaeraMahaiak_
+  - name: (
+  - uid: ErronkaApi.Modeloak.EskaeraMahaiak
+    name: EskaeraMahaiak
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+    name: Delete
+    href: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html#ErronkaApi_Interfaces_IEskaeraMahaiakRepository_Delete_ErronkaApi_Modeloak_EskaeraMahaiak_
+  - name: (
+  - uid: ErronkaApi.Modeloak.EskaeraMahaiak
+    name: EskaeraMahaiak
+  - name: )
+- uid: ErronkaApi.Modeloak.EskaeraMahaiak
+  commentId: T:ErronkaApi.Modeloak.EskaeraMahaiak
+  parent: ErronkaApi.Modeloak
+  name: EskaeraMahaiak
+  nameWithType: EskaeraMahaiak
+  fullName: ErronkaApi.Modeloak.EskaeraMahaiak
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  href: ErronkaApi.html
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak

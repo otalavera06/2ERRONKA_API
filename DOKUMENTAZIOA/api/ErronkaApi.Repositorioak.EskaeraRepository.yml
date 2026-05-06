@@ -6,16 +6,18 @@ items:
   parent: ErronkaApi.Repositorioak
   children:
   - ErronkaApi.Repositorioak.EskaeraRepository.#ctor(NHibernate.ISessionFactory)
-  - ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(System.Int32,System.Int32,System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO})
+  - ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
   - ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
-  - ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(System.Int32)
+  - ErronkaApi.Repositorioak.EskaeraRepository.Get(System.Int32)
   - ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak(System.Int32)
+  - ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
   - ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
+  - ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
   - ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko
-  - ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(System.Int32)
-  - ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(System.Int32)
+  - ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+  - ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
   - ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
-  - ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(System.Int32)
+  - ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
   langs:
   - csharp
   - vb
@@ -25,20 +27,27 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: EskaeraRepository
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: >-
+    Eskaeren biltegia.
+
+    Eskema berrian, `Eskaera` zaharra `zerbitzua` + `eskaerak` egituran oinarritzen da.
+  example: []
   syntax:
-    content: public class EskaeraRepository
-    content.vb: Public Class EskaeraRepository
+    content: 'public class EskaeraRepository : IEskaeraRepository'
+    content.vb: Public Class EskaeraRepository Implements IEskaeraRepository
   inheritance:
   - System.Object
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -60,12 +69,12 @@ items:
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 22
+    startLine: 20
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
@@ -79,37 +88,188 @@ items:
   nameWithType.vb: EskaeraRepository.New(ISessionFactory)
   fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.New(NHibernate.ISessionFactory)
   name.vb: New(ISessionFactory)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
-  id: SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Get(System.Int32)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Get(System.Int32)
+  id: Get(System.Int32)
   parent: ErronkaApi.Repositorioak.EskaeraRepository
   langs:
   - csharp
   - vb
-  name: SortuEskaera(EskaeraSortuDTO)
-  nameWithType: EskaeraRepository.SortuEskaera(EskaeraSortuDTO)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  name: Get(int)
+  nameWithType: EskaeraRepository.Get(int)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Get(int)
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: SortuEskaera
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Get
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Eskaera bat IDaren arabera lortzen du.
+  example: []
   syntax:
-    content: public ErantzunaDTO<string> SortuEskaera(EskaeraSortuDTO dto)
+    content: public Eskaera? Get(int id)
     parameters:
-    - id: dto
-      type: ErronkaApi.DTOak.EskaeraSortuDTO
+    - id: id
+      type: System.Int32
+      description: Eskaeraren IDa.
     return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{System.String}
-    content.vb: Public Function SortuEskaera(dto As EskaeraSortuDTO) As ErantzunaDTO(Of String)
-  overload: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera*
+      type: ErronkaApi.Modeloak.Eskaera
+      description: Eskaera objektua edo null.
+    content.vb: Public Function [Get](id As Integer) As Eskaera
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.Get*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.Get(System.Int32)
+  nameWithType.vb: EskaeraRepository.Get(Integer)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.Get(Integer)
+  name.vb: Get(Integer)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  id: Save(ErronkaApi.Modeloak.Eskaera)
+  parent: ErronkaApi.Repositorioak.EskaeraRepository
+  langs:
+  - csharp
+  - vb
+  name: Save(Eskaera)
+  nameWithType: EskaeraRepository.Save(Eskaera)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Save
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+    startLine: 41
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Eskaera bat gordetzen du datu-basean.
+  example: []
+  syntax:
+    content: public void Save(Eskaera eskaera)
+    parameters:
+    - id: eskaera
+      type: ErronkaApi.Modeloak.Eskaera
+      description: Gordetzeko eskaera.
+    content.vb: Public Sub Save(eskaera As Eskaera)
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.Save*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  id: Update(ErronkaApi.Modeloak.Eskaera)
+  parent: ErronkaApi.Repositorioak.EskaeraRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(Eskaera)
+  nameWithType: EskaeraRepository.Update(Eskaera)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Update
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+    startLine: 62
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Eskaera bat eguneratzen du datu-basean.
+  example: []
+  syntax:
+    content: public void Update(Eskaera eskaera)
+    parameters:
+    - id: eskaera
+      type: ErronkaApi.Modeloak.Eskaera
+      description: Eguneratzeko eskaera.
+    content.vb: Public Sub Update(eskaera As Eskaera)
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.Update*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+  id: EguneratuSukaldeaEgoera(System.Int32,System.String)
+  parent: ErronkaApi.Repositorioak.EskaeraRepository
+  langs:
+  - csharp
+  - vb
+  name: EguneratuSukaldeaEgoera(int, string)
+  nameWithType: EskaeraRepository.EguneratuSukaldeaEgoera(int, string)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(int, string)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: EguneratuSukaldeaEgoera
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+    startLine: 89
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Eskaera baten sukaldeko egoera eguneratzen du.
+  example: []
+  syntax:
+    content: public void EguneratuSukaldeaEgoera(int eskaeraId, string egoera)
+    parameters:
+    - id: eskaeraId
+      type: System.Int32
+      description: Eskaeraren IDa.
+    - id: egoera
+      type: System.String
+      description: Egoera berria.
+    content.vb: Public Sub EguneratuSukaldeaEgoera(eskaeraId As Integer, egoera As String)
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+  nameWithType.vb: EskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
+  name.vb: EguneratuSukaldeaEgoera(Integer, String)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  id: Delete(ErronkaApi.Modeloak.Eskaera)
+  parent: ErronkaApi.Repositorioak.EskaeraRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(Eskaera)
+  nameWithType: EskaeraRepository.Delete(Eskaera)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Delete
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+    startLine: 114
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Eskaera bat ezabatzen du datu-basean.
+  example: []
+  syntax:
+    content: public void Delete(Eskaera eskaera)
+    parameters:
+    - id: eskaera
+      type: ErronkaApi.Modeloak.Eskaera
+      description: Ezabatzeko eskaera.
+    content.vb: Public Sub Delete(eskaera As Eskaera)
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.Delete*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
   commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
   id: LortuEskaerak
@@ -123,20 +283,23 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuEskaerak
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 127
+    startLine: 129
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Eskaera guztiak lortzen ditu, itxita ez daudenak.
+  example: []
   syntax:
-    content: public ErantzunaDTO<EskaeraDTO> LortuEskaerak()
+    content: public List<Eskaera> LortuEskaerak()
     return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.EskaeraDTO}
-    content.vb: Public Function LortuEskaerak() As ErantzunaDTO(Of EskaeraDTO)
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.Eskaera}
+      description: Eskaeren zerrenda.
+    content.vb: Public Function LortuEskaerak() As List(Of Eskaera)
   overload: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak*
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak(System.Int32)
   commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak(System.Int32)
@@ -151,244 +314,104 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuEskaeraProduktuak
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 175
+    startLine: 143
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
-  summary: Mahai bakoitzeko zerbitzua, bere eskaerekin, itzultzen du. FROGA
-  remarks: Mahaiak bilatu hauen idearen arabera, goitik .
+  summary: Eskaera baten produktuak lortzen ditu.
   example: []
   syntax:
-    content: public ErantzunaDTO<EskaeraLortuDTO> LortuEskaeraProduktuak(int eskaeraId)
+    content: public List<EskaeraProduktuak> LortuEskaeraProduktuak(int eskaeraId)
     parameters:
     - id: eskaeraId
       type: System.Int32
+      description: Eskaeraren IDa.
     return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.EskaeraLortuDTO}
-      description: >-
-        Zerbitzuen zerrenda DTO formatuan, zerbitzu bakoitzaren eskaera zerrendarekin batera.
-
-        Froga
-    content.vb: Public Function LortuEskaeraProduktuak(eskaeraId As Integer) As ErantzunaDTO(Of EskaeraLortuDTO)
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.EskaeraProduktuak}
+      description: Eskaera-produktuen zerrenda.
+    content.vb: Public Function LortuEskaeraProduktuak(eskaeraId As Integer) As List(Of EskaeraProduktuak)
   overload: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak*
   nameWithType.vb: EskaeraRepository.LortuEskaeraProduktuak(Integer)
   fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak(Integer)
   name.vb: LortuEskaeraProduktuak(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(System.Int32)
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(System.Int32)
-  id: LortuMahaiKapazitatea(System.Int32)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+  id: LortuEskaerak2
   parent: ErronkaApi.Repositorioak.EskaeraRepository
   langs:
   - csharp
   - vb
-  name: LortuMahaiKapazitatea(int)
-  nameWithType: EskaeraRepository.LortuMahaiKapazitatea(int)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(int)
+  name: LortuEskaerak2()
+  nameWithType: EskaeraRepository.LortuEskaerak2()
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2()
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: LortuMahaiKapazitatea
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: LortuEskaerak2
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 219
+    startLine: 156
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Eskaera guztiak lortzen ditu ordenatuta.
+  example: []
   syntax:
-    content: public ErantzunaDTO<int> LortuMahaiKapazitatea(int mahaiaId)
-    parameters:
-    - id: mahaiaId
-      type: System.Int32
+    content: public List<Eskaera> LortuEskaerak2()
     return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{System.Int32}
-    content.vb: Public Function LortuMahaiKapazitatea(mahaiaId As Integer) As ErantzunaDTO(Of Integer)
-  overload: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea*
-  nameWithType.vb: EskaeraRepository.LortuMahaiKapazitatea(Integer)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(Integer)
-  name.vb: LortuMahaiKapazitatea(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(System.Int32)
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(System.Int32)
-  id: EzabatuEskaera(System.Int32)
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.Eskaera}
+      description: Eskaeren zerrenda.
+    content.vb: Public Function LortuEskaerak2() As List(Of Eskaera)
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  id: LortuEskaeraProduktuak2(System.Int32)
   parent: ErronkaApi.Repositorioak.EskaeraRepository
   langs:
   - csharp
   - vb
-  name: EzabatuEskaera(int)
-  nameWithType: EskaeraRepository.EzabatuEskaera(int)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(int)
+  name: LortuEskaeraProduktuak2(int)
+  nameWithType: EskaeraRepository.LortuEskaeraProduktuak2(int)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(int)
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: EzabatuEskaera
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: LortuEskaeraProduktuak2
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 254
+    startLine: 169
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Eskaera baten produktuak lortzen ditu (beste metodoa).
+  example: []
   syntax:
-    content: public ErantzunaDTO<string> EzabatuEskaera(int eskaeraId)
-    parameters:
-    - id: eskaeraId
-      type: System.Int32
-    return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{System.String}
-    content.vb: Public Function EzabatuEskaera(eskaeraId As Integer) As ErantzunaDTO(Of String)
-  overload: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera*
-  nameWithType.vb: EskaeraRepository.EzabatuEskaera(Integer)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(Integer)
-  name.vb: EzabatuEskaera(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(System.Int32,System.Int32,System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO})
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(System.Int32,System.Int32,System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO})
-  id: EguneratuEskaera(System.Int32,System.Int32,System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO})
-  parent: ErronkaApi.Repositorioak.EskaeraRepository
-  langs:
-  - csharp
-  - vb
-  name: EguneratuEskaera(int, int, List<EskaeraProduktuaEditatuDTO>)
-  nameWithType: EskaeraRepository.EguneratuEskaera(int, int, List<EskaeraProduktuaEditatuDTO>)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(int, int, System.Collections.Generic.List<ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO>)
-  type: Method
-  source:
-    remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
-      branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: EguneratuEskaera
-    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 323
-  assemblies:
-  - ErronkaApi
-  namespace: ErronkaApi.Repositorioak
-  syntax:
-    content: public ErantzunaDTO<string> EguneratuEskaera(int eskaeraId, int komensalak, List<EskaeraProduktuaEditatuDTO> produktuak)
+    content: public List<EskaeraProduktuak> LortuEskaeraProduktuak2(int eskaeraId)
     parameters:
     - id: eskaeraId
       type: System.Int32
-    - id: komensalak
-      type: System.Int32
-    - id: produktuak
-      type: System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO}
+      description: Eskaeraren IDa.
     return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{System.String}
-    content.vb: Public Function EguneratuEskaera(eskaeraId As Integer, komensalak As Integer, produktuak As List(Of EskaeraProduktuaEditatuDTO)) As ErantzunaDTO(Of String)
-  overload: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera*
-  nameWithType.vb: EskaeraRepository.EguneratuEskaera(Integer, Integer, List(Of EskaeraProduktuaEditatuDTO))
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(Integer, Integer, System.Collections.Generic.List(Of ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO))
-  name.vb: EguneratuEskaera(Integer, Integer, List(Of EskaeraProduktuaEditatuDTO))
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
-  id: EguneratuSukaldeaEgoera(System.Int32,System.String)
-  parent: ErronkaApi.Repositorioak.EskaeraRepository
-  langs:
-  - csharp
-  - vb
-  name: EguneratuSukaldeaEgoera(int, string)
-  nameWithType: EskaeraRepository.EguneratuSukaldeaEgoera(int, string)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(int, string)
-  type: Method
-  source:
-    remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
-      branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: EguneratuSukaldeaEgoera
-    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 450
-  assemblies:
-  - ErronkaApi
-  namespace: ErronkaApi.Repositorioak
-  syntax:
-    content: public ErantzunaDTO<string> EguneratuSukaldeaEgoera(int eskaeraId, string sukaldeaEgoera)
-    parameters:
-    - id: eskaeraId
-      type: System.Int32
-    - id: sukaldeaEgoera
-      type: System.String
-    return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{System.String}
-    content.vb: Public Function EguneratuSukaldeaEgoera(eskaeraId As Integer, sukaldeaEgoera As String) As ErantzunaDTO(Of String)
-  overload: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera*
-  nameWithType.vb: EskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
-  name.vb: EguneratuSukaldeaEgoera(Integer, String)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(System.Int32)
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(System.Int32)
-  id: OrdaintzeraBidali(System.Int32)
-  parent: ErronkaApi.Repositorioak.EskaeraRepository
-  langs:
-  - csharp
-  - vb
-  name: OrdaintzeraBidali(int)
-  nameWithType: EskaeraRepository.OrdaintzeraBidali(int)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(int)
-  type: Method
-  source:
-    remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
-      branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: OrdaintzeraBidali
-    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 511
-  assemblies:
-  - ErronkaApi
-  namespace: ErronkaApi.Repositorioak
-  syntax:
-    content: public ErantzunaDTO<string> OrdaintzeraBidali(int eskaeraId)
-    parameters:
-    - id: eskaeraId
-      type: System.Int32
-    return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{System.String}
-    content.vb: Public Function OrdaintzeraBidali(eskaeraId As Integer) As ErantzunaDTO(Of String)
-  overload: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali*
-  nameWithType.vb: EskaeraRepository.OrdaintzeraBidali(Integer)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(Integer)
-  name.vb: OrdaintzeraBidali(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(System.Int32)
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(System.Int32)
-  id: SortuFaktura(System.Int32)
-  parent: ErronkaApi.Repositorioak.EskaeraRepository
-  langs:
-  - csharp
-  - vb
-  name: SortuFaktura(int)
-  nameWithType: EskaeraRepository.SortuFaktura(int)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(int)
-  type: Method
-  source:
-    remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
-      branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: SortuFaktura
-    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 555
-  assemblies:
-  - ErronkaApi
-  namespace: ErronkaApi.Repositorioak
-  syntax:
-    content: public ErantzunaDTO<string> SortuFaktura(int eskaeraId)
-    parameters:
-    - id: eskaeraId
-      type: System.Int32
-    return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{System.String}
-    content.vb: Public Function SortuFaktura(eskaeraId As Integer) As ErantzunaDTO(Of String)
-  overload: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura*
-  nameWithType.vb: EskaeraRepository.SortuFaktura(Integer)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(Integer)
-  name.vb: SortuFaktura(Integer)
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.EskaeraProduktuak}
+      description: Eskaera-produktuen zerrenda.
+    content.vb: Public Function LortuEskaeraProduktuak2(eskaeraId As Integer) As List(Of EskaeraProduktuak)
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  nameWithType.vb: EskaeraRepository.LortuEskaeraProduktuak2(Integer)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(Integer)
+  name.vb: LortuEskaeraProduktuak2(Integer)
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko
   commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko
   id: LortuEskaerakOrdaintzeko
@@ -402,21 +425,96 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/EskaeraRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuEskaerakOrdaintzeko
     path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
-    startLine: 665
+    startLine: 182
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Ordaintzeko dauden eskaerak lortzen ditu.
+  example: []
   syntax:
-    content: public ErantzunaDTO<EskaeraDTO> LortuEskaerakOrdaintzeko()
+    content: public List<Eskaera> LortuEskaerakOrdaintzeko()
     return:
-      type: ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.EskaeraDTO}
-    content.vb: Public Function LortuEskaerakOrdaintzeko() As ErantzunaDTO(Of EskaeraDTO)
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.Eskaera}
+      description: Eskaeren zerrenda.
+    content.vb: Public Function LortuEskaerakOrdaintzeko() As List(Of Eskaera)
   overload: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+  id: LortuSukaldekoEskaerak
+  parent: ErronkaApi.Repositorioak.EskaeraRepository
+  langs:
+  - csharp
+  - vb
+  name: LortuSukaldekoEskaerak()
+  nameWithType: EskaeraRepository.LortuSukaldekoEskaerak()
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: LortuSukaldekoEskaerak
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+    startLine: 195
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Sukaldeko eskaerak lortzen ditu.
+  example: []
+  syntax:
+    content: public List<EskaeraProduktuak> LortuSukaldekoEskaerak()
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.EskaeraProduktuak}
+      description: Eskaera-produktuen zerrenda sukaldearentzat.
+    content.vb: Public Function LortuSukaldekoEskaerak() As List(Of EskaeraProduktuak)
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  id: SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  parent: ErronkaApi.Repositorioak.EskaeraRepository
+  langs:
+  - csharp
+  - vb
+  name: SortuEskaera(EskaeraSortuDTO)
+  nameWithType: EskaeraRepository.SortuEskaera(EskaeraSortuDTO)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: SortuEskaera
+    path: ../API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs
+    startLine: 210
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Eskaera berri bat sortzen du DTOtik.
+  example: []
+  syntax:
+    content: public Eskaera SortuEskaera(EskaeraSortuDTO dto)
+    parameters:
+    - id: dto
+      type: ErronkaApi.DTOak.EskaeraSortuDTO
+      description: Eskaera sortzeko datuak.
+    return:
+      type: ErronkaApi.Modeloak.Eskaera
+      description: Sortutako eskaera.
+    content.vb: Public Function SortuEskaera(dto As EskaeraSortuDTO) As Eskaera
+  overload: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera*
+  implements:
+  - ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
 references:
 - uid: ErronkaApi.Repositorioak
   commentId: N:ErronkaApi.Repositorioak
@@ -451,6 +549,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: ErronkaApi.Interfaces.IEskaeraRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html
+  name: IEskaeraRepository
+  nameWithType: IEskaeraRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -677,6 +782,28 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.#ctor*
   commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.#ctor
   href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository__ctor_NHibernate_ISessionFactory_
@@ -699,142 +826,43 @@ references:
   name: NHibernate
   nameWithType: NHibernate
   fullName: NHibernate
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
-  name: SortuEskaera
-  nameWithType: EskaeraRepository.SortuEskaera
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera
-- uid: ErronkaApi.DTOak.EskaeraSortuDTO
-  commentId: T:ErronkaApi.DTOak.EskaeraSortuDTO
-  parent: ErronkaApi.DTOak
-  href: ErronkaApi.DTOak.EskaeraSortuDTO.html
-  name: EskaeraSortuDTO
-  nameWithType: EskaeraSortuDTO
-  fullName: ErronkaApi.DTOak.EskaeraSortuDTO
-- uid: ErronkaApi.DTOak.ErantzunaDTO{System.String}
-  commentId: T:ErronkaApi.DTOak.ErantzunaDTO{System.String}
-  parent: ErronkaApi.DTOak
-  definition: ErronkaApi.DTOak.ErantzunaDTO`1
-  href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  name: ErantzunaDTO<string>
-  nameWithType: ErantzunaDTO<string>
-  fullName: ErronkaApi.DTOak.ErantzunaDTO<string>
-  nameWithType.vb: ErantzunaDTO(Of String)
-  fullName.vb: ErronkaApi.DTOak.ErantzunaDTO(Of String)
-  name.vb: ErantzunaDTO(Of String)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Get*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Get
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Get_System_Int32_
+  name: Get
+  nameWithType: EskaeraRepository.Get
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Get
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Get(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Get(System.Int32)
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Get_System_Int32_
+  name: Get(int)
+  nameWithType: IEskaeraRepository.Get(int)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Get(int)
+  nameWithType.vb: IEskaeraRepository.Get(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IEskaeraRepository.Get(Integer)
+  name.vb: Get(Integer)
   spec.csharp:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: <
-  - uid: System.String
-    name: string
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Get(System.Int32)
+    name: Get
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Get_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '>'
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
   spec.vb:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Get(System.Int32)
+    name: Get
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Get_System_Int32_
   - name: (
-  - name: Of
-  - name: " "
-  - uid: System.String
-    name: String
+  - uid: System.Int32
+    name: Integer
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: ErronkaApi.DTOak
-  commentId: N:ErronkaApi.DTOak
-  href: ErronkaApi.html
-  name: ErronkaApi.DTOak
-  nameWithType: ErronkaApi.DTOak
-  fullName: ErronkaApi.DTOak
-  spec.csharp:
-  - uid: ErronkaApi
-    name: ErronkaApi
-    href: ErronkaApi.html
-  - name: .
-  - uid: ErronkaApi.DTOak
-    name: DTOak
-    href: ErronkaApi.DTOak.html
-  spec.vb:
-  - uid: ErronkaApi
-    name: ErronkaApi
-    href: ErronkaApi.html
-  - name: .
-  - uid: ErronkaApi.DTOak
-    name: DTOak
-    href: ErronkaApi.DTOak.html
-- uid: ErronkaApi.DTOak.ErantzunaDTO`1
-  commentId: T:ErronkaApi.DTOak.ErantzunaDTO`1
-  href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  name: ErantzunaDTO<T>
-  nameWithType: ErantzunaDTO<T>
-  fullName: ErronkaApi.DTOak.ErantzunaDTO<T>
-  nameWithType.vb: ErantzunaDTO(Of T)
-  fullName.vb: ErronkaApi.DTOak.ErantzunaDTO(Of T)
-  name.vb: ErantzunaDTO(Of T)
-  spec.csharp:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak
-  name: LortuEskaerak
-  nameWithType: EskaeraRepository.LortuEskaerak
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
-- uid: ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.EskaeraDTO}
-  commentId: T:ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.EskaeraDTO}
-  parent: ErronkaApi.DTOak
-  definition: ErronkaApi.DTOak.ErantzunaDTO`1
-  href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  name: ErantzunaDTO<EskaeraDTO>
-  nameWithType: ErantzunaDTO<EskaeraDTO>
-  fullName: ErronkaApi.DTOak.ErantzunaDTO<ErronkaApi.DTOak.EskaeraDTO>
-  nameWithType.vb: ErantzunaDTO(Of EskaeraDTO)
-  fullName.vb: ErronkaApi.DTOak.ErantzunaDTO(Of ErronkaApi.DTOak.EskaeraDTO)
-  name.vb: ErantzunaDTO(Of EskaeraDTO)
-  spec.csharp:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: <
-  - uid: ErronkaApi.DTOak.EskaeraDTO
-    name: EskaeraDTO
-    href: ErronkaApi.DTOak.EskaeraDTO.html
-  - name: '>'
-  spec.vb:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ErronkaApi.DTOak.EskaeraDTO
-    name: EskaeraDTO
-    href: ErronkaApi.DTOak.EskaeraDTO.html
-  - name: )
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak_System_Int32_
-  name: LortuEskaeraProduktuak
-  nameWithType: EskaeraRepository.LortuEskaeraProduktuak
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -846,108 +874,204 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.EskaeraLortuDTO}
-  commentId: T:ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.EskaeraLortuDTO}
-  parent: ErronkaApi.DTOak
-  definition: ErronkaApi.DTOak.ErantzunaDTO`1
-  href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  name: ErantzunaDTO<EskaeraLortuDTO>
-  nameWithType: ErantzunaDTO<EskaeraLortuDTO>
-  fullName: ErronkaApi.DTOak.ErantzunaDTO<ErronkaApi.DTOak.EskaeraLortuDTO>
-  nameWithType.vb: ErantzunaDTO(Of EskaeraLortuDTO)
-  fullName.vb: ErronkaApi.DTOak.ErantzunaDTO(Of ErronkaApi.DTOak.EskaeraLortuDTO)
-  name.vb: ErantzunaDTO(Of EskaeraLortuDTO)
+- uid: ErronkaApi.Modeloak.Eskaera
+  commentId: T:ErronkaApi.Modeloak.Eskaera
+  parent: ErronkaApi.Modeloak
+  name: Eskaera
+  nameWithType: Eskaera
+  fullName: ErronkaApi.Modeloak.Eskaera
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  href: ErronkaApi.html
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
   spec.csharp:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: <
-  - uid: ErronkaApi.DTOak.EskaeraLortuDTO
-    name: EskaeraLortuDTO
-    href: ErronkaApi.DTOak.EskaeraLortuDTO.html
-  - name: '>'
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
   spec.vb:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ErronkaApi.DTOak.EskaeraLortuDTO
-    name: EskaeraLortuDTO
-    href: ErronkaApi.DTOak.EskaeraLortuDTO.html
-  - name: )
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuMahaiKapazitatea_System_Int32_
-  name: LortuMahaiKapazitatea
-  nameWithType: EskaeraRepository.LortuMahaiKapazitatea
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea
-- uid: ErronkaApi.DTOak.ErantzunaDTO{System.Int32}
-  commentId: T:ErronkaApi.DTOak.ErantzunaDTO{System.Int32}
-  parent: ErronkaApi.DTOak
-  definition: ErronkaApi.DTOak.ErantzunaDTO`1
-  href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  name: ErantzunaDTO<int>
-  nameWithType: ErantzunaDTO<int>
-  fullName: ErronkaApi.DTOak.ErantzunaDTO<int>
-  nameWithType.vb: ErantzunaDTO(Of Integer)
-  fullName.vb: ErronkaApi.DTOak.ErantzunaDTO(Of Integer)
-  name.vb: ErantzunaDTO(Of Integer)
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Save*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Save
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Save_ErronkaApi_Modeloak_Eskaera_
+  name: Save
+  nameWithType: EskaeraRepository.Save
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Save
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Save_ErronkaApi_Modeloak_Eskaera_
+  name: Save(Eskaera)
+  nameWithType: IEskaeraRepository.Save(Eskaera)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
   spec.csharp:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: <
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+    name: Save
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Save_ErronkaApi_Modeloak_Eskaera_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+    name: Save
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Save_ErronkaApi_Modeloak_Eskaera_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
+  - name: )
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Update*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Update
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Update_ErronkaApi_Modeloak_Eskaera_
+  name: Update
+  nameWithType: EskaeraRepository.Update
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Update
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Update_ErronkaApi_Modeloak_Eskaera_
+  name: Update(Eskaera)
+  nameWithType: IEskaeraRepository.Update(Eskaera)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+    name: Update
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Update_ErronkaApi_Modeloak_Eskaera_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+    name: Update
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Update_ErronkaApi_Modeloak_Eskaera_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
+  - name: )
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_
+  name: EguneratuSukaldeaEgoera
+  nameWithType: EskaeraRepository.EguneratuSukaldeaEgoera
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  isExternal: true
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_
+  name: EguneratuSukaldeaEgoera(int, string)
+  nameWithType: IEskaeraRepository.EguneratuSukaldeaEgoera(int, string)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(int, string)
+  nameWithType.vb: IEskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
+  fullName.vb: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
+  name.vb: EguneratuSukaldeaEgoera(Integer, String)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+    name: EguneratuSukaldeaEgoera
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_
+  - name: (
   - uid: System.Int32
     name: int
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '>'
-  spec.vb:
-  - uid: ErronkaApi.DTOak.ErantzunaDTO`1
-    name: ErantzunaDTO
-    href: ErronkaApi.DTOak.ErantzunaDTO-1.html
-  - name: (
-  - name: Of
+  - name: ','
   - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+    name: EguneratuSukaldeaEgoera
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_
+  - name: (
   - uid: System.Int32
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EzabatuEskaera_System_Int32_
-  name: EzabatuEskaera
-  nameWithType: EskaeraRepository.EzabatuEskaera
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EguneratuEskaera_System_Int32_System_Int32_System_Collections_Generic_List_ErronkaApi_DTOak_EskaeraProduktuaEditatuDTO__
-  name: EguneratuEskaera
-  nameWithType: EskaeraRepository.EguneratuEskaera
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera
-- uid: System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO}
-  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO}
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Delete*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Delete
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Delete_ErronkaApi_Modeloak_Eskaera_
+  name: Delete
+  nameWithType: EskaeraRepository.Delete
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Delete
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Delete_ErronkaApi_Modeloak_Eskaera_
+  name: Delete(Eskaera)
+  nameWithType: IEskaeraRepository.Delete(Eskaera)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+    name: Delete
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Delete_ErronkaApi_Modeloak_Eskaera_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+    name: Delete
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Delete_ErronkaApi_Modeloak_Eskaera_
+  - name: (
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
+  - name: )
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak
+  name: LortuEskaerak
+  nameWithType: EskaeraRepository.LortuEskaerak
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
+- uid: System.Collections.Generic.List{ErronkaApi.Modeloak.Eskaera}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.Modeloak.Eskaera}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<EskaeraProduktuaEditatuDTO>
-  nameWithType: List<EskaeraProduktuaEditatuDTO>
-  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO>
-  nameWithType.vb: List(Of EskaeraProduktuaEditatuDTO)
-  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO)
-  name.vb: List(Of EskaeraProduktuaEditatuDTO)
+  name: List<Eskaera>
+  nameWithType: List<Eskaera>
+  fullName: System.Collections.Generic.List<ErronkaApi.Modeloak.Eskaera>
+  nameWithType.vb: List(Of Eskaera)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.Modeloak.Eskaera)
+  name.vb: List(Of Eskaera)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - uid: ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO
-    name: EskaeraProduktuaEditatuDTO
-    href: ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO.html
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -957,9 +1081,8 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO
-    name: EskaeraProduktuaEditatuDTO
-    href: ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO.html
+  - uid: ErronkaApi.Modeloak.Eskaera
+    name: Eskaera
   - name: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
@@ -1026,38 +1149,212 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_
-  name: EguneratuSukaldeaEgoera
-  nameWithType: EskaeraRepository.EguneratuSukaldeaEgoera
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak_System_Int32_
+  name: LortuEskaeraProduktuak
+  nameWithType: EskaeraRepository.LortuEskaeraProduktuak
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak
+- uid: System.Collections.Generic.List{ErronkaApi.Modeloak.EskaeraProduktuak}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.Modeloak.EskaeraProduktuak}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EskaeraProduktuak>
+  nameWithType: List<EskaeraProduktuak>
+  fullName: System.Collections.Generic.List<ErronkaApi.Modeloak.EskaeraProduktuak>
+  nameWithType.vb: List(Of EskaeraProduktuak)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.Modeloak.EskaeraProduktuak)
+  name.vb: List(Of EskaeraProduktuak)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.Modeloak.EskaeraProduktuak
+    name: EskaeraProduktuak
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.Modeloak.EskaeraProduktuak
+    name: EskaeraProduktuak
+  - name: )
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak2
+  name: LortuEskaerak2
+  nameWithType: EskaeraRepository.LortuEskaerak2
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerak2
+  name: LortuEskaerak2()
+  nameWithType: IEskaeraRepository.LortuEskaerak2()
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2()
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+    name: LortuEskaerak2
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerak2
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+    name: LortuEskaerak2
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerak2
+  - name: (
+  - name: )
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak2_System_Int32_
+  name: LortuEskaeraProduktuak2
+  nameWithType: EskaeraRepository.LortuEskaeraProduktuak2
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_OrdaintzeraBidali_System_Int32_
-  name: OrdaintzeraBidali
-  nameWithType: EskaeraRepository.OrdaintzeraBidali
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura*
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura
-  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_SortuFaktura_System_Int32_
-  name: SortuFaktura
-  nameWithType: EskaeraRepository.SortuFaktura
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaeraProduktuak2_System_Int32_
+  name: LortuEskaeraProduktuak2(int)
+  nameWithType: IEskaeraRepository.LortuEskaeraProduktuak2(int)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(int)
+  nameWithType.vb: IEskaeraRepository.LortuEskaeraProduktuak2(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(Integer)
+  name.vb: LortuEskaeraProduktuak2(Integer)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+    name: LortuEskaeraProduktuak2
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaeraProduktuak2_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+    name: LortuEskaeraProduktuak2
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaeraProduktuak2_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko*
   commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko
   href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerakOrdaintzeko
   name: LortuEskaerakOrdaintzeko
   nameWithType: EskaeraRepository.LortuEskaerakOrdaintzeko
   fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerakOrdaintzeko
+  name: LortuEskaerakOrdaintzeko()
+  nameWithType: IEskaeraRepository.LortuEskaerakOrdaintzeko()
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko()
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+    name: LortuEskaerakOrdaintzeko
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerakOrdaintzeko
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+    name: LortuEskaerakOrdaintzeko
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerakOrdaintzeko
+  - name: (
+  - name: )
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuSukaldekoEskaerak
+  name: LortuSukaldekoEskaerak
+  nameWithType: EskaeraRepository.LortuSukaldekoEskaerak
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuSukaldekoEskaerak
+  name: LortuSukaldekoEskaerak()
+  nameWithType: IEskaeraRepository.LortuSukaldekoEskaerak()
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak()
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+    name: LortuSukaldekoEskaerak
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuSukaldekoEskaerak
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+    name: LortuSukaldekoEskaerak
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuSukaldekoEskaerak
+  - name: (
+  - name: )
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera*
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera
+  href: ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
+  name: SortuEskaera
+  nameWithType: EskaeraRepository.SortuEskaera
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  parent: ErronkaApi.Interfaces.IEskaeraRepository
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
+  name: SortuEskaera(EskaeraSortuDTO)
+  nameWithType: IEskaeraRepository.SortuEskaera(EskaeraSortuDTO)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+    name: SortuEskaera
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
+  - name: (
+  - uid: ErronkaApi.DTOak.EskaeraSortuDTO
+    name: EskaeraSortuDTO
+    href: ErronkaApi.DTOak.EskaeraSortuDTO.html
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+    name: SortuEskaera
+    href: ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
+  - name: (
+  - uid: ErronkaApi.DTOak.EskaeraSortuDTO
+    name: EskaeraSortuDTO
+    href: ErronkaApi.DTOak.EskaeraSortuDTO.html
+  - name: )
+- uid: ErronkaApi.DTOak.EskaeraSortuDTO
+  commentId: T:ErronkaApi.DTOak.EskaeraSortuDTO
+  parent: ErronkaApi.DTOak
+  href: ErronkaApi.DTOak.EskaeraSortuDTO.html
+  name: EskaeraSortuDTO
+  nameWithType: EskaeraSortuDTO
+  fullName: ErronkaApi.DTOak.EskaeraSortuDTO
+- uid: ErronkaApi.DTOak
+  commentId: N:ErronkaApi.DTOak
+  href: ErronkaApi.html
+  name: ErronkaApi.DTOak
+  nameWithType: ErronkaApi.DTOak
+  fullName: ErronkaApi.DTOak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.DTOak
+    name: DTOak
+    href: ErronkaApi.DTOak.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.DTOak
+    name: DTOak
+    href: ErronkaApi.DTOak.html

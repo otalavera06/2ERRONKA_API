@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EskaeraRepository | Erronka API Dokumentazioa ">
       
-      
+      <meta name="description" content="Eskaeren biltegia. Eskema berrian, Eskaera zaharra zerbitzua + eskaerak egituran oinarritzen da.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/UnaiMarti88/API2Erronka/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_EskaeraRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.EskaeraRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/otalavera06/2ERRONKA_API/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_EskaeraRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.EskaeraRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ErronkaApi_Repositorioak_EskaeraRepository" data-uid="ErronkaApi.Repositorioak.EskaeraRepository" class="text-break">
-Class EskaeraRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class EskaeraRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,11 +97,13 @@ Class EskaeraRepository  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>ErronkaApi.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Eskaeren biltegia.
+Eskema berrian, <code>Eskaera</code> zaharra <code>zerbitzua</code> + <code>eskaerak</code> egituran oinarritzen da.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EskaeraRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public class EskaeraRepository : IEskaeraRepository</code></pre>
   </div>
 
 
@@ -115,6 +117,12 @@ Class EskaeraRepository  <a class="header-action link-secondary" title="View sou
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ErronkaApi.Interfaces.IEskaeraRepository.html">IEskaeraRepository</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -156,7 +164,7 @@ Class EskaeraRepository  <a class="header-action link-secondary" title="View sou
 
   <h3 id="ErronkaApi_Repositorioak_EskaeraRepository__ctor_NHibernate_ISessionFactory_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.#ctor(NHibernate.ISessionFactory)">
   EskaeraRepository(ISessionFactory)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -187,35 +195,28 @@ Class EskaeraRepository  <a class="header-action link-secondary" title="View sou
 </h2>
 
 
-  <a id="ErronkaApi_Repositorioak_EskaeraRepository_EguneratuEskaera_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera*"></a>
+  <a id="ErronkaApi_Repositorioak_EskaeraRepository_Delete_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Delete*"></a>
 
-  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_EguneratuEskaera_System_Int32_System_Int32_System_Collections_Generic_List_ErronkaApi_DTOak_EskaeraProduktuaEditatuDTO__" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(System.Int32,System.Int32,System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO})">
-  EguneratuEskaera(int, int, List&lt;EskaeraProduktuaEditatuDTO&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_Delete_ErronkaApi_Modeloak_Eskaera_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)">
+  Delete(Eskaera)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eskaera bat ezabatzen du datu-basean.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;string&gt; EguneratuEskaera(int eskaeraId, int komensalak, List&lt;EskaeraProduktuaEditatuDTO&gt; produktuak)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Delete(Eskaera eskaera)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>komensalak</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>produktuak</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO.html">EskaeraProduktuaEditatuDTO</a>&gt;</dt>
-    <dd></dd>
+    <dt><code>eskaera</code> <span class="xref">Eskaera</span></dt>
+    <dd><p>Ezabatzeko eskaera.</p>
+</dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -231,28 +232,25 @@ Class EskaeraRepository  <a class="header-action link-secondary" title="View sou
 
   <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)">
   EguneratuSukaldeaEgoera(int, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eskaera baten sukaldeko egoera eguneratzen du.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;string&gt; EguneratuSukaldeaEgoera(int eskaeraId, string sukaldeaEgoera)</code></pre>
+    <pre><code class="lang-csharp hljs">public void EguneratuSukaldeaEgoera(int eskaeraId, string egoera)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>sukaldeaEgoera</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>Eskaeraren IDa.</p>
+</dd>
+    <dt><code>egoera</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Egoera berria.</p>
+</dd>
   </dl>
 
 
@@ -265,30 +263,34 @@ Class EskaeraRepository  <a class="header-action link-secondary" title="View sou
 
 
 
-  <a id="ErronkaApi_Repositorioak_EskaeraRepository_EzabatuEskaera_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera*"></a>
 
-  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_EzabatuEskaera_System_Int32_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(System.Int32)">
-  EzabatuEskaera(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a id="ErronkaApi_Repositorioak_EskaeraRepository_Get_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Get*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_Get_System_Int32_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Get(System.Int32)">
+  Get(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eskaera bat IDaren arabera lortzen du.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;string&gt; EzabatuEskaera(int eskaeraId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Eskaera? Get(int id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Eskaeraren IDa.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dt><span class="xref">Eskaera</span></dt>
+    <dd><p>Eskaera objektua edo null.</p>
+</dd>
   </dl>
 
 
@@ -305,28 +307,28 @@ Class EskaeraRepository  <a class="header-action link-secondary" title="View sou
 
   <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak_System_Int32_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak(System.Int32)">
   LortuEskaeraProduktuak(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Mahai bakoitzeko zerbitzua, bere eskaerekin, itzultzen du. FROGA</p>
+  <div class="markdown level1 summary"><p>Eskaera baten produktuak lortzen ditu.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;EskaeraLortuDTO&gt; LortuEskaeraProduktuak(int eskaeraId)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;EskaeraProduktuak&gt; LortuEskaeraProduktuak(int eskaeraId)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Eskaeraren IDa.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="ErronkaApi.DTOak.EskaeraLortuDTO.html">EskaeraLortuDTO</a>&gt;</dt>
-    <dd><p>Zerbitzuen zerrenda DTO formatuan, zerbitzu bakoitzaren eskaera zerrendarekin batera.
-Froga</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.Modeloak.EskaeraProduktuak.html">EskaeraProduktuak</a>&gt;</dt>
+    <dd><p>Eskaera-produktuen zerrenda.</p>
 </dd>
   </dl>
 
@@ -336,9 +338,45 @@ Froga</p>
 
 
 
-  <h4 class="section" id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak_System_Int32__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Mahaiak bilatu hauen idearen arabera, goitik .</p>
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak2_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak2_System_Int32_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(System.Int32)">
+  LortuEskaeraProduktuak2(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Eskaera baten produktuak lortzen ditu (beste metodoa).</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;EskaeraProduktuak&gt; LortuEskaeraProduktuak2(int eskaeraId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Eskaeraren IDa.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.Modeloak.EskaeraProduktuak.html">EskaeraProduktuak</a>&gt;</dt>
+    <dd><p>Eskaera-produktuen zerrenda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
 
 
 
@@ -347,21 +385,56 @@ Froga</p>
 
   <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak">
   LortuEskaerak()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eskaera guztiak lortzen ditu, itxita ez daudenak.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;EskaeraDTO&gt; LortuEskaerak()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Eskaera&gt; LortuEskaerak()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="ErronkaApi.DTOak.EskaeraDTO.html">EskaeraDTO</a>&gt;</dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Eskaera</span>&gt;</dt>
+    <dd><p>Eskaeren zerrenda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak2_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak2" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2">
+  LortuEskaerak2()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Eskaera guztiak lortzen ditu ordenatuta.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Eskaera&gt; LortuEskaerak2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Eskaera</span>&gt;</dt>
+    <dd><p>Eskaeren zerrenda.</p>
+</dd>
   </dl>
 
 
@@ -378,21 +451,23 @@ Froga</p>
 
   <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerakOrdaintzeko" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko">
   LortuEskaerakOrdaintzeko()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L666"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Ordaintzeko dauden eskaerak lortzen ditu.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;EskaeraDTO&gt; LortuEskaerakOrdaintzeko()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Eskaera&gt; LortuEskaerakOrdaintzeko()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="ErronkaApi.DTOak.EskaeraDTO.html">EskaeraDTO</a>&gt;</dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Eskaera</span>&gt;</dt>
+    <dd><p>Eskaeren zerrenda.</p>
+</dd>
   </dl>
 
 
@@ -405,67 +480,61 @@ Froga</p>
 
 
 
-  <a id="ErronkaApi_Repositorioak_EskaeraRepository_LortuMahaiKapazitatea_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea*"></a>
+  <a id="ErronkaApi_Repositorioak_EskaeraRepository_LortuSukaldekoEskaerak_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak*"></a>
 
-  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_LortuMahaiKapazitatea_System_Int32_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(System.Int32)">
-  LortuMahaiKapazitatea(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_LortuSukaldekoEskaerak" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak">
+  LortuSukaldekoEskaerak()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sukaldeko eskaerak lortzen ditu.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;int&gt; LortuMahaiKapazitatea(int mahaiaId)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;EskaeraProduktuak&gt; LortuSukaldekoEskaerak()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.Modeloak.EskaeraProduktuak.html">EskaeraProduktuak</a>&gt;</dt>
+    <dd><p>Eskaera-produktuen zerrenda sukaldearentzat.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_EskaeraRepository_Save_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Save*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_Save_ErronkaApi_Modeloak_Eskaera_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)">
+  Save(Eskaera)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Eskaera bat gordetzen du datu-basean.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Save(Eskaera eskaera)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>mahaiaId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dt><code>eskaera</code> <span class="xref">Eskaera</span></dt>
+    <dd><p>Gordetzeko eskaera.</p>
+</dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ErronkaApi_Repositorioak_EskaeraRepository_OrdaintzeraBidali_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali*"></a>
-
-  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_OrdaintzeraBidali_System_Int32_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(System.Int32)">
-  OrdaintzeraBidali(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L512"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;string&gt; OrdaintzeraBidali(int eskaeraId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -481,26 +550,29 @@ Froga</p>
 
   <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)">
   SortuEskaera(EskaeraSortuDTO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eskaera berri bat sortzen du DTOtik.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;string&gt; SortuEskaera(EskaeraSortuDTO dto)</code></pre>
+    <pre><code class="lang-csharp hljs">public Eskaera SortuEskaera(EskaeraSortuDTO dto)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>dto</code> <a class="xref" href="ErronkaApi.DTOak.EskaeraSortuDTO.html">EskaeraSortuDTO</a></dt>
-    <dd></dd>
+    <dd><p>Eskaera sortzeko datuak.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dt><span class="xref">Eskaera</span></dt>
+    <dd><p>Sortutako eskaera.</p>
+</dd>
   </dl>
 
 
@@ -513,31 +585,28 @@ Froga</p>
 
 
 
-  <a id="ErronkaApi_Repositorioak_EskaeraRepository_SortuFaktura_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura*"></a>
+  <a id="ErronkaApi_Repositorioak_EskaeraRepository_Update_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Update*"></a>
 
-  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_SortuFaktura_System_Int32_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(System.Int32)">
-  SortuFaktura(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L556"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ErronkaApi_Repositorioak_EskaeraRepository_Update_ErronkaApi_Modeloak_Eskaera_" data-uid="ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)">
+  Update(Eskaera)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eskaera bat eguneratzen du datu-basean.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ErantzunaDTO&lt;string&gt; SortuFaktura(int eskaeraId)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Update(Eskaera eskaera)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>eskaeraId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dt><code>eskaera</code> <span class="xref">Eskaera</span></dt>
+    <dd><p>Eguneratzeko eskaera.</p>
+</dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -553,7 +622,7 @@ Froga</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/EskaeraRepository.cs/#L17" class="edit-link">Edit this page</a>
         </div>
 
 

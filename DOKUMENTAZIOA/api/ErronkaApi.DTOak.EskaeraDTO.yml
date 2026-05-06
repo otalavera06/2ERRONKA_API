@@ -10,6 +10,7 @@ items:
   - ErronkaApi.DTOak.EskaeraDTO.Izena
   - ErronkaApi.DTOak.EskaeraDTO.Komensalak
   - ErronkaApi.DTOak.EskaeraDTO.MahaiaId
+  - ErronkaApi.DTOak.EskaeraDTO.Produktuak
   - ErronkaApi.DTOak.EskaeraDTO.SukaldeaEgoera
   langs:
   - csharp
@@ -20,9 +21,9 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: EskaeraDTO
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
     startLine: 5
@@ -57,9 +58,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Id
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
     startLine: 10
@@ -88,9 +89,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Izena
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
     startLine: 15
@@ -119,9 +120,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: MahaiaId
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
     startLine: 20
@@ -150,9 +151,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Komensalak
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
     startLine: 25
@@ -181,9 +182,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Data
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
     startLine: 30
@@ -212,9 +213,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: SukaldeaEgoera
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
     startLine: 35
@@ -230,6 +231,35 @@ items:
       type: System.String
     content.vb: Public Property SukaldeaEgoera As String
   overload: ErronkaApi.DTOak.EskaeraDTO.SukaldeaEgoera*
+- uid: ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  commentId: P:ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  id: Produktuak
+  parent: ErronkaApi.DTOak.EskaeraDTO
+  langs:
+  - csharp
+  - vb
+  name: Produktuak
+  nameWithType: EskaeraDTO.Produktuak
+  fullName: ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  type: Property
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Produktuak
+    path: ../API2Erronka/ErronkaApi/DTOak/EskaeraDTO.cs
+    startLine: 37
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.DTOak
+  syntax:
+    content: public List<EskaeraLortuDTO> Produktuak { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraLortuDTO}
+    content.vb: Public Property Produktuak As List(Of EskaeraLortuDTO)
+  overload: ErronkaApi.DTOak.EskaeraDTO.Produktuak*
 references:
 - uid: ErronkaApi.DTOak
   commentId: N:ErronkaApi.DTOak
@@ -548,3 +578,107 @@ references:
   name: SukaldeaEgoera
   nameWithType: EskaeraDTO.SukaldeaEgoera
   fullName: ErronkaApi.DTOak.EskaeraDTO.SukaldeaEgoera
+- uid: ErronkaApi.DTOak.EskaeraDTO.Produktuak*
+  commentId: Overload:ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  href: ErronkaApi.DTOak.EskaeraDTO.html#ErronkaApi_DTOak_EskaeraDTO_Produktuak
+  name: Produktuak
+  nameWithType: EskaeraDTO.Produktuak
+  fullName: ErronkaApi.DTOak.EskaeraDTO.Produktuak
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraLortuDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraLortuDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EskaeraLortuDTO>
+  nameWithType: List<EskaeraLortuDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.EskaeraLortuDTO>
+  nameWithType.vb: List(Of EskaeraLortuDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.EskaeraLortuDTO)
+  name.vb: List(Of EskaeraLortuDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.DTOak.EskaeraLortuDTO
+    name: EskaeraLortuDTO
+    href: ErronkaApi.DTOak.EskaeraLortuDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.DTOak.EskaeraLortuDTO
+    name: EskaeraLortuDTO
+    href: ErronkaApi.DTOak.EskaeraLortuDTO.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

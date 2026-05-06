@@ -7,6 +7,7 @@ items:
   children:
   - ErronkaApi.Repositorioak.KategoriaRepository.#ctor(NHibernate.ISessionFactory)
   - ErronkaApi.Repositorioak.KategoriaRepository.GetAll
+  - ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
   langs:
   - csharp
   - vb
@@ -16,20 +17,27 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Repositorioak/KategoriaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: KategoriaRepository
     path: ../API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: >-
+    Kategorien datu-sarbidea kudeatzen duen biltegia.
+
+    Entitate osoak nahiz APIrako DTO arinak itzultzen ditu.
+  example: []
   syntax:
-    content: public class KategoriaRepository
-    content.vb: Public Class KategoriaRepository
+    content: 'public class KategoriaRepository : IKategoriaRepository'
+    content.vb: Public Class KategoriaRepository Implements IKategoriaRepository
   inheritance:
   - System.Object
+  implements:
+  - ErronkaApi.Interfaces.IKategoriaRepository
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -51,20 +59,23 @@ items:
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Repositorioak/KategoriaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
-    startLine: 12
+    startLine: 23
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: '`KategoriaRepository` instantzia berri bat sortzen du.'
+  example: []
   syntax:
     content: public KategoriaRepository(ISessionFactory sessionFactory)
     parameters:
     - id: sessionFactory
       type: NHibernate.ISessionFactory
+      description: NHibernate saio-fabrika.
     content.vb: Public Sub New(sessionFactory As ISessionFactory)
   overload: ErronkaApi.Repositorioak.KategoriaRepository.#ctor*
   nameWithType.vb: KategoriaRepository.New(ISessionFactory)
@@ -83,21 +94,59 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Repositorioak/KategoriaRepository.cs
+      path: API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: GetAll
     path: ../API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
-    startLine: 17
+    startLine: 32
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Repositorioak
+  summary: Kategoria guztiak izenaren arabera ordenatuta lortzen ditu.
+  example: []
   syntax:
-    content: public IList<Kategoria> GetAll()
+    content: public List<Kategoria> GetAll()
     return:
-      type: System.Collections.Generic.IList{ErronkaApi.Modeloak.Kategoria}
-    content.vb: Public Function GetAll() As IList(Of Kategoria)
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.Kategoria}
+      description: Kategoria entitateen zerrenda.
+    content.vb: Public Function GetAll() As List(Of Kategoria)
   overload: ErronkaApi.Repositorioak.KategoriaRepository.GetAll*
+  implements:
+  - ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+- uid: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+  commentId: M:ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+  id: GetAllDTO
+  parent: ErronkaApi.Repositorioak.KategoriaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllDTO()
+  nameWithType: KategoriaRepository.GetAllDTO()
+  fullName: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAllDTO
+    path: ../API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs
+    startLine: 45
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Repositorioak
+  summary: Kategoria guztiak APIrako DTO formatuan lortzen ditu.
+  example: []
+  syntax:
+    content: public List<KategoriaDTO> GetAllDTO()
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.KategoriaDTO}
+      description: '`KategoriaDTO` zerrenda bat.'
+    content.vb: Public Function GetAllDTO() As List(Of KategoriaDTO)
+  overload: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO*
+  implements:
+  - ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
 references:
 - uid: ErronkaApi.Repositorioak
   commentId: N:ErronkaApi.Repositorioak
@@ -132,6 +181,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: ErronkaApi.Interfaces.IKategoriaRepository
+  commentId: T:ErronkaApi.Interfaces.IKategoriaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IKategoriaRepository.html
+  name: IKategoriaRepository
+  nameWithType: IKategoriaRepository
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -358,6 +414,28 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
 - uid: ErronkaApi.Repositorioak.KategoriaRepository.#ctor*
   commentId: Overload:ErronkaApi.Repositorioak.KategoriaRepository.#ctor
   href: ErronkaApi.Repositorioak.KategoriaRepository.html#ErronkaApi_Repositorioak_KategoriaRepository__ctor_NHibernate_ISessionFactory_
@@ -386,62 +464,79 @@ references:
   name: GetAll
   nameWithType: KategoriaRepository.GetAll
   fullName: ErronkaApi.Repositorioak.KategoriaRepository.GetAll
-- uid: System.Collections.Generic.IList{ErronkaApi.Modeloak.Kategoria}
-  commentId: T:System.Collections.Generic.IList{ErronkaApi.Modeloak.Kategoria}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IList`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  name: IList<Kategoria>
-  nameWithType: IList<Kategoria>
-  fullName: System.Collections.Generic.IList<ErronkaApi.Modeloak.Kategoria>
-  nameWithType.vb: IList(Of Kategoria)
-  fullName.vb: System.Collections.Generic.IList(Of ErronkaApi.Modeloak.Kategoria)
-  name.vb: IList(Of Kategoria)
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  commentId: M:ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  parent: ErronkaApi.Interfaces.IKategoriaRepository
+  href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAll
+  name: GetAll()
+  nameWithType: IKategoriaRepository.GetAll()
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAll()
   spec.csharp:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+    name: GetAll
+    href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAll
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+    name: GetAll
+    href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAll
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List{ErronkaApi.Modeloak.Kategoria}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.Modeloak.Kategoria}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Kategoria>
+  nameWithType: List<Kategoria>
+  fullName: System.Collections.Generic.List<ErronkaApi.Modeloak.Kategoria>
+  nameWithType.vb: List(Of Kategoria)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.Modeloak.Kategoria)
+  name.vb: List(Of Kategoria)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
   - uid: ErronkaApi.Modeloak.Kategoria
     name: Kategoria
-    href: ErronkaApi.Modeloak.Kategoria.html
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: (
   - name: Of
   - name: " "
   - uid: ErronkaApi.Modeloak.Kategoria
     name: Kategoria
-    href: ErronkaApi.Modeloak.Kategoria.html
   - name: )
-- uid: System.Collections.Generic.IList`1
-  commentId: T:System.Collections.Generic.IList`1
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  name: IList<T>
-  nameWithType: IList<T>
-  fullName: System.Collections.Generic.IList<T>
-  nameWithType.vb: IList(Of T)
-  fullName.vb: System.Collections.Generic.IList(Of T)
-  name.vb: IList(Of T)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.List`1
+    name: List
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: (
   - name: Of
   - name: " "
@@ -484,3 +579,61 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO*
+  commentId: Overload:ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+  href: ErronkaApi.Repositorioak.KategoriaRepository.html#ErronkaApi_Repositorioak_KategoriaRepository_GetAllDTO
+  name: GetAllDTO
+  nameWithType: KategoriaRepository.GetAllDTO
+  fullName: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  commentId: M:ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  parent: ErronkaApi.Interfaces.IKategoriaRepository
+  href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAllDTO
+  name: GetAllDTO()
+  nameWithType: IKategoriaRepository.GetAllDTO()
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO()
+  spec.csharp:
+  - uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+    name: GetAllDTO
+    href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAllDTO
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+    name: GetAllDTO
+    href: ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAllDTO
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.KategoriaDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.KategoriaDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<KategoriaDTO>
+  nameWithType: List<KategoriaDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.KategoriaDTO>
+  nameWithType.vb: List(Of KategoriaDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.KategoriaDTO)
+  name.vb: List(Of KategoriaDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.DTOak.KategoriaDTO
+    name: KategoriaDTO
+    href: ErronkaApi.DTOak.KategoriaDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.DTOak.KategoriaDTO
+    name: KategoriaDTO
+    href: ErronkaApi.DTOak.KategoriaDTO.html
+  - name: )

@@ -478,6 +478,19 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.DTOak.EskaeraDTO.MahaiaId
   nameWithType: EskaeraDTO.MahaiaId
+- uid: ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  name: Produktuak
+  href: api/ErronkaApi.DTOak.EskaeraDTO.html#ErronkaApi_DTOak_EskaeraDTO_Produktuak
+  commentId: P:ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  fullName: ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  nameWithType: EskaeraDTO.Produktuak
+- uid: ErronkaApi.DTOak.EskaeraDTO.Produktuak*
+  name: Produktuak
+  href: api/ErronkaApi.DTOak.EskaeraDTO.html#ErronkaApi_DTOak_EskaeraDTO_Produktuak_
+  commentId: Overload:ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.EskaeraDTO.Produktuak
+  nameWithType: EskaeraDTO.Produktuak
 - uid: ErronkaApi.DTOak.EskaeraDTO.SukaldeaEgoera
   name: SukaldeaEgoera
   href: api/ErronkaApi.DTOak.EskaeraDTO.html#ErronkaApi_DTOak_EskaeraDTO_SukaldeaEgoera
@@ -812,6 +825,129 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.DTOak.KategoriaDTO.izena
   nameWithType: KategoriaDTO.izena
+- uid: ErronkaApi.DTOak.LangileaDTO
+  name: LangileaDTO
+  href: api/ErronkaApi.DTOak.LangileaDTO.html
+  commentId: T:ErronkaApi.DTOak.LangileaDTO
+  fullName: ErronkaApi.DTOak.LangileaDTO
+  nameWithType: LangileaDTO
+- uid: ErronkaApi.DTOak.LangileaDTO.Abizena
+  name: Abizena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Abizena
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.Abizena
+  fullName: ErronkaApi.DTOak.LangileaDTO.Abizena
+  nameWithType: LangileaDTO.Abizena
+- uid: ErronkaApi.DTOak.LangileaDTO.Abizena*
+  name: Abizena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Abizena_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.Abizena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.Abizena
+  nameWithType: LangileaDTO.Abizena
+- uid: ErronkaApi.DTOak.LangileaDTO.Baimena
+  name: Baimena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Baimena
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.Baimena
+  fullName: ErronkaApi.DTOak.LangileaDTO.Baimena
+  nameWithType: LangileaDTO.Baimena
+- uid: ErronkaApi.DTOak.LangileaDTO.Baimena*
+  name: Baimena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Baimena_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.Baimena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.Baimena
+  nameWithType: LangileaDTO.Baimena
+- uid: ErronkaApi.DTOak.LangileaDTO.ChatBaimena
+  name: ChatBaimena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_ChatBaimena
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.ChatBaimena
+  fullName: ErronkaApi.DTOak.LangileaDTO.ChatBaimena
+  nameWithType: LangileaDTO.ChatBaimena
+- uid: ErronkaApi.DTOak.LangileaDTO.ChatBaimena*
+  name: ChatBaimena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_ChatBaimena_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.ChatBaimena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.ChatBaimena
+  nameWithType: LangileaDTO.ChatBaimena
+- uid: ErronkaApi.DTOak.LangileaDTO.Email
+  name: Email
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Email
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.Email
+  fullName: ErronkaApi.DTOak.LangileaDTO.Email
+  nameWithType: LangileaDTO.Email
+- uid: ErronkaApi.DTOak.LangileaDTO.Email*
+  name: Email
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Email_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.Email
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.Email
+  nameWithType: LangileaDTO.Email
+- uid: ErronkaApi.DTOak.LangileaDTO.Erabiltzailea
+  name: Erabiltzailea
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Erabiltzailea
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.Erabiltzailea
+  fullName: ErronkaApi.DTOak.LangileaDTO.Erabiltzailea
+  nameWithType: LangileaDTO.Erabiltzailea
+- uid: ErronkaApi.DTOak.LangileaDTO.Erabiltzailea*
+  name: Erabiltzailea
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Erabiltzailea_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.Erabiltzailea
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.Erabiltzailea
+  nameWithType: LangileaDTO.Erabiltzailea
+- uid: ErronkaApi.DTOak.LangileaDTO.Id
+  name: Id
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Id
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.Id
+  fullName: ErronkaApi.DTOak.LangileaDTO.Id
+  nameWithType: LangileaDTO.Id
+- uid: ErronkaApi.DTOak.LangileaDTO.Id*
+  name: Id
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Id_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.Id
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.Id
+  nameWithType: LangileaDTO.Id
+- uid: ErronkaApi.DTOak.LangileaDTO.Izena
+  name: Izena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Izena
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.Izena
+  fullName: ErronkaApi.DTOak.LangileaDTO.Izena
+  nameWithType: LangileaDTO.Izena
+- uid: ErronkaApi.DTOak.LangileaDTO.Izena*
+  name: Izena
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Izena_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.Izena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.Izena
+  nameWithType: LangileaDTO.Izena
+- uid: ErronkaApi.DTOak.LangileaDTO.MahaiakId
+  name: MahaiakId
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_MahaiakId
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.MahaiakId
+  fullName: ErronkaApi.DTOak.LangileaDTO.MahaiakId
+  nameWithType: LangileaDTO.MahaiakId
+- uid: ErronkaApi.DTOak.LangileaDTO.MahaiakId*
+  name: MahaiakId
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_MahaiakId_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.MahaiakId
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.MahaiakId
+  nameWithType: LangileaDTO.MahaiakId
+- uid: ErronkaApi.DTOak.LangileaDTO.Telefonoa
+  name: Telefonoa
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Telefonoa
+  commentId: P:ErronkaApi.DTOak.LangileaDTO.Telefonoa
+  fullName: ErronkaApi.DTOak.LangileaDTO.Telefonoa
+  nameWithType: LangileaDTO.Telefonoa
+- uid: ErronkaApi.DTOak.LangileaDTO.Telefonoa*
+  name: Telefonoa
+  href: api/ErronkaApi.DTOak.LangileaDTO.html#ErronkaApi_DTOak_LangileaDTO_Telefonoa_
+  commentId: Overload:ErronkaApi.DTOak.LangileaDTO.Telefonoa
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.LangileaDTO.Telefonoa
+  nameWithType: LangileaDTO.Telefonoa
 - uid: ErronkaApi.DTOak.LogDTO
   name: LogDTO
   href: api/ErronkaApi.DTOak.LogDTO.html
@@ -876,25 +1012,38 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.DTOak.LoginDTO.pasahitza
   nameWithType: LoginDTO.pasahitza
-- uid: ErronkaApi.DTOak.LoginDTO.txat
-  name: txat
-  href: api/ErronkaApi.DTOak.LoginDTO.html#ErronkaApi_DTOak_LoginDTO_txat
-  commentId: P:ErronkaApi.DTOak.LoginDTO.txat
-  fullName: ErronkaApi.DTOak.LoginDTO.txat
-  nameWithType: LoginDTO.txat
-- uid: ErronkaApi.DTOak.LoginDTO.txat*
-  name: txat
-  href: api/ErronkaApi.DTOak.LoginDTO.html#ErronkaApi_DTOak_LoginDTO_txat_
-  commentId: Overload:ErronkaApi.DTOak.LoginDTO.txat
-  isSpec: "True"
-  fullName: ErronkaApi.DTOak.LoginDTO.txat
-  nameWithType: LoginDTO.txat
 - uid: ErronkaApi.DTOak.MahaiaDTO
   name: MahaiaDTO
   href: api/ErronkaApi.DTOak.MahaiaDTO.html
   commentId: T:ErronkaApi.DTOak.MahaiaDTO
   fullName: ErronkaApi.DTOak.MahaiaDTO
   nameWithType: MahaiaDTO
+- uid: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  name: ChatBaimena
+  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_ChatBaimena
+  commentId: P:ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  fullName: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  nameWithType: MahaiaDTO.ChatBaimena
+- uid: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena*
+  name: ChatBaimena
+  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_ChatBaimena_
+  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.MahaiaDTO.ChatBaimena
+  nameWithType: MahaiaDTO.ChatBaimena
+- uid: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  name: Erabiltzailea
+  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Erabiltzailea
+  commentId: P:ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  nameWithType: MahaiaDTO.Erabiltzailea
+- uid: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea*
+  name: Erabiltzailea
+  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Erabiltzailea_
+  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Erabiltzailea
+  nameWithType: MahaiaDTO.Erabiltzailea
 - uid: ErronkaApi.DTOak.MahaiaDTO.Id
   name: Id
   href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Id
@@ -908,38 +1057,186 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.DTOak.MahaiaDTO.Id
   nameWithType: MahaiaDTO.Id
-- uid: ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  name: Zenbakia
-  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Zenbakia
-  commentId: P:ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  fullName: ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  nameWithType: MahaiaDTO.Zenbakia
-- uid: ErronkaApi.DTOak.MahaiaDTO.Zenbakia*
-  name: Zenbakia
-  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Zenbakia_
-  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.Zenbakia
+- uid: ErronkaApi.DTOak.MahaiaDTO.Izena
+  name: Izena
+  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Izena
+  commentId: P:ErronkaApi.DTOak.MahaiaDTO.Izena
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Izena
+  nameWithType: MahaiaDTO.Izena
+- uid: ErronkaApi.DTOak.MahaiaDTO.Izena*
+  name: Izena
+  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_Izena_
+  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.Izena
   isSpec: "True"
-  fullName: ErronkaApi.DTOak.MahaiaDTO.Zenbakia
-  nameWithType: MahaiaDTO.Zenbakia
-- uid: ErronkaApi.DTOak.MahaiaDTO.kapazitatea
-  name: kapazitatea
-  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_kapazitatea
-  commentId: P:ErronkaApi.DTOak.MahaiaDTO.kapazitatea
-  fullName: ErronkaApi.DTOak.MahaiaDTO.kapazitatea
-  nameWithType: MahaiaDTO.kapazitatea
-- uid: ErronkaApi.DTOak.MahaiaDTO.kapazitatea*
-  name: kapazitatea
-  href: api/ErronkaApi.DTOak.MahaiaDTO.html#ErronkaApi_DTOak_MahaiaDTO_kapazitatea_
-  commentId: Overload:ErronkaApi.DTOak.MahaiaDTO.kapazitatea
+  fullName: ErronkaApi.DTOak.MahaiaDTO.Izena
+  nameWithType: MahaiaDTO.Izena
+- uid: ErronkaApi.DTOak.PlateraDTO
+  name: PlateraDTO
+  href: api/ErronkaApi.DTOak.PlateraDTO.html
+  commentId: T:ErronkaApi.DTOak.PlateraDTO
+  fullName: ErronkaApi.DTOak.PlateraDTO
+  nameWithType: PlateraDTO
+- uid: ErronkaApi.DTOak.PlateraDTO.Argazkia
+  name: Argazkia
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Argazkia
+  commentId: P:ErronkaApi.DTOak.PlateraDTO.Argazkia
+  fullName: ErronkaApi.DTOak.PlateraDTO.Argazkia
+  nameWithType: PlateraDTO.Argazkia
+- uid: ErronkaApi.DTOak.PlateraDTO.Argazkia*
+  name: Argazkia
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Argazkia_
+  commentId: Overload:ErronkaApi.DTOak.PlateraDTO.Argazkia
   isSpec: "True"
-  fullName: ErronkaApi.DTOak.MahaiaDTO.kapazitatea
-  nameWithType: MahaiaDTO.kapazitatea
+  fullName: ErronkaApi.DTOak.PlateraDTO.Argazkia
+  nameWithType: PlateraDTO.Argazkia
+- uid: ErronkaApi.DTOak.PlateraDTO.ArgazkiaUrl
+  name: ArgazkiaUrl
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_ArgazkiaUrl
+  commentId: P:ErronkaApi.DTOak.PlateraDTO.ArgazkiaUrl
+  fullName: ErronkaApi.DTOak.PlateraDTO.ArgazkiaUrl
+  nameWithType: PlateraDTO.ArgazkiaUrl
+- uid: ErronkaApi.DTOak.PlateraDTO.ArgazkiaUrl*
+  name: ArgazkiaUrl
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_ArgazkiaUrl_
+  commentId: Overload:ErronkaApi.DTOak.PlateraDTO.ArgazkiaUrl
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraDTO.ArgazkiaUrl
+  nameWithType: PlateraDTO.ArgazkiaUrl
+- uid: ErronkaApi.DTOak.PlateraDTO.Id
+  name: Id
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Id
+  commentId: P:ErronkaApi.DTOak.PlateraDTO.Id
+  fullName: ErronkaApi.DTOak.PlateraDTO.Id
+  nameWithType: PlateraDTO.Id
+- uid: ErronkaApi.DTOak.PlateraDTO.Id*
+  name: Id
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Id_
+  commentId: Overload:ErronkaApi.DTOak.PlateraDTO.Id
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraDTO.Id
+  nameWithType: PlateraDTO.Id
+- uid: ErronkaApi.DTOak.PlateraDTO.Izena
+  name: Izena
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Izena
+  commentId: P:ErronkaApi.DTOak.PlateraDTO.Izena
+  fullName: ErronkaApi.DTOak.PlateraDTO.Izena
+  nameWithType: PlateraDTO.Izena
+- uid: ErronkaApi.DTOak.PlateraDTO.Izena*
+  name: Izena
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Izena_
+  commentId: Overload:ErronkaApi.DTOak.PlateraDTO.Izena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraDTO.Izena
+  nameWithType: PlateraDTO.Izena
+- uid: ErronkaApi.DTOak.PlateraDTO.Mota
+  name: Mota
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Mota
+  commentId: P:ErronkaApi.DTOak.PlateraDTO.Mota
+  fullName: ErronkaApi.DTOak.PlateraDTO.Mota
+  nameWithType: PlateraDTO.Mota
+- uid: ErronkaApi.DTOak.PlateraDTO.Mota*
+  name: Mota
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Mota_
+  commentId: Overload:ErronkaApi.DTOak.PlateraDTO.Mota
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraDTO.Mota
+  nameWithType: PlateraDTO.Mota
+- uid: ErronkaApi.DTOak.PlateraDTO.Osagaiak
+  name: Osagaiak
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Osagaiak
+  commentId: P:ErronkaApi.DTOak.PlateraDTO.Osagaiak
+  fullName: ErronkaApi.DTOak.PlateraDTO.Osagaiak
+  nameWithType: PlateraDTO.Osagaiak
+- uid: ErronkaApi.DTOak.PlateraDTO.Osagaiak*
+  name: Osagaiak
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Osagaiak_
+  commentId: Overload:ErronkaApi.DTOak.PlateraDTO.Osagaiak
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraDTO.Osagaiak
+  nameWithType: PlateraDTO.Osagaiak
+- uid: ErronkaApi.DTOak.PlateraDTO.Prezioa
+  name: Prezioa
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Prezioa
+  commentId: P:ErronkaApi.DTOak.PlateraDTO.Prezioa
+  fullName: ErronkaApi.DTOak.PlateraDTO.Prezioa
+  nameWithType: PlateraDTO.Prezioa
+- uid: ErronkaApi.DTOak.PlateraDTO.Prezioa*
+  name: Prezioa
+  href: api/ErronkaApi.DTOak.PlateraDTO.html#ErronkaApi_DTOak_PlateraDTO_Prezioa_
+  commentId: Overload:ErronkaApi.DTOak.PlateraDTO.Prezioa
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraDTO.Prezioa
+  nameWithType: PlateraDTO.Prezioa
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO
+  name: PlateraOsagaiaDTO
+  href: api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html
+  commentId: T:ErronkaApi.DTOak.PlateraOsagaiaDTO
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO
+  nameWithType: PlateraOsagaiaDTO
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO.Id
+  name: Id
+  href: api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html#ErronkaApi_DTOak_PlateraOsagaiaDTO_Id
+  commentId: P:ErronkaApi.DTOak.PlateraOsagaiaDTO.Id
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO.Id
+  nameWithType: PlateraOsagaiaDTO.Id
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO.Id*
+  name: Id
+  href: api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html#ErronkaApi_DTOak_PlateraOsagaiaDTO_Id_
+  commentId: Overload:ErronkaApi.DTOak.PlateraOsagaiaDTO.Id
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO.Id
+  nameWithType: PlateraOsagaiaDTO.Id
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO.Izena
+  name: Izena
+  href: api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html#ErronkaApi_DTOak_PlateraOsagaiaDTO_Izena
+  commentId: P:ErronkaApi.DTOak.PlateraOsagaiaDTO.Izena
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO.Izena
+  nameWithType: PlateraOsagaiaDTO.Izena
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO.Izena*
+  name: Izena
+  href: api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html#ErronkaApi_DTOak_PlateraOsagaiaDTO_Izena_
+  commentId: Overload:ErronkaApi.DTOak.PlateraOsagaiaDTO.Izena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO.Izena
+  nameWithType: PlateraOsagaiaDTO.Izena
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO.Stock
+  name: Stock
+  href: api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html#ErronkaApi_DTOak_PlateraOsagaiaDTO_Stock
+  commentId: P:ErronkaApi.DTOak.PlateraOsagaiaDTO.Stock
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO.Stock
+  nameWithType: PlateraOsagaiaDTO.Stock
+- uid: ErronkaApi.DTOak.PlateraOsagaiaDTO.Stock*
+  name: Stock
+  href: api/ErronkaApi.DTOak.PlateraOsagaiaDTO.html#ErronkaApi_DTOak_PlateraOsagaiaDTO_Stock_
+  commentId: Overload:ErronkaApi.DTOak.PlateraOsagaiaDTO.Stock
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.PlateraOsagaiaDTO.Stock
+  nameWithType: PlateraOsagaiaDTO.Stock
 - uid: ErronkaApi.DTOak.ProduktuaDTO
   name: ProduktuaDTO
   href: api/ErronkaApi.DTOak.ProduktuaDTO.html
   commentId: T:ErronkaApi.DTOak.ProduktuaDTO
   fullName: ErronkaApi.DTOak.ProduktuaDTO
   nameWithType: ProduktuaDTO
+- uid: ErronkaApi.DTOak.ProduktuaDTO.#ctor(ErronkaApi.Modeloak.Produktua)
+  name: ProduktuaDTO(Produktua)
+  href: api/ErronkaApi.DTOak.ProduktuaDTO.html#ErronkaApi_DTOak_ProduktuaDTO__ctor_ErronkaApi_Modeloak_Produktua_
+  commentId: M:ErronkaApi.DTOak.ProduktuaDTO.#ctor(ErronkaApi.Modeloak.Produktua)
+  name.vb: New(Produktua)
+  fullName: ErronkaApi.DTOak.ProduktuaDTO.ProduktuaDTO(ErronkaApi.Modeloak.Produktua)
+  fullName.vb: ErronkaApi.DTOak.ProduktuaDTO.New(ErronkaApi.Modeloak.Produktua)
+  nameWithType: ProduktuaDTO.ProduktuaDTO(Produktua)
+  nameWithType.vb: ProduktuaDTO.New(Produktua)
+- uid: ErronkaApi.DTOak.ProduktuaDTO.#ctor*
+  name: ProduktuaDTO
+  href: api/ErronkaApi.DTOak.ProduktuaDTO.html#ErronkaApi_DTOak_ProduktuaDTO__ctor_
+  commentId: Overload:ErronkaApi.DTOak.ProduktuaDTO.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.DTOak.ProduktuaDTO.ProduktuaDTO
+  fullName.vb: ErronkaApi.DTOak.ProduktuaDTO.New
+  nameWithType: ProduktuaDTO.ProduktuaDTO
+  nameWithType.vb: ProduktuaDTO.New
 - uid: ErronkaApi.DTOak.ProduktuaDTO.id
   name: id
   href: api/ErronkaApi.DTOak.ProduktuaDTO.html#ErronkaApi_DTOak_ProduktuaDTO_id
@@ -1005,27 +1302,1063 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.DTOak.ProduktuaDTO.stock_aktuala
   nameWithType: ProduktuaDTO.stock_aktuala
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+  name: ZerbitzuaEskaeraDTO
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html
+  commentId: T:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+  nameWithType: ZerbitzuaEskaeraDTO
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Data
+  name: Data
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Data
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Data
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Data
+  nameWithType: ZerbitzuaEskaeraDTO.Data
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Data*
+  name: Data
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Data_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Data
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Data
+  nameWithType: ZerbitzuaEskaeraDTO.Data
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Egoera
+  name: Egoera
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Egoera
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Egoera
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Egoera
+  nameWithType: ZerbitzuaEskaeraDTO.Egoera
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Egoera*
+  name: Egoera
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Egoera_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Egoera
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Egoera
+  nameWithType: ZerbitzuaEskaeraDTO.Egoera
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Id
+  name: Id
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Id
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Id
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Id
+  nameWithType: ZerbitzuaEskaeraDTO.Id
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Id*
+  name: Id
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Id_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Id
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Id
+  nameWithType: ZerbitzuaEskaeraDTO.Id
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Irudia
+  name: Irudia
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Irudia
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Irudia
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Irudia
+  nameWithType: ZerbitzuaEskaeraDTO.Irudia
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Irudia*
+  name: Irudia
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Irudia_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Irudia
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Irudia
+  nameWithType: ZerbitzuaEskaeraDTO.Irudia
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.IsPlatera
+  name: IsPlatera
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_IsPlatera
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.IsPlatera
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.IsPlatera
+  nameWithType: ZerbitzuaEskaeraDTO.IsPlatera
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.IsPlatera*
+  name: IsPlatera
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_IsPlatera_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.IsPlatera
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.IsPlatera
+  nameWithType: ZerbitzuaEskaeraDTO.IsPlatera
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Izena
+  name: Izena
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Izena
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Izena
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Izena
+  nameWithType: ZerbitzuaEskaeraDTO.Izena
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Izena*
+  name: Izena
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Izena_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Izena
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Izena
+  nameWithType: ZerbitzuaEskaeraDTO.Izena
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Prezioa
+  name: Prezioa
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Prezioa
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Prezioa
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Prezioa
+  nameWithType: ZerbitzuaEskaeraDTO.Prezioa
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Prezioa*
+  name: Prezioa
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_Prezioa_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Prezioa
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.Prezioa
+  nameWithType: ZerbitzuaEskaeraDTO.Prezioa
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.ProduktuaId
+  name: ProduktuaId
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_ProduktuaId
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.ProduktuaId
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.ProduktuaId
+  nameWithType: ZerbitzuaEskaeraDTO.ProduktuaId
+- uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.ProduktuaId*
+  name: ProduktuaId
+  href: api/ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.html#ErronkaApi_DTOak_ZerbitzuaEskaeraDTO_ProduktuaId_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.ProduktuaId
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.ProduktuaId
+  nameWithType: ZerbitzuaEskaeraDTO.ProduktuaId
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+  name: ZerbitzuaMahaiDTO
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html
+  commentId: T:ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+  nameWithType: ZerbitzuaMahaiDTO
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Data
+  name: Data
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Data
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Data
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Data
+  nameWithType: ZerbitzuaMahaiDTO.Data
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Data*
+  name: Data
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Data_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Data
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Data
+  nameWithType: ZerbitzuaMahaiDTO.Data
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.ErreserbaId
+  name: ErreserbaId
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_ErreserbaId
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.ErreserbaId
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.ErreserbaId
+  nameWithType: ZerbitzuaMahaiDTO.ErreserbaId
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.ErreserbaId*
+  name: ErreserbaId
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_ErreserbaId_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.ErreserbaId
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.ErreserbaId
+  nameWithType: ZerbitzuaMahaiDTO.ErreserbaId
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Eskaerak
+  name: Eskaerak
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Eskaerak
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Eskaerak
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Eskaerak
+  nameWithType: ZerbitzuaMahaiDTO.Eskaerak
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Eskaerak*
+  name: Eskaerak
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Eskaerak_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Eskaerak
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Eskaerak
+  nameWithType: ZerbitzuaMahaiDTO.Eskaerak
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Id
+  name: Id
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Id
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Id
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Id
+  nameWithType: ZerbitzuaMahaiDTO.Id
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Id*
+  name: Id
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Id_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Id
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Id
+  nameWithType: ZerbitzuaMahaiDTO.Id
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.MahaiakId
+  name: MahaiakId
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_MahaiakId
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.MahaiakId
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.MahaiakId
+  nameWithType: ZerbitzuaMahaiDTO.MahaiakId
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.MahaiakId*
+  name: MahaiakId
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_MahaiakId_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.MahaiakId
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.MahaiakId
+  nameWithType: ZerbitzuaMahaiDTO.MahaiakId
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Ordainduta
+  name: Ordainduta
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Ordainduta
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Ordainduta
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Ordainduta
+  nameWithType: ZerbitzuaMahaiDTO.Ordainduta
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Ordainduta*
+  name: Ordainduta
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_Ordainduta_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Ordainduta
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Ordainduta
+  nameWithType: ZerbitzuaMahaiDTO.Ordainduta
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.PrezioTotala
+  name: PrezioTotala
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_PrezioTotala
+  commentId: P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.PrezioTotala
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.PrezioTotala
+  nameWithType: ZerbitzuaMahaiDTO.PrezioTotala
+- uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.PrezioTotala*
+  name: PrezioTotala
+  href: api/ErronkaApi.DTOak.ZerbitzuaMahaiDTO.html#ErronkaApi_DTOak_ZerbitzuaMahaiDTO_PrezioTotala_
+  commentId: Overload:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.PrezioTotala
+  isSpec: "True"
+  fullName: ErronkaApi.DTOak.ZerbitzuaMahaiDTO.PrezioTotala
+  nameWithType: ZerbitzuaMahaiDTO.PrezioTotala
+- uid: ErronkaApi.Interfaces
+  name: ErronkaApi.Interfaces
+  href: api/ErronkaApi.Interfaces.html
+  commentId: N:ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository
+  name: IErabiltzaileaRepository
+  href: api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html
+  commentId: T:ErronkaApi.Interfaces.IErabiltzaileaRepository
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository
+  nameWithType: IErabiltzaileaRepository
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_GetAll
+  commentId: M:ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll()
+  nameWithType: IErabiltzaileaRepository.GetAll()
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_GetAll_
+  commentId: Overload:ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.GetAll
+  nameWithType: IErabiltzaileaRepository.GetAll
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(System.String,System.String)
+  name: Login(string, string)
+  href: api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_Login_System_String_System_String_
+  commentId: M:ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(System.String,System.String)
+  name.vb: Login(String, String)
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(string, string)
+  fullName.vb: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login(String, String)
+  nameWithType: IErabiltzaileaRepository.Login(string, string)
+  nameWithType.vb: IErabiltzaileaRepository.Login(String, String)
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login*
+  name: Login
+  href: api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_Login_
+  commentId: Overload:ErronkaApi.Interfaces.IErabiltzaileaRepository.Login
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.Login
+  nameWithType: IErabiltzaileaRepository.Login
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  name: LortuErabiltzailea(int)
+  href: api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_LortuErabiltzailea_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  name.vb: LortuErabiltzailea(Integer)
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(int)
+  fullName.vb: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea(Integer)
+  nameWithType: IErabiltzaileaRepository.LortuErabiltzailea(int)
+  nameWithType.vb: IErabiltzaileaRepository.LortuErabiltzailea(Integer)
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea*
+  name: LortuErabiltzailea
+  href: api/ErronkaApi.Interfaces.IErabiltzaileaRepository.html#ErronkaApi_Interfaces_IErabiltzaileaRepository_LortuErabiltzailea_
+  commentId: Overload:ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository.LortuErabiltzailea
+  nameWithType: IErabiltzaileaRepository.LortuErabiltzailea
+- uid: ErronkaApi.Interfaces.IErreserbaRepository
+  name: IErreserbaRepository
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html
+  commentId: T:ErronkaApi.Interfaces.IErreserbaRepository
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository
+  nameWithType: IErreserbaRepository
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  name: Create(ErreserbakSortuDto)
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_Create_ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_
+  commentId: M:ErronkaApi.Interfaces.IErreserbaRepository.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  nameWithType: IErreserbaRepository.Create(ErreserbakController.ErreserbakSortuDto)
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.Create*
+  name: Create
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_Create_
+  commentId: Overload:ErronkaApi.Interfaces.IErreserbaRepository.Create
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.Create
+  nameWithType: IErreserbaRepository.Create
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.DeleteByMahai(System.Int32,System.DateTime,System.Boolean)
+  name: DeleteByMahai(int, DateTime, bool)
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_DeleteByMahai_System_Int32_System_DateTime_System_Boolean_
+  commentId: M:ErronkaApi.Interfaces.IErreserbaRepository.DeleteByMahai(System.Int32,System.DateTime,System.Boolean)
+  name.vb: DeleteByMahai(Integer, Date, Boolean)
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.DeleteByMahai(int, System.DateTime, bool)
+  fullName.vb: ErronkaApi.Interfaces.IErreserbaRepository.DeleteByMahai(Integer, Date, Boolean)
+  nameWithType: IErreserbaRepository.DeleteByMahai(int, DateTime, bool)
+  nameWithType.vb: IErreserbaRepository.DeleteByMahai(Integer, Date, Boolean)
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.DeleteByMahai*
+  name: DeleteByMahai
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_DeleteByMahai_
+  commentId: Overload:ErronkaApi.Interfaces.IErreserbaRepository.DeleteByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.DeleteByMahai
+  nameWithType: IErreserbaRepository.DeleteByMahai
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.GetByDate(System.DateTime,System.Boolean)
+  name: GetByDate(DateTime, bool)
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_GetByDate_System_DateTime_System_Boolean_
+  commentId: M:ErronkaApi.Interfaces.IErreserbaRepository.GetByDate(System.DateTime,System.Boolean)
+  name.vb: GetByDate(Date, Boolean)
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.GetByDate(System.DateTime, bool)
+  fullName.vb: ErronkaApi.Interfaces.IErreserbaRepository.GetByDate(Date, Boolean)
+  nameWithType: IErreserbaRepository.GetByDate(DateTime, bool)
+  nameWithType.vb: IErreserbaRepository.GetByDate(Date, Boolean)
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.GetByDate*
+  name: GetByDate
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_GetByDate_
+  commentId: Overload:ErronkaApi.Interfaces.IErreserbaRepository.GetByDate
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.GetByDate
+  nameWithType: IErreserbaRepository.GetByDate
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.UpdateByMahai(System.Int32,System.DateTime,System.Boolean,ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  name: UpdateByMahai(int, DateTime, bool, ErreserbakUpdateDto)
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_UpdateByMahai_System_Int32_System_DateTime_System_Boolean_ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_
+  commentId: M:ErronkaApi.Interfaces.IErreserbaRepository.UpdateByMahai(System.Int32,System.DateTime,System.Boolean,ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  name.vb: UpdateByMahai(Integer, Date, Boolean, ErreserbakUpdateDto)
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.UpdateByMahai(int, System.DateTime, bool, ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  fullName.vb: ErronkaApi.Interfaces.IErreserbaRepository.UpdateByMahai(Integer, Date, Boolean, ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  nameWithType: IErreserbaRepository.UpdateByMahai(int, DateTime, bool, ErreserbakController.ErreserbakUpdateDto)
+  nameWithType.vb: IErreserbaRepository.UpdateByMahai(Integer, Date, Boolean, ErreserbakController.ErreserbakUpdateDto)
+- uid: ErronkaApi.Interfaces.IErreserbaRepository.UpdateByMahai*
+  name: UpdateByMahai
+  href: api/ErronkaApi.Interfaces.IErreserbaRepository.html#ErronkaApi_Interfaces_IErreserbaRepository_UpdateByMahai_
+  commentId: Overload:ErronkaApi.Interfaces.IErreserbaRepository.UpdateByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository.UpdateByMahai
+  nameWithType: IErreserbaRepository.UpdateByMahai
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  name: IEskaeraMahaiakRepository
+  href: api/ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html
+  commentId: T:ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  nameWithType: IEskaeraMahaiakRepository
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  name: Delete(EskaeraMahaiak)
+  href: api/ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html#ErronkaApi_Interfaces_IEskaeraMahaiakRepository_Delete_ErronkaApi_Modeloak_EskaeraMahaiak_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  nameWithType: IEskaeraMahaiakRepository.Delete(EskaeraMahaiak)
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html#ErronkaApi_Interfaces_IEskaeraMahaiakRepository_Delete_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.Delete
+  nameWithType: IEskaeraMahaiakRepository.Delete
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  name: IEskaeraProduktuakRepository
+  href: api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html
+  commentId: T:ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  nameWithType: IEskaeraProduktuakRepository
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Delete(ErronkaApi.Modeloak.EskaeraProduktuak)
+  name: Delete(EskaeraProduktuak)
+  href: api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html#ErronkaApi_Interfaces_IEskaeraProduktuakRepository_Delete_ErronkaApi_Modeloak_EskaeraProduktuak_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Delete(ErronkaApi.Modeloak.EskaeraProduktuak)
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Delete(ErronkaApi.Modeloak.EskaeraProduktuak)
+  nameWithType: IEskaeraProduktuakRepository.Delete(EskaeraProduktuak)
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html#ErronkaApi_Interfaces_IEskaeraProduktuakRepository_Delete_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Delete
+  nameWithType: IEskaeraProduktuakRepository.Delete
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.GetByEskaeraId(System.Int32)
+  name: GetByEskaeraId(int)
+  href: api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html#ErronkaApi_Interfaces_IEskaeraProduktuakRepository_GetByEskaeraId_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraProduktuakRepository.GetByEskaeraId(System.Int32)
+  name.vb: GetByEskaeraId(Integer)
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.GetByEskaeraId(int)
+  fullName.vb: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.GetByEskaeraId(Integer)
+  nameWithType: IEskaeraProduktuakRepository.GetByEskaeraId(int)
+  nameWithType.vb: IEskaeraProduktuakRepository.GetByEskaeraId(Integer)
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.GetByEskaeraId*
+  name: GetByEskaeraId
+  href: api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html#ErronkaApi_Interfaces_IEskaeraProduktuakRepository_GetByEskaeraId_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraProduktuakRepository.GetByEskaeraId
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.GetByEskaeraId
+  nameWithType: IEskaeraProduktuakRepository.GetByEskaeraId
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Update(ErronkaApi.Modeloak.EskaeraProduktuak)
+  name: Update(EskaeraProduktuak)
+  href: api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html#ErronkaApi_Interfaces_IEskaeraProduktuakRepository_Update_ErronkaApi_Modeloak_EskaeraProduktuak_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Update(ErronkaApi.Modeloak.EskaeraProduktuak)
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Update(ErronkaApi.Modeloak.EskaeraProduktuak)
+  nameWithType: IEskaeraProduktuakRepository.Update(EskaeraProduktuak)
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html#ErronkaApi_Interfaces_IEskaeraProduktuakRepository_Update_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.Update
+  nameWithType: IEskaeraProduktuakRepository.Update
+- uid: ErronkaApi.Interfaces.IEskaeraRepository
+  name: IEskaeraRepository
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html
+  commentId: T:ErronkaApi.Interfaces.IEskaeraRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository
+  nameWithType: IEskaeraRepository
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  name: Delete(Eskaera)
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Delete_ErronkaApi_Modeloak_Eskaera_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  nameWithType: IEskaeraRepository.Delete(Eskaera)
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Delete_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Delete
+  nameWithType: IEskaeraRepository.Delete
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+  name: EguneratuSukaldeaEgoera(int, string)
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
+  name.vb: EguneratuSukaldeaEgoera(Integer, String)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(int, string)
+  fullName.vb: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
+  nameWithType: IEskaeraRepository.EguneratuSukaldeaEgoera(int, string)
+  nameWithType.vb: IEskaeraRepository.EguneratuSukaldeaEgoera(Integer, String)
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera*
+  name: EguneratuSukaldeaEgoera
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_EguneratuSukaldeaEgoera_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.EguneratuSukaldeaEgoera
+  nameWithType: IEskaeraRepository.EguneratuSukaldeaEgoera
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Get(System.Int32)
+  name: Get(int)
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Get_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Get(System.Int32)
+  name.vb: Get(Integer)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Get(int)
+  fullName.vb: ErronkaApi.Interfaces.IEskaeraRepository.Get(Integer)
+  nameWithType: IEskaeraRepository.Get(int)
+  nameWithType.vb: IEskaeraRepository.Get(Integer)
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Get*
+  name: Get
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Get_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.Get
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Get
+  nameWithType: IEskaeraRepository.Get
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  name: LortuEskaeraProduktuak2(int)
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaeraProduktuak2_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  name.vb: LortuEskaeraProduktuak2(Integer)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(int)
+  fullName.vb: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2(Integer)
+  nameWithType: IEskaeraRepository.LortuEskaeraProduktuak2(int)
+  nameWithType.vb: IEskaeraRepository.LortuEskaeraProduktuak2(Integer)
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2*
+  name: LortuEskaeraProduktuak2
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaeraProduktuak2_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaeraProduktuak2
+  nameWithType: IEskaeraRepository.LortuEskaeraProduktuak2
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+  name: LortuEskaerak2()
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerak2
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2()
+  nameWithType: IEskaeraRepository.LortuEskaerak2()
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2*
+  name: LortuEskaerak2
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerak2_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerak2
+  nameWithType: IEskaeraRepository.LortuEskaerak2
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+  name: LortuEskaerakOrdaintzeko()
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerakOrdaintzeko
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko()
+  nameWithType: IEskaeraRepository.LortuEskaerakOrdaintzeko()
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko*
+  name: LortuEskaerakOrdaintzeko
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuEskaerakOrdaintzeko_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuEskaerakOrdaintzeko
+  nameWithType: IEskaeraRepository.LortuEskaerakOrdaintzeko
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+  name: LortuSukaldekoEskaerak()
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuSukaldekoEskaerak
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak()
+  nameWithType: IEskaeraRepository.LortuSukaldekoEskaerak()
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak*
+  name: LortuSukaldekoEskaerak
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_LortuSukaldekoEskaerak_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.LortuSukaldekoEskaerak
+  nameWithType: IEskaeraRepository.LortuSukaldekoEskaerak
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  name: Save(Eskaera)
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Save_ErronkaApi_Modeloak_Eskaera_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  nameWithType: IEskaeraRepository.Save(Eskaera)
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Save*
+  name: Save
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Save_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.Save
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Save
+  nameWithType: IEskaeraRepository.Save
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  name: SortuEskaera(EskaeraSortuDTO)
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
+  nameWithType: IEskaeraRepository.SortuEskaera(EskaeraSortuDTO)
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera*
+  name: SortuEskaera
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_SortuEskaera_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.SortuEskaera
+  nameWithType: IEskaeraRepository.SortuEskaera
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  name: Update(Eskaera)
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Update_ErronkaApi_Modeloak_Eskaera_
+  commentId: M:ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  nameWithType: IEskaeraRepository.Update(Eskaera)
+- uid: ErronkaApi.Interfaces.IEskaeraRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Interfaces.IEskaeraRepository.html#ErronkaApi_Interfaces_IEskaeraRepository_Update_
+  commentId: Overload:ErronkaApi.Interfaces.IEskaeraRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository.Update
+  nameWithType: IEskaeraRepository.Update
+- uid: ErronkaApi.Interfaces.IKategoriaRepository
+  name: IKategoriaRepository
+  href: api/ErronkaApi.Interfaces.IKategoriaRepository.html
+  commentId: T:ErronkaApi.Interfaces.IKategoriaRepository
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository
+  nameWithType: IKategoriaRepository
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAll
+  commentId: M:ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAll()
+  nameWithType: IKategoriaRepository.GetAll()
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAll_
+  commentId: Overload:ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAll
+  nameWithType: IKategoriaRepository.GetAll
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  name: GetAllDTO()
+  href: api/ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAllDTO
+  commentId: M:ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO()
+  nameWithType: IKategoriaRepository.GetAllDTO()
+- uid: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO*
+  name: GetAllDTO
+  href: api/ErronkaApi.Interfaces.IKategoriaRepository.html#ErronkaApi_Interfaces_IKategoriaRepository_GetAllDTO_
+  commentId: Overload:ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository.GetAllDTO
+  nameWithType: IKategoriaRepository.GetAllDTO
+- uid: ErronkaApi.Interfaces.IMahaiaRepository
+  name: IMahaiaRepository
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html
+  commentId: T:ErronkaApi.Interfaces.IMahaiaRepository
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository
+  nameWithType: IMahaiaRepository
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  name: Delete(Mahaia)
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Delete_ErronkaApi_Modeloak_Mahaia_
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  nameWithType: IMahaiaRepository.Delete(Mahaia)
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Delete_
+  commentId: Overload:ErronkaApi.Interfaces.IMahaiaRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Delete
+  nameWithType: IMahaiaRepository.Delete
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Get(System.Int32)
+  name: Get(int)
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Get_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Get(System.Int32)
+  name.vb: Get(Integer)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Get(int)
+  fullName.vb: ErronkaApi.Interfaces.IMahaiaRepository.Get(Integer)
+  nameWithType: IMahaiaRepository.Get(int)
+  nameWithType.vb: IMahaiaRepository.Get(Integer)
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Get*
+  name: Get
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Get_
+  commentId: Overload:ErronkaApi.Interfaces.IMahaiaRepository.Get
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Get
+  nameWithType: IMahaiaRepository.Get
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Login(System.String,System.String)
+  name: Login(string, string)
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Login_System_String_System_String_
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Login(System.String,System.String)
+  name.vb: Login(String, String)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Login(string, string)
+  fullName.vb: ErronkaApi.Interfaces.IMahaiaRepository.Login(String, String)
+  nameWithType: IMahaiaRepository.Login(string, string)
+  nameWithType.vb: IMahaiaRepository.Login(String, String)
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Login*
+  name: Login
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Login_
+  commentId: Overload:ErronkaApi.Interfaces.IMahaiaRepository.Login
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Login
+  nameWithType: IMahaiaRepository.Login
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+  name: LortuMahaiLibre()
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_LortuMahaiLibre
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre()
+  nameWithType: IMahaiaRepository.LortuMahaiLibre()
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre*
+  name: LortuMahaiLibre
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_LortuMahaiLibre_
+  commentId: Overload:ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.LortuMahaiLibre
+  nameWithType: IMahaiaRepository.LortuMahaiLibre
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  name: Update(Mahaia)
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Update_ErronkaApi_Modeloak_Mahaia_
+  commentId: M:ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  nameWithType: IMahaiaRepository.Update(Mahaia)
+- uid: ErronkaApi.Interfaces.IMahaiaRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Interfaces.IMahaiaRepository.html#ErronkaApi_Interfaces_IMahaiaRepository_Update_
+  commentId: Overload:ErronkaApi.Interfaces.IMahaiaRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository.Update
+  nameWithType: IMahaiaRepository.Update
+- uid: ErronkaApi.Interfaces.IPlateraRepository
+  name: IPlateraRepository
+  href: api/ErronkaApi.Interfaces.IPlateraRepository.html
+  commentId: T:ErronkaApi.Interfaces.IPlateraRepository
+  fullName: ErronkaApi.Interfaces.IPlateraRepository
+  nameWithType: IPlateraRepository
+- uid: ErronkaApi.Interfaces.IPlateraRepository.GetAll(System.String)
+  name: GetAll(string)
+  href: api/ErronkaApi.Interfaces.IPlateraRepository.html#ErronkaApi_Interfaces_IPlateraRepository_GetAll_System_String_
+  commentId: M:ErronkaApi.Interfaces.IPlateraRepository.GetAll(System.String)
+  name.vb: GetAll(String)
+  fullName: ErronkaApi.Interfaces.IPlateraRepository.GetAll(string)
+  fullName.vb: ErronkaApi.Interfaces.IPlateraRepository.GetAll(String)
+  nameWithType: IPlateraRepository.GetAll(string)
+  nameWithType.vb: IPlateraRepository.GetAll(String)
+- uid: ErronkaApi.Interfaces.IPlateraRepository.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Interfaces.IPlateraRepository.html#ErronkaApi_Interfaces_IPlateraRepository_GetAll_
+  commentId: Overload:ErronkaApi.Interfaces.IPlateraRepository.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IPlateraRepository.GetAll
+  nameWithType: IPlateraRepository.GetAll
+- uid: ErronkaApi.Interfaces.IProduktuaRepository
+  name: IProduktuaRepository
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html
+  commentId: T:ErronkaApi.Interfaces.IProduktuaRepository
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository
+  nameWithType: IProduktuaRepository
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  name: Delete(Produktua)
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Delete_ErronkaApi_Modeloak_Produktua_
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  nameWithType: IProduktuaRepository.Delete(Produktua)
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Delete_
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Delete
+  nameWithType: IProduktuaRepository.Delete
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Get(System.Int32)
+  name: Get(int)
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Get_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.Get(System.Int32)
+  name.vb: Get(Integer)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Get(int)
+  fullName.vb: ErronkaApi.Interfaces.IProduktuaRepository.Get(Integer)
+  nameWithType: IProduktuaRepository.Get(int)
+  nameWithType.vb: IProduktuaRepository.Get(Integer)
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Get*
+  name: Get
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Get_
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.Get
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Get
+  nameWithType: IProduktuaRepository.Get
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetAll
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAll()
+  nameWithType: IProduktuaRepository.GetAll()
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetAll_
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  nameWithType: IProduktuaRepository.GetAll
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(System.Int32)
+  name: GetAllByKategoriaId(int)
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetAllByKategoriaId_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(System.Int32)
+  name.vb: GetAllByKategoriaId(Integer)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(int)
+  fullName.vb: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(Integer)
+  nameWithType: IProduktuaRepository.GetAllByKategoriaId(int)
+  nameWithType.vb: IProduktuaRepository.GetAllByKategoriaId(Integer)
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId*
+  name: GetAllByKategoriaId
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetAllByKategoriaId_
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId
+  nameWithType: IProduktuaRepository.GetAllByKategoriaId
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(System.Int32)
+  name: GetByKategoria(int)
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetByKategoria_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(System.Int32)
+  name.vb: GetByKategoria(Integer)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(int)
+  fullName.vb: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(Integer)
+  nameWithType: IProduktuaRepository.GetByKategoria(int)
+  nameWithType.vb: IProduktuaRepository.GetByKategoria(Integer)
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria*
+  name: GetByKategoria
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetByKategoria_
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria
+  nameWithType: IProduktuaRepository.GetByKategoria
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  name: Update(Produktua)
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Update_ErronkaApi_Modeloak_Produktua_
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  nameWithType: IProduktuaRepository.Update(Produktua)
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Update_
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Update
+  nameWithType: IProduktuaRepository.Update
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository
+  name: IZerbitzuaRepository
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html
+  commentId: T:ErronkaApi.Interfaces.IZerbitzuaRepository
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository
+  nameWithType: IZerbitzuaRepository
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name: Create(ZerbitzuaSortuDto)
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Create_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType: IZerbitzuaRepository.Create(ZerbitzuaController.ZerbitzuaSortuDto)
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Create*
+  name: Create
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Create_
+  commentId: Overload:ErronkaApi.Interfaces.IZerbitzuaRepository.Create
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Create
+  nameWithType: IZerbitzuaRepository.Create
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(System.Int32)
+  name: GetByMahai(int)
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_GetByMahai_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(System.Int32)
+  name.vb: GetByMahai(Integer)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(int)
+  fullName.vb: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai(Integer)
+  nameWithType: IZerbitzuaRepository.GetByMahai(int)
+  nameWithType.vb: IZerbitzuaRepository.GetByMahai(Integer)
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai*
+  name: GetByMahai
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_GetByMahai_
+  commentId: Overload:ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.GetByMahai
+  nameWithType: IZerbitzuaRepository.GetByMahai
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(System.Int32)
+  name: Ordaindu(int)
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Ordaindu_System_Int32_
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(System.Int32)
+  name.vb: Ordaindu(Integer)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(int)
+  fullName.vb: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu(Integer)
+  nameWithType: IZerbitzuaRepository.Ordaindu(int)
+  nameWithType.vb: IZerbitzuaRepository.Ordaindu(Integer)
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu*
+  name: Ordaindu
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Ordaindu_
+  commentId: Overload:ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Ordaindu
+  nameWithType: IZerbitzuaRepository.Ordaindu
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name: Update(int, ZerbitzuaSortuDto)
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Update_System_Int32_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  commentId: M:ErronkaApi.Interfaces.IZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name.vb: Update(Integer, ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(int, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName.vb: ErronkaApi.Interfaces.IZerbitzuaRepository.Update(Integer, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType: IZerbitzuaRepository.Update(int, ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType.vb: IZerbitzuaRepository.Update(Integer, ZerbitzuaController.ZerbitzuaSortuDto)
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Interfaces.IZerbitzuaRepository.html#ErronkaApi_Interfaces_IZerbitzuaRepository_Update_
+  commentId: Overload:ErronkaApi.Interfaces.IZerbitzuaRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository.Update
+  nameWithType: IZerbitzuaRepository.Update
 - uid: ErronkaApi.Kontrollerrak
   name: ErronkaApi.Kontrollerrak
   href: api/ErronkaApi.Kontrollerrak.html
   commentId: N:ErronkaApi.Kontrollerrak
   fullName: ErronkaApi.Kontrollerrak
   nameWithType: ErronkaApi.Kontrollerrak
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController
+  name: ErreserbakController
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html
+  commentId: T:ErronkaApi.Kontrollerrak.ErreserbakController
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController
+  nameWithType: ErreserbakController
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.#ctor(ErronkaApi.Interfaces.IErreserbaRepository)
+  name: ErreserbakController(IErreserbaRepository)
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController__ctor_ErronkaApi_Interfaces_IErreserbaRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.ErreserbakController.#ctor(ErronkaApi.Interfaces.IErreserbaRepository)
+  name.vb: New(IErreserbaRepository)
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakController(ErronkaApi.Interfaces.IErreserbaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.ErreserbakController.New(ErronkaApi.Interfaces.IErreserbaRepository)
+  nameWithType: ErreserbakController.ErreserbakController(IErreserbaRepository)
+  nameWithType.vb: ErreserbakController.New(IErreserbaRepository)
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.#ctor*
+  name: ErreserbakController
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController__ctor_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakController
+  fullName.vb: ErronkaApi.Kontrollerrak.ErreserbakController.New
+  nameWithType: ErreserbakController.ErreserbakController
+  nameWithType.vb: ErreserbakController.New
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  name: Create(ErreserbakSortuDto)
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_Create_ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_
+  commentId: M:ErronkaApi.Kontrollerrak.ErreserbakController.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  nameWithType: ErreserbakController.Create(ErreserbakController.ErreserbakSortuDto)
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.Create*
+  name: Create
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_Create_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.Create
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.Create
+  nameWithType: ErreserbakController.Create
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.DeleteByMahai(System.Int32,System.String,System.Boolean)
+  name: DeleteByMahai(int, string, bool)
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_DeleteByMahai_System_Int32_System_String_System_Boolean_
+  commentId: M:ErronkaApi.Kontrollerrak.ErreserbakController.DeleteByMahai(System.Int32,System.String,System.Boolean)
+  name.vb: DeleteByMahai(Integer, String, Boolean)
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.DeleteByMahai(int, string, bool)
+  fullName.vb: ErronkaApi.Kontrollerrak.ErreserbakController.DeleteByMahai(Integer, String, Boolean)
+  nameWithType: ErreserbakController.DeleteByMahai(int, string, bool)
+  nameWithType.vb: ErreserbakController.DeleteByMahai(Integer, String, Boolean)
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.DeleteByMahai*
+  name: DeleteByMahai
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_DeleteByMahai_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.DeleteByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.DeleteByMahai
+  nameWithType: ErreserbakController.DeleteByMahai
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+  name: ErreserbakController.ErreserbakSortuDto
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html
+  commentId: T:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+  nameWithType: ErreserbakController.ErreserbakSortuDto
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Data
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_Data
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Data
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Data
+  nameWithType: ErreserbakController.ErreserbakSortuDto.Data
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Data*
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_Data_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Data
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Data
+  nameWithType: ErreserbakController.ErreserbakSortuDto.Data
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId
+  name: ErabiltzaileakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_ErabiltzaileakId
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId
+  nameWithType: ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId*
+  name: ErabiltzaileakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_ErabiltzaileakId_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId
+  nameWithType: ErreserbakController.ErreserbakSortuDto.ErabiltzaileakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.MahaiakId
+  name: MahaiakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_MahaiakId
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.MahaiakId
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.MahaiakId
+  nameWithType: ErreserbakController.ErreserbakSortuDto.MahaiakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.MahaiakId*
+  name: MahaiakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_MahaiakId_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.MahaiakId
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.MahaiakId
+  nameWithType: ErreserbakController.ErreserbakSortuDto.MahaiakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Mota
+  name: Mota
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_Mota
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Mota
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Mota
+  nameWithType: ErreserbakController.ErreserbakSortuDto.Mota
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Mota*
+  name: Mota
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_Mota_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Mota
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.Mota
+  nameWithType: ErreserbakController.ErreserbakSortuDto.Mota
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+  name: ErreserbakController.ErreserbakUpdateDto
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html
+  commentId: T:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+  nameWithType: ErreserbakController.ErreserbakUpdateDto
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Data
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_Data
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Data
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Data
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.Data
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Data*
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_Data_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Data
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Data
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.Data
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId
+  name: ErabiltzaileakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_ErabiltzaileakId
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId*
+  name: ErabiltzaileakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_ErabiltzaileakId_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.ErabiltzaileakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.MahaiakId
+  name: MahaiakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_MahaiakId
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.MahaiakId
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.MahaiakId
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.MahaiakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.MahaiakId*
+  name: MahaiakId
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_MahaiakId_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.MahaiakId
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.MahaiakId
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.MahaiakId
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Mota
+  name: Mota
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_Mota
+  commentId: P:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Mota
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Mota
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.Mota
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Mota*
+  name: Mota
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html#ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_Mota_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Mota
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.Mota
+  nameWithType: ErreserbakController.ErreserbakUpdateDto.Mota
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.GetByDate(System.String,System.Boolean)
+  name: GetByDate(string, bool)
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_GetByDate_System_String_System_Boolean_
+  commentId: M:ErronkaApi.Kontrollerrak.ErreserbakController.GetByDate(System.String,System.Boolean)
+  name.vb: GetByDate(String, Boolean)
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.GetByDate(string, bool)
+  fullName.vb: ErronkaApi.Kontrollerrak.ErreserbakController.GetByDate(String, Boolean)
+  nameWithType: ErreserbakController.GetByDate(string, bool)
+  nameWithType.vb: ErreserbakController.GetByDate(String, Boolean)
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.GetByDate*
+  name: GetByDate
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_GetByDate_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.GetByDate
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.GetByDate
+  nameWithType: ErreserbakController.GetByDate
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.UpdateByMahai(System.Int32,System.String,System.Boolean,ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  name: UpdateByMahai(int, string, bool, ErreserbakUpdateDto)
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_UpdateByMahai_System_Int32_System_String_System_Boolean_ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_
+  commentId: M:ErronkaApi.Kontrollerrak.ErreserbakController.UpdateByMahai(System.Int32,System.String,System.Boolean,ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  name.vb: UpdateByMahai(Integer, String, Boolean, ErreserbakUpdateDto)
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.UpdateByMahai(int, string, bool, ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  fullName.vb: ErronkaApi.Kontrollerrak.ErreserbakController.UpdateByMahai(Integer, String, Boolean, ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  nameWithType: ErreserbakController.UpdateByMahai(int, string, bool, ErreserbakController.ErreserbakUpdateDto)
+  nameWithType.vb: ErreserbakController.UpdateByMahai(Integer, String, Boolean, ErreserbakController.ErreserbakUpdateDto)
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.UpdateByMahai*
+  name: UpdateByMahai
+  href: api/ErronkaApi.Kontrollerrak.ErreserbakController.html#ErronkaApi_Kontrollerrak_ErreserbakController_UpdateByMahai_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ErreserbakController.UpdateByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.UpdateByMahai
+  nameWithType: ErreserbakController.UpdateByMahai
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
   name: EskaeraKontrollerra
   href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html
   commentId: T:ErronkaApi.Kontrollerrak.EskaeraKontrollerra
   fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
   nameWithType: EskaeraKontrollerra
-- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor
-  name: EskaeraKontrollerra()
-  href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor
-  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor
-  name.vb: New()
-  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EskaeraKontrollerra()
-  fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.New()
-  nameWithType: EskaeraKontrollerra.EskaeraKontrollerra()
-  nameWithType.vb: EskaeraKontrollerra.New()
+- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository,ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
+  name: EskaeraKontrollerra(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
+  href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor_ErronkaApi_Interfaces_IEskaeraRepository_ErronkaApi_Interfaces_IMahaiaRepository_ErronkaApi_Interfaces_IProduktuaRepository_ErronkaApi_Interfaces_IEskaeraProduktuakRepository_ErronkaApi_Interfaces_IEskaeraMahaiakRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository,ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
+  name.vb: New(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
+  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EskaeraKontrollerra(ErronkaApi.Interfaces.IEskaeraRepository, ErronkaApi.Interfaces.IMahaiaRepository, ErronkaApi.Interfaces.IProduktuaRepository, ErronkaApi.Interfaces.IEskaeraProduktuakRepository, ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.New(ErronkaApi.Interfaces.IEskaeraRepository, ErronkaApi.Interfaces.IMahaiaRepository, ErronkaApi.Interfaces.IProduktuaRepository, ErronkaApi.Interfaces.IEskaeraProduktuakRepository, ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
+  nameWithType: EskaeraKontrollerra.EskaeraKontrollerra(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
+  nameWithType.vb: EskaeraKontrollerra.New(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor*
   name: EskaeraKontrollerra
   href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor_
@@ -1142,6 +2475,19 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuMahaiKapasitatea
   nameWithType: EskaeraKontrollerra.LortuMahaiKapasitatea
+- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
+  name: LortuSukaldekoEskaerak()
+  href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuSukaldekoEskaerak
+  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
+  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak()
+  nameWithType: EskaeraKontrollerra.LortuSukaldekoEskaerak()
+- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak*
+  name: LortuSukaldekoEskaerak
+  href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuSukaldekoEskaerak_
+  commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
+  nameWithType: EskaeraKontrollerra.LortuSukaldekoEskaerak
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.OrdainduEskaera(System.Int32)
   name: OrdainduEskaera(int)
   href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_OrdainduEskaera_System_Int32_
@@ -1171,37 +2517,91 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera
   nameWithType: EskaeraKontrollerra.SortuEskaera
-- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(System.Int32)
-  name: SortuFaktura(int)
-  href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_SortuFaktura_System_Int32_
-  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(System.Int32)
-  name.vb: SortuFaktura(Integer)
-  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(int)
-  fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(Integer)
-  nameWithType: EskaeraKontrollerra.SortuFaktura(int)
-  nameWithType.vb: EskaeraKontrollerra.SortuFaktura(Integer)
-- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura*
-  name: SortuFaktura
-  href: api/ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_SortuFaktura_
-  commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra
+  name: FakturaKontrollerra
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html
+  commentId: T:ErronkaApi.Kontrollerrak.FakturaKontrollerra
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra
+  nameWithType: FakturaKontrollerra
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository)
+  name: FakturaKontrollerra(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository)
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra__ctor_ErronkaApi_Interfaces_IEskaeraRepository_ErronkaApi_Interfaces_IMahaiaRepository_ErronkaApi_Interfaces_IProduktuaRepository_ErronkaApi_Interfaces_IEskaeraProduktuakRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.FakturaKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository)
+  name.vb: New(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository)
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.FakturaKontrollerra(ErronkaApi.Interfaces.IEskaeraRepository, ErronkaApi.Interfaces.IMahaiaRepository, ErronkaApi.Interfaces.IProduktuaRepository, ErronkaApi.Interfaces.IEskaeraProduktuakRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.FakturaKontrollerra.New(ErronkaApi.Interfaces.IEskaeraRepository, ErronkaApi.Interfaces.IMahaiaRepository, ErronkaApi.Interfaces.IProduktuaRepository, ErronkaApi.Interfaces.IEskaeraProduktuakRepository)
+  nameWithType: FakturaKontrollerra.FakturaKontrollerra(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository)
+  nameWithType.vb: FakturaKontrollerra.New(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository)
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.#ctor*
+  name: FakturaKontrollerra
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra__ctor_
+  commentId: Overload:ErronkaApi.Kontrollerrak.FakturaKontrollerra.#ctor
   isSpec: "True"
-  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura
-  nameWithType: EskaeraKontrollerra.SortuFaktura
+  name.vb: New
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.FakturaKontrollerra
+  fullName.vb: ErronkaApi.Kontrollerrak.FakturaKontrollerra.New
+  nameWithType: FakturaKontrollerra.FakturaKontrollerra
+  nameWithType.vb: FakturaKontrollerra.New
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra_GetAll
+  commentId: M:ErronkaApi.Kontrollerrak.FakturaKontrollerra.GetAll
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.GetAll()
+  nameWithType: FakturaKontrollerra.GetAll()
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra_GetAll_
+  commentId: Overload:ErronkaApi.Kontrollerrak.FakturaKontrollerra.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.GetAll
+  nameWithType: FakturaKontrollerra.GetAll
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.Pdf(System.Int32)
+  name: Pdf(int)
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra_Pdf_System_Int32_
+  commentId: M:ErronkaApi.Kontrollerrak.FakturaKontrollerra.Pdf(System.Int32)
+  name.vb: Pdf(Integer)
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.Pdf(int)
+  fullName.vb: ErronkaApi.Kontrollerrak.FakturaKontrollerra.Pdf(Integer)
+  nameWithType: FakturaKontrollerra.Pdf(int)
+  nameWithType.vb: FakturaKontrollerra.Pdf(Integer)
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.Pdf*
+  name: Pdf
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra_Pdf_
+  commentId: Overload:ErronkaApi.Kontrollerrak.FakturaKontrollerra.Pdf
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.Pdf
+  nameWithType: FakturaKontrollerra.Pdf
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.SortuFaktura(System.Int32)
+  name: SortuFaktura(int)
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra_SortuFaktura_System_Int32_
+  commentId: M:ErronkaApi.Kontrollerrak.FakturaKontrollerra.SortuFaktura(System.Int32)
+  name.vb: SortuFaktura(Integer)
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.SortuFaktura(int)
+  fullName.vb: ErronkaApi.Kontrollerrak.FakturaKontrollerra.SortuFaktura(Integer)
+  nameWithType: FakturaKontrollerra.SortuFaktura(int)
+  nameWithType.vb: FakturaKontrollerra.SortuFaktura(Integer)
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra.SortuFaktura*
+  name: SortuFaktura
+  href: api/ErronkaApi.Kontrollerrak.FakturaKontrollerra.html#ErronkaApi_Kontrollerrak_FakturaKontrollerra_SortuFaktura_
+  commentId: Overload:ErronkaApi.Kontrollerrak.FakturaKontrollerra.SortuFaktura
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra.SortuFaktura
+  nameWithType: FakturaKontrollerra.SortuFaktura
 - uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
   name: KategoriaKontrollerra
   href: api/ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html
   commentId: T:ErronkaApi.Kontrollerrak.KategoriaKontrollerra
   fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
   nameWithType: KategoriaKontrollerra
-- uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Repositorioak.KategoriaRepository)
-  name: KategoriaKontrollerra(KategoriaRepository)
-  href: api/ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html#ErronkaApi_Kontrollerrak_KategoriaKontrollerra__ctor_ErronkaApi_Repositorioak_KategoriaRepository_
-  commentId: M:ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Repositorioak.KategoriaRepository)
-  name.vb: New(KategoriaRepository)
-  fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.KategoriaKontrollerra(ErronkaApi.Repositorioak.KategoriaRepository)
-  fullName.vb: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.New(ErronkaApi.Repositorioak.KategoriaRepository)
-  nameWithType: KategoriaKontrollerra.KategoriaKontrollerra(KategoriaRepository)
-  nameWithType.vb: KategoriaKontrollerra.New(KategoriaRepository)
+- uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Interfaces.IKategoriaRepository)
+  name: KategoriaKontrollerra(IKategoriaRepository)
+  href: api/ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html#ErronkaApi_Kontrollerrak_KategoriaKontrollerra__ctor_ErronkaApi_Interfaces_IKategoriaRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Interfaces.IKategoriaRepository)
+  name.vb: New(IKategoriaRepository)
+  fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.KategoriaKontrollerra(ErronkaApi.Interfaces.IKategoriaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.New(ErronkaApi.Interfaces.IKategoriaRepository)
+  nameWithType: KategoriaKontrollerra.KategoriaKontrollerra(IKategoriaRepository)
+  nameWithType.vb: KategoriaKontrollerra.New(IKategoriaRepository)
 - uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor*
   name: KategoriaKontrollerra
   href: api/ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html#ErronkaApi_Kontrollerrak_KategoriaKontrollerra__ctor_
@@ -1225,6 +2625,124 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.GetAll
   nameWithType: KategoriaKontrollerra.GetAll
+- uid: ErronkaApi.Kontrollerrak.LangileakController
+  name: LangileakController
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html
+  commentId: T:ErronkaApi.Kontrollerrak.LangileakController
+  fullName: ErronkaApi.Kontrollerrak.LangileakController
+  nameWithType: LangileakController
+- uid: ErronkaApi.Kontrollerrak.LangileakController.#ctor(ErronkaApi.Interfaces.IErabiltzaileaRepository)
+  name: LangileakController(IErabiltzaileaRepository)
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController__ctor_ErronkaApi_Interfaces_IErabiltzaileaRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.LangileakController.#ctor(ErronkaApi.Interfaces.IErabiltzaileaRepository)
+  name.vb: New(IErabiltzaileaRepository)
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LangileakController(ErronkaApi.Interfaces.IErabiltzaileaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.LangileakController.New(ErronkaApi.Interfaces.IErabiltzaileaRepository)
+  nameWithType: LangileakController.LangileakController(IErabiltzaileaRepository)
+  nameWithType.vb: LangileakController.New(IErabiltzaileaRepository)
+- uid: ErronkaApi.Kontrollerrak.LangileakController.#ctor*
+  name: LangileakController
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController__ctor_
+  commentId: Overload:ErronkaApi.Kontrollerrak.LangileakController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LangileakController
+  fullName.vb: ErronkaApi.Kontrollerrak.LangileakController.New
+  nameWithType: LangileakController.LangileakController
+  nameWithType.vb: LangileakController.New
+- uid: ErronkaApi.Kontrollerrak.LangileakController.CheckTxatBaimena(System.Int32)
+  name: CheckTxatBaimena(int)
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController_CheckTxatBaimena_System_Int32_
+  commentId: M:ErronkaApi.Kontrollerrak.LangileakController.CheckTxatBaimena(System.Int32)
+  name.vb: CheckTxatBaimena(Integer)
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.CheckTxatBaimena(int)
+  fullName.vb: ErronkaApi.Kontrollerrak.LangileakController.CheckTxatBaimena(Integer)
+  nameWithType: LangileakController.CheckTxatBaimena(int)
+  nameWithType.vb: LangileakController.CheckTxatBaimena(Integer)
+- uid: ErronkaApi.Kontrollerrak.LangileakController.CheckTxatBaimena*
+  name: CheckTxatBaimena
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController_CheckTxatBaimena_
+  commentId: Overload:ErronkaApi.Kontrollerrak.LangileakController.CheckTxatBaimena
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.CheckTxatBaimena
+  nameWithType: LangileakController.CheckTxatBaimena
+- uid: ErronkaApi.Kontrollerrak.LangileakController.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController_GetAll
+  commentId: M:ErronkaApi.Kontrollerrak.LangileakController.GetAll
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.GetAll()
+  nameWithType: LangileakController.GetAll()
+- uid: ErronkaApi.Kontrollerrak.LangileakController.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController_GetAll_
+  commentId: Overload:ErronkaApi.Kontrollerrak.LangileakController.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.GetAll
+  nameWithType: LangileakController.GetAll
+- uid: ErronkaApi.Kontrollerrak.LangileakController.Login(ErronkaApi.Kontrollerrak.LangileakController.LoginRequest)
+  name: Login(LoginRequest)
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController_Login_ErronkaApi_Kontrollerrak_LangileakController_LoginRequest_
+  commentId: M:ErronkaApi.Kontrollerrak.LangileakController.Login(ErronkaApi.Kontrollerrak.LangileakController.LoginRequest)
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.Login(ErronkaApi.Kontrollerrak.LangileakController.LoginRequest)
+  nameWithType: LangileakController.Login(LangileakController.LoginRequest)
+- uid: ErronkaApi.Kontrollerrak.LangileakController.Login*
+  name: Login
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.html#ErronkaApi_Kontrollerrak_LangileakController_Login_
+  commentId: Overload:ErronkaApi.Kontrollerrak.LangileakController.Login
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.Login
+  nameWithType: LangileakController.Login
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+  name: LangileakController.LoginRequest
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html
+  commentId: T:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+  nameWithType: LangileakController.LoginRequest
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.#ctor(System.String,System.String)
+  name: LoginRequest(string, string)
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html#ErronkaApi_Kontrollerrak_LangileakController_LoginRequest__ctor_System_String_System_String_
+  commentId: M:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.LoginRequest(string, string)
+  fullName.vb: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.New(String, String)
+  nameWithType: LangileakController.LoginRequest.LoginRequest(string, string)
+  nameWithType.vb: LangileakController.LoginRequest.New(String, String)
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.#ctor*
+  name: LoginRequest
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html#ErronkaApi_Kontrollerrak_LangileakController_LoginRequest__ctor_
+  commentId: Overload:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.LoginRequest
+  fullName.vb: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.New
+  nameWithType: LangileakController.LoginRequest.LoginRequest
+  nameWithType.vb: LangileakController.LoginRequest.New
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.erabiltzailea
+  name: erabiltzailea
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html#ErronkaApi_Kontrollerrak_LangileakController_LoginRequest_erabiltzailea
+  commentId: P:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.erabiltzailea
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.erabiltzailea
+  nameWithType: LangileakController.LoginRequest.erabiltzailea
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.erabiltzailea*
+  name: erabiltzailea
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html#ErronkaApi_Kontrollerrak_LangileakController_LoginRequest_erabiltzailea_
+  commentId: Overload:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.erabiltzailea
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.erabiltzailea
+  nameWithType: LangileakController.LoginRequest.erabiltzailea
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.pasahitza
+  name: pasahitza
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html#ErronkaApi_Kontrollerrak_LangileakController_LoginRequest_pasahitza
+  commentId: P:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.pasahitza
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.pasahitza
+  nameWithType: LangileakController.LoginRequest.pasahitza
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.pasahitza*
+  name: pasahitza
+  href: api/ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html#ErronkaApi_Kontrollerrak_LangileakController_LoginRequest_pasahitza_
+  commentId: Overload:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.pasahitza
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.pasahitza
+  nameWithType: LangileakController.LoginRequest.pasahitza
 - uid: ErronkaApi.Kontrollerrak.LogKontrollerra
   name: LogKontrollerra
   href: api/ErronkaApi.Kontrollerrak.LogKontrollerra.html
@@ -1307,15 +2825,15 @@ references:
   commentId: T:ErronkaApi.Kontrollerrak.MahaiakController
   fullName: ErronkaApi.Kontrollerrak.MahaiakController
   nameWithType: MahaiakController
-- uid: ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Repositorioak.MahaiaRepository)
-  name: MahaiakController(MahaiaRepository)
-  href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController__ctor_ErronkaApi_Repositorioak_MahaiaRepository_
-  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Repositorioak.MahaiaRepository)
-  name.vb: New(MahaiaRepository)
-  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakController(ErronkaApi.Repositorioak.MahaiaRepository)
-  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.New(ErronkaApi.Repositorioak.MahaiaRepository)
-  nameWithType: MahaiakController.MahaiakController(MahaiaRepository)
-  nameWithType.vb: MahaiakController.New(MahaiaRepository)
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Interfaces.IMahaiaRepository)
+  name: MahaiakController(IMahaiaRepository)
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController__ctor_ErronkaApi_Interfaces_IMahaiaRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Interfaces.IMahaiaRepository)
+  name.vb: New(IMahaiaRepository)
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakController(ErronkaApi.Interfaces.IMahaiaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.New(ErronkaApi.Interfaces.IMahaiaRepository)
+  nameWithType: MahaiakController.MahaiakController(IMahaiaRepository)
+  nameWithType.vb: MahaiakController.New(IMahaiaRepository)
 - uid: ErronkaApi.Kontrollerrak.MahaiakController.#ctor*
   name: MahaiakController
   href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController__ctor_
@@ -1326,6 +2844,35 @@ references:
   fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.New
   nameWithType: MahaiakController.MahaiakController
   nameWithType.vb: MahaiakController.New
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(System.Int32)
+  name: CheckTxatBaimena(int)
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_CheckTxatBaimena_System_Int32_
+  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(System.Int32)
+  name.vb: CheckTxatBaimena(Integer)
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(int)
+  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(Integer)
+  nameWithType: MahaiakController.CheckTxatBaimena(int)
+  nameWithType.vb: MahaiakController.CheckTxatBaimena(Integer)
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena*
+  name: CheckTxatBaimena
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_CheckTxatBaimena_
+  commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena
+  nameWithType: MahaiakController.CheckTxatBaimena
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
+  name: Login(MahaiakLoginRequest)
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_Login_ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest_
+  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
+  nameWithType: MahaiakController.Login(MahaiakController.MahaiakLoginRequest)
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.Login*
+  name: Login
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_Login_
+  commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.Login
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.Login
+  nameWithType: MahaiakController.Login
 - uid: ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre
   name: LortuMahaiLibre()
   href: api/ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_LortuMahaiLibre
@@ -1339,21 +2886,110 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre
   nameWithType: MahaiakController.LortuMahaiLibre
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  name: MahaiakController.MahaiakLoginRequest
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html
+  commentId: T:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  nameWithType: MahaiakController.MahaiakLoginRequest
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.#ctor(System.String,System.String)
+  name: MahaiakLoginRequest(string, string)
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html#ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest__ctor_System_String_System_String_
+  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.MahaiakLoginRequest(string, string)
+  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.New(String, String)
+  nameWithType: MahaiakController.MahaiakLoginRequest.MahaiakLoginRequest(string, string)
+  nameWithType.vb: MahaiakController.MahaiakLoginRequest.New(String, String)
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.#ctor*
+  name: MahaiakLoginRequest
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html#ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest__ctor_
+  commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.MahaiakLoginRequest
+  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.New
+  nameWithType: MahaiakController.MahaiakLoginRequest.MahaiakLoginRequest
+  nameWithType.vb: MahaiakController.MahaiakLoginRequest.New
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.erabiltzailea
+  name: erabiltzailea
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html#ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest_erabiltzailea
+  commentId: P:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.erabiltzailea
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.erabiltzailea
+  nameWithType: MahaiakController.MahaiakLoginRequest.erabiltzailea
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.erabiltzailea*
+  name: erabiltzailea
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html#ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest_erabiltzailea_
+  commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.erabiltzailea
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.erabiltzailea
+  nameWithType: MahaiakController.MahaiakLoginRequest.erabiltzailea
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.pasahitza
+  name: pasahitza
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html#ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest_pasahitza
+  commentId: P:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.pasahitza
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.pasahitza
+  nameWithType: MahaiakController.MahaiakLoginRequest.pasahitza
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.pasahitza*
+  name: pasahitza
+  href: api/ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html#ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest_pasahitza_
+  commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.pasahitza
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.pasahitza
+  nameWithType: MahaiakController.MahaiakLoginRequest.pasahitza
+- uid: ErronkaApi.Kontrollerrak.PlaterakController
+  name: PlaterakController
+  href: api/ErronkaApi.Kontrollerrak.PlaterakController.html
+  commentId: T:ErronkaApi.Kontrollerrak.PlaterakController
+  fullName: ErronkaApi.Kontrollerrak.PlaterakController
+  nameWithType: PlaterakController
+- uid: ErronkaApi.Kontrollerrak.PlaterakController.#ctor(ErronkaApi.Interfaces.IPlateraRepository)
+  name: PlaterakController(IPlateraRepository)
+  href: api/ErronkaApi.Kontrollerrak.PlaterakController.html#ErronkaApi_Kontrollerrak_PlaterakController__ctor_ErronkaApi_Interfaces_IPlateraRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.PlaterakController.#ctor(ErronkaApi.Interfaces.IPlateraRepository)
+  name.vb: New(IPlateraRepository)
+  fullName: ErronkaApi.Kontrollerrak.PlaterakController.PlaterakController(ErronkaApi.Interfaces.IPlateraRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.PlaterakController.New(ErronkaApi.Interfaces.IPlateraRepository)
+  nameWithType: PlaterakController.PlaterakController(IPlateraRepository)
+  nameWithType.vb: PlaterakController.New(IPlateraRepository)
+- uid: ErronkaApi.Kontrollerrak.PlaterakController.#ctor*
+  name: PlaterakController
+  href: api/ErronkaApi.Kontrollerrak.PlaterakController.html#ErronkaApi_Kontrollerrak_PlaterakController__ctor_
+  commentId: Overload:ErronkaApi.Kontrollerrak.PlaterakController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Kontrollerrak.PlaterakController.PlaterakController
+  fullName.vb: ErronkaApi.Kontrollerrak.PlaterakController.New
+  nameWithType: PlaterakController.PlaterakController
+  nameWithType.vb: PlaterakController.New
+- uid: ErronkaApi.Kontrollerrak.PlaterakController.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Kontrollerrak.PlaterakController.html#ErronkaApi_Kontrollerrak_PlaterakController_GetAll
+  commentId: M:ErronkaApi.Kontrollerrak.PlaterakController.GetAll
+  fullName: ErronkaApi.Kontrollerrak.PlaterakController.GetAll()
+  nameWithType: PlaterakController.GetAll()
+- uid: ErronkaApi.Kontrollerrak.PlaterakController.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Kontrollerrak.PlaterakController.html#ErronkaApi_Kontrollerrak_PlaterakController_GetAll_
+  commentId: Overload:ErronkaApi.Kontrollerrak.PlaterakController.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.PlaterakController.GetAll
+  nameWithType: PlaterakController.GetAll
 - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
   name: ProduktuakKontrollera
   href: api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html
   commentId: T:ErronkaApi.Kontrollerrak.ProduktuakKontrollera
   fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
   nameWithType: ProduktuakKontrollera
-- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Repositorioak.ProduktuaRepository)
-  name: ProduktuakKontrollera(ProduktuaRepository)
-  href: api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_ErronkaApi_Repositorioak_ProduktuaRepository_
-  commentId: M:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Repositorioak.ProduktuaRepository)
-  name.vb: New(ProduktuaRepository)
-  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.ProduktuakKontrollera(ErronkaApi.Repositorioak.ProduktuaRepository)
-  fullName.vb: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.New(ErronkaApi.Repositorioak.ProduktuaRepository)
-  nameWithType: ProduktuakKontrollera.ProduktuakKontrollera(ProduktuaRepository)
-  nameWithType.vb: ProduktuakKontrollera.New(ProduktuaRepository)
+- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Interfaces.IProduktuaRepository)
+  name: ProduktuakKontrollera(IProduktuaRepository)
+  href: api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_ErronkaApi_Interfaces_IProduktuaRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Interfaces.IProduktuaRepository)
+  name.vb: New(IProduktuaRepository)
+  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.ProduktuakKontrollera(ErronkaApi.Interfaces.IProduktuaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.New(ErronkaApi.Interfaces.IProduktuaRepository)
+  nameWithType: ProduktuakKontrollera.ProduktuakKontrollera(IProduktuaRepository)
+  nameWithType.vb: ProduktuakKontrollera.New(IProduktuaRepository)
 - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor*
   name: ProduktuakKontrollera
   href: api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_
@@ -1364,6 +3000,19 @@ references:
   fullName.vb: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.New
   nameWithType: ProduktuakKontrollera.ProduktuakKontrollera
   nameWithType.vb: ProduktuakKontrollera.New
+- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetAll
+  commentId: M:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll()
+  nameWithType: ProduktuakKontrollera.GetAll()
+- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetAll_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+  nameWithType: ProduktuakKontrollera.GetAll
 - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria(System.Int32)
   name: GetByKategoria(int)
   href: api/ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetByKategoria_System_Int32_
@@ -1380,6 +3029,247 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria
   nameWithType: ProduktuakKontrollera.GetByKategoria
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+  name: ZerbitzuaController
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  commentId: T:ErronkaApi.Kontrollerrak.ZerbitzuaController
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController
+  nameWithType: ZerbitzuaController
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.#ctor(ErronkaApi.Interfaces.IZerbitzuaRepository)
+  name: ZerbitzuaController(IZerbitzuaRepository)
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController__ctor_ErronkaApi_Interfaces_IZerbitzuaRepository_
+  commentId: M:ErronkaApi.Kontrollerrak.ZerbitzuaController.#ctor(ErronkaApi.Interfaces.IZerbitzuaRepository)
+  name.vb: New(IZerbitzuaRepository)
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaController(ErronkaApi.Interfaces.IZerbitzuaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.ZerbitzuaController.New(ErronkaApi.Interfaces.IZerbitzuaRepository)
+  nameWithType: ZerbitzuaController.ZerbitzuaController(IZerbitzuaRepository)
+  nameWithType.vb: ZerbitzuaController.New(IZerbitzuaRepository)
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.#ctor*
+  name: ZerbitzuaController
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController__ctor_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaController
+  fullName.vb: ErronkaApi.Kontrollerrak.ZerbitzuaController.New
+  nameWithType: ZerbitzuaController.ZerbitzuaController
+  nameWithType.vb: ZerbitzuaController.New
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name: Create(ZerbitzuaSortuDto)
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_Create_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  commentId: M:ErronkaApi.Kontrollerrak.ZerbitzuaController.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType: ZerbitzuaController.Create(ZerbitzuaController.ZerbitzuaSortuDto)
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.Create*
+  name: Create
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_Create_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.Create
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.Create
+  nameWithType: ZerbitzuaController.Create
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+  name: ZerbitzuaController.EskaeraSortuDto
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html
+  commentId: T:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+  nameWithType: ZerbitzuaController.EskaeraSortuDto
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Data
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Data
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Data
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Data
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Data
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Data*
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Data_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Data
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Data
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Data
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Egoera
+  name: Egoera
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Egoera
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Egoera
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Egoera
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Egoera
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Egoera*
+  name: Egoera
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Egoera_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Egoera
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Egoera
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Egoera
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.IsPlatera
+  name: IsPlatera
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_IsPlatera
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.IsPlatera
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.IsPlatera
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.IsPlatera
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.IsPlatera*
+  name: IsPlatera
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_IsPlatera_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.IsPlatera
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.IsPlatera
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.IsPlatera
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Izena
+  name: Izena
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Izena
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Izena
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Izena
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Izena
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Izena*
+  name: Izena
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Izena_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Izena
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Izena
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Izena
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Prezioa
+  name: Prezioa
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Prezioa
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Prezioa
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Prezioa
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Prezioa
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Prezioa*
+  name: Prezioa
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_Prezioa_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Prezioa
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.Prezioa
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.Prezioa
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.ProduktuaId
+  name: ProduktuaId
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_ProduktuaId
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.ProduktuaId
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.ProduktuaId
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.ProduktuaId
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.ProduktuaId*
+  name: ProduktuaId
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_EskaeraSortuDto_ProduktuaId_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.ProduktuaId
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.ProduktuaId
+  nameWithType: ZerbitzuaController.EskaeraSortuDto.ProduktuaId
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.GetByMahai(System.Int32)
+  name: GetByMahai(int)
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_GetByMahai_System_Int32_
+  commentId: M:ErronkaApi.Kontrollerrak.ZerbitzuaController.GetByMahai(System.Int32)
+  name.vb: GetByMahai(Integer)
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.GetByMahai(int)
+  fullName.vb: ErronkaApi.Kontrollerrak.ZerbitzuaController.GetByMahai(Integer)
+  nameWithType: ZerbitzuaController.GetByMahai(int)
+  nameWithType.vb: ZerbitzuaController.GetByMahai(Integer)
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.GetByMahai*
+  name: GetByMahai
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_GetByMahai_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.GetByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.GetByMahai
+  nameWithType: ZerbitzuaController.GetByMahai
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu(System.Int32)
+  name: Ordaindu(int)
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_Ordaindu_System_Int32_
+  commentId: M:ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu(System.Int32)
+  name.vb: Ordaindu(Integer)
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu(int)
+  fullName.vb: ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu(Integer)
+  nameWithType: ZerbitzuaController.Ordaindu(int)
+  nameWithType.vb: ZerbitzuaController.Ordaindu(Integer)
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu*
+  name: Ordaindu
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_Ordaindu_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.Ordaindu
+  nameWithType: ZerbitzuaController.Ordaindu
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name: Update(int, ZerbitzuaSortuDto)
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_Update_System_Int32_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  commentId: M:ErronkaApi.Kontrollerrak.ZerbitzuaController.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name.vb: Update(Integer, ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.Update(int, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName.vb: ErronkaApi.Kontrollerrak.ZerbitzuaController.Update(Integer, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType: ZerbitzuaController.Update(int, ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType.vb: ZerbitzuaController.Update(Integer, ZerbitzuaController.ZerbitzuaSortuDto)
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.Update*
+  name: Update
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_Update_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.Update
+  nameWithType: ZerbitzuaController.Update
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  name: ZerbitzuaController.ZerbitzuaSortuDto
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+  commentId: T:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Data
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_Data
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Data
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Data
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.Data
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Data*
+  name: Data
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_Data_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Data
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Data
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.Data
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId
+  name: ErreserbaId
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_ErreserbaId
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId*
+  name: ErreserbaId
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_ErreserbaId_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.ErreserbaId
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak
+  name: Eskaerak
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_Eskaerak
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak*
+  name: Eskaerak
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_Eskaerak_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.Eskaerak
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId
+  name: MahaiakId
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_MahaiakId
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId*
+  name: MahaiakId
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_MahaiakId_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.MahaiakId
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala
+  name: PrezioTotala
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_PrezioTotala
+  commentId: P:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala*
+  name: PrezioTotala
+  href: api/ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html#ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_PrezioTotala_
+  commentId: Overload:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala
+  isSpec: "True"
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto.PrezioTotala
 - uid: ErronkaApi.Mapeoak
   name: ErronkaApi.Mapeoak
   href: api/ErronkaApi.Mapeoak.html
@@ -1993,6 +3883,19 @@ references:
   fullName.vb: ErronkaApi.Repositorioak.ErabiltzaileaRepository.New
   nameWithType: ErabiltzaileaRepository.ErabiltzaileaRepository
   nameWithType.vb: ErabiltzaileaRepository.New
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+  name: GetAll()
+  href: api/ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_GetAll
+  commentId: M:ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll()
+  nameWithType: ErabiltzaileaRepository.GetAll()
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_GetAll_
+  commentId: Overload:ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll
+  nameWithType: ErabiltzaileaRepository.GetAll
 - uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login(System.String,System.String)
   name: Login(string, string)
   href: api/ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_Login_System_String_System_String_
@@ -2009,6 +3912,213 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login
   nameWithType: ErabiltzaileaRepository.Login
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  name: LortuErabiltzailea(int)
+  href: api/ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_LortuErabiltzailea_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(System.Int32)
+  name.vb: LortuErabiltzailea(Integer)
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(int)
+  fullName.vb: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(Integer)
+  nameWithType: ErabiltzaileaRepository.LortuErabiltzailea(int)
+  nameWithType.vb: ErabiltzaileaRepository.LortuErabiltzailea(Integer)
+- uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea*
+  name: LortuErabiltzailea
+  href: api/ErronkaApi.Repositorioak.ErabiltzaileaRepository.html#ErronkaApi_Repositorioak_ErabiltzaileaRepository_LortuErabiltzailea_
+  commentId: Overload:ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea
+  nameWithType: ErabiltzaileaRepository.LortuErabiltzailea
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository
+  name: ErreserbaRepository
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html
+  commentId: T:ErronkaApi.Repositorioak.ErreserbaRepository
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository
+  nameWithType: ErreserbaRepository
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.#ctor(NHibernate.ISessionFactory)
+  name: ErreserbaRepository(ISessionFactory)
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository__ctor_NHibernate_ISessionFactory_
+  commentId: M:ErronkaApi.Repositorioak.ErreserbaRepository.#ctor(NHibernate.ISessionFactory)
+  name.vb: New(ISessionFactory)
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.ErreserbaRepository(NHibernate.ISessionFactory)
+  fullName.vb: ErronkaApi.Repositorioak.ErreserbaRepository.New(NHibernate.ISessionFactory)
+  nameWithType: ErreserbaRepository.ErreserbaRepository(ISessionFactory)
+  nameWithType.vb: ErreserbaRepository.New(ISessionFactory)
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.#ctor*
+  name: ErreserbaRepository
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository__ctor_
+  commentId: Overload:ErronkaApi.Repositorioak.ErreserbaRepository.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.ErreserbaRepository
+  fullName.vb: ErronkaApi.Repositorioak.ErreserbaRepository.New
+  nameWithType: ErreserbaRepository.ErreserbaRepository
+  nameWithType.vb: ErreserbaRepository.New
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  name: Create(ErreserbakSortuDto)
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_Create_ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakSortuDto_
+  commentId: M:ErronkaApi.Repositorioak.ErreserbaRepository.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.Create(ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto)
+  nameWithType: ErreserbaRepository.Create(ErreserbakController.ErreserbakSortuDto)
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.Create*
+  name: Create
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_Create_
+  commentId: Overload:ErronkaApi.Repositorioak.ErreserbaRepository.Create
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.Create
+  nameWithType: ErreserbaRepository.Create
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.DeleteByMahai(System.Int32,System.DateTime,System.Boolean)
+  name: DeleteByMahai(int, DateTime, bool)
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_DeleteByMahai_System_Int32_System_DateTime_System_Boolean_
+  commentId: M:ErronkaApi.Repositorioak.ErreserbaRepository.DeleteByMahai(System.Int32,System.DateTime,System.Boolean)
+  name.vb: DeleteByMahai(Integer, Date, Boolean)
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.DeleteByMahai(int, System.DateTime, bool)
+  fullName.vb: ErronkaApi.Repositorioak.ErreserbaRepository.DeleteByMahai(Integer, Date, Boolean)
+  nameWithType: ErreserbaRepository.DeleteByMahai(int, DateTime, bool)
+  nameWithType.vb: ErreserbaRepository.DeleteByMahai(Integer, Date, Boolean)
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.DeleteByMahai*
+  name: DeleteByMahai
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_DeleteByMahai_
+  commentId: Overload:ErronkaApi.Repositorioak.ErreserbaRepository.DeleteByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.DeleteByMahai
+  nameWithType: ErreserbaRepository.DeleteByMahai
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.GetByDate(System.DateTime,System.Boolean)
+  name: GetByDate(DateTime, bool)
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_GetByDate_System_DateTime_System_Boolean_
+  commentId: M:ErronkaApi.Repositorioak.ErreserbaRepository.GetByDate(System.DateTime,System.Boolean)
+  name.vb: GetByDate(Date, Boolean)
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.GetByDate(System.DateTime, bool)
+  fullName.vb: ErronkaApi.Repositorioak.ErreserbaRepository.GetByDate(Date, Boolean)
+  nameWithType: ErreserbaRepository.GetByDate(DateTime, bool)
+  nameWithType.vb: ErreserbaRepository.GetByDate(Date, Boolean)
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.GetByDate*
+  name: GetByDate
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_GetByDate_
+  commentId: Overload:ErronkaApi.Repositorioak.ErreserbaRepository.GetByDate
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.GetByDate
+  nameWithType: ErreserbaRepository.GetByDate
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.UpdateByMahai(System.Int32,System.DateTime,System.Boolean,ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  name: UpdateByMahai(int, DateTime, bool, ErreserbakUpdateDto)
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_UpdateByMahai_System_Int32_System_DateTime_System_Boolean_ErronkaApi_Kontrollerrak_ErreserbakController_ErreserbakUpdateDto_
+  commentId: M:ErronkaApi.Repositorioak.ErreserbaRepository.UpdateByMahai(System.Int32,System.DateTime,System.Boolean,ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  name.vb: UpdateByMahai(Integer, Date, Boolean, ErreserbakUpdateDto)
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.UpdateByMahai(int, System.DateTime, bool, ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  fullName.vb: ErronkaApi.Repositorioak.ErreserbaRepository.UpdateByMahai(Integer, Date, Boolean, ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto)
+  nameWithType: ErreserbaRepository.UpdateByMahai(int, DateTime, bool, ErreserbakController.ErreserbakUpdateDto)
+  nameWithType.vb: ErreserbaRepository.UpdateByMahai(Integer, Date, Boolean, ErreserbakController.ErreserbakUpdateDto)
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository.UpdateByMahai*
+  name: UpdateByMahai
+  href: api/ErronkaApi.Repositorioak.ErreserbaRepository.html#ErronkaApi_Repositorioak_ErreserbaRepository_UpdateByMahai_
+  commentId: Overload:ErronkaApi.Repositorioak.ErreserbaRepository.UpdateByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository.UpdateByMahai
+  nameWithType: ErreserbaRepository.UpdateByMahai
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  name: EskaeraMahaiakRepository
+  href: api/ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html
+  commentId: T:ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  nameWithType: EskaeraMahaiakRepository
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor(NHibernate.ISessionFactory)
+  name: EskaeraMahaiakRepository(ISessionFactory)
+  href: api/ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html#ErronkaApi_Repositorioak_EskaeraMahaiakRepository__ctor_NHibernate_ISessionFactory_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor(NHibernate.ISessionFactory)
+  name.vb: New(ISessionFactory)
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.EskaeraMahaiakRepository(NHibernate.ISessionFactory)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.New(NHibernate.ISessionFactory)
+  nameWithType: EskaeraMahaiakRepository.EskaeraMahaiakRepository(ISessionFactory)
+  nameWithType.vb: EskaeraMahaiakRepository.New(ISessionFactory)
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor*
+  name: EskaeraMahaiakRepository
+  href: api/ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html#ErronkaApi_Repositorioak_EskaeraMahaiakRepository__ctor_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.EskaeraMahaiakRepository
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.New
+  nameWithType: EskaeraMahaiakRepository.EskaeraMahaiakRepository
+  nameWithType.vb: EskaeraMahaiakRepository.New
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  name: Delete(EskaeraMahaiak)
+  href: api/ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html#ErronkaApi_Repositorioak_EskaeraMahaiakRepository_Delete_ErronkaApi_Modeloak_EskaeraMahaiak_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete(ErronkaApi.Modeloak.EskaeraMahaiak)
+  nameWithType: EskaeraMahaiakRepository.Delete(EskaeraMahaiak)
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html#ErronkaApi_Repositorioak_EskaeraMahaiakRepository_Delete_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.Delete
+  nameWithType: EskaeraMahaiakRepository.Delete
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository
+  name: EskaeraProduktuakRepository
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html
+  commentId: T:ErronkaApi.Repositorioak.EskaeraProduktuakRepository
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository
+  nameWithType: EskaeraProduktuakRepository
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.#ctor(NHibernate.ISessionFactory)
+  name: EskaeraProduktuakRepository(ISessionFactory)
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository__ctor_NHibernate_ISessionFactory_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.#ctor(NHibernate.ISessionFactory)
+  name.vb: New(ISessionFactory)
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.EskaeraProduktuakRepository(NHibernate.ISessionFactory)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.New(NHibernate.ISessionFactory)
+  nameWithType: EskaeraProduktuakRepository.EskaeraProduktuakRepository(ISessionFactory)
+  nameWithType.vb: EskaeraProduktuakRepository.New(ISessionFactory)
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.#ctor*
+  name: EskaeraProduktuakRepository
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository__ctor_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.EskaeraProduktuakRepository
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.New
+  nameWithType: EskaeraProduktuakRepository.EskaeraProduktuakRepository
+  nameWithType.vb: EskaeraProduktuakRepository.New
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Delete(ErronkaApi.Modeloak.EskaeraProduktuak)
+  name: Delete(EskaeraProduktuak)
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository_Delete_ErronkaApi_Modeloak_EskaeraProduktuak_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Delete(ErronkaApi.Modeloak.EskaeraProduktuak)
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Delete(ErronkaApi.Modeloak.EskaeraProduktuak)
+  nameWithType: EskaeraProduktuakRepository.Delete(EskaeraProduktuak)
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository_Delete_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Delete
+  nameWithType: EskaeraProduktuakRepository.Delete
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.GetByEskaeraId(System.Int32)
+  name: GetByEskaeraId(int)
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository_GetByEskaeraId_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.GetByEskaeraId(System.Int32)
+  name.vb: GetByEskaeraId(Integer)
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.GetByEskaeraId(int)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.GetByEskaeraId(Integer)
+  nameWithType: EskaeraProduktuakRepository.GetByEskaeraId(int)
+  nameWithType.vb: EskaeraProduktuakRepository.GetByEskaeraId(Integer)
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.GetByEskaeraId*
+  name: GetByEskaeraId
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository_GetByEskaeraId_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.GetByEskaeraId
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.GetByEskaeraId
+  nameWithType: EskaeraProduktuakRepository.GetByEskaeraId
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Update(ErronkaApi.Modeloak.EskaeraProduktuak)
+  name: Update(EskaeraProduktuak)
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository_Update_ErronkaApi_Modeloak_EskaeraProduktuak_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Update(ErronkaApi.Modeloak.EskaeraProduktuak)
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Update(ErronkaApi.Modeloak.EskaeraProduktuak)
+  nameWithType: EskaeraProduktuakRepository.Update(EskaeraProduktuak)
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html#ErronkaApi_Repositorioak_EskaeraProduktuakRepository_Update_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.Update
+  nameWithType: EskaeraProduktuakRepository.Update
 - uid: ErronkaApi.Repositorioak.EskaeraRepository
   name: EskaeraRepository
   href: api/ErronkaApi.Repositorioak.EskaeraRepository.html
@@ -2034,22 +4144,19 @@ references:
   fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.New
   nameWithType: EskaeraRepository.EskaeraRepository
   nameWithType.vb: EskaeraRepository.New
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(System.Int32,System.Int32,System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO})
-  name: EguneratuEskaera(int, int, List<EskaeraProduktuaEditatuDTO>)
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EguneratuEskaera_System_Int32_System_Int32_System_Collections_Generic_List_ErronkaApi_DTOak_EskaeraProduktuaEditatuDTO__
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(System.Int32,System.Int32,System.Collections.Generic.List{ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO})
-  name.vb: EguneratuEskaera(Integer, Integer, List(Of EskaeraProduktuaEditatuDTO))
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(int, int, System.Collections.Generic.List<ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO>)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera(Integer, Integer, System.Collections.Generic.List(Of ErronkaApi.DTOak.EskaeraProduktuaEditatuDTO))
-  nameWithType: EskaeraRepository.EguneratuEskaera(int, int, List<EskaeraProduktuaEditatuDTO>)
-  nameWithType.vb: EskaeraRepository.EguneratuEskaera(Integer, Integer, List(Of EskaeraProduktuaEditatuDTO))
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera*
-  name: EguneratuEskaera
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EguneratuEskaera_
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  name: Delete(Eskaera)
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Delete_ErronkaApi_Modeloak_Eskaera_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)
+  nameWithType: EskaeraRepository.Delete(Eskaera)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Delete_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Delete
   isSpec: "True"
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuEskaera
-  nameWithType: EskaeraRepository.EguneratuEskaera
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Delete
+  nameWithType: EskaeraRepository.Delete
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)
   name: EguneratuSukaldeaEgoera(int, string)
   href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EguneratuSukaldeaEgoera_System_Int32_System_String_
@@ -2066,22 +4173,22 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera
   nameWithType: EskaeraRepository.EguneratuSukaldeaEgoera
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(System.Int32)
-  name: EzabatuEskaera(int)
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EzabatuEskaera_System_Int32_
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(System.Int32)
-  name.vb: EzabatuEskaera(Integer)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(int)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera(Integer)
-  nameWithType: EskaeraRepository.EzabatuEskaera(int)
-  nameWithType.vb: EskaeraRepository.EzabatuEskaera(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera*
-  name: EzabatuEskaera
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_EzabatuEskaera_
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Get(System.Int32)
+  name: Get(int)
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Get_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Get(System.Int32)
+  name.vb: Get(Integer)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Get(int)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.Get(Integer)
+  nameWithType: EskaeraRepository.Get(int)
+  nameWithType.vb: EskaeraRepository.Get(Integer)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Get*
+  name: Get
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Get_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Get
   isSpec: "True"
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.EzabatuEskaera
-  nameWithType: EskaeraRepository.EzabatuEskaera
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Get
+  nameWithType: EskaeraRepository.Get
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak(System.Int32)
   name: LortuEskaeraProduktuak(int)
   href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak_System_Int32_
@@ -2098,6 +4205,22 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak
   nameWithType: EskaeraRepository.LortuEskaeraProduktuak
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  name: LortuEskaeraProduktuak2(int)
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak2_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(System.Int32)
+  name.vb: LortuEskaeraProduktuak2(Integer)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(int)
+  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(Integer)
+  nameWithType: EskaeraRepository.LortuEskaeraProduktuak2(int)
+  nameWithType.vb: EskaeraRepository.LortuEskaeraProduktuak2(Integer)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2*
+  name: LortuEskaeraProduktuak2
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaeraProduktuak2_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2
+  nameWithType: EskaeraRepository.LortuEskaeraProduktuak2
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
   name: LortuEskaerak()
   href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak
@@ -2111,6 +4234,19 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak
   nameWithType: EskaeraRepository.LortuEskaerak
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+  name: LortuEskaerak2()
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak2
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2()
+  nameWithType: EskaeraRepository.LortuEskaerak2()
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2*
+  name: LortuEskaerak2
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerak2_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2
+  nameWithType: EskaeraRepository.LortuEskaerak2
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko
   name: LortuEskaerakOrdaintzeko()
   href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuEskaerakOrdaintzeko
@@ -2124,38 +4260,32 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko
   nameWithType: EskaeraRepository.LortuEskaerakOrdaintzeko
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(System.Int32)
-  name: LortuMahaiKapazitatea(int)
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuMahaiKapazitatea_System_Int32_
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(System.Int32)
-  name.vb: LortuMahaiKapazitatea(Integer)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(int)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea(Integer)
-  nameWithType: EskaeraRepository.LortuMahaiKapazitatea(int)
-  nameWithType.vb: EskaeraRepository.LortuMahaiKapazitatea(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea*
-  name: LortuMahaiKapazitatea
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuMahaiKapazitatea_
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+  name: LortuSukaldekoEskaerak()
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuSukaldekoEskaerak
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak()
+  nameWithType: EskaeraRepository.LortuSukaldekoEskaerak()
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak*
+  name: LortuSukaldekoEskaerak
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_LortuSukaldekoEskaerak_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
   isSpec: "True"
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuMahaiKapazitatea
-  nameWithType: EskaeraRepository.LortuMahaiKapazitatea
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(System.Int32)
-  name: OrdaintzeraBidali(int)
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_OrdaintzeraBidali_System_Int32_
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(System.Int32)
-  name.vb: OrdaintzeraBidali(Integer)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(int)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali(Integer)
-  nameWithType: EskaeraRepository.OrdaintzeraBidali(int)
-  nameWithType.vb: EskaeraRepository.OrdaintzeraBidali(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali*
-  name: OrdaintzeraBidali
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_OrdaintzeraBidali_
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak
+  nameWithType: EskaeraRepository.LortuSukaldekoEskaerak
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  name: Save(Eskaera)
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Save_ErronkaApi_Modeloak_Eskaera_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)
+  nameWithType: EskaeraRepository.Save(Eskaera)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Save*
+  name: Save
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Save_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Save
   isSpec: "True"
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.OrdaintzeraBidali
-  nameWithType: EskaeraRepository.OrdaintzeraBidali
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Save
+  nameWithType: EskaeraRepository.Save
 - uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
   name: SortuEskaera(EskaeraSortuDTO)
   href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
@@ -2169,22 +4299,19 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera
   nameWithType: EskaeraRepository.SortuEskaera
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(System.Int32)
-  name: SortuFaktura(int)
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_SortuFaktura_System_Int32_
-  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(System.Int32)
-  name.vb: SortuFaktura(Integer)
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(int)
-  fullName.vb: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura(Integer)
-  nameWithType: EskaeraRepository.SortuFaktura(int)
-  nameWithType.vb: EskaeraRepository.SortuFaktura(Integer)
-- uid: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura*
-  name: SortuFaktura
-  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_SortuFaktura_
-  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  name: Update(Eskaera)
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Update_ErronkaApi_Modeloak_Eskaera_
+  commentId: M:ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)
+  nameWithType: EskaeraRepository.Update(Eskaera)
+- uid: ErronkaApi.Repositorioak.EskaeraRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Repositorioak.EskaeraRepository.html#ErronkaApi_Repositorioak_EskaeraRepository_Update_
+  commentId: Overload:ErronkaApi.Repositorioak.EskaeraRepository.Update
   isSpec: "True"
-  fullName: ErronkaApi.Repositorioak.EskaeraRepository.SortuFaktura
-  nameWithType: EskaeraRepository.SortuFaktura
+  fullName: ErronkaApi.Repositorioak.EskaeraRepository.Update
+  nameWithType: EskaeraRepository.Update
 - uid: ErronkaApi.Repositorioak.KategoriaRepository
   name: KategoriaRepository
   href: api/ErronkaApi.Repositorioak.KategoriaRepository.html
@@ -2223,6 +4350,19 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.KategoriaRepository.GetAll
   nameWithType: KategoriaRepository.GetAll
+- uid: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+  name: GetAllDTO()
+  href: api/ErronkaApi.Repositorioak.KategoriaRepository.html#ErronkaApi_Repositorioak_KategoriaRepository_GetAllDTO
+  commentId: M:ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+  fullName: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO()
+  nameWithType: KategoriaRepository.GetAllDTO()
+- uid: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO*
+  name: GetAllDTO
+  href: api/ErronkaApi.Repositorioak.KategoriaRepository.html#ErronkaApi_Repositorioak_KategoriaRepository_GetAllDTO_
+  commentId: Overload:ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO
+  nameWithType: KategoriaRepository.GetAllDTO
 - uid: ErronkaApi.Repositorioak.MahaiaRepository
   name: MahaiaRepository
   href: api/ErronkaApi.Repositorioak.MahaiaRepository.html
@@ -2248,25 +4388,172 @@ references:
   fullName.vb: ErronkaApi.Repositorioak.MahaiaRepository.New
   nameWithType: MahaiaRepository.MahaiaRepository
   nameWithType.vb: MahaiaRepository.New
-- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
-  name: LortuMahaiLibreAsync()
-  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibreAsync
-  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
-  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync()
-  nameWithType: MahaiaRepository.LortuMahaiLibreAsync()
-- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync*
-  name: LortuMahaiLibreAsync
-  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibreAsync_
-  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  name: Delete(Mahaia)
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Delete_ErronkaApi_Modeloak_Mahaia_
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)
+  nameWithType: MahaiaRepository.Delete(Mahaia)
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Delete_
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Delete
   isSpec: "True"
-  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync
-  nameWithType: MahaiaRepository.LortuMahaiLibreAsync
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Delete
+  nameWithType: MahaiaRepository.Delete
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Get(System.Int32)
+  name: Get(int)
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Get_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Get(System.Int32)
+  name.vb: Get(Integer)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Get(int)
+  fullName.vb: ErronkaApi.Repositorioak.MahaiaRepository.Get(Integer)
+  nameWithType: MahaiaRepository.Get(int)
+  nameWithType.vb: MahaiaRepository.Get(Integer)
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Get*
+  name: Get
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Get_
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Get
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Get
+  nameWithType: MahaiaRepository.Get
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Login(System.String,System.String)
+  name: Login(string, string)
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Login_System_String_System_String_
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Login(System.String,System.String)
+  name.vb: Login(String, String)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Login(string, string)
+  fullName.vb: ErronkaApi.Repositorioak.MahaiaRepository.Login(String, String)
+  nameWithType: MahaiaRepository.Login(string, string)
+  nameWithType.vb: MahaiaRepository.Login(String, String)
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Login*
+  name: Login
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Login_
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Login
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Login
+  nameWithType: MahaiaRepository.Login
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  name: LortuMahaiLibre()
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibre
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre()
+  nameWithType: MahaiaRepository.LortuMahaiLibre()
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre*
+  name: LortuMahaiLibre
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibre_
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre
+  nameWithType: MahaiaRepository.LortuMahaiLibre
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  name: Update(Mahaia)
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Update_ErronkaApi_Modeloak_Mahaia_
+  commentId: M:ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)
+  nameWithType: MahaiaRepository.Update(Mahaia)
+- uid: ErronkaApi.Repositorioak.MahaiaRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Repositorioak.MahaiaRepository.html#ErronkaApi_Repositorioak_MahaiaRepository_Update_
+  commentId: Overload:ErronkaApi.Repositorioak.MahaiaRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.MahaiaRepository.Update
+  nameWithType: MahaiaRepository.Update
+- uid: ErronkaApi.Repositorioak.PlateraRepository
+  name: PlateraRepository
+  href: api/ErronkaApi.Repositorioak.PlateraRepository.html
+  commentId: T:ErronkaApi.Repositorioak.PlateraRepository
+  fullName: ErronkaApi.Repositorioak.PlateraRepository
+  nameWithType: PlateraRepository
+- uid: ErronkaApi.Repositorioak.PlateraRepository.#ctor(NHibernate.ISessionFactory)
+  name: PlateraRepository(ISessionFactory)
+  href: api/ErronkaApi.Repositorioak.PlateraRepository.html#ErronkaApi_Repositorioak_PlateraRepository__ctor_NHibernate_ISessionFactory_
+  commentId: M:ErronkaApi.Repositorioak.PlateraRepository.#ctor(NHibernate.ISessionFactory)
+  name.vb: New(ISessionFactory)
+  fullName: ErronkaApi.Repositorioak.PlateraRepository.PlateraRepository(NHibernate.ISessionFactory)
+  fullName.vb: ErronkaApi.Repositorioak.PlateraRepository.New(NHibernate.ISessionFactory)
+  nameWithType: PlateraRepository.PlateraRepository(ISessionFactory)
+  nameWithType.vb: PlateraRepository.New(ISessionFactory)
+- uid: ErronkaApi.Repositorioak.PlateraRepository.#ctor*
+  name: PlateraRepository
+  href: api/ErronkaApi.Repositorioak.PlateraRepository.html#ErronkaApi_Repositorioak_PlateraRepository__ctor_
+  commentId: Overload:ErronkaApi.Repositorioak.PlateraRepository.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Repositorioak.PlateraRepository.PlateraRepository
+  fullName.vb: ErronkaApi.Repositorioak.PlateraRepository.New
+  nameWithType: PlateraRepository.PlateraRepository
+  nameWithType.vb: PlateraRepository.New
+- uid: ErronkaApi.Repositorioak.PlateraRepository.GetAll(System.String)
+  name: GetAll(string)
+  href: api/ErronkaApi.Repositorioak.PlateraRepository.html#ErronkaApi_Repositorioak_PlateraRepository_GetAll_System_String_
+  commentId: M:ErronkaApi.Repositorioak.PlateraRepository.GetAll(System.String)
+  name.vb: GetAll(String)
+  fullName: ErronkaApi.Repositorioak.PlateraRepository.GetAll(string)
+  fullName.vb: ErronkaApi.Repositorioak.PlateraRepository.GetAll(String)
+  nameWithType: PlateraRepository.GetAll(string)
+  nameWithType.vb: PlateraRepository.GetAll(String)
+- uid: ErronkaApi.Repositorioak.PlateraRepository.GetAll*
+  name: GetAll
+  href: api/ErronkaApi.Repositorioak.PlateraRepository.html#ErronkaApi_Repositorioak_PlateraRepository_GetAll_
+  commentId: Overload:ErronkaApi.Repositorioak.PlateraRepository.GetAll
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.PlateraRepository.GetAll
+  nameWithType: PlateraRepository.GetAll
 - uid: ErronkaApi.Repositorioak.ProduktuaRepository
   name: ProduktuaRepository
   href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html
   commentId: T:ErronkaApi.Repositorioak.ProduktuaRepository
   fullName: ErronkaApi.Repositorioak.ProduktuaRepository
   nameWithType: ProduktuaRepository
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.#ctor(NHibernate.ISessionFactory)
+  name: ProduktuaRepository(ISessionFactory)
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository__ctor_NHibernate_ISessionFactory_
+  commentId: M:ErronkaApi.Repositorioak.ProduktuaRepository.#ctor(NHibernate.ISessionFactory)
+  name.vb: New(ISessionFactory)
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.ProduktuaRepository(NHibernate.ISessionFactory)
+  fullName.vb: ErronkaApi.Repositorioak.ProduktuaRepository.New(NHibernate.ISessionFactory)
+  nameWithType: ProduktuaRepository.ProduktuaRepository(ISessionFactory)
+  nameWithType.vb: ProduktuaRepository.New(ISessionFactory)
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.#ctor*
+  name: ProduktuaRepository
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository__ctor_
+  commentId: Overload:ErronkaApi.Repositorioak.ProduktuaRepository.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.ProduktuaRepository
+  fullName.vb: ErronkaApi.Repositorioak.ProduktuaRepository.New
+  nameWithType: ProduktuaRepository.ProduktuaRepository
+  nameWithType.vb: ProduktuaRepository.New
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  name: Delete(Produktua)
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_Delete_ErronkaApi_Modeloak_Produktua_
+  commentId: M:ErronkaApi.Repositorioak.ProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  nameWithType: ProduktuaRepository.Delete(Produktua)
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.Delete*
+  name: Delete
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_Delete_
+  commentId: Overload:ErronkaApi.Repositorioak.ProduktuaRepository.Delete
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.Delete
+  nameWithType: ProduktuaRepository.Delete
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.Get(System.Int32)
+  name: Get(int)
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_Get_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.ProduktuaRepository.Get(System.Int32)
+  name.vb: Get(Integer)
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.Get(int)
+  fullName.vb: ErronkaApi.Repositorioak.ProduktuaRepository.Get(Integer)
+  nameWithType: ProduktuaRepository.Get(int)
+  nameWithType.vb: ProduktuaRepository.Get(Integer)
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.Get*
+  name: Get
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_Get_
+  commentId: Overload:ErronkaApi.Repositorioak.ProduktuaRepository.Get
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.Get
+  nameWithType: ProduktuaRepository.Get
 - uid: ErronkaApi.Repositorioak.ProduktuaRepository.GetAll
   name: GetAll()
   href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_GetAll
@@ -2280,6 +4567,22 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.ProduktuaRepository.GetAll
   nameWithType: ProduktuaRepository.GetAll
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.GetAllByKategoriaId(System.Int32)
+  name: GetAllByKategoriaId(int)
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_GetAllByKategoriaId_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.ProduktuaRepository.GetAllByKategoriaId(System.Int32)
+  name.vb: GetAllByKategoriaId(Integer)
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.GetAllByKategoriaId(int)
+  fullName.vb: ErronkaApi.Repositorioak.ProduktuaRepository.GetAllByKategoriaId(Integer)
+  nameWithType: ProduktuaRepository.GetAllByKategoriaId(int)
+  nameWithType.vb: ProduktuaRepository.GetAllByKategoriaId(Integer)
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.GetAllByKategoriaId*
+  name: GetAllByKategoriaId
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_GetAllByKategoriaId_
+  commentId: Overload:ErronkaApi.Repositorioak.ProduktuaRepository.GetAllByKategoriaId
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.GetAllByKategoriaId
+  nameWithType: ProduktuaRepository.GetAllByKategoriaId
 - uid: ErronkaApi.Repositorioak.ProduktuaRepository.GetByKategoria(System.Int32)
   name: GetByKategoria(int)
   href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_GetByKategoria_System_Int32_
@@ -2296,3 +4599,83 @@ references:
   isSpec: "True"
   fullName: ErronkaApi.Repositorioak.ProduktuaRepository.GetByKategoria
   nameWithType: ProduktuaRepository.GetByKategoria
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  name: Update(Produktua)
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_Update_ErronkaApi_Modeloak_Produktua_
+  commentId: M:ErronkaApi.Repositorioak.ProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  nameWithType: ProduktuaRepository.Update(Produktua)
+- uid: ErronkaApi.Repositorioak.ProduktuaRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Repositorioak.ProduktuaRepository.html#ErronkaApi_Repositorioak_ProduktuaRepository_Update_
+  commentId: Overload:ErronkaApi.Repositorioak.ProduktuaRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ProduktuaRepository.Update
+  nameWithType: ProduktuaRepository.Update
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  name: ZerbitzuaRepository
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html
+  commentId: T:ErronkaApi.Repositorioak.ZerbitzuaRepository
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  nameWithType: ZerbitzuaRepository
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name: Create(ZerbitzuaSortuDto)
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Create_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create(ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType: ZerbitzuaRepository.Create(ZerbitzuaController.ZerbitzuaSortuDto)
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create*
+  name: Create
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Create_
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.Create
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Create
+  nameWithType: ZerbitzuaRepository.Create
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(System.Int32)
+  name: GetByMahai(int)
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_GetByMahai_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(System.Int32)
+  name.vb: GetByMahai(Integer)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(int)
+  fullName.vb: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai(Integer)
+  nameWithType: ZerbitzuaRepository.GetByMahai(int)
+  nameWithType.vb: ZerbitzuaRepository.GetByMahai(Integer)
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai*
+  name: GetByMahai
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_GetByMahai_
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.GetByMahai
+  nameWithType: ZerbitzuaRepository.GetByMahai
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(System.Int32)
+  name: Ordaindu(int)
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Ordaindu_System_Int32_
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(System.Int32)
+  name.vb: Ordaindu(Integer)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(int)
+  fullName.vb: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu(Integer)
+  nameWithType: ZerbitzuaRepository.Ordaindu(int)
+  nameWithType.vb: ZerbitzuaRepository.Ordaindu(Integer)
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu*
+  name: Ordaindu
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Ordaindu_
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Ordaindu
+  nameWithType: ZerbitzuaRepository.Ordaindu
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name: Update(int, ZerbitzuaSortuDto)
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Update_System_Int32_ErronkaApi_Kontrollerrak_ZerbitzuaController_ZerbitzuaSortuDto_
+  commentId: M:ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(System.Int32,ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  name.vb: Update(Integer, ZerbitzuaSortuDto)
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(int, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  fullName.vb: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update(Integer, ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType: ZerbitzuaRepository.Update(int, ZerbitzuaController.ZerbitzuaSortuDto)
+  nameWithType.vb: ZerbitzuaRepository.Update(Integer, ZerbitzuaController.ZerbitzuaSortuDto)
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update*
+  name: Update
+  href: api/ErronkaApi.Repositorioak.ZerbitzuaRepository.html#ErronkaApi_Repositorioak_ZerbitzuaRepository_Update_
+  commentId: Overload:ErronkaApi.Repositorioak.ZerbitzuaRepository.Update
+  isSpec: "True"
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository.Update
+  nameWithType: ZerbitzuaRepository.Update

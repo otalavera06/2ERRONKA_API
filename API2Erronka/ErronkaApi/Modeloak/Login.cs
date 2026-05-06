@@ -31,7 +31,6 @@ namespace ErronkaApi.Modeloak
             var erabiltzailea = _repo.Login(loginDto.erabiltzailea, loginDto.pasahitza);
             if (erabiltzailea == null)
             {
-                // Gorde login faltsua logean (erabiltzaile 0)
                 try
                 {
                     string logKarpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "TPV_Logs");
@@ -43,7 +42,6 @@ namespace ErronkaApi.Modeloak
                 }
                 catch
                 {
-                    // Login erroreak baztertu autentifikazioa ez oztopatzeko.
                 }
 
                 return Unauthorized(new ErantzunaDTO<object>
@@ -64,7 +62,6 @@ namespace ErronkaApi.Modeloak
                 rola = new Rola { id = erabiltzailea.rola.id }
             };
 
-            // Gorde login arrakastatsua logean
             try
             {
                 if (!Directory.Exists(logKarpeta)) Directory.CreateDirectory(logKarpeta);
@@ -75,7 +72,6 @@ namespace ErronkaApi.Modeloak
             }
             catch
             {
-                // Login erroreak baztertu
             }
 
             return Ok(new ErantzunaDTO<Erabiltzailea>

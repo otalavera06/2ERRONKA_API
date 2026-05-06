@@ -5,7 +5,8 @@ items:
   id: ProduktuakKontrollera
   parent: ErronkaApi.Kontrollerrak
   children:
-  - ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Repositorioak.ProduktuaRepository)
+  - ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Interfaces.IProduktuaRepository)
+  - ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
   - ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria(System.Int32)
   langs:
   - csharp
@@ -16,12 +17,12 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: ProduktuakKontrollera
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
@@ -34,13 +35,13 @@ items:
     content: >-
       [ApiController]
 
-      [Route("api/Produktuak")]
+      [Route("api/produktuak")]
 
       public class ProduktuakKontrollera : ControllerBase
     content.vb: >-
       <ApiController>
 
-      <Route("api/Produktuak")>
+      <Route("api/produktuak")>
 
       Public Class ProduktuakKontrollera Inherits ControllerBase
   inheritance:
@@ -235,39 +236,77 @@ items:
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: api/Produktuak
-- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Repositorioak.ProduktuaRepository)
-  commentId: M:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Repositorioak.ProduktuaRepository)
-  id: '#ctor(ErronkaApi.Repositorioak.ProduktuaRepository)'
+      value: api/produktuak
+- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Interfaces.IProduktuaRepository)
+  commentId: M:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor(ErronkaApi.Interfaces.IProduktuaRepository)
+  id: '#ctor(ErronkaApi.Interfaces.IProduktuaRepository)'
   parent: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
   langs:
   - csharp
   - vb
-  name: ProduktuakKontrollera(ProduktuaRepository)
-  nameWithType: ProduktuakKontrollera.ProduktuakKontrollera(ProduktuaRepository)
-  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.ProduktuakKontrollera(ErronkaApi.Repositorioak.ProduktuaRepository)
+  name: ProduktuakKontrollera(IProduktuaRepository)
+  nameWithType: ProduktuakKontrollera.ProduktuakKontrollera(IProduktuaRepository)
+  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.ProduktuakKontrollera(ErronkaApi.Interfaces.IProduktuaRepository)
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
   syntax:
-    content: public ProduktuakKontrollera(ProduktuaRepository repo)
+    content: public ProduktuakKontrollera(IProduktuaRepository repo)
     parameters:
     - id: repo
-      type: ErronkaApi.Repositorioak.ProduktuaRepository
-    content.vb: Public Sub New(repo As ProduktuaRepository)
+      type: ErronkaApi.Interfaces.IProduktuaRepository
+    content.vb: Public Sub New(repo As IProduktuaRepository)
   overload: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor*
-  nameWithType.vb: ProduktuakKontrollera.New(ProduktuaRepository)
-  fullName.vb: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.New(ErronkaApi.Repositorioak.ProduktuaRepository)
-  name.vb: New(ProduktuaRepository)
+  nameWithType.vb: ProduktuakKontrollera.New(IProduktuaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.New(ErronkaApi.Interfaces.IProduktuaRepository)
+  name.vb: New(IProduktuaRepository)
+- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+  commentId: M:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+  id: GetAll
+  parent: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: ProduktuakKontrollera.GetAll()
+  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAll
+    path: ../API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
+    startLine: 22
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Kontrollerrak
+  syntax:
+    content: >-
+      [HttpGet]
+
+      public IActionResult GetAll()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      Public Function GetAll() As IActionResult
+  overload: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
 - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria(System.Int32)
   commentId: M:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria(System.Int32)
   id: GetByKategoria(System.Int32)
@@ -281,12 +320,12 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: GetByKategoria
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/ProduktuKontrollerra.cs
-    startLine: 26
+    startLine: 45
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
@@ -9308,39 +9347,56 @@ references:
   - name: )
 - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor*
   commentId: Overload:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.#ctor
-  href: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_ErronkaApi_Repositorioak_ProduktuaRepository_
+  href: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera__ctor_ErronkaApi_Interfaces_IProduktuaRepository_
   name: ProduktuakKontrollera
   nameWithType: ProduktuakKontrollera.ProduktuakKontrollera
   fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.ProduktuakKontrollera
   nameWithType.vb: ProduktuakKontrollera.New
   fullName.vb: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.New
   name.vb: New
-- uid: ErronkaApi.Repositorioak.ProduktuaRepository
-  commentId: T:ErronkaApi.Repositorioak.ProduktuaRepository
-  parent: ErronkaApi.Repositorioak
-  name: ProduktuaRepository
-  nameWithType: ProduktuaRepository
-  fullName: ErronkaApi.Repositorioak.ProduktuaRepository
-- uid: ErronkaApi.Repositorioak
-  commentId: N:ErronkaApi.Repositorioak
+- uid: ErronkaApi.Interfaces.IProduktuaRepository
+  commentId: T:ErronkaApi.Interfaces.IProduktuaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html
+  name: IProduktuaRepository
+  nameWithType: IProduktuaRepository
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
   href: ErronkaApi.html
-  name: ErronkaApi.Repositorioak
-  nameWithType: ErronkaApi.Repositorioak
-  fullName: ErronkaApi.Repositorioak
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
   spec.csharp:
   - uid: ErronkaApi
     name: ErronkaApi
     href: ErronkaApi.html
   - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
   spec.vb:
   - uid: ErronkaApi
     name: ErronkaApi
     href: ErronkaApi.html
   - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+- uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll*
+  commentId: Overload:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+  href: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetAll
+  name: GetAll
+  nameWithType: ProduktuakKontrollera.GetAll
+  fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetAll
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
 - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria*
   commentId: Overload:ErronkaApi.Kontrollerrak.ProduktuakKontrollera.GetByKategoria
   href: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html#ErronkaApi_Kontrollerrak_ProduktuakKontrollera_GetByKategoria_System_Int32_
@@ -9358,11 +9414,3 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: Microsoft.AspNetCore.Mvc.IActionResult
-  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
-  parent: Microsoft.AspNetCore.Mvc
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult
-  name: IActionResult
-  nameWithType: IActionResult
-  fullName: Microsoft.AspNetCore.Mvc.IActionResult

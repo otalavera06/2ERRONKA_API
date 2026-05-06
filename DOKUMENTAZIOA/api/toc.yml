@@ -34,6 +34,9 @@ items:
   - uid: ErronkaApi.DTOak.KategoriaDTO
     name: KategoriaDTO
     type: Class
+  - uid: ErronkaApi.DTOak.LangileaDTO
+    name: LangileaDTO
+    type: Class
   - uid: ErronkaApi.DTOak.LogDTO
     name: LogDTO
     type: Class
@@ -43,29 +46,136 @@ items:
   - uid: ErronkaApi.DTOak.MahaiaDTO
     name: MahaiaDTO
     type: Class
+  - uid: ErronkaApi.DTOak.PlateraDTO
+    name: PlateraDTO
+    type: Class
+  - uid: ErronkaApi.DTOak.PlateraOsagaiaDTO
+    name: PlateraOsagaiaDTO
+    type: Class
   - uid: ErronkaApi.DTOak.ProduktuaDTO
     name: ProduktuaDTO
     type: Class
+  - uid: ErronkaApi.DTOak.ZerbitzuaEskaeraDTO
+    name: ZerbitzuaEskaeraDTO
+    type: Class
+  - uid: ErronkaApi.DTOak.ZerbitzuaMahaiDTO
+    name: ZerbitzuaMahaiDTO
+    type: Class
+- uid: ErronkaApi.Interfaces
+  name: ErronkaApi.Interfaces
+  type: Namespace
+  items:
+  - uid: ErronkaApi.Interfaces.IErabiltzaileaRepository
+    name: IErabiltzaileaRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IErreserbaRepository
+    name: IErreserbaRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+    name: IEskaeraMahaiakRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+    name: IEskaeraProduktuakRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IEskaeraRepository
+    name: IEskaeraRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IKategoriaRepository
+    name: IKategoriaRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IMahaiaRepository
+    name: IMahaiaRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IPlateraRepository
+    name: IPlateraRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IProduktuaRepository
+    name: IProduktuaRepository
+    type: Interface
+  - uid: ErronkaApi.Interfaces.IZerbitzuaRepository
+    name: IZerbitzuaRepository
+    type: Interface
 - uid: ErronkaApi.Kontrollerrak
   name: ErronkaApi.Kontrollerrak
   type: Namespace
   items:
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController
+    name: ErreserbakController
+    type: Class
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+    name: ErreserbakController.ErreserbakSortuDto
+    type: Class
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+    name: ErreserbakController.ErreserbakUpdateDto
+    type: Class
   - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
     name: EskaeraKontrollerra
+    type: Class
+  - uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra
+    name: FakturaKontrollerra
     type: Class
   - uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
     name: KategoriaKontrollerra
     type: Class
-  - uid: ErronkaApi.Kontrollerrak.LogKontrollerra
-    name: LogKontrollerra
+  - uid: ErronkaApi.Kontrollerrak.LangileakController
+    name: LangileakController
     type: Class
-  - uid: ErronkaApi.Kontrollerrak.LoginKontrollera
-    name: LoginKontrollera
+  - uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+    name: LangileakController.LoginRequest
     type: Class
   - uid: ErronkaApi.Kontrollerrak.MahaiakController
     name: MahaiakController
     type: Class
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+    name: MahaiakController.MahaiakLoginRequest
+    type: Class
+  - uid: ErronkaApi.Kontrollerrak.PlaterakController
+    name: PlaterakController
+    type: Class
   - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
     name: ProduktuakKontrollera
+    type: Class
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+    name: ZerbitzuaController
+    type: Class
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+    name: ZerbitzuaController.EskaeraSortuDto
+    type: Class
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaController.ZerbitzuaSortuDto
+    type: Class
+- uid: ErronkaApi.Repositorioak
+  name: ErronkaApi.Repositorioak
+  type: Namespace
+  items:
+  - uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository
+    name: ErabiltzaileaRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.ErreserbaRepository
+    name: ErreserbaRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+    name: EskaeraMahaiakRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository
+    name: EskaeraProduktuakRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.EskaeraRepository
+    name: EskaeraRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.KategoriaRepository
+    name: KategoriaRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.MahaiaRepository
+    name: MahaiaRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.PlateraRepository
+    name: PlateraRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.ProduktuaRepository
+    name: ProduktuaRepository
+    type: Class
+  - uid: ErronkaApi.Repositorioak.ZerbitzuaRepository
+    name: ZerbitzuaRepository
     type: Class
 memberLayout: SamePage

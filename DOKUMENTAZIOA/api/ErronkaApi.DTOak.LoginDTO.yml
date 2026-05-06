@@ -7,7 +7,6 @@ items:
   children:
   - ErronkaApi.DTOak.LoginDTO.erabiltzailea
   - ErronkaApi.DTOak.LoginDTO.pasahitza
-  - ErronkaApi.DTOak.LoginDTO.txat
   langs:
   - csharp
   - vb
@@ -17,9 +16,9 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/DTOak/LoginDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/LoginDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LoginDTO
     path: ../API2Erronka/ErronkaApi/DTOak/LoginDTO.cs
     startLine: 5
@@ -54,9 +53,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/LoginDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/LoginDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: erabiltzailea
     path: ../API2Erronka/ErronkaApi/DTOak/LoginDTO.cs
     startLine: 10
@@ -85,9 +84,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/LoginDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/LoginDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: pasahitza
     path: ../API2Erronka/ErronkaApi/DTOak/LoginDTO.cs
     startLine: 15
@@ -103,37 +102,6 @@ items:
       type: System.String
     content.vb: Public Property pasahitza As String
   overload: ErronkaApi.DTOak.LoginDTO.pasahitza*
-- uid: ErronkaApi.DTOak.LoginDTO.txat
-  commentId: P:ErronkaApi.DTOak.LoginDTO.txat
-  id: txat
-  parent: ErronkaApi.DTOak.LoginDTO
-  langs:
-  - csharp
-  - vb
-  name: txat
-  nameWithType: LoginDTO.txat
-  fullName: ErronkaApi.DTOak.LoginDTO.txat
-  type: Property
-  source:
-    remote:
-      path: ErronkaApi/DTOak/LoginDTO.cs
-      branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: txat
-    path: ../API2Erronka/ErronkaApi/DTOak/LoginDTO.cs
-    startLine: 20
-  assemblies:
-  - ErronkaApi
-  namespace: ErronkaApi.DTOak
-  summary: Txata gaituta dagoen ala ez adierazten du.
-  example: []
-  syntax:
-    content: public bool txat { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property txat As Boolean
-  overload: ErronkaApi.DTOak.LoginDTO.txat*
 references:
 - uid: ErronkaApi.DTOak
   commentId: N:ErronkaApi.DTOak
@@ -417,20 +385,3 @@ references:
   name: pasahitza
   nameWithType: LoginDTO.pasahitza
   fullName: ErronkaApi.DTOak.LoginDTO.pasahitza
-- uid: ErronkaApi.DTOak.LoginDTO.txat*
-  commentId: Overload:ErronkaApi.DTOak.LoginDTO.txat
-  href: ErronkaApi.DTOak.LoginDTO.html#ErronkaApi_DTOak_LoginDTO_txat
-  name: txat
-  nameWithType: LoginDTO.txat
-  fullName: ErronkaApi.DTOak.LoginDTO.txat
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean

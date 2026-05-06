@@ -1,0 +1,454 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Interfaces.IProduktuaRepository
+  commentId: T:ErronkaApi.Interfaces.IProduktuaRepository
+  id: IProduktuaRepository
+  parent: ErronkaApi.Interfaces
+  children:
+  - ErronkaApi.Interfaces.IProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  - ErronkaApi.Interfaces.IProduktuaRepository.Get(System.Int32)
+  - ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  - ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(System.Int32)
+  - ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(System.Int32)
+  - ErronkaApi.Interfaces.IProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  langs:
+  - csharp
+  - vb
+  name: IProduktuaRepository
+  nameWithType: IProduktuaRepository
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository
+  type: Interface
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: IProduktuaRepository
+    path: ../API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+    startLine: 8
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: public interface IProduktuaRepository
+    content.vb: Public Interface IProduktuaRepository
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Get(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.Get(System.Int32)
+  id: Get(System.Int32)
+  parent: ErronkaApi.Interfaces.IProduktuaRepository
+  langs:
+  - csharp
+  - vb
+  name: Get(int)
+  nameWithType: IProduktuaRepository.Get(int)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Get(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Get
+    path: ../API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+    startLine: 11
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: Produktua? Get(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: ErronkaApi.Modeloak.Produktua
+    content.vb: Function [Get](id As Integer) As Produktua
+  overload: ErronkaApi.Interfaces.IProduktuaRepository.Get*
+  nameWithType.vb: IProduktuaRepository.Get(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IProduktuaRepository.Get(Integer)
+  name.vb: Get(Integer)
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  id: Update(ErronkaApi.Modeloak.Produktua)
+  parent: ErronkaApi.Interfaces.IProduktuaRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(Produktua)
+  nameWithType: IProduktuaRepository.Update(Produktua)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Update(ErronkaApi.Modeloak.Produktua)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Update
+    path: ../API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+    startLine: 12
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: void Update(Produktua produktua)
+    parameters:
+    - id: produktua
+      type: ErronkaApi.Modeloak.Produktua
+    content.vb: Sub Update(produktua As Produktua)
+  overload: ErronkaApi.Interfaces.IProduktuaRepository.Update*
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  id: Delete(ErronkaApi.Modeloak.Produktua)
+  parent: ErronkaApi.Interfaces.IProduktuaRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(Produktua)
+  nameWithType: IProduktuaRepository.Delete(Produktua)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Delete(ErronkaApi.Modeloak.Produktua)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Delete
+    path: ../API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+    startLine: 14
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: void Delete(Produktua produktua)
+    parameters:
+    - id: produktua
+      type: ErronkaApi.Modeloak.Produktua
+    content.vb: Sub Delete(produktua As Produktua)
+  overload: ErronkaApi.Interfaces.IProduktuaRepository.Delete*
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  id: GetAll
+  parent: ErronkaApi.Interfaces.IProduktuaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: IProduktuaRepository.GetAll()
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAll()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAll
+    path: ../API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+    startLine: 16
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: List<Produktua> GetAll()
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.Produktua}
+    content.vb: Function GetAll() As List(Of Produktua)
+  overload: ErronkaApi.Interfaces.IProduktuaRepository.GetAll*
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(System.Int32)
+  id: GetAllByKategoriaId(System.Int32)
+  parent: ErronkaApi.Interfaces.IProduktuaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllByKategoriaId(int)
+  nameWithType: IProduktuaRepository.GetAllByKategoriaId(int)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetAllByKategoriaId
+    path: ../API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+    startLine: 18
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: List<ProduktuaDTO> GetAllByKategoriaId(int katId)
+    parameters:
+    - id: katId
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.DTOak.ProduktuaDTO}
+    content.vb: Function GetAllByKategoriaId(katId As Integer) As List(Of ProduktuaDTO)
+  overload: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId*
+  nameWithType.vb: IProduktuaRepository.GetAllByKategoriaId(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId(Integer)
+  name.vb: GetAllByKategoriaId(Integer)
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(System.Int32)
+  commentId: M:ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(System.Int32)
+  id: GetByKategoria(System.Int32)
+  parent: ErronkaApi.Interfaces.IProduktuaRepository
+  langs:
+  - csharp
+  - vb
+  name: GetByKategoria(int)
+  nameWithType: IProduktuaRepository.GetByKategoria(int)
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: GetByKategoria
+    path: ../API2Erronka/ErronkaApi/Interfaces/IProduktuaRepository.cs
+    startLine: 20
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Interfaces
+  syntax:
+    content: List<Produktua> GetByKategoria(int kategoriaId)
+    parameters:
+    - id: kategoriaId
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{ErronkaApi.Modeloak.Produktua}
+    content.vb: Function GetByKategoria(kategoriaId As Integer) As List(Of Produktua)
+  overload: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria*
+  nameWithType.vb: IProduktuaRepository.GetByKategoria(Integer)
+  fullName.vb: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria(Integer)
+  name.vb: GetByKategoria(Integer)
+references:
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Get*
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.Get
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Get_System_Int32_
+  name: Get
+  nameWithType: IProduktuaRepository.Get
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Get
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ErronkaApi.Modeloak.Produktua
+  commentId: T:ErronkaApi.Modeloak.Produktua
+  parent: ErronkaApi.Modeloak
+  name: Produktua
+  nameWithType: Produktua
+  fullName: ErronkaApi.Modeloak.Produktua
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ErronkaApi.Modeloak
+  commentId: N:ErronkaApi.Modeloak
+  href: ErronkaApi.html
+  name: ErronkaApi.Modeloak
+  nameWithType: ErronkaApi.Modeloak
+  fullName: ErronkaApi.Modeloak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Modeloak
+    name: Modeloak
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Update*
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.Update
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Update_ErronkaApi_Modeloak_Produktua_
+  name: Update
+  nameWithType: IProduktuaRepository.Update
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Update
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.Delete*
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.Delete
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_Delete_ErronkaApi_Modeloak_Produktua_
+  name: Delete
+  nameWithType: IProduktuaRepository.Delete
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.Delete
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAll*
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetAll
+  name: GetAll
+  nameWithType: IProduktuaRepository.GetAll
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAll
+- uid: System.Collections.Generic.List{ErronkaApi.Modeloak.Produktua}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.Modeloak.Produktua}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Produktua>
+  nameWithType: List<Produktua>
+  fullName: System.Collections.Generic.List<ErronkaApi.Modeloak.Produktua>
+  nameWithType.vb: List(Of Produktua)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.Modeloak.Produktua)
+  name.vb: List(Of Produktua)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.Modeloak.Produktua
+    name: Produktua
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.Modeloak.Produktua
+    name: Produktua
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId*
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetAllByKategoriaId_System_Int32_
+  name: GetAllByKategoriaId
+  nameWithType: IProduktuaRepository.GetAllByKategoriaId
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetAllByKategoriaId
+- uid: System.Collections.Generic.List{ErronkaApi.DTOak.ProduktuaDTO}
+  commentId: T:System.Collections.Generic.List{ErronkaApi.DTOak.ProduktuaDTO}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ProduktuaDTO>
+  nameWithType: List<ProduktuaDTO>
+  fullName: System.Collections.Generic.List<ErronkaApi.DTOak.ProduktuaDTO>
+  nameWithType.vb: List(Of ProduktuaDTO)
+  fullName.vb: System.Collections.Generic.List(Of ErronkaApi.DTOak.ProduktuaDTO)
+  name.vb: List(Of ProduktuaDTO)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ErronkaApi.DTOak.ProduktuaDTO
+    name: ProduktuaDTO
+    href: ErronkaApi.DTOak.ProduktuaDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ErronkaApi.DTOak.ProduktuaDTO
+    name: ProduktuaDTO
+    href: ErronkaApi.DTOak.ProduktuaDTO.html
+  - name: )
+- uid: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria*
+  commentId: Overload:ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html#ErronkaApi_Interfaces_IProduktuaRepository_GetByKategoria_System_Int32_
+  name: GetByKategoria
+  nameWithType: IProduktuaRepository.GetByKategoria
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository.GetByKategoria

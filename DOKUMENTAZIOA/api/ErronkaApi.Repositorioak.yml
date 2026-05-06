@@ -5,10 +5,15 @@ items:
   id: ErronkaApi.Repositorioak
   children:
   - ErronkaApi.Repositorioak.ErabiltzaileaRepository
+  - ErronkaApi.Repositorioak.ErreserbaRepository
+  - ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  - ErronkaApi.Repositorioak.EskaeraProduktuakRepository
   - ErronkaApi.Repositorioak.EskaeraRepository
   - ErronkaApi.Repositorioak.KategoriaRepository
   - ErronkaApi.Repositorioak.MahaiaRepository
+  - ErronkaApi.Repositorioak.PlateraRepository
   - ErronkaApi.Repositorioak.ProduktuaRepository
+  - ErronkaApi.Repositorioak.ZerbitzuaRepository
   langs:
   - csharp
   - vb
@@ -21,11 +26,28 @@ items:
 references:
 - uid: ErronkaApi.Repositorioak.ErabiltzaileaRepository
   commentId: T:ErronkaApi.Repositorioak.ErabiltzaileaRepository
-  parent: ErronkaApi.Repositorioak
   href: ErronkaApi.Repositorioak.ErabiltzaileaRepository.html
   name: ErabiltzaileaRepository
   nameWithType: ErabiltzaileaRepository
   fullName: ErronkaApi.Repositorioak.ErabiltzaileaRepository
+- uid: ErronkaApi.Repositorioak.ErreserbaRepository
+  commentId: T:ErronkaApi.Repositorioak.ErreserbaRepository
+  href: ErronkaApi.Repositorioak.ErreserbaRepository.html
+  name: ErreserbaRepository
+  nameWithType: ErreserbaRepository
+  fullName: ErronkaApi.Repositorioak.ErreserbaRepository
+- uid: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  commentId: T:ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+  href: ErronkaApi.Repositorioak.EskaeraMahaiakRepository.html
+  name: EskaeraMahaiakRepository
+  nameWithType: EskaeraMahaiakRepository
+  fullName: ErronkaApi.Repositorioak.EskaeraMahaiakRepository
+- uid: ErronkaApi.Repositorioak.EskaeraProduktuakRepository
+  commentId: T:ErronkaApi.Repositorioak.EskaeraProduktuakRepository
+  href: ErronkaApi.Repositorioak.EskaeraProduktuakRepository.html
+  name: EskaeraProduktuakRepository
+  nameWithType: EskaeraProduktuakRepository
+  fullName: ErronkaApi.Repositorioak.EskaeraProduktuakRepository
 - uid: ErronkaApi.Repositorioak.EskaeraRepository
   commentId: T:ErronkaApi.Repositorioak.EskaeraRepository
   href: ErronkaApi.Repositorioak.EskaeraRepository.html
@@ -34,44 +56,31 @@ references:
   fullName: ErronkaApi.Repositorioak.EskaeraRepository
 - uid: ErronkaApi.Repositorioak.KategoriaRepository
   commentId: T:ErronkaApi.Repositorioak.KategoriaRepository
-  parent: ErronkaApi.Repositorioak
   href: ErronkaApi.Repositorioak.KategoriaRepository.html
   name: KategoriaRepository
   nameWithType: KategoriaRepository
   fullName: ErronkaApi.Repositorioak.KategoriaRepository
 - uid: ErronkaApi.Repositorioak.MahaiaRepository
   commentId: T:ErronkaApi.Repositorioak.MahaiaRepository
-  parent: ErronkaApi.Repositorioak
   href: ErronkaApi.Repositorioak.MahaiaRepository.html
   name: MahaiaRepository
   nameWithType: MahaiaRepository
   fullName: ErronkaApi.Repositorioak.MahaiaRepository
+- uid: ErronkaApi.Repositorioak.PlateraRepository
+  commentId: T:ErronkaApi.Repositorioak.PlateraRepository
+  href: ErronkaApi.Repositorioak.PlateraRepository.html
+  name: PlateraRepository
+  nameWithType: PlateraRepository
+  fullName: ErronkaApi.Repositorioak.PlateraRepository
 - uid: ErronkaApi.Repositorioak.ProduktuaRepository
   commentId: T:ErronkaApi.Repositorioak.ProduktuaRepository
-  parent: ErronkaApi.Repositorioak
   href: ErronkaApi.Repositorioak.ProduktuaRepository.html
   name: ProduktuaRepository
   nameWithType: ProduktuaRepository
   fullName: ErronkaApi.Repositorioak.ProduktuaRepository
-- uid: ErronkaApi.Repositorioak
-  commentId: N:ErronkaApi.Repositorioak
-  href: ErronkaApi.html
-  name: ErronkaApi.Repositorioak
-  nameWithType: ErronkaApi.Repositorioak
-  fullName: ErronkaApi.Repositorioak
-  spec.csharp:
-  - uid: ErronkaApi
-    name: ErronkaApi
-    href: ErronkaApi.html
-  - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
-    href: ErronkaApi.Repositorioak.html
-  spec.vb:
-  - uid: ErronkaApi
-    name: ErronkaApi
-    href: ErronkaApi.html
-  - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
-    href: ErronkaApi.Repositorioak.html
+- uid: ErronkaApi.Repositorioak.ZerbitzuaRepository
+  commentId: T:ErronkaApi.Repositorioak.ZerbitzuaRepository
+  href: ErronkaApi.Repositorioak.ZerbitzuaRepository.html
+  name: ZerbitzuaRepository
+  nameWithType: ZerbitzuaRepository
+  fullName: ErronkaApi.Repositorioak.ZerbitzuaRepository

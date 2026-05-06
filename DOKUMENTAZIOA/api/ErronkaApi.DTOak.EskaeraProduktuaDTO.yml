@@ -17,9 +17,9 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: EskaeraProduktuaDTO
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
     startLine: 5
@@ -54,9 +54,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: ProduktuaId
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
     startLine: 10
@@ -85,9 +85,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: PrezioUnitarioa
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
     startLine: 15
@@ -116,9 +116,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Kantitatea
     path: ../API2Erronka/ErronkaApi/DTOak/EskaeraProduktuaDTO.cs
     startLine: 20

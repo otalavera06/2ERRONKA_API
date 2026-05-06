@@ -17,9 +17,9 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/DTOak/ErantzunaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: ErantzunaDTO
     path: ../API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
     startLine: 6
@@ -60,9 +60,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ErantzunaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Code
     path: ../API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
     startLine: 11
@@ -93,9 +93,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ErantzunaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Message
     path: ../API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
     startLine: 16
@@ -126,9 +126,9 @@ items:
   type: Property
   source:
     remote:
-      path: ErronkaApi/DTOak/ErantzunaDTO.cs
+      path: API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: Datuak
     path: ../API2Erronka/ErronkaApi/DTOak/ErantzunaDTO.cs
     startLine: 21

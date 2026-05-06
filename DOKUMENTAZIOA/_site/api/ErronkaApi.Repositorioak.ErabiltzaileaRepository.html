@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ErabiltzaileaRepository | Erronka API Dokumentazioa ">
       
-      
+      <meta name="description" content="Langile eta erabiltzaileen autentifikazio-datuetarako sarbidea ematen duen biltegia.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/UnaiMarti88/API2Erronka/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_ErabiltzaileaRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.ErabiltzaileaRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/otalavera06/2ERRONKA_API/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_ErabiltzaileaRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.ErabiltzaileaRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ErronkaApi_Repositorioak_ErabiltzaileaRepository" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository" class="text-break">
-Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,11 +97,12 @@ Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="Vi
   <dl><dt>Assembly</dt><dd>ErronkaApi.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Langile eta erabiltzaileen autentifikazio-datuetarako sarbidea ematen duen biltegia.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ErabiltzaileaRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public class ErabiltzaileaRepository : IErabiltzaileaRepository</code></pre>
   </div>
 
 
@@ -115,6 +116,12 @@ Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="Vi
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ErronkaApi.Interfaces.IErabiltzaileaRepository.html">IErabiltzaileaRepository</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -156,10 +163,11 @@ Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ErronkaApi_Repositorioak_ErabiltzaileaRepository__ctor_NHibernate_ISessionFactory_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.#ctor(NHibernate.ISessionFactory)">
   ErabiltzaileaRepository(ISessionFactory)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>ErabiltzaileaRepository</code> instantzia berri bat sortzen du.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -169,7 +177,8 @@ Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sessionFactory</code> <span class="xref">ISessionFactory</span></dt>
-    <dd></dd>
+    <dd><p>NHibernate saio-fabrika.</p>
+</dd>
   </dl>
 
 
@@ -187,25 +196,96 @@ Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="Vi
 </h2>
 
 
-  <a id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_Login_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login*"></a>
+  <a id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_GetAll_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll*"></a>
 
-  <h3 id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_Login_System_String_System_String_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login(System.String,System.String)">
-  Login(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_GetAll" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.GetAll">
+  GetAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Erabiltzailea Login(string erabiltzailea, string pasahitza)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;LangileaDTO&gt; GetAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.DTOak.LangileaDTO.html">LangileaDTO</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_Login_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_Login_System_String_System_String_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.Login(System.String,System.String)">
+  Login(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Erabiltzaile aktibo bat bilatzen du emandako kredentzialekin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Erabiltzailea? Login(string erabiltzailea, string pasahitza)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>erabiltzailea</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Saioa hasteko erabiltzaile-izena.</p>
+</dd>
     <dt><code>pasahitza</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Saioa hasteko pasahitza.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ErronkaApi.Modeloak.Erabiltzailea.html">Erabiltzailea</a></dt>
+    <dd><p>Aurkitutako erabiltzailea edo <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_LortuErabiltzailea_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_ErabiltzaileaRepository_LortuErabiltzailea_System_Int32_" data-uid="ErronkaApi.Repositorioak.ErabiltzaileaRepository.LortuErabiltzailea(System.Int32)">
+  LortuErabiltzailea(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Erabiltzailea? LortuErabiltzailea(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -229,7 +309,7 @@ Class ErabiltzaileaRepository  <a class="header-action link-secondary" title="Vi
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/ErabiltzaileaRepository.cs/#L14" class="edit-link">Edit this page</a>
         </div>
 
 

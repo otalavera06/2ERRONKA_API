@@ -8477,23 +8477,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ander\\.nuget\\packages\\": {},
+    "C:\\Users\\oierg\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\xampp\\htdocs\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\Test_Logika\\ErronkaApi.Test_Logika.csproj",
+      "projectUniqueName": "C:\\skfkjskfn\\Lanak\\2. Urtea\\2.Ebaluazioa\\2ERRONKA\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\Test_Logika\\ErronkaApi.Test_Logika.csproj",
       "projectName": "ErronkaApi.Test_Logika",
-      "projectPath": "C:\\xampp\\htdocs\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\Test_Logika\\ErronkaApi.Test_Logika.csproj",
-      "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "C:\\xampp\\htdocs\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\Test_Logika\\obj\\",
+      "projectPath": "C:\\skfkjskfn\\Lanak\\2. Urtea\\2.Ebaluazioa\\2ERRONKA\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\Test_Logika\\ErronkaApi.Test_Logika.csproj",
+      "packagesPath": "C:\\Users\\oierg\\.nuget\\packages\\",
+      "outputPath": "C:\\skfkjskfn\\Lanak\\2. Urtea\\2.Ebaluazioa\\2ERRONKA\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\Test_Logika\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\oierg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8502,15 +8502,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\xampp\\htdocs\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\ErronkaApi.csproj": {
-              "projectPath": "C:\\xampp\\htdocs\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\ErronkaApi.csproj"
+            "C:\\skfkjskfn\\Lanak\\2. Urtea\\2.Ebaluazioa\\2ERRONKA\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\ErronkaApi.csproj": {
+              "projectPath": "C:\\skfkjskfn\\Lanak\\2. Urtea\\2.Ebaluazioa\\2ERRONKA\\2ERRONKA_API\\API2Erronka\\ErronkaApi\\ErronkaApi.csproj"
             }
           }
         }
@@ -8568,7 +8567,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

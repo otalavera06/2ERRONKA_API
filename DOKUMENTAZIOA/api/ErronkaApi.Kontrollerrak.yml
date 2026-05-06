@@ -4,12 +4,21 @@ items:
   commentId: N:ErronkaApi.Kontrollerrak
   id: ErronkaApi.Kontrollerrak
   children:
+  - ErronkaApi.Kontrollerrak.ErreserbakController
+  - ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+  - ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra
+  - ErronkaApi.Kontrollerrak.FakturaKontrollerra
   - ErronkaApi.Kontrollerrak.KategoriaKontrollerra
-  - ErronkaApi.Kontrollerrak.LogKontrollerra
-  - ErronkaApi.Kontrollerrak.LoginKontrollera
+  - ErronkaApi.Kontrollerrak.LangileakController
+  - ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
   - ErronkaApi.Kontrollerrak.MahaiakController
+  - ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  - ErronkaApi.Kontrollerrak.PlaterakController
   - ErronkaApi.Kontrollerrak.ProduktuakKontrollera
+  - ErronkaApi.Kontrollerrak.ZerbitzuaController
+  - ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+  - ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
   langs:
   - csharp
   - vb
@@ -20,39 +29,216 @@ items:
   assemblies:
   - ErronkaApi
 references:
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController
+  commentId: T:ErronkaApi.Kontrollerrak.ErreserbakController
+  href: ErronkaApi.Kontrollerrak.ErreserbakController.html
+  name: ErreserbakController
+  nameWithType: ErreserbakController
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+  commentId: T:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+  parent: ErronkaApi.Kontrollerrak
+  href: ErronkaApi.Kontrollerrak.ErreserbakController.html
+  name: ErreserbakController.ErreserbakSortuDto
+  nameWithType: ErreserbakController.ErreserbakSortuDto
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+  spec.csharp:
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController
+    name: ErreserbakController
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+    name: ErreserbakSortuDto
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html
+  spec.vb:
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController
+    name: ErreserbakController
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto
+    name: ErreserbakSortuDto
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakSortuDto.html
+- uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+  commentId: T:ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+  parent: ErronkaApi.Kontrollerrak
+  href: ErronkaApi.Kontrollerrak.ErreserbakController.html
+  name: ErreserbakController.ErreserbakUpdateDto
+  nameWithType: ErreserbakController.ErreserbakUpdateDto
+  fullName: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+  spec.csharp:
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController
+    name: ErreserbakController
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+    name: ErreserbakUpdateDto
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html
+  spec.vb:
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController
+    name: ErreserbakController
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto
+    name: ErreserbakUpdateDto
+    href: ErronkaApi.Kontrollerrak.ErreserbakController.ErreserbakUpdateDto.html
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
   commentId: T:ErronkaApi.Kontrollerrak.EskaeraKontrollerra
   href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html
   name: EskaeraKontrollerra
   nameWithType: EskaeraKontrollerra
   fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
+- uid: ErronkaApi.Kontrollerrak.FakturaKontrollerra
+  commentId: T:ErronkaApi.Kontrollerrak.FakturaKontrollerra
+  href: ErronkaApi.Kontrollerrak.FakturaKontrollerra.html
+  name: FakturaKontrollerra
+  nameWithType: FakturaKontrollerra
+  fullName: ErronkaApi.Kontrollerrak.FakturaKontrollerra
 - uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
   commentId: T:ErronkaApi.Kontrollerrak.KategoriaKontrollerra
   href: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html
   name: KategoriaKontrollerra
   nameWithType: KategoriaKontrollerra
   fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
-- uid: ErronkaApi.Kontrollerrak.LoginKontrollera
-  commentId: T:ErronkaApi.Kontrollerrak.LoginKontrollera
-  href: ErronkaApi.Kontrollerrak.LoginKontrollera.html
-  name: LoginKontrollera
-  nameWithType: LoginKontrollera
-  fullName: ErronkaApi.Kontrollerrak.LoginKontrollera
-- uid: ErronkaApi.Kontrollerrak.LogKontrollerra
-  commentId: T:ErronkaApi.Kontrollerrak.LogKontrollerra
-  href: ErronkaApi.Kontrollerrak.LogKontrollerra.html
-  name: LogKontrollerra
-  nameWithType: LogKontrollerra
-  fullName: ErronkaApi.Kontrollerrak.LogKontrollerra
+- uid: ErronkaApi.Kontrollerrak.LangileakController
+  commentId: T:ErronkaApi.Kontrollerrak.LangileakController
+  href: ErronkaApi.Kontrollerrak.LangileakController.html
+  name: LangileakController
+  nameWithType: LangileakController
+  fullName: ErronkaApi.Kontrollerrak.LangileakController
+- uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+  commentId: T:ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+  parent: ErronkaApi.Kontrollerrak
+  href: ErronkaApi.Kontrollerrak.LangileakController.html
+  name: LangileakController.LoginRequest
+  nameWithType: LangileakController.LoginRequest
+  fullName: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+  spec.csharp:
+  - uid: ErronkaApi.Kontrollerrak.LangileakController
+    name: LangileakController
+    href: ErronkaApi.Kontrollerrak.LangileakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+    name: LoginRequest
+    href: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html
+  spec.vb:
+  - uid: ErronkaApi.Kontrollerrak.LangileakController
+    name: LangileakController
+    href: ErronkaApi.Kontrollerrak.LangileakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest
+    name: LoginRequest
+    href: ErronkaApi.Kontrollerrak.LangileakController.LoginRequest.html
 - uid: ErronkaApi.Kontrollerrak.MahaiakController
   commentId: T:ErronkaApi.Kontrollerrak.MahaiakController
   href: ErronkaApi.Kontrollerrak.MahaiakController.html
   name: MahaiakController
   nameWithType: MahaiakController
   fullName: ErronkaApi.Kontrollerrak.MahaiakController
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  commentId: T:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  parent: ErronkaApi.Kontrollerrak
+  href: ErronkaApi.Kontrollerrak.MahaiakController.html
+  name: MahaiakController.MahaiakLoginRequest
+  nameWithType: MahaiakController.MahaiakLoginRequest
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  spec.csharp:
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController
+    name: MahaiakController
+    href: ErronkaApi.Kontrollerrak.MahaiakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+    name: MahaiakLoginRequest
+    href: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html
+  spec.vb:
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController
+    name: MahaiakController
+    href: ErronkaApi.Kontrollerrak.MahaiakController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+    name: MahaiakLoginRequest
+    href: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html
+- uid: ErronkaApi.Kontrollerrak.PlaterakController
+  commentId: T:ErronkaApi.Kontrollerrak.PlaterakController
+  href: ErronkaApi.Kontrollerrak.PlaterakController.html
+  name: PlaterakController
+  nameWithType: PlaterakController
+  fullName: ErronkaApi.Kontrollerrak.PlaterakController
 - uid: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
   commentId: T:ErronkaApi.Kontrollerrak.ProduktuakKontrollera
   href: ErronkaApi.Kontrollerrak.ProduktuakKontrollera.html
   name: ProduktuakKontrollera
   nameWithType: ProduktuakKontrollera
   fullName: ErronkaApi.Kontrollerrak.ProduktuakKontrollera
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+  commentId: T:ErronkaApi.Kontrollerrak.ZerbitzuaController
+  href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  name: ZerbitzuaController
+  nameWithType: ZerbitzuaController
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+  commentId: T:ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+  href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  name: ZerbitzuaController.EskaeraSortuDto
+  nameWithType: ZerbitzuaController.EskaeraSortuDto
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+  spec.csharp:
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+    name: ZerbitzuaController
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+    name: EskaeraSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html
+  spec.vb:
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+    name: ZerbitzuaController
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto
+    name: EskaeraSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.EskaeraSortuDto.html
+- uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  commentId: T:ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  parent: ErronkaApi.Kontrollerrak
+  href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  name: ZerbitzuaController.ZerbitzuaSortuDto
+  nameWithType: ZerbitzuaController.ZerbitzuaSortuDto
+  fullName: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+  spec.csharp:
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+    name: ZerbitzuaController
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+  spec.vb:
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController
+    name: ZerbitzuaController
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto
+    name: ZerbitzuaSortuDto
+    href: ErronkaApi.Kontrollerrak.ZerbitzuaController.ZerbitzuaSortuDto.html
+- uid: ErronkaApi.Kontrollerrak
+  commentId: N:ErronkaApi.Kontrollerrak
+  href: ErronkaApi.html
+  name: ErronkaApi.Kontrollerrak
+  nameWithType: ErronkaApi.Kontrollerrak
+  fullName: ErronkaApi.Kontrollerrak
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak
+    name: Kontrollerrak
+    href: ErronkaApi.Kontrollerrak.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Kontrollerrak
+    name: Kontrollerrak
+    href: ErronkaApi.Kontrollerrak.html

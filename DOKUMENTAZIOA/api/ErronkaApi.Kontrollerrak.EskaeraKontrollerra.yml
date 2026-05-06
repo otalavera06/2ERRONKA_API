@@ -5,7 +5,7 @@ items:
   id: EskaeraKontrollerra
   parent: ErronkaApi.Kontrollerrak
   children:
-  - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor
+  - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository,ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuEskaera(System.Int32,ErronkaApi.DTOak.EskaeraEguneratuDTO)
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuSukaldeaEgoera(System.Int32,ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO)
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EzabatuEskaera(System.Int32)
@@ -13,9 +13,9 @@ items:
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerak
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerakOrdaintzeko
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuMahaiKapasitatea(System.Int32)
+  - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.OrdainduEskaera(System.Int32)
   - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
-  - ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(System.Int32)
   langs:
   - csharp
   - vb
@@ -25,20 +25,15 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: EskaeraKontrollerra
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
     startLine: 13
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: >-
-    Eskaerak kudeatzeko kontroladorea.
-
-    Eskaerak sortu, kontsultatu, eguneratu eta ezabatzeko aukera ematen du.
-  example: []
   syntax:
     content: >-
       [ApiController]
@@ -245,35 +240,46 @@ items:
     arguments:
     - type: System.String
       value: api/eskaerak
-- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor
-  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor
-  id: '#ctor'
+- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository,ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
+  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository,ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
+  id: '#ctor(ErronkaApi.Interfaces.IEskaeraRepository,ErronkaApi.Interfaces.IMahaiaRepository,ErronkaApi.Interfaces.IProduktuaRepository,ErronkaApi.Interfaces.IEskaeraProduktuakRepository,ErronkaApi.Interfaces.IEskaeraMahaiakRepository)'
   parent: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
   langs:
   - csharp
   - vb
-  name: EskaeraKontrollerra()
-  nameWithType: EskaeraKontrollerra.EskaeraKontrollerra()
-  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EskaeraKontrollerra()
+  name: EskaeraKontrollerra(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
+  nameWithType: EskaeraKontrollerra.EskaeraKontrollerra(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
+  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EskaeraKontrollerra(ErronkaApi.Interfaces.IEskaeraRepository, ErronkaApi.Interfaces.IMahaiaRepository, ErronkaApi.Interfaces.IProduktuaRepository, ErronkaApi.Interfaces.IEskaeraProduktuakRepository, ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
   syntax:
-    content: public EskaeraKontrollerra()
-    content.vb: Public Sub New()
+    content: public EskaeraKontrollerra(IEskaeraRepository repo, IMahaiaRepository repoMahaia, IProduktuaRepository repoProduktua, IEskaeraProduktuakRepository repoEskaeraProduktuak, IEskaeraMahaiakRepository repoEskaeraMahaiak)
+    parameters:
+    - id: repo
+      type: ErronkaApi.Interfaces.IEskaeraRepository
+    - id: repoMahaia
+      type: ErronkaApi.Interfaces.IMahaiaRepository
+    - id: repoProduktua
+      type: ErronkaApi.Interfaces.IProduktuaRepository
+    - id: repoEskaeraProduktuak
+      type: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+    - id: repoEskaeraMahaiak
+      type: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+    content.vb: Public Sub New(repo As IEskaeraRepository, repoMahaia As IMahaiaRepository, repoProduktua As IProduktuaRepository, repoEskaeraProduktuak As IEskaeraProduktuakRepository, repoEskaeraMahaiak As IEskaeraMahaiakRepository)
   overload: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor*
-  nameWithType.vb: EskaeraKontrollerra.New()
-  fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.New()
-  name.vb: New()
+  nameWithType.vb: EskaeraKontrollerra.New(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.New(ErronkaApi.Interfaces.IEskaeraRepository, ErronkaApi.Interfaces.IMahaiaRepository, ErronkaApi.Interfaces.IProduktuaRepository, ErronkaApi.Interfaces.IEskaeraProduktuakRepository, ErronkaApi.Interfaces.IEskaeraMahaiakRepository)
+  name.vb: New(IEskaeraRepository, IMahaiaRepository, IProduktuaRepository, IEskaeraProduktuakRepository, IEskaeraMahaiakRepository)
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
   commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
   id: SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)
@@ -287,17 +293,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: SortuEskaera
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 29
+    startLine: 37
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera berri bat sortzen du.
-  example: []
   syntax:
     content: >-
       [HttpPost]
@@ -306,14 +310,12 @@ items:
     parameters:
     - id: dto
       type: ErronkaApi.DTOak.EskaeraSortuDTO
-      description: Eskaera berriaren datuak.
       attributes:
       - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
         ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
         arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Sortutako eskaeraren informazioa.
     content.vb: >-
       <HttpPost>
 
@@ -336,17 +338,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuEskaerak
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 51
+    startLine: 107
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera guztiak lortzen ditu.
-  example: []
   syntax:
     content: >-
       [HttpGet]
@@ -354,7 +354,6 @@ items:
       public IActionResult LortuEskaerak()
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Eskaeren zerrenda.
     content.vb: >-
       <HttpGet>
 
@@ -377,17 +376,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuEskaeraProduktuak
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 64
+    startLine: 143
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera baten produktuak lortzen ditu.
-  example: []
   syntax:
     content: >-
       [HttpGet("{eskaeraId}/produktuak")]
@@ -396,10 +393,8 @@ items:
     parameters:
     - id: eskaeraId
       type: System.Int32
-      description: Eskaeraren IDa.
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Eskaeraren produktuen zerrenda.
     content.vb: >-
       <HttpGet("{eskaeraId}/produktuak")>
 
@@ -427,17 +422,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: EzabatuEskaera
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 77
+    startLine: 184
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera bat ezabatzen du.
-  example: []
   syntax:
     content: >-
       [HttpDelete("{eskaeraId}")]
@@ -446,10 +439,8 @@ items:
     parameters:
     - id: eskaeraId
       type: System.Int32
-      description: Ezabatu nahi den eskaeraren IDa.
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Erantzunaren emaitza.
     content.vb: >-
       <HttpDelete("{eskaeraId}")>
 
@@ -477,17 +468,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuMahaiKapasitatea
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 97
+    startLine: 245
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Mahai baten kapazitatea lortzen du.
-  example: []
   syntax:
     content: >-
       [HttpGet("mahaiak/{mahaiaId}/kapazitatea")]
@@ -496,10 +485,8 @@ items:
     parameters:
     - id: mahaiaId
       type: System.Int32
-      description: Mahaiaren IDa.
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Mahaiaren kapazitatea.
     content.vb: >-
       <HttpGet("mahaiak/{mahaiaId}/kapazitatea")>
 
@@ -527,17 +514,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: EguneratuEskaera
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 116
+    startLine: 279
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera bat eguneratzen du (komensalak eta produktuak).
-  example: []
   syntax:
     content: >-
       [HttpPut("{eskaeraId}")]
@@ -546,17 +531,14 @@ items:
     parameters:
     - id: eskaeraId
       type: System.Int32
-      description: Eskaeraren IDa.
     - id: dto
       type: ErronkaApi.DTOak.EskaeraEguneratuDTO
-      description: Eguneratu nahi diren datuak.
       attributes:
       - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
         ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
         arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Eguneratzearen emaitza.
     content.vb: >-
       <HttpPut("{eskaeraId}")>
 
@@ -571,6 +553,46 @@ items:
   nameWithType.vb: EskaeraKontrollerra.EguneratuEskaera(Integer, EskaeraEguneratuDTO)
   fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuEskaera(Integer, ErronkaApi.DTOak.EskaeraEguneratuDTO)
   name.vb: EguneratuEskaera(Integer, EskaeraEguneratuDTO)
+- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
+  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
+  id: LortuSukaldekoEskaerak
+  parent: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
+  langs:
+  - csharp
+  - vb
+  name: LortuSukaldekoEskaerak()
+  nameWithType: EskaeraKontrollerra.LortuSukaldekoEskaerak()
+  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak()
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: LortuSukaldekoEskaerak
+    path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+    startLine: 397
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Kontrollerrak
+  syntax:
+    content: >-
+      [HttpGet("sukaldea")]
+
+      public IActionResult LortuSukaldekoEskaerak()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet("sukaldea")>
+
+      Public Function LortuSukaldekoEskaerak() As IActionResult
+  overload: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sukaldea
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuSukaldeaEgoera(System.Int32,ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO)
   commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuSukaldeaEgoera(System.Int32,ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO)
   id: EguneratuSukaldeaEgoera(System.Int32,ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO)
@@ -584,17 +606,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: EguneratuSukaldeaEgoera
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 149
+    startLine: 439
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera baten sukaldeko egoera eguneratzen du.
-  example: []
   syntax:
     content: >-
       [HttpPut("{eskaeraId}/sukaldea-egoera")]
@@ -603,17 +623,14 @@ items:
     parameters:
     - id: eskaeraId
       type: System.Int32
-      description: Eskaeraren IDa.
     - id: dto
       type: ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO
-      description: Sukaldeko egoera berria.
       attributes:
       - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
         ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
         arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Eguneratzearen emaitza.
     content.vb: >-
       <HttpPut("{eskaeraId}/sukaldea-egoera")>
 
@@ -641,31 +658,27 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: OrdainduEskaera
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 179
+    startLine: 476
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera bat ordaintzera bidaltzen du.
-  example: []
   syntax:
     content: >-
-      [HttpPost("{eskaeraId}/ordainduEskaera")]
+      [HttpPost("{eskaeraId}/ordaindu")]
 
       public IActionResult OrdainduEskaera(int eskaeraId)
     parameters:
     - id: eskaeraId
       type: System.Int32
-      description: Eskaeraren IDa.
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Emaitza.
     content.vb: >-
-      <HttpPost("{eskaeraId}/ordainduEskaera")>
+      <HttpPost("{eskaeraId}/ordaindu")>
 
       Public Function OrdainduEskaera(eskaeraId As Integer) As IActionResult
   overload: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.OrdainduEskaera*
@@ -674,60 +687,10 @@ items:
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: '{eskaeraId}/ordainduEskaera'
+      value: '{eskaeraId}/ordaindu'
   nameWithType.vb: EskaeraKontrollerra.OrdainduEskaera(Integer)
   fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.OrdainduEskaera(Integer)
   name.vb: OrdainduEskaera(Integer)
-- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(System.Int32)
-  commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(System.Int32)
-  id: SortuFaktura(System.Int32)
-  parent: ErronkaApi.Kontrollerrak.EskaeraKontrollerra
-  langs:
-  - csharp
-  - vb
-  name: SortuFaktura(int)
-  nameWithType: EskaeraKontrollerra.SortuFaktura(int)
-  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(int)
-  type: Method
-  source:
-    remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-      branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
-    id: SortuFaktura
-    path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 199
-  assemblies:
-  - ErronkaApi
-  namespace: ErronkaApi.Kontrollerrak
-  summary: Eskaera baten faktura sortzen du.
-  example: []
-  syntax:
-    content: >-
-      [HttpPost("{eskaeraId}/sortuFaktura")]
-
-      public IActionResult SortuFaktura(int eskaeraId)
-    parameters:
-    - id: eskaeraId
-      type: System.Int32
-      description: Eskaeraren IDa.
-    return:
-      type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Emaitza.
-    content.vb: >-
-      <HttpPost("{eskaeraId}/sortuFaktura")>
-
-      Public Function SortuFaktura(eskaeraId As Integer) As IActionResult
-  overload: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura*
-  attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: '{eskaeraId}/sortuFaktura'
-  nameWithType.vb: EskaeraKontrollerra.SortuFaktura(Integer)
-  fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura(Integer)
-  name.vb: SortuFaktura(Integer)
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerakOrdaintzeko
   commentId: M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerakOrdaintzeko
   id: LortuEskaerakOrdaintzeko
@@ -741,17 +704,15 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuEskaerakOrdaintzeko
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/EskaeraKontrollerra.cs
-    startLine: 216
+    startLine: 503
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Ordaintzeko dauden eskaerak lortzen ditu.
-  example: []
   syntax:
     content: >-
       [HttpGet("ordainketa-pendiente")]
@@ -759,7 +720,6 @@ items:
       public IActionResult LortuEskaerakOrdaintzeko()
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-      description: Ordaintzeko dauden eskaeren zerrenda.
     content.vb: >-
       <HttpGet("ordainketa-pendiente")>
 
@@ -9761,13 +9721,70 @@ references:
   - name: )
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor*
   commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.#ctor
-  href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor
+  href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra__ctor_ErronkaApi_Interfaces_IEskaeraRepository_ErronkaApi_Interfaces_IMahaiaRepository_ErronkaApi_Interfaces_IProduktuaRepository_ErronkaApi_Interfaces_IEskaeraProduktuakRepository_ErronkaApi_Interfaces_IEskaeraMahaiakRepository_
   name: EskaeraKontrollerra
   nameWithType: EskaeraKontrollerra.EskaeraKontrollerra
   fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EskaeraKontrollerra
   nameWithType.vb: EskaeraKontrollerra.New
   fullName.vb: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.New
   name.vb: New
+- uid: ErronkaApi.Interfaces.IEskaeraRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html
+  name: IEskaeraRepository
+  nameWithType: IEskaeraRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository
+- uid: ErronkaApi.Interfaces.IMahaiaRepository
+  commentId: T:ErronkaApi.Interfaces.IMahaiaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html
+  name: IMahaiaRepository
+  nameWithType: IMahaiaRepository
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository
+- uid: ErronkaApi.Interfaces.IProduktuaRepository
+  commentId: T:ErronkaApi.Interfaces.IProduktuaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html
+  name: IProduktuaRepository
+  nameWithType: IProduktuaRepository
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html
+  name: IEskaeraProduktuakRepository
+  nameWithType: IEskaeraProduktuakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html
+  name: IEskaeraMahaiakRepository
+  nameWithType: IEskaeraMahaiakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera*
   commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera
   href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_SortuEskaera_ErronkaApi_DTOak_EskaeraSortuDTO_
@@ -9859,6 +9876,12 @@ references:
   name: EskaeraEguneratuDTO
   nameWithType: EskaeraEguneratuDTO
   fullName: ErronkaApi.DTOak.EskaeraEguneratuDTO
+- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak*
+  commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
+  href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuSukaldekoEskaerak
+  name: LortuSukaldekoEskaerak
+  nameWithType: EskaeraKontrollerra.LortuSukaldekoEskaerak
+  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuSukaldekoEskaerak
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuSukaldeaEgoera*
   commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuSukaldeaEgoera
   href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_EguneratuSukaldeaEgoera_System_Int32_ErronkaApi_DTOak_EskaeraSukaldeaEgoeraDTO_
@@ -9878,12 +9901,6 @@ references:
   name: OrdainduEskaera
   nameWithType: EskaeraKontrollerra.OrdainduEskaera
   fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.OrdainduEskaera
-- uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura*
-  commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura
-  href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_SortuFaktura_System_Int32_
-  name: SortuFaktura
-  nameWithType: EskaeraKontrollerra.SortuFaktura
-  fullName: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuFaktura
 - uid: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerakOrdaintzeko*
   commentId: Overload:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerakOrdaintzeko
   href: ErronkaApi.Kontrollerrak.EskaeraKontrollerra.html#ErronkaApi_Kontrollerrak_EskaeraKontrollerra_LortuEskaerakOrdaintzeko

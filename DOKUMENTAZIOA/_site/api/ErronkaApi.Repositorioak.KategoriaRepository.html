@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class KategoriaRepository | Erronka API Dokumentazioa ">
       
-      
+      <meta name="description" content="Kategorien datu-sarbidea kudeatzen duen biltegia. Entitate osoak nahiz APIrako DTO arinak itzultzen ditu.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/UnaiMarti88/API2Erronka/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_KategoriaRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.KategoriaRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/otalavera06/2ERRONKA_API/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_KategoriaRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.KategoriaRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ErronkaApi_Repositorioak_KategoriaRepository" data-uid="ErronkaApi.Repositorioak.KategoriaRepository" class="text-break">
-Class KategoriaRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class KategoriaRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,11 +97,13 @@ Class KategoriaRepository  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>ErronkaApi.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Kategorien datu-sarbidea kudeatzen duen biltegia.
+Entitate osoak nahiz APIrako DTO arinak itzultzen ditu.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KategoriaRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public class KategoriaRepository : IKategoriaRepository</code></pre>
   </div>
 
 
@@ -115,6 +117,12 @@ Class KategoriaRepository  <a class="header-action link-secondary" title="View s
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ErronkaApi.Interfaces.IKategoriaRepository.html">IKategoriaRepository</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -156,10 +164,11 @@ Class KategoriaRepository  <a class="header-action link-secondary" title="View s
 
   <h3 id="ErronkaApi_Repositorioak_KategoriaRepository__ctor_NHibernate_ISessionFactory_" data-uid="ErronkaApi.Repositorioak.KategoriaRepository.#ctor(NHibernate.ISessionFactory)">
   KategoriaRepository(ISessionFactory)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>KategoriaRepository</code> instantzia berri bat sortzen du.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -169,7 +178,8 @@ Class KategoriaRepository  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sessionFactory</code> <span class="xref">ISessionFactory</span></dt>
-    <dd></dd>
+    <dd><p>NHibernate saio-fabrika.</p>
+</dd>
   </dl>
 
 
@@ -191,21 +201,56 @@ Class KategoriaRepository  <a class="header-action link-secondary" title="View s
 
   <h3 id="ErronkaApi_Repositorioak_KategoriaRepository_GetAll" data-uid="ErronkaApi.Repositorioak.KategoriaRepository.GetAll">
   GetAll()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Kategoria guztiak izenaren arabera ordenatuta lortzen ditu.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IList&lt;Kategoria&gt; GetAll()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Kategoria&gt; GetAll()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="ErronkaApi.Modeloak.Kategoria.html">Kategoria</a>&gt;</dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.Modeloak.Kategoria.html">Kategoria</a>&gt;</dt>
+    <dd><p>Kategoria entitateen zerrenda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_KategoriaRepository_GetAllDTO_" data-uid="ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_KategoriaRepository_GetAllDTO" data-uid="ErronkaApi.Repositorioak.KategoriaRepository.GetAllDTO">
+  GetAllDTO()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Kategoria guztiak APIrako DTO formatuan lortzen ditu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;KategoriaDTO&gt; GetAllDTO()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.DTOak.KategoriaDTO.html">KategoriaDTO</a>&gt;</dt>
+    <dd><p><code>KategoriaDTO</code> zerrenda bat.</p>
+</dd>
   </dl>
 
 
@@ -222,7 +267,7 @@ Class KategoriaRepository  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/KategoriaRepository.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

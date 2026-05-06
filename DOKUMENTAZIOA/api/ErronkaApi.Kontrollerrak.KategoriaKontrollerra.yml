@@ -5,7 +5,7 @@ items:
   id: KategoriaKontrollerra
   parent: ErronkaApi.Kontrollerrak
   children:
-  - ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Repositorioak.KategoriaRepository)
+  - ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Interfaces.IKategoriaRepository)
   - ErronkaApi.Kontrollerrak.KategoriaKontrollerra.GetAll
   langs:
   - csharp
@@ -16,12 +16,12 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: KategoriaKontrollerra
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
@@ -236,38 +236,38 @@ items:
     arguments:
     - type: System.String
       value: api/Kategoria
-- uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Repositorioak.KategoriaRepository)
-  commentId: M:ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Repositorioak.KategoriaRepository)
-  id: '#ctor(ErronkaApi.Repositorioak.KategoriaRepository)'
+- uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Interfaces.IKategoriaRepository)
+  commentId: M:ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor(ErronkaApi.Interfaces.IKategoriaRepository)
+  id: '#ctor(ErronkaApi.Interfaces.IKategoriaRepository)'
   parent: ErronkaApi.Kontrollerrak.KategoriaKontrollerra
   langs:
   - csharp
   - vb
-  name: KategoriaKontrollerra(KategoriaRepository)
-  nameWithType: KategoriaKontrollerra.KategoriaKontrollerra(KategoriaRepository)
-  fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.KategoriaKontrollerra(ErronkaApi.Repositorioak.KategoriaRepository)
+  name: KategoriaKontrollerra(IKategoriaRepository)
+  nameWithType: KategoriaKontrollerra.KategoriaKontrollerra(IKategoriaRepository)
+  fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.KategoriaKontrollerra(ErronkaApi.Interfaces.IKategoriaRepository)
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
   syntax:
-    content: public KategoriaKontrollerra(KategoriaRepository repo)
+    content: public KategoriaKontrollerra(IKategoriaRepository repo)
     parameters:
     - id: repo
-      type: ErronkaApi.Repositorioak.KategoriaRepository
-    content.vb: Public Sub New(repo As KategoriaRepository)
+      type: ErronkaApi.Interfaces.IKategoriaRepository
+    content.vb: Public Sub New(repo As IKategoriaRepository)
   overload: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor*
-  nameWithType.vb: KategoriaKontrollerra.New(KategoriaRepository)
-  fullName.vb: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.New(ErronkaApi.Repositorioak.KategoriaRepository)
-  name.vb: New(KategoriaRepository)
+  nameWithType.vb: KategoriaKontrollerra.New(IKategoriaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.New(ErronkaApi.Interfaces.IKategoriaRepository)
+  name.vb: New(IKategoriaRepository)
 - uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.GetAll
   commentId: M:ErronkaApi.Kontrollerrak.KategoriaKontrollerra.GetAll
   id: GetAll
@@ -281,12 +281,12 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: GetAll
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/KategoriaKontrollerra.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
@@ -9299,39 +9299,42 @@ references:
   - name: )
 - uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor*
   commentId: Overload:ErronkaApi.Kontrollerrak.KategoriaKontrollerra.#ctor
-  href: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html#ErronkaApi_Kontrollerrak_KategoriaKontrollerra__ctor_ErronkaApi_Repositorioak_KategoriaRepository_
+  href: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html#ErronkaApi_Kontrollerrak_KategoriaKontrollerra__ctor_ErronkaApi_Interfaces_IKategoriaRepository_
   name: KategoriaKontrollerra
   nameWithType: KategoriaKontrollerra.KategoriaKontrollerra
   fullName: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.KategoriaKontrollerra
   nameWithType.vb: KategoriaKontrollerra.New
   fullName.vb: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.New
   name.vb: New
-- uid: ErronkaApi.Repositorioak.KategoriaRepository
-  commentId: T:ErronkaApi.Repositorioak.KategoriaRepository
-  parent: ErronkaApi.Repositorioak
-  name: KategoriaRepository
-  nameWithType: KategoriaRepository
-  fullName: ErronkaApi.Repositorioak.KategoriaRepository
-- uid: ErronkaApi.Repositorioak
-  commentId: N:ErronkaApi.Repositorioak
+- uid: ErronkaApi.Interfaces.IKategoriaRepository
+  commentId: T:ErronkaApi.Interfaces.IKategoriaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IKategoriaRepository.html
+  name: IKategoriaRepository
+  nameWithType: IKategoriaRepository
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
   href: ErronkaApi.html
-  name: ErronkaApi.Repositorioak
-  nameWithType: ErronkaApi.Repositorioak
-  fullName: ErronkaApi.Repositorioak
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
   spec.csharp:
   - uid: ErronkaApi
     name: ErronkaApi
     href: ErronkaApi.html
   - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
   spec.vb:
   - uid: ErronkaApi
     name: ErronkaApi
     href: ErronkaApi.html
   - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
 - uid: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.GetAll*
   commentId: Overload:ErronkaApi.Kontrollerrak.KategoriaKontrollerra.GetAll
   href: ErronkaApi.Kontrollerrak.KategoriaKontrollerra.html#ErronkaApi_Kontrollerrak_KategoriaKontrollerra_GetAll

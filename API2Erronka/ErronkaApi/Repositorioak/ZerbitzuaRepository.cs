@@ -22,6 +22,27 @@ namespace ErronkaApi.Repositorioak
             return "/irudiak/" + irudia;
         }
 
+        private static bool IsPlaceholderPlatera(object? produktuaId, object? produktuaIzena)
+        {
+            return produktuaId != null
+                && produktuaId != DBNull.Value
+                && Convert.ToInt32(produktuaId) == 1
+                && string.Equals(produktuaIzena?.ToString(), "Platera", StringComparison.OrdinalIgnoreCase);
+        }
+
+        private Produktua EnsurePlateraProduktua(global::NHibernate.ISession session)
+        {
+            var produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == 1);
+            if (produktua != null) return produktua;
+
+            session.CreateSQLQuery("INSERT IGNORE INTO produktuak (id, izena, prezioa, stock, irudia, produktuen_motak_id) VALUES (1, 'Platera', 0, 999, 'platera.png', 8)")
+                .ExecuteUpdate();
+
+            produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == 1);
+            if (produktua == null) throw new InvalidOperationException("Platerak gordetzeko produktu teknikoa ez da existitzen.");
+            return produktua;
+        }
+
         public int Create(ZerbitzuaController.ZerbitzuaSortuDto dto)
         {
             using var session = NHibernateHelper.OpenSession();
@@ -62,14 +83,9 @@ namespace ErronkaApi.Repositorioak
             foreach (var e in dto.Eskaerak)
             {
                 int dbProduktuaId = e.IsPlatera ? 1 : e.ProduktuaId;
-                var produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == dbProduktuaId);
-                
-                if (produktua == null && e.IsPlatera)
-                {
-                    
-                    session.CreateSQLQuery("INSERT IGNORE INTO produktuak (id, izena, prezioa, stock, irudia, produktuen_motak_id) VALUES (1, 'Platera', 0, 999, 'platera.png', 8)").ExecuteUpdate();
-                    produktua = session.Query<Produktua>().FirstOrDefault(p => p.id == 1);
-                }
+                var produktua = e.IsPlatera
+                    ? EnsurePlateraProduktua(session)
+                    : session.Query<Produktua>().FirstOrDefault(p => p.id == dbProduktuaId);
 
                 if (produktua == null) throw new InvalidOperationException($"Produktua ez da existitzen: {dbProduktuaId}");
 
@@ -130,7 +146,7 @@ namespace ErronkaApi.Repositorioak
             {
                 var zerbitzuaId = Convert.ToInt32(z[0]);
                 var produktuak = session.CreateSQLQuery(
-                        @"SELECT e.id, e.produktua_id, COALESCE(e.izena, p.izena), p.irudia, e.data, e.prezioa, e.egoera
+                    @"SELECT e.id, e.produktua_id, COALESCE(e.izena, p.izena), p.irudia, e.data, e.prezioa, e.egoera, p.izena
                           FROM eskaerak e
                           LEFT JOIN produktuak p ON p.id = e.produktua_id
                           WHERE e.zerbitzua_id = :zerbitzuaId
@@ -156,7 +172,8 @@ namespace ErronkaApi.Repositorioak
                         Irudia = BuildIrudiUrl(ep[3] == DBNull.Value ? null : ep[3]?.ToString()),
                         Data = ep[4] == DBNull.Value || ep[4] == null ? DateTime.MinValue : Convert.ToDateTime(ep[4]),
                         Prezioa = ep[5] == DBNull.Value || ep[5] == null ? 0 : Convert.ToDecimal(ep[5]),
-                        Egoera = ordainduta ? 1 : (ep[6] == DBNull.Value || ep[6] == null ? 0 : Convert.ToInt32(ep[6]))
+                        Egoera = ordainduta ? 1 : (ep[6] == DBNull.Value || ep[6] == null ? 0 : Convert.ToInt32(ep[6])),
+                        IsPlatera = IsPlaceholderPlatera(ep[1], ep[7])
                     }).ToList()
                 };
             }).ToList();
@@ -184,7 +201,7 @@ namespace ErronkaApi.Repositorioak
             var oraingoProduktuak = session.CreateSQLQuery(
                     @"SELECT produktua_id, COUNT(*)
                       FROM eskaerak
-                      WHERE zerbitzua_id = :id
+                      WHERE zerbitzua_id = :id AND produktua_id <> 1
                       GROUP BY produktua_id")
                 .SetParameter("id", id)
                 .List<object[]>();
@@ -200,7 +217,10 @@ namespace ErronkaApi.Repositorioak
                     .ExecuteUpdate();
             }
 
+            EnsurePlateraProduktua(session);
+
             var taldekatuta = dto.Eskaerak
+                .Where(e => !e.IsPlatera)
                 .GroupBy(e => e.ProduktuaId)
                 .Select(g => new
                 {
@@ -235,6 +255,7 @@ namespace ErronkaApi.Repositorioak
             var data = DateTime.Now;
             foreach (var e in dto.Eskaerak)
             {
+                var dbProduktuaId = e.IsPlatera ? 1 : e.ProduktuaId;
                 session.CreateSQLQuery(
                         @"INSERT INTO eskaerak (izena, prezioa, data, egoera, zerbitzua_id, produktua_id)
                           VALUES (:izena, :prezioa, :data, :egoera, :zerbitzuaId, :produktuaId)")
@@ -243,7 +264,7 @@ namespace ErronkaApi.Repositorioak
                     .SetParameter("data", e.Data == default ? data : e.Data)
                     .SetParameter("egoera", e.Egoera)
                     .SetParameter("zerbitzuaId", id)
-                    .SetParameter("produktuaId", e.ProduktuaId)
+                    .SetParameter("produktuaId", dbProduktuaId)
                     .ExecuteUpdate();
             }
 
@@ -264,6 +285,20 @@ namespace ErronkaApi.Repositorioak
                 .SetParameter("id", id)
                 .UniqueResult();
             if (totalObj == null) return false;
+
+            var pendingPlaterak = Convert.ToInt32(session.CreateSQLQuery(
+                    @"SELECT COUNT(*)
+                      FROM eskaerak e
+                      WHERE e.zerbitzua_id = :id
+                        AND e.produktua_id = 1
+                        AND COALESCE(e.egoera, 0) = 0")
+                .SetParameter("id", id)
+                .UniqueResult());
+
+            if (pendingPlaterak > 0)
+            {
+                throw new InvalidOperationException("Ezin da ordaindu: plater guztiak Prestatuta egon behar dira.");
+            }
 
             session.CreateSQLQuery("UPDATE zerbitzua SET ordainduta = 1 WHERE id = :id")
                 .SetParameter("id", id)

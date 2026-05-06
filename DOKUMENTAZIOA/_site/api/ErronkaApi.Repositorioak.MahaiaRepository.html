@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MahaiaRepository | Erronka API Dokumentazioa ">
       
-      
+      <meta name="description" content="Mahaien egoera eta kontsultak kudeatzen dituen datu-biltegia.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/UnaiMarti88/API2Erronka/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_MahaiaRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.MahaiaRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/otalavera06/2ERRONKA_API/new/main/apiSpec/new?filename=ErronkaApi_Repositorioak_MahaiaRepository.md&amp;value=---%0Auid%3A%20ErronkaApi.Repositorioak.MahaiaRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ErronkaApi_Repositorioak_MahaiaRepository" data-uid="ErronkaApi.Repositorioak.MahaiaRepository" class="text-break">
-Class MahaiaRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class MahaiaRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,11 +97,12 @@ Class MahaiaRepository  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>ErronkaApi.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Mahaien egoera eta kontsultak kudeatzen dituen datu-biltegia.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MahaiaRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public class MahaiaRepository : IMahaiaRepository</code></pre>
   </div>
 
 
@@ -115,6 +116,12 @@ Class MahaiaRepository  <a class="header-action link-secondary" title="View sour
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ErronkaApi.Interfaces.IMahaiaRepository.html">IMahaiaRepository</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -156,10 +163,11 @@ Class MahaiaRepository  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ErronkaApi_Repositorioak_MahaiaRepository__ctor_NHibernate_ISessionFactory_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.#ctor(NHibernate.ISessionFactory)">
   MahaiaRepository(ISessionFactory)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>MahaiaRepository</code> instantzia berri bat sortzen du.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -169,7 +177,8 @@ Class MahaiaRepository  <a class="header-action link-secondary" title="View sour
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sessionFactory</code> <span class="xref">ISessionFactory</span></dt>
-    <dd></dd>
+    <dd><p>NHibernate saio-fabrika.</p>
+</dd>
   </dl>
 
 
@@ -187,26 +196,171 @@ Class MahaiaRepository  <a class="header-action link-secondary" title="View sour
 </h2>
 
 
-  <a id="ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibreAsync_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync*"></a>
+  <a id="ErronkaApi_Repositorioak_MahaiaRepository_Delete_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Delete*"></a>
 
-  <h3 id="ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibreAsync" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibreAsync">
-  LortuMahaiLibreAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ErronkaApi_Repositorioak_MahaiaRepository_Delete_ErronkaApi_Modeloak_Mahaia_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Delete(ErronkaApi.Modeloak.Mahaia)">
+  Delete(Mahaia)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mahaia bat datu-basean ezabatzen du.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete(Mahaia mahaia)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mahaia</code> <a class="xref" href="ErronkaApi.Modeloak.Mahaia.html">Mahaia</a></dt>
+    <dd><p>Ezabatu beharreko mahaia.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_MahaiaRepository_Get_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Get*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_MahaiaRepository_Get_System_Int32_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Get(System.Int32)">
+  Get(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bere identifikatzailearen arabera mahaia bat lortzen du.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mahaia? Get(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Bilatu beharreko mahaiaren identifikatzailea.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ErronkaApi.Modeloak.Mahaia.html">Mahaia</a></dt>
+    <dd><p>Aurkitutako mahaia edo <code>null</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_MahaiaRepository_Login_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Login*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_MahaiaRepository_Login_System_String_System_String_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Login(System.String,System.String)">
+  Login(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;ErantzunaDTO&lt;MahaiaDTO&gt;&gt; LortuMahaiLibreAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public Mahaia? Login(string erabiltzailea, string pasahitza)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>erabiltzailea</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pasahitza</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ErronkaApi.Modeloak.Mahaia.html">Mahaia</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibre_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_MahaiaRepository_LortuMahaiLibre" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.LortuMahaiLibre">
+  LortuMahaiLibre()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Une honetan libre dauden mahaiak DTO formatuan lortzen ditu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MahaiaDTO&gt; LortuMahaiLibre()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="ErronkaApi.DTOak.ErantzunaDTO-1.html">ErantzunaDTO</a>&lt;<a class="xref" href="ErronkaApi.DTOak.MahaiaDTO.html">MahaiaDTO</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ErronkaApi.DTOak.MahaiaDTO.html">MahaiaDTO</a>&gt;</dt>
+    <dd><p>Mahai libreen zerrenda edo <code>null</code> errorea gertatzen bada.</p>
+</dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ErronkaApi_Repositorioak_MahaiaRepository_Update_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Update*"></a>
+
+  <h3 id="ErronkaApi_Repositorioak_MahaiaRepository_Update_ErronkaApi_Modeloak_Mahaia_" data-uid="ErronkaApi.Repositorioak.MahaiaRepository.Update(ErronkaApi.Modeloak.Mahaia)">
+  Update(Mahaia)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mahaia baten egoera edo atributuak eguneratzen ditu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update(Mahaia mahaia)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mahaia</code> <a class="xref" href="ErronkaApi.Modeloak.Mahaia.html">Mahaia</a></dt>
+    <dd><p>Eguneratu beharreko mahaia.</p>
+</dd>
+  </dl>
+
 
 
 
@@ -222,7 +376,7 @@ Class MahaiaRepository  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/UnaiMarti88/API2Erronka/blob/main/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/otalavera06/2ERRONKA_API/blob/main/API2Erronka/ErronkaApi/Repositorioak/MahaiaRepository.cs/#L18" class="edit-link">Edit this page</a>
         </div>
 
 

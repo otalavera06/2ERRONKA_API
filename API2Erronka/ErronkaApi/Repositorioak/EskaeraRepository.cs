@@ -197,7 +197,7 @@ namespace ErronkaApi.Repositorioak
         {
             using var session = _sessionFactory.OpenSession();
             var query = session.Query<EskaeraProduktuak>()
-                .Where(ep => ep.Egoera == 0 && ep.Eskaera.mahaia_id >= 1 && ep.Eskaera.mahaia_id <= 5);
+                .Where(ep => ep.Egoera == 0 && ep.Produktua.id == 1 && ep.Eskaera.mahaia_id >= 1 && ep.Eskaera.mahaia_id <= 5);
             query.Fetch(ep => ep.Produktua).ToFuture();
             query.Fetch(ep => ep.Eskaera).ToFuture();
             return query.ToFuture().ToList();
@@ -246,14 +246,6 @@ namespace ErronkaApi.Repositorioak
                     session.Update(produktua);
                 }
             }
-
-            //var mahaia = session.Get<Mahaia>(dto.MahaiaId);
-            //if (mahaia != null)
-            //{
-            //    mahaia = "okupatuta";
-            //    session.Update(mahaia);
-            //}
-
             tx.Commit();
             return eskaera;
         }

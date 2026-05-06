@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  id: ErronkaApi.Interfaces
+  children:
+  - ErronkaApi.Interfaces.IErabiltzaileaRepository
+  - ErronkaApi.Interfaces.IErreserbaRepository
+  - ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  - ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  - ErronkaApi.Interfaces.IEskaeraRepository
+  - ErronkaApi.Interfaces.IKategoriaRepository
+  - ErronkaApi.Interfaces.IMahaiaRepository
+  - ErronkaApi.Interfaces.IPlateraRepository
+  - ErronkaApi.Interfaces.IProduktuaRepository
+  - ErronkaApi.Interfaces.IZerbitzuaRepository
+  langs:
+  - csharp
+  - vb
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  type: Namespace
+  assemblies:
+  - ErronkaApi
+references:
+- uid: ErronkaApi.Interfaces.IErabiltzaileaRepository
+  commentId: T:ErronkaApi.Interfaces.IErabiltzaileaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IErabiltzaileaRepository.html
+  name: IErabiltzaileaRepository
+  nameWithType: IErabiltzaileaRepository
+  fullName: ErronkaApi.Interfaces.IErabiltzaileaRepository
+- uid: ErronkaApi.Interfaces.IErreserbaRepository
+  commentId: T:ErronkaApi.Interfaces.IErreserbaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IErreserbaRepository.html
+  name: IErreserbaRepository
+  nameWithType: IErreserbaRepository
+  fullName: ErronkaApi.Interfaces.IErreserbaRepository
+- uid: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraMahaiakRepository.html
+  name: IEskaeraMahaiakRepository
+  nameWithType: IEskaeraMahaiakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraMahaiakRepository
+- uid: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraProduktuakRepository.html
+  name: IEskaeraProduktuakRepository
+  nameWithType: IEskaeraProduktuakRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraProduktuakRepository
+- uid: ErronkaApi.Interfaces.IEskaeraRepository
+  commentId: T:ErronkaApi.Interfaces.IEskaeraRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IEskaeraRepository.html
+  name: IEskaeraRepository
+  nameWithType: IEskaeraRepository
+  fullName: ErronkaApi.Interfaces.IEskaeraRepository
+- uid: ErronkaApi.Interfaces.IKategoriaRepository
+  commentId: T:ErronkaApi.Interfaces.IKategoriaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IKategoriaRepository.html
+  name: IKategoriaRepository
+  nameWithType: IKategoriaRepository
+  fullName: ErronkaApi.Interfaces.IKategoriaRepository
+- uid: ErronkaApi.Interfaces.IMahaiaRepository
+  commentId: T:ErronkaApi.Interfaces.IMahaiaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html
+  name: IMahaiaRepository
+  nameWithType: IMahaiaRepository
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository
+- uid: ErronkaApi.Interfaces.IPlateraRepository
+  commentId: T:ErronkaApi.Interfaces.IPlateraRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IPlateraRepository.html
+  name: IPlateraRepository
+  nameWithType: IPlateraRepository
+  fullName: ErronkaApi.Interfaces.IPlateraRepository
+- uid: ErronkaApi.Interfaces.IProduktuaRepository
+  commentId: T:ErronkaApi.Interfaces.IProduktuaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IProduktuaRepository.html
+  name: IProduktuaRepository
+  nameWithType: IProduktuaRepository
+  fullName: ErronkaApi.Interfaces.IProduktuaRepository
+- uid: ErronkaApi.Interfaces.IZerbitzuaRepository
+  commentId: T:ErronkaApi.Interfaces.IZerbitzuaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IZerbitzuaRepository.html
+  name: IZerbitzuaRepository
+  nameWithType: IZerbitzuaRepository
+  fullName: ErronkaApi.Interfaces.IZerbitzuaRepository
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
+  href: ErronkaApi.html
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
+  spec.csharp:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
+  spec.vb:
+  - uid: ErronkaApi
+    name: ErronkaApi
+    href: ErronkaApi.html
+  - name: .
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html

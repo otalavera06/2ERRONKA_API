@@ -108,9 +108,16 @@ namespace ErronkaApi.Kontrollerrak
         [HttpPost("{id:int}/ordaindu")]
         public IActionResult Ordaindu(int id)
         {
-             var ok = _repo.Ordaindu(id);
-             if (!ok) return NotFound();
-             return Ok();
+            try
+            {
+                var ok = _repo.Ordaindu(id);
+                if (!ok) return NotFound();
+                return Ok();
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

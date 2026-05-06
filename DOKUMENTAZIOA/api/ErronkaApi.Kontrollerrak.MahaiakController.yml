@@ -5,7 +5,9 @@ items:
   id: MahaiakController
   parent: ErronkaApi.Kontrollerrak
   children:
-  - ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Repositorioak.MahaiaRepository)
+  - ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Interfaces.IMahaiaRepository)
+  - ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(System.Int32)
+  - ErronkaApi.Kontrollerrak.MahaiakController.Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
   - ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre
   langs:
   - csharp
@@ -16,12 +18,12 @@ items:
   type: Class
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: MahaiakController
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
@@ -34,13 +36,13 @@ items:
     content: >-
       [ApiController]
 
-      [Route("api/[controller]")]
+      [Route("api/mahaiak")]
 
       public class MahaiakController : ControllerBase
     content.vb: >-
       <ApiController>
 
-      <Route("api/[controller]")>
+      <Route("api/mahaiak")>
 
       Public Class MahaiakController Inherits ControllerBase
   inheritance:
@@ -235,39 +237,39 @@ items:
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: api/[controller]
-- uid: ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Repositorioak.MahaiaRepository)
-  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Repositorioak.MahaiaRepository)
-  id: '#ctor(ErronkaApi.Repositorioak.MahaiaRepository)'
+      value: api/mahaiak
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Interfaces.IMahaiaRepository)
+  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.#ctor(ErronkaApi.Interfaces.IMahaiaRepository)
+  id: '#ctor(ErronkaApi.Interfaces.IMahaiaRepository)'
   parent: ErronkaApi.Kontrollerrak.MahaiakController
   langs:
   - csharp
   - vb
-  name: MahaiakController(MahaiaRepository)
-  nameWithType: MahaiakController.MahaiakController(MahaiaRepository)
-  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakController(ErronkaApi.Repositorioak.MahaiaRepository)
+  name: MahaiakController(IMahaiaRepository)
+  nameWithType: MahaiakController.MahaiakController(IMahaiaRepository)
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakController(ErronkaApi.Interfaces.IMahaiaRepository)
   type: Constructor
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: .ctor
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
   syntax:
-    content: public MahaiakController(MahaiaRepository mahaiaService)
+    content: public MahaiakController(IMahaiaRepository mahaiaService)
     parameters:
     - id: mahaiaService
-      type: ErronkaApi.Repositorioak.MahaiaRepository
-    content.vb: Public Sub New(mahaiaService As MahaiaRepository)
+      type: ErronkaApi.Interfaces.IMahaiaRepository
+    content.vb: Public Sub New(mahaiaService As IMahaiaRepository)
   overload: ErronkaApi.Kontrollerrak.MahaiakController.#ctor*
-  nameWithType.vb: MahaiakController.New(MahaiaRepository)
-  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.New(ErronkaApi.Repositorioak.MahaiaRepository)
-  name.vb: New(MahaiaRepository)
+  nameWithType.vb: MahaiakController.New(IMahaiaRepository)
+  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.New(ErronkaApi.Interfaces.IMahaiaRepository)
+  name.vb: New(IMahaiaRepository)
 - uid: ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre
   commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre
   id: LortuMahaiLibre
@@ -281,36 +283,129 @@ items:
   type: Method
   source:
     remote:
-      path: ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
+      path: API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
       branch: main
-      repo: https://github.com/UnaiMarti88/API2Erronka.git
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
     id: LortuMahaiLibre
     path: ../API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - ErronkaApi
   namespace: ErronkaApi.Kontrollerrak
-  summary: Mahai libre bat lortzen du.
+  summary: Mahai libreak lortzen ditu.
   example: []
   syntax:
     content: >-
-      [HttpGet("libre")]
+      [HttpGet("libreak")]
 
-      public Task<ActionResult<ErantzunaDTO<MahaiaDTO>>> LortuMahaiLibre()
+      public ActionResult<ErantzunaDTO<List<MahaiaDTO>>> LortuMahaiLibre()
     return:
-      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult{ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.MahaiaDTO}}}
-      description: Mahai libre baten informazioa.
+      type: Microsoft.AspNetCore.Mvc.ActionResult{ErronkaApi.DTOak.ErantzunaDTO{System.Collections.Generic.List{ErronkaApi.DTOak.MahaiaDTO}}}
+      description: Mahai libreen zerrenda ErantzunaDTO formatuan.
     content.vb: >-
-      <HttpGet("libre")>
+      <HttpGet("libreak")>
 
-      Public Function LortuMahaiLibre() As Task(Of ActionResult(Of ErantzunaDTO(Of MahaiaDTO)))
+      Public Function LortuMahaiLibre() As ActionResult(Of ErantzunaDTO(Of List(Of MahaiaDTO)))
   overload: ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: libre
+      value: libreak
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
+  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
+  id: Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
+  parent: ErronkaApi.Kontrollerrak.MahaiakController
+  langs:
+  - csharp
+  - vb
+  name: Login(MahaiakLoginRequest)
+  nameWithType: MahaiakController.Login(MahaiakController.MahaiakLoginRequest)
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.Login(ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: Login
+    path: ../API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
+    startLine: 63
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Kontrollerrak
+  syntax:
+    content: >-
+      [HttpPost("login")]
+
+      public IActionResult Login(MahaiakController.MahaiakLoginRequest req)
+    parameters:
+    - id: req
+      type: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpPost("login")>
+
+      Public Function Login(req As MahaiakController.MahaiakLoginRequest) As IActionResult
+  overload: ErronkaApi.Kontrollerrak.MahaiakController.Login*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: login
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(System.Int32)
+  commentId: M:ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(System.Int32)
+  id: CheckTxatBaimena(System.Int32)
+  parent: ErronkaApi.Kontrollerrak.MahaiakController
+  langs:
+  - csharp
+  - vb
+  name: CheckTxatBaimena(int)
+  nameWithType: MahaiakController.CheckTxatBaimena(int)
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(int)
+  type: Method
+  source:
+    remote:
+      path: API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
+      branch: main
+      repo: https://github.com/otalavera06/2ERRONKA_API.git
+    id: CheckTxatBaimena
+    path: ../API2Erronka/ErronkaApi/Kontrollerrak/MahaiakKontrollerra.cs
+    startLine: 84
+  assemblies:
+  - ErronkaApi
+  namespace: ErronkaApi.Kontrollerrak
+  syntax:
+    content: >-
+      [HttpGet("{id}/txat-baimena")]
+
+      public IActionResult CheckTxatBaimena(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet("{id}/txat-baimena")>
+
+      Public Function CheckTxatBaimena(id As Integer) As IActionResult
+  overload: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{id}/txat-baimena'
+  nameWithType.vb: MahaiakController.CheckTxatBaimena(Integer)
+  fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena(Integer)
+  name.vb: CheckTxatBaimena(Integer)
 references:
 - uid: ErronkaApi.Kontrollerrak
   commentId: N:ErronkaApi.Kontrollerrak
@@ -9301,62 +9396,60 @@ references:
   - name: )
 - uid: ErronkaApi.Kontrollerrak.MahaiakController.#ctor*
   commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.#ctor
-  href: ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController__ctor_ErronkaApi_Repositorioak_MahaiaRepository_
+  href: ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController__ctor_ErronkaApi_Interfaces_IMahaiaRepository_
   name: MahaiakController
   nameWithType: MahaiakController.MahaiakController
   fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakController
   nameWithType.vb: MahaiakController.New
   fullName.vb: ErronkaApi.Kontrollerrak.MahaiakController.New
   name.vb: New
-- uid: ErronkaApi.Repositorioak.MahaiaRepository
-  commentId: T:ErronkaApi.Repositorioak.MahaiaRepository
-  parent: ErronkaApi.Repositorioak
-  name: MahaiaRepository
-  nameWithType: MahaiaRepository
-  fullName: ErronkaApi.Repositorioak.MahaiaRepository
-- uid: ErronkaApi.Repositorioak
-  commentId: N:ErronkaApi.Repositorioak
+- uid: ErronkaApi.Interfaces.IMahaiaRepository
+  commentId: T:ErronkaApi.Interfaces.IMahaiaRepository
+  parent: ErronkaApi.Interfaces
+  href: ErronkaApi.Interfaces.IMahaiaRepository.html
+  name: IMahaiaRepository
+  nameWithType: IMahaiaRepository
+  fullName: ErronkaApi.Interfaces.IMahaiaRepository
+- uid: ErronkaApi.Interfaces
+  commentId: N:ErronkaApi.Interfaces
   href: ErronkaApi.html
-  name: ErronkaApi.Repositorioak
-  nameWithType: ErronkaApi.Repositorioak
-  fullName: ErronkaApi.Repositorioak
+  name: ErronkaApi.Interfaces
+  nameWithType: ErronkaApi.Interfaces
+  fullName: ErronkaApi.Interfaces
   spec.csharp:
   - uid: ErronkaApi
     name: ErronkaApi
     href: ErronkaApi.html
   - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
   spec.vb:
   - uid: ErronkaApi
     name: ErronkaApi
     href: ErronkaApi.html
   - name: .
-  - uid: ErronkaApi.Repositorioak
-    name: Repositorioak
+  - uid: ErronkaApi.Interfaces
+    name: Interfaces
+    href: ErronkaApi.Interfaces.html
 - uid: ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre*
   commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre
   href: ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_LortuMahaiLibre
   name: LortuMahaiLibre
   nameWithType: MahaiakController.LortuMahaiLibre
   fullName: ErronkaApi.Kontrollerrak.MahaiakController.LortuMahaiLibre
-- uid: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult{ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.MahaiaDTO}}}
-  commentId: T:System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult{ErronkaApi.DTOak.ErantzunaDTO{ErronkaApi.DTOak.MahaiaDTO}}}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<ActionResult<ErantzunaDTO<MahaiaDTO>>>
-  nameWithType: Task<ActionResult<ErantzunaDTO<MahaiaDTO>>>
-  fullName: System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<ErronkaApi.DTOak.ErantzunaDTO<ErronkaApi.DTOak.MahaiaDTO>>>
-  nameWithType.vb: Task(Of ActionResult(Of ErantzunaDTO(Of MahaiaDTO)))
-  fullName.vb: System.Threading.Tasks.Task(Of Microsoft.AspNetCore.Mvc.ActionResult(Of ErronkaApi.DTOak.ErantzunaDTO(Of ErronkaApi.DTOak.MahaiaDTO)))
-  name.vb: Task(Of ActionResult(Of ErantzunaDTO(Of MahaiaDTO)))
+- uid: Microsoft.AspNetCore.Mvc.ActionResult{ErronkaApi.DTOak.ErantzunaDTO{System.Collections.Generic.List{ErronkaApi.DTOak.MahaiaDTO}}}
+  commentId: T:Microsoft.AspNetCore.Mvc.ActionResult{ErronkaApi.DTOak.ErantzunaDTO{System.Collections.Generic.List{ErronkaApi.DTOak.MahaiaDTO}}}
+  parent: Microsoft.AspNetCore.Mvc
+  definition: Microsoft.AspNetCore.Mvc.ActionResult`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1
+  name: ActionResult<ErantzunaDTO<List<MahaiaDTO>>>
+  nameWithType: ActionResult<ErantzunaDTO<List<MahaiaDTO>>>
+  fullName: Microsoft.AspNetCore.Mvc.ActionResult<ErronkaApi.DTOak.ErantzunaDTO<System.Collections.Generic.List<ErronkaApi.DTOak.MahaiaDTO>>>
+  nameWithType.vb: ActionResult(Of ErantzunaDTO(Of List(Of MahaiaDTO)))
+  fullName.vb: Microsoft.AspNetCore.Mvc.ActionResult(Of ErronkaApi.DTOak.ErantzunaDTO(Of System.Collections.Generic.List(Of ErronkaApi.DTOak.MahaiaDTO)))
+  name.vb: ActionResult(Of ErantzunaDTO(Of List(Of MahaiaDTO)))
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
   - uid: Microsoft.AspNetCore.Mvc.ActionResult`1
     name: ActionResult
     isExternal: true
@@ -9366,6 +9459,11 @@ references:
     name: ErantzunaDTO
     href: ErronkaApi.DTOak.ErantzunaDTO-1.html
   - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
   - uid: ErronkaApi.DTOak.MahaiaDTO
     name: MahaiaDTO
     href: ErronkaApi.DTOak.MahaiaDTO.html
@@ -9373,13 +9471,6 @@ references:
   - name: '>'
   - name: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
   - uid: Microsoft.AspNetCore.Mvc.ActionResult`1
     name: ActionResult
     isExternal: true
@@ -9393,74 +9484,98 @@ references:
   - name: (
   - name: Of
   - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
   - uid: ErronkaApi.DTOak.MahaiaDTO
     name: MahaiaDTO
     href: ErronkaApi.DTOak.MahaiaDTO.html
   - name: )
   - name: )
   - name: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
+- uid: Microsoft.AspNetCore.Mvc.ActionResult`1
+  commentId: T:Microsoft.AspNetCore.Mvc.ActionResult`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1
+  name: ActionResult<TValue>
+  nameWithType: ActionResult<TValue>
+  fullName: Microsoft.AspNetCore.Mvc.ActionResult<TValue>
+  nameWithType.vb: ActionResult(Of TValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ActionResult(Of TValue)
+  name.vb: ActionResult(Of TValue)
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
+  - uid: Microsoft.AspNetCore.Mvc.ActionResult`1
+    name: ActionResult
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1
   - name: <
-  - name: TResult
+  - name: TValue
   - name: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
+  - uid: Microsoft.AspNetCore.Mvc.ActionResult`1
+    name: ActionResult
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1
   - name: (
   - name: Of
   - name: " "
-  - name: TResult
+  - name: TValue
   - name: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.Login*
+  commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.Login
+  href: ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_Login_ErronkaApi_Kontrollerrak_MahaiakController_MahaiakLoginRequest_
+  name: Login
+  nameWithType: MahaiakController.Login
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.Login
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  commentId: T:ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+  parent: ErronkaApi.Kontrollerrak
+  href: ErronkaApi.Kontrollerrak.MahaiakController.html
+  name: MahaiakController.MahaiakLoginRequest
+  nameWithType: MahaiakController.MahaiakLoginRequest
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
   spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController
+    name: MahaiakController
+    href: ErronkaApi.Kontrollerrak.MahaiakController.html
   - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+    name: MahaiakLoginRequest
+    href: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html
   spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController
+    name: MahaiakController
+    href: ErronkaApi.Kontrollerrak.MahaiakController.html
   - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  - uid: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest
+    name: MahaiakLoginRequest
+    href: ErronkaApi.Kontrollerrak.MahaiakController.MahaiakLoginRequest.html
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
+- uid: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena*
+  commentId: Overload:ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena
+  href: ErronkaApi.Kontrollerrak.MahaiakController.html#ErronkaApi_Kontrollerrak_MahaiakController_CheckTxatBaimena_System_Int32_
+  name: CheckTxatBaimena
+  nameWithType: MahaiakController.CheckTxatBaimena
+  fullName: ErronkaApi.Kontrollerrak.MahaiakController.CheckTxatBaimena
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -205,6 +205,56 @@
             Kategoriaren izena.
             </summary>
         </member>
+        <member name="T:ErronkaApi.DTOak.LangileaDTO">
+            <summary>
+            Langile baten datuak eta aplikazioko baimenak garraiatzeko DTOa.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.Id">
+            <summary>
+            Langilearen identifikatzailea.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.Izena">
+            <summary>
+            Langilearen izena.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.Abizena">
+            <summary>
+            Langilearen abizena.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.Erabiltzailea">
+            <summary>
+            Saioa hasteko erabiltzaile izena.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.Email">
+            <summary>
+            Langilearen emaila.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.Telefonoa">
+            <summary>
+            Langilearen telefono zenbakia.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.Baimena">
+            <summary>
+            Langileak aplikazioan sartzeko baimena duen adierazten du.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.MahaiakId">
+            <summary>
+            Langileari lotutako mahaiaren identifikatzailea, baldin badago.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.LangileaDTO.ChatBaimena">
+            <summary>
+            Langileak txata erabiltzeko baimena duen adierazten du.
+            </summary>
+        </member>
         <member name="T:ErronkaApi.DTOak.LogDTO">
             <summary>
             Log bat sortzeko DTOa.
@@ -235,29 +285,69 @@
             Pasahitza.
             </summary>
         </member>
-        <member name="P:ErronkaApi.DTOak.LoginDTO.txat">
-            <summary>
-            Txata gaituta dagoen ala ez adierazten du.
-            </summary>
-        </member>
         <member name="T:ErronkaApi.DTOak.MahaiaDTO">
             <summary>
             Mahai baten informazioa duen DTOa.
             </summary>
         </member>
-        <member name="P:ErronkaApi.DTOak.MahaiaDTO.Id">
+        <member name="T:ErronkaApi.DTOak.PlateraDTO">
             <summary>
-            Mahaiaren identifikatzailea.
+            Plater baten informazio osoa eta bere osagaiak garraiatzeko DTOa.
             </summary>
         </member>
-        <member name="P:ErronkaApi.DTOak.MahaiaDTO.Zenbakia">
+        <member name="P:ErronkaApi.DTOak.PlateraDTO.Id">
             <summary>
-            Mahaiaren zenbakia.
+            Plateraren identifikatzailea.
             </summary>
         </member>
-        <member name="P:ErronkaApi.DTOak.MahaiaDTO.kapazitatea">
+        <member name="P:ErronkaApi.DTOak.PlateraDTO.Izena">
             <summary>
-            Mahaiaren kapazitatea (pertsona kopurua).
+            Plateraren izena.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraDTO.Mota">
+            <summary>
+            Plateraren mota edo taldea.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraDTO.Prezioa">
+            <summary>
+            Plateraren prezioa.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraDTO.Argazkia">
+            <summary>
+            Datu-basean gordetako argazkiaren izena.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraDTO.ArgazkiaUrl">
+            <summary>
+            Bezeroak irudia deskargatzeko URL osoa.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraDTO.Osagaiak">
+            <summary>
+            Platera prestatzeko erabiltzen diren osagaien zerrenda.
+            </summary>
+        </member>
+        <member name="T:ErronkaApi.DTOak.PlateraOsagaiaDTO">
+            <summary>
+            Plater bati lotutako osagai baten datuak.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraOsagaiaDTO.Id">
+            <summary>
+            Osagaiaren identifikatzailea.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraOsagaiaDTO.Izena">
+            <summary>
+            Osagaiaren izena.
+            </summary>
+        </member>
+        <member name="P:ErronkaApi.DTOak.PlateraOsagaiaDTO.Stock">
+            <summary>
+            Osagaiaren uneko stocka.
             </summary>
         </member>
         <member name="T:ErronkaApi.DTOak.ProduktuaDTO">
@@ -330,6 +420,11 @@
             Eskaeraren egoera zenbakiz adierazita.
             </summary>
         </member>
+        <member name="P:ErronkaApi.DTOak.ZerbitzuaEskaeraDTO.IsPlatera">
+            <summary>
+            Plateren katalogotik datorren eskaera den ala ez.
+            </summary>
+        </member>
         <member name="T:ErronkaApi.DTOak.ZerbitzuaMahaiDTO">
             <summary>
             Mahai bateko zerbitzuaren laburpena eta bere eskaeren zerrenda.
@@ -365,74 +460,10 @@
             Zerbitzuan dauden eskaeren zerrenda.
             </summary>
         </member>
-        <member name="T:ErronkaApi.Kontrollerrak.EskaeraKontrollerra">
+        <member name="P:ErronkaApi.DTOak.ZerbitzuaMahaiDTO.Ordainduta">
             <summary>
-            Eskaerak kudeatzeko kontroladorea.
-            Eskaerak sortu, kontsultatu, eguneratu eta ezabatzeko aukera ematen du.
+            Zerbitzua ordainduta dagoen ala ez.
             </summary>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)">
-            <summary>
-            Eskaera berri bat sortzen du.
-            </summary>
-            <param name="dto">Eskaera berriaren datuak.</param>
-            <returns>Sortutako eskaeraren informazioa.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerak">
-            <summary>
-            Eskaera guztiak lortzen ditu.
-            </summary>
-            <returns>Eskaeren zerrenda.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaeraProduktuak(System.Int32)">
-            <summary>
-            Eskaera baten produktuak lortzen ditu.
-            </summary>
-            <param name="eskaeraId">Eskaeraren IDa.</param>
-            <returns>Eskaeraren produktuen zerrenda.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EzabatuEskaera(System.Int32)">
-            <summary>
-            Eskaera bat ezabatzen du.
-            </summary>
-            <param name="eskaeraId">Ezabatu nahi den eskaeraren IDa.</param>
-            <returns>Erantzunaren emaitza.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuMahaiKapasitatea(System.Int32)">
-            <summary>
-            Mahai baten kapazitatea lortzen du.
-            </summary>
-            <param name="mahaiaId">Mahaiaren IDa.</param>
-            <returns>Mahaiaren kapazitatea.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuEskaera(System.Int32,ErronkaApi.DTOak.EskaeraEguneratuDTO)">
-            <summary>
-            Eskaera bat eguneratzen du (komensalak eta produktuak).
-            </summary>
-            <param name="eskaeraId">Eskaeraren IDa.</param>
-            <param name="dto">Eguneratu nahi diren datuak.</param>
-            <returns>Eguneratzearen emaitza.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.EguneratuSukaldeaEgoera(System.Int32,ErronkaApi.DTOak.EskaeraSukaldeaEgoeraDTO)">
-            <summary>
-            Eskaera baten sukaldeko egoera eguneratzen du.
-            </summary>
-            <param name="eskaeraId">Eskaeraren IDa.</param>
-            <param name="dto">Sukaldeko egoera berria.</param>
-            <returns>Eguneratzearen emaitza.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.OrdainduEskaera(System.Int32)">
-            <summary>
-            Eskaera bat ordaintzera bidaltzen du.
-            </summary>
-            <param name="eskaeraId">Eskaeraren IDa.</param>
-            <returns>Emaitza.</returns>
-        </member>
-        <member name="M:ErronkaApi.Kontrollerrak.EskaeraKontrollerra.LortuEskaerakOrdaintzeko">
-            <summary>
-            Ordaintzeko dauden eskaerak lortzen ditu.
-            </summary>
-            <returns>Ordaintzeko dauden eskaeren zerrenda.</returns>
         </member>
         <member name="T:ErronkaApi.Kontrollerrak.FakturaKontrollerra">
             <summary>
@@ -585,6 +616,83 @@
             Eskaeren biltegia.
             Eskema berrian, `Eskaera` zaharra `zerbitzua` + `eskaerak` egituran oinarritzen da.
             </summary>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.Get(System.Int32)">
+            <summary>
+            Eskaera bat IDaren arabera lortzen du.
+            </summary>
+            <param name="id">Eskaeraren IDa.</param>
+            <returns>Eskaera objektua edo null.</returns>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.Save(ErronkaApi.Modeloak.Eskaera)">
+            <summary>
+            Eskaera bat gordetzen du datu-basean.
+            </summary>
+            <param name="eskaera">Gordetzeko eskaera.</param>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.Update(ErronkaApi.Modeloak.Eskaera)">
+            <summary>
+            Eskaera bat eguneratzen du datu-basean.
+            </summary>
+            <param name="eskaera">Eguneratzeko eskaera.</param>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.EguneratuSukaldeaEgoera(System.Int32,System.String)">
+            <summary>
+            Eskaera baten sukaldeko egoera eguneratzen du.
+            </summary>
+            <param name="eskaeraId">Eskaeraren IDa.</param>
+            <param name="egoera">Egoera berria.</param>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.Delete(ErronkaApi.Modeloak.Eskaera)">
+            <summary>
+            Eskaera bat ezabatzen du datu-basean.
+            </summary>
+            <param name="eskaera">Ezabatzeko eskaera.</param>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak">
+            <summary>
+            Eskaera guztiak lortzen ditu, itxita ez daudenak.
+            </summary>
+            <returns>Eskaeren zerrenda.</returns>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak(System.Int32)">
+            <summary>
+            Eskaera baten produktuak lortzen ditu.
+            </summary>
+            <param name="eskaeraId">Eskaeraren IDa.</param>
+            <returns>Eskaera-produktuen zerrenda.</returns>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerak2">
+            <summary>
+            Eskaera guztiak lortzen ditu ordenatuta.
+            </summary>
+            <returns>Eskaeren zerrenda.</returns>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaeraProduktuak2(System.Int32)">
+            <summary>
+            Eskaera baten produktuak lortzen ditu (beste metodoa).
+            </summary>
+            <param name="eskaeraId">Eskaeraren IDa.</param>
+            <returns>Eskaera-produktuen zerrenda.</returns>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.LortuEskaerakOrdaintzeko">
+            <summary>
+            Ordaintzeko dauden eskaerak lortzen ditu.
+            </summary>
+            <returns>Eskaeren zerrenda.</returns>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.LortuSukaldekoEskaerak">
+            <summary>
+            Sukaldeko eskaerak lortzen ditu.
+            </summary>
+            <returns>Eskaera-produktuen zerrenda sukaldearentzat.</returns>
+        </member>
+        <member name="M:ErronkaApi.Repositorioak.EskaeraRepository.SortuEskaera(ErronkaApi.DTOak.EskaeraSortuDTO)">
+            <summary>
+            Eskaera berri bat sortzen du DTOtik.
+            </summary>
+            <param name="dto">Eskaera sortzeko datuak.</param>
+            <returns>Sortutako eskaera.</returns>
         </member>
         <member name="T:ErronkaApi.Repositorioak.KategoriaRepository">
             <summary>
